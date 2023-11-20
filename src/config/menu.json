@@ -13,12 +13,8 @@
       "url": "/blog"
     },
     {
-      "name": "Features",
-      "url": "/features"
-    },
-    {
-      "name": "How It Works",
-      "url": "/how-it-works"
+      "name": "Technologies",
+      "url": "/technologies"
     },
     {
       "name": "Pages",
@@ -29,12 +25,10 @@
           "name": "Career",
           "url": "/career"
         },
-
         {
           "name": "Integrations",
           "url": "/integrations"
         },
-
         {
           "name": "Pricing",
           "url": "/pricing"
@@ -43,7 +37,6 @@
           "name": "Sign In",
           "url": "/signin"
         },
-
         {
           "name": "Elements",
           "url": "/elements"

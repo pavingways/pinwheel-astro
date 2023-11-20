@@ -1,14 +1,14 @@
 {
   "site": {
-    "title": "Pinwheel Astro",
-    "base_url": "https://pinwheel-astro.vercel.app",
+    "title": "Mobile App Development in Central Switzerland - PavingWays GmbH",
+    "base_url": "https://www.pavingways.com",
     "base_path": "/",
     "trailing_slash": false,
     "favicon": "/images/favicon.png",
     "logo": "/images/logo.png",
-    "logo_width": "147",
-    "logo_height": "31",
-    "logo_text": "Pinwheel"
+    "logo_width": "200",
+    "logo_height": "62",
+    "logo_text": "PavingWays Mobile Apps Logo"
   },
 
   "settings": {
@@ -18,11 +18,11 @@
   },
 
   "call_to_action": {
-    "title": "Helping teams in the world with focus",
-    "description": "Lorem ipsum dolor sit sed dmi amet, consectetur adipiscing. Cdo tellus, sed condimentum volutpat.",
+    "title": "You need an App. Let's build it for you!",
+    "description": "We can talk about anything from your mobile app concept over design and content to building, releasing and maintaining your app.",
     "button": {
-      "label": "Download The Theme",
-      "link": "https://themefisher.com/astro-themes/pinwheel-astro"
+      "label": "Lüetets üs a",
+      "link": "https://www.pavingways.com"
     }
   },
 
@@ -33,17 +33,17 @@
   },
 
   "params": {
-    "footer_description": "Lorem ipsum dolor sit sed dmi amet, consectetur adipiscing. Cdo tellus, sed condimentum volutpat.",
-    "email": "info@andromeda.io",
-    "location": "2118 Thornridge Cir. Syracuse, Connecticut 35624",
-    "phone": "+704-555-0127",
+    "footer_description": "We are experts in building mobile apps. Since 2006 we are building mobile apps, research mobile browsers and create automated build chains.",
+    "email": "info@pavingways.com",
+    "location": "Badstrasse 13a, 6045 Meggen, Switzerland",
+    "phone": "+41-76-831 58 37",
     "contact_form_action": "#",
-    "copyright": "Copyright © 2023 a theme by [Themefisher](https://themefisher.com)"
+    "copyright": "Copyright © 2023 PavingWays GmbH"
   },
 
   "metadata": {
-    "meta_author": "Themefisher",
+    "meta_author": "PavingWays GmbH",
     "meta_image": "/images/og-image.png",
-    "meta_description": "pinwheel astro"
+    "meta_description": "PavingWays GmbH develops mobile applications in the heart of Switzerland."
   }
 }

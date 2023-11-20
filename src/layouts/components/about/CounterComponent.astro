@@ -29,7 +29,7 @@ const { counter } = Astro.props;
 
 <script is:inline>
   const counters = document.querySelectorAll(".count");
-  const speed = 700;
+  const speed = 100;
   counters.forEach((counter) => {
     const animate = () => {
       const value = +counter.getAttribute("aria-valuenow");
@@ -38,7 +38,7 @@ const { counter } = Astro.props;
       const time = value / speed;
       if (data < value) {
         counter.innerText = Math.ceil(data + time);
-        setTimeout(animate, 1);
+        setTimeout(animate, 50);
       } else {
         counter.innerText = value;
       }

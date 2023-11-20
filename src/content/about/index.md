@@ -14,19 +14,15 @@ buttons:
 counter:
   - name: "Customers"
     number: 25
-    messurment: M
     color: "#A3A1FB"
-  - name: "Customers"
-    number: 440
-    messurment: M
+  - name: "Projects"
+    number: 44
     color: "#5EE2A0"
-  - name: "Customers"
+  - name: "Years"
     number: 50
-    messurment: K
     color: "#FE6019"
   - name: "Customers"
     number: 20
-    messurment: K
     color: "#FEC163"
     
 # Gallery

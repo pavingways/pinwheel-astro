@@ -1,53 +1,52 @@
 ---
 banner:
-  title: "Scale design & dev operations with Avocode Enterprise"
-  content: "A fully integrated suite of authentication & authoriz products, Stytch’s platform removes the headache of."
+  title: "Mobile App Development"
+  content: "
+  Crafting the mobile future, one app at a time, PavingWays turns your ideas into app store realities. 
+  We offer <strong>full-spectrum app development</strong> from technology selection to app store distribution.
+  With <strong>tons of years of mobile app and web experience</strong> and a diverse range of tiny to huge customers and projects in our portfolio, we not only build state-of-the-art apps, 
+  <strong>we amplify your innovative potential in the mobile world</strong>."
   image: /images/banner-img.png
   button:
-    label: Download The Theme
+    label: Take my money already!
     link: "https://themefisher.com/astro-themes/pinwheel-astro"
     enable: true
 
 ##key features
 key_features:
-  title: "The Highlighting Part Of Our Solution"
-  description: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi egestas Werat viverra id et aliquet. vulputate egestas sollicitudin.
+  title: "Things We Do"
+  description: With experience since 2006 we have seen it all. Small and huge Apps, tons of frameworks, millions of app users. 
+    Here is what we provide our customers with. 
   feature_list:
     - icon: "map"  #icon package react-feather-icon [https://feathericons.com/]
-      title: Live Caption
-      content: Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+      title: Tech Select
+      content: Finding what your app's tech stack should look like and if our stack can match that.
     - icon: "lock"  #icon package react-feather-icon [https://feathericons.com/]
-      title: Smart Reply
+      title: App Development
       content: Lorem ipsum dolor sit amet, consectetur adipiscing elit.
     - icon: "link"  #icon package react-feather-icon [https://feathericons.com/]
-      title: Sound Amplifier
+      title: Workshops
       content: Lorem ipsum dolor sit amet, consectetur adipiscing elit.
     - icon: "bell"  #icon package react-feather-icon [https://feathericons.com/]
-      title: Sound Amplifier
+      title: Store Deploy
       content: Lorem ipsum dolor sit amet, consectetur adipiscing elit.
     - icon: "monitor"  #icon package react-feather-icon [https://feathericons.com/]
-      title: Smart Reply
-      content: Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-    - icon: "map"  #icon package react-feather-icon [https://feathericons.com/]
-      title: Live Caption
-      content: Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-    - icon: "link"  #icon package react-feather-icon [https://feathericons.com/]
-      title: Sound Amplifier
-      content: Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-    - icon: "bell"  #icon package react-feather-icon [https://feathericons.com/]
-      title: Sound Amplifier
-      content: Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-    - icon: "map"  #icon package react-feather-icon [https://feathericons.com/]
-      title: Smart Reply
+      title: App Marketing
       content: Lorem ipsum dolor sit amet, consectetur adipiscing elit.
     - icon: "monitor"  #icon package react-feather-icon [https://feathericons.com/]
-      title: Live Caption
+      title: Pipeline Setup
+      content: Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+    - icon: "monitor"  #icon package react-feather-icon [https://feathericons.com/]
+      title: Dev Setup
+      content: Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+    - icon: "monitor"  #icon package react-feather-icon [https://feathericons.com/]
+      title: App-As-A-Service
       content: Lorem ipsum dolor sit amet, consectetur adipiscing elit.
 
 #service
 service:
   homepage_tab:
-    title: Prevent failure from to impacting your reputation
+    title: Get it done, trust in quality
     description: Our platform helps you build secure onboarding authentication experiences that retain and engage your users. We build the infrastructure, you can.
     tab_list:
         - title: Habit building essential choose habit
