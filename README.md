@@ -1,25 +1,3 @@
-<h1 align=center>PavingWays</h1>
-<p align=center>PavingWays is a free multipurpose SaaS theme built with Astro, TailwindCSS and TypeScript with 17+ pre-designed pages.</p>
-<h2 align="center"><a target="_blank" href="https://pinwheel-astro.vercel.app/" rel="nofollow"> 👀 Demo</a> | <a  target="_blank" href="https://pagespeed.web.dev/analysis/https-pinwheel-astro-vercel-app/kmaxqwa7rx?form_factor=desktop"> Page Speed (95+) 🚀 </a>
-</h2>
-<p align=center>
-  <a href="https://github.com/withastro/astro/releases/tag/astro%402.0.11" alt="Contributors">
-    <img src="https://img.shields.io/static/v1?label=ASTRO&message=2.0&color=000&logo=astro" />
-  </a>
-
-  <a href="https://github.com/themefisher/pinwheel-astro/blob/main/LICENSE">
-    <img src="https://img.shields.io/github/license/themefisher/pinwheel-astro" alt="license"></a>
-
-  <img src="https://img.shields.io/github/languages/code-size/themefisher/pinwheel-astro" alt="code size">
-
-  <a href="https://github.com/themefisher/pinwheel-astro/graphs/contributors">
-    <img src="https://img.shields.io/github/contributors/themefisher/bigspring-light-astro" alt="contributors"></a>
-</p>
-
-![pinwheel](https://demo.themefisher.com/thumbnails/pinwheel.png)
-
-<!-- small description -->
-
 <!-- key features -->
 ## 📌 Key Features
 

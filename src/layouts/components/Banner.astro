@@ -14,7 +14,7 @@ const { title, button, image, content } = banner;
         <p class="mt-6" set:html={markdownify(content)} />
         {
           button.enable && (
-            <a class="btn btn-white mt-8" href={button.link}>
+            <a class="btn btn-primary mt-8" href={button.link}>
               {button.label}
             </a>
           )
@@ -35,7 +35,7 @@ const { title, button, image, content } = banner;
   <Image
     class="banner-shape absolute -top-28 right-0 -z-[1] w-full max-w-[30%]"
     alt="banner"
-    src="/images/banner-shape.png"
+    src="/images/top-shape.png"
     width={496}
     height={466}
   />

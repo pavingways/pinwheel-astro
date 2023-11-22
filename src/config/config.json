@@ -18,7 +18,7 @@
   },
 
   "call_to_action": {
-    "title": "You need an App. Let's build it for you!",
+    "title": "You need an app - let's build it together!",
     "description": "We can talk about anything from your mobile app concept over design and content to building, releasing and maintaining your app.",
     "button": {
       "label": "Lüetets üs a",
@@ -33,9 +33,11 @@
   },
 
   "params": {
-    "footer_description": "We are experts in building mobile apps. Since 2006 we are building mobile apps, research mobile browsers and create automated build chains.",
+    "footer_description": "We are experts in building mobile apps. Since 2006 we research mobile browsers, libraries and frameworks. We also create automated build chains and app developer setups for our clients.",
     "email": "info@pavingways.com",
-    "location": "Badstrasse 13a, 6045 Meggen, Switzerland",
+    "location1": "Badstrasse 13a",
+    "location2": "6045 Meggen",
+    "location3": "Switzerland",
     "phone": "+41-76-831 58 37",
     "contact_form_action": "#",
     "copyright": "Copyright © 2023 PavingWays GmbH"
