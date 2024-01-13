@@ -1,6 +1,7 @@
 ---
 import Logo from "@components/Logo.astro";
 import menu from "@config/menu.json";
+import LanguagePicker from "../components/LanguagePicker.astro";
 
 export interface ChildNavigationLink {
   name: string;
@@ -49,6 +50,8 @@ const { pathname } = Astro.url;
       </svg>
     </label>
     <!-- /navbar toggler -->
+
+    <LanguagePicker></LanguagePicker>
 
     <ul
       id="nav-menu"

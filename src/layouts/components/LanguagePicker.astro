@@ -1,0 +1,14 @@
+---
+import Config from 'astro.config.mjs'
+import type { LocaleDef } from "@lib/utils/i18n";
+---
+<ul>
+  <li>Language Picker</li>
+  {Object.entries(Config.i18n.locales).map(
+    (it) => it[1]
+  ).map((localeNow: LocaleDef) =>
+    <li>
+      <a href={`/${localeNow.path !== Config.i18n.defaultLocale ? localeNow.path + '/' : ''}`}>{localeNow.name}</a>
+    </li>
+  )}
+</ul>

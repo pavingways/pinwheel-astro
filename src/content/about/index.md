@@ -20,7 +20,7 @@ counter:
     color: "#5EE2A0"
   - name: "Years"
     number: 50
-    color: "#FE6019"
+    color: "#1ac0b7"
   - name: "Customers"
     number: 20
     color: "#FEC163"

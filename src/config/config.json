@@ -3,7 +3,7 @@
     "title": "Mobile App Development in Central Switzerland - PavingWays GmbH",
     "base_url": "https://www.pavingways.com",
     "base_path": "/",
-    "trailing_slash": false,
+    "trailing_slash": "always",
     "favicon": "/images/favicon.png",
     "logo": "/images/logo.png",
     "logo_width": "200",
@@ -38,14 +38,14 @@
     "location1": "Badstrasse 13a",
     "location2": "6045 Meggen",
     "location3": "Switzerland",
-    "phone": "+41-76-831 58 37",
+    "phone": "+41 76 831 58 37",
     "contact_form_action": "#",
-    "copyright": "Copyright © 2023 PavingWays GmbH"
+    "copyright": "Copyright © 2024 PavingWays GmbH"
   },
 
   "metadata": {
     "meta_author": "PavingWays GmbH",
     "meta_image": "/images/og-image.png",
-    "meta_description": "PavingWays GmbH develops mobile applications in the heart of Switzerland."
+    "meta_description": "PavingWays GmbH develops mobile applications and is based in Switzerland."
   }
 }

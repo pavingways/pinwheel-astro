@@ -5,9 +5,9 @@ import KeyFeatures from "@layouts/components/KeyFeatures.astro";
 import Testimonial from "@layouts/components/Testimonial.astro";
 import Service from "@layouts/components/Service.astro";
 import Cta from "@layouts/partials/Cta.astro";
-import { getEntryBySlug } from "astro:content";
+import { getEntry } from "astro:content";
 
-const homepage = await getEntryBySlug("homepage", "index");
+const homepage = await getEntry("homepage", Astro.currentLocale);
 const { banner, key_features, service, testimonial } = homepage.data;
 ---
 
@@ -23,4 +23,3 @@ const { banner, key_features, service, testimonial } = homepage.data;
   <!-- call to action -->
   <Cta />
 </Base>
-

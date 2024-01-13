@@ -12,11 +12,36 @@ import config from "./src/config/config.json";
 export default defineConfig({
   i18n: {
     defaultLocale: "en",
-    locales: ["en", "de", "fr", "it"],
+    locales: [
+      {
+        path: "en",
+        codes: ["en", "en-US", "en-GB", "en-CA"],
+        name: "English"
+      }, {
+        path: "de",
+        codes: ["de", "de-CH", "de-DE"],
+        name: "Deutsch"
+      }, {
+        path: "fr",
+        codes: ["fr", "fr-BR", "fr-CA"],
+        name: "Français"
+      }, {
+        path: "it",
+        codes: ["it", "it-IT"],
+        name: "Italiano"
+      }],
+    routing: {
+      prefixDefaultLocale: false
+    },
+    fallback: {
+      de: "en",
+      fr: "en",
+      it: "en"
+    }
   },
   site: config.site.base_url ? config.site.base_url : "https://skatepark.pilatustools.com",
   base: config.site.base_path ? config.site.base_path : "/",
-  trailingSlash: config.site.trailing_slash ? "always" : "never",
+  trailingSlash: config.site.trailing_slash ? config.site.trailing_slash : "ignore",
   integrations: [
     react(),
     sitemap(),

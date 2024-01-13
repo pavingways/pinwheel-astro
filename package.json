@@ -1,12 +1,13 @@
 {
-  "name": "pinwheel-astro",
+  "name": "pavingways.com",
   "version": "1.0.0",
-  "author": "themefisher",
+  "author": "PavingWays GmbH",
   "license": "MIT",
   "packageManager": "yarn@1.22.19",
   "scripts": {
     "dev": "astro dev",
     "build": "astro build",
+    "deploy": "./deploy-dev.sh",
     "json": "node scripts/jsonGenerator.js",
     "format": "prettier -w ."
   },

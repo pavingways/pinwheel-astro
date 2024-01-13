@@ -1,3 +1,10 @@
+#show-button,
+#hide-button {
+  height: 50px;
+  width: 50px;
+  justify-content: center;
+}
+
 // navbar toggler
 input#nav-toggle:checked ~ label#show-button {
   @apply hidden;

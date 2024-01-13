@@ -1,6 +1,6 @@
 ---
 banner:
-  title: "Mobile App Entwicklung"
+  title: "Mobile App Development"
   content: "
   Crafting the mobile future, one app at a time, PavingWays turns your ideas into app store realities. 
   We offer <strong>full-spectrum app development</strong> from technology selection to app store distribution.
@@ -8,8 +8,8 @@ banner:
   <strong>we amplify your innovative potential in the mobile world</strong>."
   image: /images/banner-img.png
   button:
-    label: Sounds Awesome!
-    link: "https://www.pavingways.com"
+    label: Take my money already!
+    link: "https://www.pavingways.com/"
     enable: true
 
 ##key features

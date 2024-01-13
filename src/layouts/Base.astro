@@ -21,18 +21,16 @@ export interface Props {
   canonical?: string;
 }
 
-// distructure frontmatters
-const { title, meta_title, description, image, noindex, canonical } =
-  Astro.props;
+// destructure front matter
+const currentLocale = Astro.currentLocale;
+const { title, meta_title, description, image, noindex, canonical } = Astro.props;
 ---
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang={currentLocale}>
   <head>
     <!-- favicon -->
     <link rel="shortcut icon" href={config.site.favicon} />
-    <!-- theme meta -->
-    <meta name="theme-name" content="pinwheel-astro" />
     <meta name="msapplication-TileColor" content="#000000" />
     <meta
       name="theme-color"
@@ -44,7 +42,6 @@ const { title, meta_title, description, image, noindex, canonical } =
       media="(prefers-color-scheme: dark)"
       content="#000"
     />
-    <meta name="generator" content={Astro.generator} />
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 
     <!-- google font css -->

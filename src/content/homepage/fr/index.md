@@ -1,6 +1,6 @@
 ---
 banner:
-  title: "Mobile App Development"
+  title: "Développement d'applications mobiles"
   content: "
   Crafting the mobile future, one app at a time, PavingWays turns your ideas into app store realities. 
   We offer <strong>full-spectrum app development</strong> from technology selection to app store distribution.
@@ -8,8 +8,8 @@ banner:
   <strong>we amplify your innovative potential in the mobile world</strong>."
   image: /images/banner-img.png
   button:
-    label: Take my money already!
-    link: "https://themefisher.com/astro-themes/pinwheel-astro"
+    label: Sounds Awesome!
+    link: "https://www.pavingways.com"
     enable: true
 
 ##key features

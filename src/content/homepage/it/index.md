@@ -1,6 +1,6 @@
 ---
 banner:
-  title: "Mobile App Entwicklung"
+  title: "Sviluppo di applicazioni mobili"
   content: "
   Crafting the mobile future, one app at a time, PavingWays turns your ideas into app store realities. 
   We offer <strong>full-spectrum app development</strong> from technology selection to app store distribution.

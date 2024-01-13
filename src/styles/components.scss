@@ -94,12 +94,14 @@
   padding: 0.5rem 1rem;
   cursor: pointer;
   opacity: 0.8;
+
+  &.active {
+    border-bottom: 3px solid #aaa;
+    opacity: 1;
+  }
 }
 
-.tab-nav-item.active {
-  border-bottom: 3px solid #aaa;
-  opacity: 1;
-}
+
 
 .tab-content .tab-content-panel {
   display: none;
@@ -244,7 +246,7 @@ select:invalid {
     @apply h-6 w-6;
 
     svg {
-      @apply text-[#FA7398];
+      @apply text-[#1ac0b7];
     }
   }
 }
