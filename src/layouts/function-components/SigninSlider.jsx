@@ -1,5 +1,6 @@
+import React from "react";
+import { useRef, useState } from "react";
 import { marked } from "marked";
-import React, { useRef, useState } from "react";
 import SwiperCore, { Autoplay, Pagination } from "swiper";
 import "swiper/css";
 import "swiper/css/pagination";

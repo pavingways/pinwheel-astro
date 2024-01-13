@@ -1,5 +1,5 @@
 ---
-import { Image } from "@astrojs/image/components";
+import { Image } from 'astro:assets'
 import dateFormat from "@lib/utils/dateFormat";
 import readingTime from "@lib/utils/readingTime";
 import Disqus from "./function-components/Disqus";
@@ -23,7 +23,7 @@ const { Content } = await post.render();
         <Image
           class="w-full rounded-xl"
           src={post.data.image}
-          alt=""
+          alt={post.data.title}
           width={920}
           height={450}
         />

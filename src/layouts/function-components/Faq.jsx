@@ -1,3 +1,4 @@
+import React from "react";
 import { marked } from "marked";
 import { useState } from "react";
 
@@ -31,7 +32,7 @@ const Faq = ({ data }) => {
                 >
                   <div
                     className="accordion-header relative pl-6 text-lg font-semibold text-dark"
-                    
+
                   >
                     {item.title}
                     <svg

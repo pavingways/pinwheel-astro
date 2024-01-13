@@ -1,3 +1,4 @@
+import React from "react";
 import { useState } from "react";
 import { humanize } from "@lib/utils/textConverter";
 import * as Icon from "react-feather";
@@ -34,7 +35,7 @@ const HomepageTab = ({ homepage_tab: { tab_list, title, description } }) => {
                     tab === index ? "active" : undefined
                   }`}
                   onClick={() => setTab(index)}
-                  
+
                 >
                   <span className="tab-icon mr-3">
                     {" "}

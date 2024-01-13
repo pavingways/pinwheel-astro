@@ -1,4 +1,3 @@
-import image from "@astrojs/image";
 import mdx from "@astrojs/mdx";
 import react from "@astrojs/react";
 import sitemap from "@astrojs/sitemap";
@@ -11,6 +10,10 @@ import config from "./src/config/config.json";
 
 // https://astro.build/config
 export default defineConfig({
+  i18n: {
+    defaultLocale: "en",
+    locales: ["en", "de", "fr", "it"],
+  },
   site: config.site.base_url ? config.site.base_url : "https://skatepark.pilatustools.com",
   base: config.site.base_path ? config.site.base_path : "/",
   trailingSlash: config.site.trailing_slash ? "always" : "never",
@@ -19,11 +22,8 @@ export default defineConfig({
     sitemap(),
     tailwind({
       config: {
-        applyBaseStyles: false,
-      },
-    }),
-    image({
-      serviceEntryPoint: "@astrojs/image/sharp",
+        applyBaseStyles: false
+      }
     }),
     AutoImport({
       imports: [
@@ -35,10 +35,10 @@ export default defineConfig({
         "@shortcodes/Blockquote",
         "@shortcodes/Badge",
         "@shortcodes/ContentBlock",
-        "@shortcodes/Changelog",
-      ],
+        "@shortcodes/Changelog"
+      ]
     }),
-    mdx(),
+    mdx()
   ],
   markdown: {
     remarkPlugins: [
@@ -46,14 +46,14 @@ export default defineConfig({
       [
         remarkCollapse,
         {
-          test: "Table of contents",
-        },
-      ],
+          test: "Table of contents"
+        }
+      ]
     ],
     shikiConfig: {
       theme: "one-dark-pro",
-      wrap: true,
+      wrap: true
     },
-    extendDefaultPlugins: true,
-  },
+    extendDefaultPlugins: true
+  }
 });
