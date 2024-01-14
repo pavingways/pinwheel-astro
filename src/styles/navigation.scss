@@ -16,14 +16,33 @@ input#nav-toggle:checked ~ label#hide-button {
 
 input#nav-toggle:checked ~ #nav-menu {
   @apply block lg:flex;
+
+  li.languages {
+    > span {
+      display: none;
+    }
+    ul.hidden {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      gap: 20px;
+      background-color: transparent;
+      box-shadow: none;
+
+      > li > a > span {
+        display: none;
+      }
+    }
+  }
 }
 
 .header {
   @apply sticky top-0 z-50 bg-white py-6 transition-all duration-300 lg:bg-transparent;
   min-width: 320px;
 
-  &-sticky {
-    @apply bg-white shadow;
+  &.header-sticky {
+    background-color: rgba(255, 255, 255, 0.98);
+    @apply shadow;
   }
 }
 
@@ -65,6 +84,14 @@ input#nav-toggle:checked ~ #nav-menu {
 
 .nav-dropdown-item {
   @apply mb-1;
+
+  a.active {
+    @apply relative;
+
+    &::after {
+      @apply absolute bottom-0 left-0 right-0 h-0.5 bg-gradient-to-tl content-[''];
+    }
+  }
 }
 
 .nav-dropdown-link {

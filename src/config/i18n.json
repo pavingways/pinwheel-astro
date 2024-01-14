@@ -1,0 +1,26 @@
+{
+  "i18n_en": {
+    "menu_home": "Home",
+    "menu_about": "About",
+    "menu_technologies": "Technologies",
+    "menu_blog": "Blog"
+  },
+  "i18n_de": {
+    "menu_home": "Home",
+    "menu_about": "Über Uns",
+    "menu_technologies": "Technologien",
+    "menu_blog": "Blog"
+  },
+  "i18n_fr": {
+    "menu_home": "Page d'accueil",
+    "menu_about": "À propos de nous",
+    "menu_technologies": "Technologies",
+    "menu_blog": "Blog"
+  },
+  "i18n_it": {
+    "menu_home": "Pagina Iniziale",
+    "menu_about": "Informazioni",
+    "menu_technologies": "Tecnologie",
+    "menu_blog": "Blog"
+  }
+}

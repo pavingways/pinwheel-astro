@@ -5,36 +5,24 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d2d6658b-20ca-4d31-9309-cfe0c6c3172e" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/pavingways.com.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/content/homepage/fr/index.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/content/homepage/it/index.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/layouts/components/LanguagePicker.astro" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/lib/utils/i18n.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/pinwheel-astro.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/config/i18n.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/it/about.astro" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/it/index.astro" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/astro.config.mjs" beforeDir="false" afterPath="$PROJECT_DIR$/astro.config.mjs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/deploy-dev.sh" beforeDir="false" afterPath="$PROJECT_DIR$/deploy-dev.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pinwheel-astro.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/icons/feature-shape.svg" beforeDir="false" afterPath="$PROJECT_DIR$/public/images/icons/feature-shape.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/icons/quote.svg" beforeDir="false" afterPath="$PROJECT_DIR$/public/images/icons/quote.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/config/config.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/config/config.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/config/theme.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/config/theme.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/content/about/index.md" beforeDir="false" afterPath="$PROJECT_DIR$/src/content/about/index.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/content/homepage/de/index.md" beforeDir="false" afterPath="$PROJECT_DIR$/src/content/homepage/de/index.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/content/homepage/index.md" beforeDir="false" afterPath="$PROJECT_DIR$/src/content/homepage/en/index.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/layouts/Base.astro" beforeDir="false" afterPath="$PROJECT_DIR$/src/layouts/Base.astro" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/layouts/components/Banner.astro" beforeDir="false" afterPath="$PROJECT_DIR$/src/layouts/components/Banner.astro" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/layouts/function-components/Projects.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/layouts/function-components/Projects.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/config/menu.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/config/menu.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/layouts/components/LanguagePicker.astro" beforeDir="false" afterPath="$PROJECT_DIR$/src/layouts/components/LanguagePicker.astro" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/layouts/components/Logo.astro" beforeDir="false" afterPath="$PROJECT_DIR$/src/layouts/components/Logo.astro" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/layouts/components/features/FeatureBanner.astro" beforeDir="false" afterPath="$PROJECT_DIR$/src/layouts/components/features/FeatureBanner.astro" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/layouts/partials/Header.astro" beforeDir="false" afterPath="$PROJECT_DIR$/src/layouts/partials/Header.astro" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/about.astro" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/about.astro" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/de/about.astro" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/de/about.astro" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/de/index.astro" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/de/index.astro" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/index.astro" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/index.astro" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/components.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/components.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/features.astro" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/technologies.astro" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/fr/about.astro" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/fr/about.astro" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/fr/index.astro" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/fr/index.astro" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles/buttons.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/buttons.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/styles/navigation.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/navigation.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/utilities.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/utilities.scss" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,9 +47,9 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "feature/astro-upgrade",
+    "git-widget-placeholder": "main",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "/Users/Rocco/Develop/pavingways/pavingways.com/src/pages/de",
+    "last_opened_file_path": "/Users/Rocco/Develop/pavingways/pavingways.com/src/pages",
     "node.js.detected.package.eslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "nodejs_package_manager_path": "yarn",
@@ -69,18 +57,27 @@
     "npm.deploy.executor": "Run",
     "npm.dev.executor": "Run",
     "ts.external.directory.path": "/Users/Rocco/Applications/IntelliJ IDEA Ultimate.app/Contents/plugins/javascript-impl/jsLanguageServicesImpl/external"
+  },
+  "keyToStringList": {
+    "com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File": [
+      "HTML"
+    ]
   }
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/pages" />
+      <recent name="$PROJECT_DIR$/src/pages/fr" />
+      <recent name="$PROJECT_DIR$/src/config/i18n" />
+      <recent name="$PROJECT_DIR$/src/config" />
       <recent name="$PROJECT_DIR$/src/pages/de" />
-      <recent name="$PROJECT_DIR$/src/pages/en" />
-      <recent name="$PROJECT_DIR$/src/content/homepage" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/config" />
+      <recent name="$PROJECT_DIR$/src/config/i18n" />
+      <recent name="$PROJECT_DIR$/src/config/i18n-en.json" />
       <recent name="$PROJECT_DIR$/src/content/homepage/en" />
       <recent name="$PROJECT_DIR$/src/content/homepage" />
-      <recent name="$PROJECT_DIR$/src/content/pages" />
     </key>
   </component>
   <component name="RunManager" selected="npm.deploy">

@@ -1,6 +1,7 @@
 ---
 import { Image } from 'astro:assets'
 import config from "@config/config.json";
+import Config from "../../../astro.config.mjs";
 const { src } = Astro.props;
 const {
   logo,
@@ -15,9 +16,13 @@ const {
   logo_text: string;
   title: string;
 } = config.site;
+
+
 ---
 
-<a href="/" class="navbar-brand block">
+<a
+  href={Astro.currentLocale !== Config.i18n.defaultLocale ? `/${Astro.currentLocale}/` : `/`}
+  class="navbar-brand block">
   {
     src || logo ? (
       <Image

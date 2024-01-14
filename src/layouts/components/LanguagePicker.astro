@@ -1,14 +1,31 @@
 ---
-import Config from 'astro.config.mjs'
+import Config from "astro.config.mjs";
 import type { LocaleDef } from "@lib/utils/i18n";
 ---
-<ul>
-  <li>Language Picker</li>
-  {Object.entries(Config.i18n.locales).map(
-    (it) => it[1]
-  ).map((localeNow: LocaleDef) =>
-    <li>
-      <a href={`/${localeNow.path !== Config.i18n.defaultLocale ? localeNow.path + '/' : ''}`}>{localeNow.name}</a>
-    </li>
-  )}
-</ul>
+
+
+<li class="nav-item nav-dropdown group relative cursor-pointer languages">
+  <span class="nav-link inline-flex items-center notactive">
+
+    <span style="font-size: 14px; margin-left: 5px; margin-top: -10px;">又</span>
+    <span style="position: relative; font-size: 18px; top: 2px; left: -5px;">A</span>
+
+    <svg class="h-4 w-4 fill-current" viewBox="0 0 20 20">
+      <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" />
+    </svg>
+  </span>
+
+  <ul class="nav-dropdown-list mx-auto hidden duration-300 lg:invisible lg:absolute lg:block lg:h-auto lg:w-[13.5rem] lg:opacity-0 lg:group-hover:visible lg:group-hover:opacity-100">
+    {Object.entries(Config.i18n.locales).map(
+      (it) => it[1]
+    ).map((localeNow: LocaleDef) =>
+      <li class="nav-dropdown-item">
+        <a
+          class={`${localeNow.path === Astro.currentLocale ? 'active' : ''}`}
+          href={`/${localeNow.path !== Config.i18n.defaultLocale ? localeNow.path + "/" : ""}`}
+        >{localeNow.flag} <span>{localeNow.name}</span></a>
+      </li>
+    )}
+  </ul>
+
+</li>

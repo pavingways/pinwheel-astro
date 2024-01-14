@@ -1,78 +1,35 @@
 {
   "main": [
     {
-      "name": "Home",
+      "i18nKey": "menu_home",
       "url": "/"
     },
     {
-      "name": "About",
-      "url": "/about"
+      "i18nKey": "menu_about",
+      "url": "/about/"
     },
     {
-      "name": "Blog",
-      "url": "/blog"
+      "i18nKey": "menu_technologies",
+      "url": "/technologies/"
     },
     {
-      "name": "Technologies",
-      "url": "/technologies"
-    },
-    {
-      "name": "Pages",
-      "url": "",
-      "hasChildren": true,
-      "children": [
-        {
-          "name": "Career",
-          "url": "/career"
-        },
-        {
-          "name": "Integrations",
-          "url": "/integrations"
-        },
-        {
-          "name": "Pricing",
-          "url": "/pricing"
-        },
-        {
-          "name": "Sign In",
-          "url": "/signin"
-        },
-        {
-          "name": "Elements",
-          "url": "/elements"
-        },
-        {
-          "name": "Changelog",
-          "url": "/changelog"
-        },
-        {
-          "name": "Terms And Conditions",
-          "url": "/terms-and-conditions"
-        }
-      ]
-    },
-    {
-      "name": "Contact",
-      "url": "/contact"
+      "i18nKey": "menu_blog",
+      "url": "/blog/"
     }
   ],
 
   "footer": [
     {
-      "name": "About",
-      "url": "/about"
+      "i18nKey": "menu_about",
+      "url": "/about/"
     },
     {
-      "name": "Contact",
-      "url": "/contact"
+      "i18nKey": "menu_technologies",
+      "url": "/technologies/"
     },
     {
-      "name": "Elements",
-      "url": "/elements"
-    },
-    {
-      "name": "Changelog",
-      "url": "/changelog"
+      "i18nKey": "menu_blog",
+      "url": "/blog/"
     }
   ]
 }

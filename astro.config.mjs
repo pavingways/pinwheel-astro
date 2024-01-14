@@ -16,19 +16,23 @@ export default defineConfig({
       {
         path: "en",
         codes: ["en", "en-US", "en-GB", "en-CA"],
-        name: "English"
+        name: "English",
+        flag: "🇺🇸"
       }, {
         path: "de",
         codes: ["de", "de-CH", "de-DE"],
-        name: "Deutsch"
+        name: "Deutsch",
+        flag: "🇩🇪"
       }, {
         path: "fr",
         codes: ["fr", "fr-BR", "fr-CA"],
-        name: "Français"
+        name: "Français",
+        flag: "🇫🇷"
       }, {
         path: "it",
         codes: ["it", "it-IT"],
-        name: "Italiano"
+        name: "Italiano",
+        flag: "🇮🇹"
       }],
     routing: {
       prefixDefaultLocale: false
