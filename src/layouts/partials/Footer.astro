@@ -19,25 +19,28 @@ const { copyright, location1, location2, location3, email, phone, footer_descrip
         </p>
       </div>
       <div class="col-12 mt-12 md:col-6 lg:col-3">
-        <h6>Socials</h6>
-
-        <Social source={social} className="social-icons mt-4 lg:mt-6" />
+        <h3 class="h6">Socials</h3>
+        <Social source={social} className="social-icons mt-5" />
       </div>
       <div class="col-12 mt-12 md:col-6 lg:col-3">
-        <h6>Quick Links</h6>
-        <nav>
+        <h3 class="h6">Quick Links</h3>
+        <nav class="mt-4">
           {
             footer.map(item => (
-              <a class="hover:text-primary hover:underline block mt-2 lg:mt-3" href={item.url}>
-                {item.name}
+              <a
+                aria-label={item.i18nKey}
+                class="hover:text-primary hover:underline block mb-1"
+                href={item.url}
+              >
+                {item.i18nKey}
               </a>
             ))
           }
         </nav>
       </div>
       <div class="col-12 mt-12 md:col-6 lg:col-3">
-        <h6>Location & Contact</h6>
-        <ul>
+        <h3 class="h6">Location & Contact</h3>
+        <ul class="mt-4">
           <li class="mb-2">
             {location1}<br>
             {location2}<br>

@@ -5,12 +5,6 @@ buttons:
   - label: Download The Theme
     link: "https://themefisher.com/astro-themes/pinwheel-astro"
     enable: true
-  - label: Learn More
-    link: "#"
-    outline: true
-    enable: true
-
-# counter
 counter:
   - name: "Customers"
     number: 25
@@ -62,21 +56,21 @@ members:
   member_list:
     - name: Eleanor Pena
       field: Co-founder & COO
-      image: "/images/users/user-1.png"
+      image: "/images/users/user-1.webp"
     - name: Bukiakta Bansalo
       field: Product Manager
-      image: "/images/users/user-2.png"
+      image: "/images/users/user-2.webp"
     - name: Ortrin Okaster
       field: Software Engineer
-      image: "/images/users/user-3.png"
+      image: "/images/users/user-3.webp"
     - name: Eleanor Pena
       field: Co-founder & COO
-      image: "/images/users/user-1.png"
+      image: "/images/users/user-1.webp"
     - name: Bukiakta Bansalo
       field: Product Manager
-      image: "/images/users/user-2.png"
+      image: "/images/users/user-2.webp"
     - name: Ortrin Okaster
       field: Software Engineer
-      image: "/images/users/user-3.png"
+      image: "/images/users/user-3.webp"
 ---
 Donec sollicitudin molestie malesda. Donec sollitudin molestie malesuada. Mauris pellentesque nec, egestas non nisi. Cras ultricies ligula sed magna dictum porta. Lorem

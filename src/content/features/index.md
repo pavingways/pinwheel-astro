@@ -45,10 +45,6 @@ project_management:
       - label: Download The Theme
         link: "https://themefisher.com/astro-themes/pinwheel-astro"
         enable: true
-      - label: Learn More
-        link: "#"
-        outline: true
-        enable: true
   feature_tab:
     title: Payment gateway for every stage <br /> of your business growth
     list:

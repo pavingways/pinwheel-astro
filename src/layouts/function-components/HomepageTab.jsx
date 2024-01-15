@@ -16,7 +16,7 @@ const HomepageTab = ({ homepage_tab: { tab_list, title, description } }) => {
                 tab === index ? "active" : undefined
               }`}
             >
-              <img className="w-full object-contain" src={item.image} />
+              <img className="w-full object-contain" src={item.image} alt={item.title} />
             </div>
           ))}
         </div>

@@ -24,7 +24,7 @@ const VideoComponent = ({
     <>
       {!play ? (
         <div className="relative text-center">
-          <button className="video-play-btn" onClick={() => setPlay(true)}>
+          <button className="video-play-btn" onClick={() => setPlay(true)} aria-label="Play Video">
             <Play />
           </button>
           <img

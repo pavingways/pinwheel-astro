@@ -9,6 +9,7 @@ const Accordion = ({ title, children, className }) => {
       <button
         className="relative block w-full  bg-theme-light px-4 py-3 text-left text-dark"
         onClick={() => setShow(!show)}
+        aria-label="open"
       >
         {title}
         <svg
