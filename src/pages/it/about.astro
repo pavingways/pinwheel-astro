@@ -6,9 +6,9 @@ import Gallery from "@components/about/Gallery.astro";
 import OurMembers from "@components/about/OurMembers.astro";
 import Works from "@components/about/Works.astro";
 import Base from "@layouts/Base.astro";
-import { getEntryBySlug } from "astro:content";
+import { getEntry } from "astro:content";
 
-const about = await getEntryBySlug("about", "index");
+const about = await getEntry("about", Astro.currentLocale);
 const { counter, gallery, features, members } = about.data;
 const page_data = {
   ...about.data,
@@ -22,6 +22,7 @@ const page_data = {
   description={about.data.description}
   image={about.data.image}
 >
+  <!--<Shape />-->
   <section class="page-hero py-16">
     <div class="container">
       <div class="page-hero-content mx-auto max-w-[768px] text-center">
