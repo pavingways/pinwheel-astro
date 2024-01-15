@@ -54,7 +54,7 @@ service:
           image: "/images/sales-by-country.webp"
         - title: Get an overview of Habit Calendars.
           icon: "clock"  #icon package react-feather-icon [https://feathericons.com/]
-          image: "/images/sales-by-country.webp"
+          image: "/images/collaboration.webp"
         - title: Start building with Habitify platform
           icon: "bell"  #icon package react-feather-icon [https://feathericons.com/]
           image: "/images/sales-by-country.webp"

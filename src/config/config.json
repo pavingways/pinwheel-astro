@@ -18,18 +18,12 @@
   },
 
   "call_to_action": {
-    "title": "You need an app - let's build it together!",
-    "description": "We can talk about anything from your mobile app concept over design and content to building, releasing and maintaining your app.",
+    "title": "Lassen Sie uns Ihre App gemeinsam realisieren",
+    "description": "Buchen Sie einen Termin, der Ihnen gut passt. Wir sprechen ganz unverbindlich über Ihr Projekt oder Ihre Fragen zur App-Entwicklung allgemein.",
     "button": {
-      "label": "Lüetets üs a",
-      "link": "https://www.pavingways.com"
+      "label": "Termin eintragen",
+      "link": "https://calendly.com/pavingways_com/ms-teams-meeting"
     }
-  },
-
-  "disqus": {
-    "enable": true,
-    "shortname": "themefisher-template",
-    "settings": {}
   },
 
   "params": {

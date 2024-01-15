@@ -5,8 +5,23 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d2d6658b-20ca-4d31-9309-cfe0c6c3172e" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/content/about/en/index.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/layouts/Base.astro" beforeDir="false" afterPath="$PROJECT_DIR$/src/layouts/Base.astro" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/collaboration.pxd" beforeDir="false" afterPath="$PROJECT_DIR$/public/images/collaboration.pxd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/collaboration.webp" beforeDir="false" afterPath="$PROJECT_DIR$/public/images/collaboration.webp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/logo.bigger.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/logo.webp" beforeDir="false" afterPath="$PROJECT_DIR$/public/images/logo.webp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/sales-by-country.pxd" beforeDir="false" afterPath="$PROJECT_DIR$/public/images/sales-by-country.pxd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/config/config.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/config/config.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/content/about/index.md" beforeDir="false" afterPath="$PROJECT_DIR$/src/content/about/de/index.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/content/homepage/de/index.md" beforeDir="false" afterPath="$PROJECT_DIR$/src/content/homepage/de/index.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/content/homepage/en/index.md" beforeDir="false" afterPath="$PROJECT_DIR$/src/content/homepage/en/index.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/layouts/BlogSingle.astro" beforeDir="false" afterPath="$PROJECT_DIR$/src/layouts/BlogSingle.astro" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/layouts/components/about/OurMembers.astro" beforeDir="false" afterPath="$PROJECT_DIR$/src/layouts/components/about/OurMembers.astro" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/layouts/function-components/HomepageTab.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/layouts/function-components/HomepageTab.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/about.astro" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/about.astro" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/de/about.astro" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/de/about.astro" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles/components.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/components.scss" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,17 +66,17 @@
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/pages" />
+      <recent name="$PROJECT_DIR$/src/content/about/de" />
       <recent name="$PROJECT_DIR$/src/pages/fr" />
       <recent name="$PROJECT_DIR$/src/config/i18n" />
       <recent name="$PROJECT_DIR$/src/config" />
-      <recent name="$PROJECT_DIR$/src/pages/de" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/config" />
-      <recent name="$PROJECT_DIR$/src/config/i18n" />
-      <recent name="$PROJECT_DIR$/src/config/i18n-en.json" />
+      <recent name="$PROJECT_DIR$/src/content/about/en" />
       <recent name="$PROJECT_DIR$/src/content/homepage/en" />
       <recent name="$PROJECT_DIR$/src/content/homepage" />
+      <recent name="$PROJECT_DIR$/src/config" />
+      <recent name="$PROJECT_DIR$/src/config/i18n" />
     </key>
   </component>
   <component name="RunManager" selected="npm.deploy">

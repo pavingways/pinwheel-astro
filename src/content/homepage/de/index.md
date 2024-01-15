@@ -2,21 +2,25 @@
 banner:
   title: "Mobile App Entwicklung"
   content: "
-  Crafting the mobile future, one app at a time, PavingWays turns your ideas into app store realities. 
-  We offer <strong>full-spectrum app development</strong> from technology selection to app store distribution.
-  With <strong>tons of years of mobile app and web experience</strong> and a diverse range of tiny to huge customers and projects in our portfolio, we not only build state-of-the-art apps, 
-  <strong>we amplify your innovative potential in the mobile world</strong>."
+  PavingWays bedeutet, wir ebnen den Weg uns bringen Ihre Vision Schritt für Schritt in die App-Stores.
+  Unser umfassendes Angebot deckt den gesamten Prozess der App-Entwicklung ab, beginnend mit der Auswahl der geeigneten Technologien, über die Umsetzung und Entwicklung der App bis hin zur erfolgreichen Platzierung im App- oder Play-Store. 
+  Unsere langjährigen Erfahrungen in der Entwicklung von mobilen Anwendungen und Web-Applikationen, gepaart mit einer Vielfalt an Projekten für eine breite Kundenpalette, ermöglicht es uns, nicht nur technologisch fortschrittliche Apps zu kreieren, sondern auch Ihre Innovationskraft im mobilen Sektor zu fördern.
+  "
   image: /images/banner-img.webp
   button:
-    label: Sounds Awesome!
+    label: Das klingt gut!
     link: "https://www.pavingways.com"
     enable: true
 
-##key features
 key_features:
-  title: "Things We Do"
-  description: With experience since 2006 we have seen it all. Small and huge Apps, tons of frameworks, millions of app users. 
-    Here is what we provide our customers with. 
+  title: "So arbeiten wir"
+  description: "
+    Als passionierte App-Entwickler gehen wir über das reine Programmieren hinaus. 
+    Wir entwickeln nicht nur state-of-the-art Apps, sondern beraten Sie auch hinsichtlich passender Frameworks und Entwicklungswerkzeuge. 
+    Bei uns steht nicht nur die qualitative Umsetzung Ihrer Ideen im Vordergrund, sondern auch eine klare, offene und ehrliche Kommunikation.
+    Wir legen großen Wert darauf, dass Sie jederzeit über den Entwicklungsprozess informiert sind und bieten Ihnen vollständige Projekt- und Kostentransparenz.
+    Mit uns wird Ihr Weg zur eigenen App somit klar und unkompliziert.
+  " 
   feature_list:
     - icon: "map"  #icon package react-feather-icon [https://feathericons.com/]
       title: Tech Select
@@ -43,19 +47,20 @@ key_features:
       title: App-As-A-Service
       content: Lorem ipsum dolor sit amet, consectetur adipiscing elit.
 
-#service
 service:
   homepage_tab:
-    title: Get it done, trust in quality
-    description: Our platform helps you build secure onboarding authentication experiences that retain and engage your users. We build the infrastructure, you can.
+    title: Unsere neuesten Projekte
+    description: "
+      Eine Übersicht unserer letzten Projekte
+    "
     tab_list:
-        - title: Habit building essential choose habit
+        - title: VHV - Kundenportal
           icon: "lock"  #icon package react-feather-icon [https://feathericons.com/]
           image: "/images/sales-by-country.webp"
-        - title: Get an overview of Habit Calendars.
+        - title: ELMA - Suchtberatung
           icon: "clock"  #icon package react-feather-icon [https://feathericons.com/]
           image: "/images/collaboration.webp"
-        - title: Start building with Habitify platform
+        - title: Tree-Shop - Verkaufen per QR Code 
           icon: "bell"  #icon package react-feather-icon [https://feathericons.com/]
           image: "/images/sales-by-country.webp"
 
@@ -79,7 +84,7 @@ service:
 
 #testimonial
 testimonial:
-  title: Our customers have nice things to say about us
+  title: Zufriedene Kunden
   description: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi egestas Werat viverra id et aliquet. vulputate egestas sollicitudin.
   testimonial_list:
     - author: David Cameron
