@@ -6,17 +6,15 @@
     "trailing_slash": "always",
     "favicon": "/images/favicon.png",
     "logo": "/images/logo.webp",
-    "logo_width": "200",
-    "logo_height": "62",
+    "logo_width": "190",
+    "logo_height": "59",
     "logo_text": "PavingWays Mobile Apps Logo"
   },
-
   "settings": {
     "pagination": 6,
     "summary_length": 100,
     "blog_folder": "blog"
   },
-
   "call_to_action": {
     "title": "Lassen Sie uns Ihre App gemeinsam realisieren",
     "description": "Buchen Sie einen Termin, der Ihnen gut passt. Wir sprechen ganz unverbindlich über Ihr Projekt oder Ihre Fragen zur App-Entwicklung allgemein.",
@@ -25,18 +23,6 @@
       "link": "https://calendly.com/pavingways_com/ms-teams-meeting"
     }
   },
-
-  "params": {
-    "footer_description": "We are experts in building mobile apps. Since 2006 we research mobile browsers, libraries and frameworks. We also create automated build chains and app developer setups for our clients.",
-    "email": "info@pavingways.com",
-    "location1": "Badstrasse 13a",
-    "location2": "6045 Meggen",
-    "location3": "Switzerland",
-    "phone": "+41 76 831 58 37",
-    "contact_form_action": "#",
-    "copyright": "Copyright © 2024 PavingWays GmbH"
-  },
-
   "metadata": {
     "meta_author": "PavingWays GmbH",
     "meta_image": "/images/og-image.png",

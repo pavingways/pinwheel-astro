@@ -2,21 +2,20 @@
 import { Image } from 'astro:assets'
 import config from "@config/config.json";
 import Config from "../../../astro.config.mjs";
-const { src } = Astro.props;
+const { src, max_width, max_height } = Astro.props;
+
+const maxWidth = max_width || config.site.logo_width;
+const maxHeight = max_height || config.site.logo_height;
 const {
   logo,
   logo_width,
   logo_height,
   logo_text,
   title,
-}: {
-  logo: string;
-  logo_width: any;
-  logo_height: any;
-  logo_text: string;
-  title: string;
-} = config.site;
-
+} = {
+  ...config.site,
+  max_width: maxWidth
+};
 
 ---
 
@@ -33,6 +32,8 @@ const {
         style={{
           height: logo_height.replace("px", "") + "px",
           width: logo_width.replace("px", "") + "px",
+          maxWidth: maxWidth.replace("px", "") + "px",
+          maxHeight: maxHeight.replace("px", "") + "px",
         }}
       />
     ) : logo_text ? (

@@ -3,24 +3,76 @@
     "menu_home": "Home",
     "menu_about": "About",
     "menu_technologies": "Technologies",
-    "menu_blog": "Blog"
+    "menu_blog": "Blog",
+    "menu_socials": "Find us online",
+    "menu_quick_links": "Quick Links",
+    "menu_location": "Location & Contact",
+    "config.params": {
+      "email": "info@pavingways.com",
+      "location1": "Badstrasse 13a",
+      "location2": "6045 Meggen",
+      "location3": "Switzerland",
+      "phone": "+41 76 831 58 37",
+      "contact_form_action": "#",
+      "copyright": "&copy; 2024 PavingWays GmbH \uD83C\uDDE8\uD83C\uDDED",
+      "footer_description": "We are experts in building mobile apps. Since 2006 we research mobile browsers, libraries and frameworks. We also create automated build chains and app developer setups for our clients."
+    }
   },
   "i18n_de": {
     "menu_home": "Home",
     "menu_about": "Über Uns",
     "menu_technologies": "Technologien",
-    "menu_blog": "Blog"
+    "menu_blog": "Blog",
+    "menu_socials": "Find us online",
+    "menu_quick_links": "Quick Links",
+    "menu_location": "Location & Contact",
+    "config.params": {
+      "email": "info@pavingways.com",
+      "location1": "Badstrasse 13a",
+      "location2": "6045 Meggen",
+      "location3": "Schweiz",
+      "phone": "076 831 58 37",
+      "contact_form_action": "#",
+      "copyright": "&copy; 2024 PavingWays GmbH \uD83E\uDED5",
+      "footer_description": "We are experts in building mobile apps. Since 2006 we research mobile browsers, libraries and frameworks. We also create automated build chains and app developer setups for our clients."
+    }
   },
   "i18n_fr": {
     "menu_home": "Page d'accueil",
     "menu_about": "À propos de nous",
     "menu_technologies": "Technologies",
-    "menu_blog": "Blog"
+    "menu_blog": "Blog",
+    "menu_socials": "Find us online",
+    "menu_quick_links": "Quick Links",
+    "menu_location": "Location & Contact",
+    "config.params": {
+      "email": "info@pavingways.com",
+      "location1": "Badstrasse 13a",
+      "location2": "6045 Meggen",
+      "location3": "Switzerland",
+      "phone": "+41 76 831 58 37",
+      "contact_form_action": "#",
+      "copyright": "&copy; 2024 PavingWays GmbH \uD83C\uDDE8\uD83C\uDDED",
+      "footer_description": "We are experts in building mobile apps. Since 2006 we research mobile browsers, libraries and frameworks. We also create automated build chains and app developer setups for our clients."
+    }
   },
   "i18n_it": {
     "menu_home": "Pagina Iniziale",
     "menu_about": "Informazioni",
     "menu_technologies": "Tecnologie",
-    "menu_blog": "Blog"
+    "menu_blog": "Blog",
+    "menu_socials": "Find us online",
+    "menu_quick_links": "Quick Links",
+    "menu_location": "Location & Contact",
+    "config.params": {
+      "email": "info@pavingways.com",
+      "location1": "Badstrasse 13a",
+      "location2": "6045 Meggen",
+      "location3": "Switzerland",
+      "phone": "+41 76 831 58 37",
+      "contact_form_action": "#",
+      "copyright": "&copy; 2024 PavingWays GmbH \uD83C\uDDE8\uD83C\uDDED",
+      "footer_description": "We are experts in building mobile apps. Since 2006 we research mobile browsers, libraries and frameworks. We also create automated build chains and app developer setups for our clients."
+    }
   }
 }

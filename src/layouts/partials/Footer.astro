@@ -1,21 +1,41 @@
 ---
 import Logo from "@components/Logo.astro";
 import Social from "@components/Social.astro";
-import config from "@config/config.json";
 import menu from "@config/menu.json";
 import social from "@config/social.json";
 import { markdownify } from "@lib/utils/textConverter";
-const { footer } = menu;
-const { copyright, location1, location2, location3, email, phone, footer_description } = config.params;
+import { NavigationLink } from "@lib/utils/interfaces";
+import Config from "../../../astro.config.mjs";
+import i18nAll from "../../config/i18n.json";
+
+const { footer }: { main: NavigationLink[] } = menu;
+const { pathname } = Astro.url;
+
+let { i18n_en, i18n_de, i18n_fr, i18n_it } = i18nAll;
+let i18n = {};
+switch (Astro.currentLocale) {
+  case "en":
+    i18n = i18n_en;
+    break;
+  case "de":
+    i18n = i18n_de;
+    break;
+  case "fr":
+    i18n = i18n_fr;
+    break;
+  case "it":
+    i18n = i18n_it;
+    break;
+}
 ---
 
 <footer class="footer bg-[#F1F1F1]">
   <div class="container">
     <div class="gx-5 row pb-10 pt-[52px]">
       <div class="col-12 mt-12 md:col-6 lg:col-3">
-        <Logo />
+        <Logo max_width="180px" max_height="56px" />
         <p class="mt-6">
-          {footer_description}
+          {i18n['config.params']['footer_description']}
         </p>
       </div>
       <div class="col-12 mt-12 md:col-6 lg:col-3">
@@ -26,14 +46,13 @@ const { copyright, location1, location2, location3, email, phone, footer_descrip
         <h3 class="h6">Quick Links</h3>
         <nav class="mt-4">
           {
-            footer.map(item => (
+            footer.map((item) => (
               <a
-                aria-label={item.i18nKey}
-                class="hover:text-primary hover:underline block mb-1"
-                href={item.url}
-              >
-                {item.i18nKey}
-              </a>
+                href={Astro.currentLocale !== Config.i18n.defaultLocale ? `/${Astro.currentLocale}${item.url}` : `${item.url}`}
+                class={`nav-link-footer ${
+                  (pathname === item.url || pathname === `/${Astro.currentLocale}${item.url}`) && "active"
+                }`}
+              >{i18n[item.i18nKey]}</a>
             ))
           }
         </nav>
@@ -42,17 +61,17 @@ const { copyright, location1, location2, location3, email, phone, footer_descrip
         <h3 class="h6">Location & Contact</h3>
         <ul class="mt-4">
           <li class="mb-2">
-            {location1}<br>
-            {location2}<br>
-            {location3}
+            {i18n['config.params']['location1']}<br>
+            {i18n['config.params']['location2']}<br>
+            {i18n['config.params']['location3']}
           </li>
           <li class="mb-2">
-            <a class="mb-2 hover:text-primary" href={`mailto:${email}`}
-              >{email}</a>
+            <a class="mb-2 hover:text-primary" href={`mailto:${i18n['config.params']['email']}`}
+            >{i18n['config.params']['email']}</a>
           </li>
           <li>
-            <a class="hover:text-primary hover:underline" href={`tel:${phone}`}
-              >{phone}</a>
+            <a class="hover:text-primary hover:underline" href={`tel:${i18n['config.params']['phone']}`}
+            >{i18n['config.params']['email']}</a>
           </li>
         </ul>
       </div>
@@ -62,7 +81,7 @@ const { copyright, location1, location2, location3, email, phone, footer_descrip
     <div
       class="footer-copyright mx-auto border-t border-border pb-10 pt-7 text-center"
     >
-      <p class="content text-text" set:html={markdownify(copyright)} />
+      <p class="content text-text" set:html={markdownify(i18n['config.params']['copyright'])}} />
     </div>
   </div>
 </footer>

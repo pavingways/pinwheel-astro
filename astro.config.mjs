@@ -22,25 +22,25 @@ export default defineConfig({
         path: "de",
         codes: ["de", "de-CH", "de-DE"],
         name: "Deutsch",
-        flag: "🇩🇪"
-      }, {
-        path: "fr",
-        codes: ["fr", "fr-BR", "fr-CA"],
-        name: "Français",
-        flag: "🇫🇷"
-      }, {
-        path: "it",
-        codes: ["it", "it-IT"],
-        name: "Italiano",
-        flag: "🇮🇹"
+        flag: '🇨🇭🇩🇪'
+      // }, {
+      //   path: "fr",
+      //   codes: ["fr", "fr-BR", "fr-CA"],
+      //   name: "Français",
+      //   flag: "🇫🇷"
+      // }, {
+      //   path: "it",
+      //   codes: ["it", "it-IT"],
+      //   name: "Italiano",
+      //   flag: "🇮🇹"
       }],
     routing: {
       prefixDefaultLocale: false
     },
     fallback: {
       de: "en",
-      fr: "en",
-      it: "en"
+      // fr: "en",
+      // it: "en"
     }
   },
   site: config.site.base_url ? config.site.base_url : "https://skatepark.pilatustools.com",

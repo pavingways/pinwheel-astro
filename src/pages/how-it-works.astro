@@ -5,7 +5,7 @@ import Shape from "@components/Shape.astro";
 import Base from "@layouts/Base.astro";
 import Cta from "@layouts/partials/Cta.astro";
 import { getEntryBySlug } from "astro:content";
-import { AiFillCheckCircle } from "react-icons/ai/index.js";
+import { AiFillCheckCircle } from "react-icons/ai";
 
 const how_it_works = await getEntryBySlug("how-it-works", "index");
 const { perfomance, our_works } = how_it_works.data;

@@ -1,21 +1,10 @@
 ---
 import Logo from "@components/Logo.astro";
 import menu from "@config/menu.json";
+import { NavigationLink } from "@lib/utils/interfaces";
+import Config from "astro.config.mjs";
 import i18nAll from "../../config/i18n.json";
 import LanguagePicker from "../components/LanguagePicker.astro";
-import Config from "astro.config.mjs";
-
-export interface ChildNavigationLink {
-  i18nKey: string;
-  url: string;
-}
-
-export interface NavigationLink {
-  i18nKey: string;
-  url: string;
-  hasChildren?: boolean;
-  children?: ChildNavigationLink[];
-}
 
 const { main }: { main: NavigationLink[] } = menu;
 const { pathname } = Astro.url;
@@ -23,16 +12,16 @@ const { pathname } = Astro.url;
 let { i18n_en, i18n_de, i18n_fr, i18n_it } = i18nAll;
 let i18n = {};
 switch (Astro.currentLocale) {
-  case 'en':
+  case "en":
     i18n = i18n_en;
     break;
-  case 'de':
+  case "de":
     i18n = i18n_de;
     break;
-  case 'fr':
+  case "fr":
     i18n = i18n_fr;
     break;
-  case 'it':
+  case "it":
     i18n = i18n_it;
     break;
 }
@@ -77,72 +66,28 @@ switch (Astro.currentLocale) {
     >
       {
         main.map((menu) => (
-          <!--<>-->
-            <!--{menu.hasChildren ? (-->
-            <!--  <li-->
-            <!--    class="nav-item nav-dropdown group relative cursor-pointer "-->
-            <!--    id="dropdown-button"-->
-            <!--  >-->
-            <!--    <span-->
-            <!--      class={`nav-link inline-flex items-center ${-->
-            <!--        menu.children?.map(({ url }) => url).includes(pathname) ||-->
-            <!--        menu.children-->
-            <!--          ?.map(({ url }) => `${url}/`)-->
-            <!--          .includes(pathname)-->
-            <!--          ? "active"-->
-            <!--          : ""-->
-            <!--      }`}-->
-            <!--    >-->
-            <!--      {menu.i18nKey}-->
-            <!--      <svg class="h-4 w-4 fill-current" viewBox="0 0 20 20">-->
-            <!--        <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" />-->
-            <!--      </svg>-->
-            <!--    </span>-->
-            <!--    <ul-->
-            <!--      id="dropdown"-->
-            <!--      class="nav-dropdown-list mx-auto hidden duration-300 lg:invisible lg:absolute lg:block lg:h-auto lg:w-[13.5rem] lg:opacity-0 lg:group-hover:visible lg:group-hover:opacity-100"-->
-            <!--    >-->
-            <!--      {menu.children?.map((child) => (-->
-            <!--        <li class="nav-dropdown-item">-->
-            <!--          <a-->
-            <!--            href={child.url}-->
-            <!--            class={`nav-dropdown-link block ${-->
-            <!--              (pathname === `${child.url}/` ||-->
-            <!--                pathname === child.url) &&-->
-            <!--              "text-primary"-->
-            <!--            }`}-->
-            <!--          >{child.i18nKey}</a>-->
-            <!--        </li>-->
-            <!--      ))}-->
-            <!--    </ul>-->
-            <!--  </li>-->
-            <!--) : (-->
-              <li class="nav-item">
-                <a
-                  href={Astro.currentLocale !== Config.i18n.defaultLocale ? `/${Astro.currentLocale}${menu.url}` : `${menu.url}`}
-                  class={`nav-link inline-block lg:block ${
-                    (pathname === menu.url || pathname === '/' + Astro.currentLocale + menu.url) &&
-                    "active"
-                  }`}
-                >{i18n[menu.i18nKey]}</a>
-              </li>
-            <!--)}-->
-          <!--</>-->
+          <li class="nav-item">
+            <a
+              href={Astro.currentLocale !== Config.i18n.defaultLocale ? `/${Astro.currentLocale}${menu.url}` : `${menu.url}`}
+              class={`nav-link inline-block lg:block ${
+                (pathname === menu.url || pathname === `/${Astro.currentLocale}${menu.url}`) && "active"
+              }`}
+            >{i18n[menu.i18nKey]}</a>
+          </li>
         ))
       }
 
       <LanguagePicker></LanguagePicker>
 
-      <li class="nav-item mt-2 lg:hidden">
-        <a class="btn btn-white btn-sm border-border" href="/signin">Only In Mobile Menu</a>
-      </li>
+      <!--<li class="nav-item mt-2 lg:hidden">-->
+      <!--  <a class="btn btn-white btn-sm border-border" href="/signin">Only In Mobile Menu</a>-->
+      <!--</li>-->
+
     </ul>
 
-
-
-    <div class="order-1 ml-auto hidden items-center md:order-2 md:ml-0 lg:flex">
-      <a class="btn btn-white btn-sm" href="/">Contact</a>
-    </div>
+    <!--<div class="order-1 ml-auto hidden items-center md:order-2 md:ml-0 lg:flex">-->
+    <!--  <a class="btn btn-white btn-sm" href="/">Contact</a>-->
+    <!--</div>-->
   </nav>
 </header>
 <script is:inline>

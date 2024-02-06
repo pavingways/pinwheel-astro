@@ -1,14 +1,16 @@
 ---
 banner:
-  title: "Mobile App Entwicklung"
+  title: "Wir entwickeln Mobile Apps"
   content: "
-  PavingWays bedeutet, wir ebnen den Weg uns bringen Ihre Vision Schritt für Schritt in die App-Stores.
-  Unser umfassendes Angebot deckt den gesamten Prozess der App-Entwicklung ab, beginnend mit der Auswahl der geeigneten Technologien, über die Umsetzung und Entwicklung der App bis hin zur erfolgreichen Platzierung im App- oder Play-Store. 
-  Unsere langjährigen Erfahrungen in der Entwicklung von mobilen Anwendungen und Web-Applikationen, gepaart mit einer Vielfalt an Projekten für eine breite Kundenpalette, ermöglicht es uns, nicht nur technologisch fortschrittliche Apps zu kreieren, sondern auch Ihre Innovationskraft im mobilen Sektor zu fördern.
+    Seit 2006 entwickeln wir **Mobile Apps für iOS, Android** und andere Plattformen.<br>
+    <br>
+    Wir arbeiten als **Entwicklungs-Partner für Digitalagenturen**, **Technologie-Provider für KMUs** und als Teil von **IT-Abteilungen in Weltkonzernen**.<br/>
+    <br/>
+    Als _PavingWays_ ebnen wir unseren Kunden den Weg **von der Idee bis in die App Stores**, indem wir unsere **jahrelangen Erfahrungen** in der gesamten App-Entwicklungs-Kette einbringen.
   "
   image: /images/banner-img.webp
   button:
-    label: Das klingt gut!
+    label: Unser neuestes Projekt
     link: "https://www.pavingways.com"
     enable: true
 
@@ -16,14 +18,17 @@ key_features:
   title: "So arbeiten wir"
   description: "
     Als passionierte App-Entwickler gehen wir über das reine Programmieren hinaus. 
+    Von der **Konzeptionierung** und der **Technologie-Auswahl** an, über die **agile Entwicklung** bis hin zur **Platzierung in den App Stores** 
+    begleiten wir unsere Kunden ab der ersten Idee mit unserem Know-How. Wir setzen die Projekte dabei nicht nur um, sondern übertragen aktiv Wissen, Tools und Projekt-Setups.<br/>
+    <br/>    
     Wir entwickeln nicht nur state-of-the-art Apps, sondern beraten Sie auch hinsichtlich passender Frameworks und Entwicklungswerkzeuge. 
     Bei uns steht nicht nur die qualitative Umsetzung Ihrer Ideen im Vordergrund, sondern auch eine klare, offene und ehrliche Kommunikation.
     Wir legen großen Wert darauf, dass Sie jederzeit über den Entwicklungsprozess informiert sind und bieten Ihnen vollständige Projekt- und Kostentransparenz.
     Mit uns wird Ihr Weg zur eigenen App somit klar und unkompliziert.
   " 
   feature_list:
-    - icon: "map"  #icon package react-feather-icon [https://feathericons.com/]
-      title: Tech Select
+    - icon: "image"  #icon package react-feather-icon [https://feathericons.com/]
+      title: Technologieauswahl
       content: Finding what your app's tech stack should look like and if our stack can match that.
     - icon: "lock"  #icon package react-feather-icon [https://feathericons.com/]
       title: App Development

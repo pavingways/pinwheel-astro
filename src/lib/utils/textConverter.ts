@@ -9,10 +9,16 @@ export const slugify = (content: string) => {
 };
 
 // markdownify
-export const markdownify = (content: string) => {
+export const markdownifyInline = (content: string) => {
   if (!content) return null;
 
   return marked.parseInline(content);
+};
+
+export const markdownify = (content: string) => {
+  if (!content) return null;
+
+  return marked.parse(content);
 };
 
 // humanize

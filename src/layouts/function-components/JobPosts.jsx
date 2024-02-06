@@ -2,7 +2,7 @@ import React from "react";
 import { useState } from "react";
 import { humanize } from "@lib/utils/textConverter";
 import { marked } from "marked";
-import { AiOutlineArrowRight } from "react-icons/ai/index.js";
+import { AiOutlineArrowRight } from "react-icons/ai";
 const JobPosts = ({ posts, categories, career: { title, subtitle } }) => {
   const [tab, setTab] = useState("");
   const filterPost = !tab

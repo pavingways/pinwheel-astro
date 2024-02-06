@@ -33,7 +33,9 @@ import {
   IoLogoWhatsapp,
   IoLogoYoutube,
   IoMail,
-} from "react-icons/io5/index.js";
+} from "react-icons/io5";
+
+import {FaXTwitter} from 'react-icons/fa6';
 
 const {
   facebook,
@@ -86,20 +88,6 @@ const {
     )
   }
   {
-    twitter && (
-      <li class="inline-block">
-        <a
-          aria-label="twitter"
-          href={twitter}
-          target="_blank"
-          rel="noopener noreferrer nofollow"
-        >
-          <IoLogoTwitter />
-        </a>
-      </li>
-    )
-  }
-  {
     mastodon && (
       <li class="inline-block">
         <a
@@ -128,20 +116,6 @@ const {
     )
   }
   {
-    youtube && (
-      <li class="inline-block">
-        <a
-          aria-label="youtube"
-          href={youtube}
-          target="_blank"
-          rel="noopener noreferrer nofollow"
-        >
-          <IoLogoYoutube />
-        </a>
-      </li>
-    )
-  }
-  {
     linkedin && (
       <li class="inline-block">
         <a
@@ -165,6 +139,34 @@ const {
           rel="noopener noreferrer nofollow"
         >
           <IoLogoGithub />
+        </a>
+      </li>
+    )
+  }
+  {
+    twitter && (
+      <li class="inline-block">
+        <a
+          aria-label="twitter"
+          href={twitter}
+          target="_blank"
+          rel="noopener noreferrer nofollow"
+        >
+          <FaXTwitter />
+        </a>
+      </li>
+    )
+  }
+  {
+    youtube && (
+      <li class="inline-block">
+        <a
+          aria-label="youtube"
+          href={youtube}
+          target="_blank"
+          rel="noopener noreferrer nofollow"
+        >
+          <IoLogoYoutube />
         </a>
       </li>
     )
