@@ -7,15 +7,26 @@
     "menu_socials": "Find us online",
     "menu_quick_links": "Quick Links",
     "menu_location": "Location & Contact",
+    "menu_imprint": "Imprint",
+    "menu_privacy": "Privacy",
+    "cta": {
+      "title": "Let's talk!",
+      "description": "Book an online-meeting that suits you. We'll talk about your app project or your questions about app development in general without any obligations.",
+      "label": "You pick the date!",
+      "link": "https://calendly.com/pavingways_com/ms-teams-meeting",
+      "tellabel": "... or call us directly",
+      "tellink": "tel:+41768315837",
+      "telnumber": "+41 76 831 58 37"
+    },
     "config.params": {
       "email": "info@pavingways.com",
       "location1": "Badstrasse 13a",
       "location2": "6045 Meggen",
       "location3": "Switzerland",
       "phone": "+41 76 831 58 37",
-      "contact_form_action": "#",
+      "contact_form_action": "",
       "copyright": "&copy; 2024 PavingWays GmbH \uD83C\uDDE8\uD83C\uDDED",
-      "footer_description": "We are experts in building mobile apps. Since 2006 we research mobile browsers, libraries and frameworks. We also create automated build chains and app developer setups for our clients."
+      "footer_description": "We are experts in the development of mobile apps. We have been researching mobile browsers, libraries and frameworks since 2006. We automate build chains and help our clients to be successful in the app stores."
     }
   },
   "i18n_de": {
@@ -23,18 +34,29 @@
     "menu_about": "Über Uns",
     "menu_technologies": "Technologien",
     "menu_blog": "Blog",
-    "menu_socials": "Find us online",
-    "menu_quick_links": "Quick Links",
-    "menu_location": "Location & Contact",
+    "menu_socials": "PavingWays Online",
+    "menu_quick_links": "Menü",
+    "menu_location": "Adresse & Kontakt",
+    "menu_imprint": "Impressum",
+    "menu_privacy": "Datenschutz",
+    "cta": {
+      "title": "Sprechen wir darüber",
+      "description": "Buchen Sie einen Termin, der Ihnen gut passt. Wir sprechen ganz unverbindlich über Ihr App-Projekt oder Ihre Fragen zur App-Entwicklung allgemein.",
+      "label": "Termin eintragen",
+      "link": "https://calendly.com/pavingways_com/ms-teams-meeting",
+      "tellabel": "... oder rufen Sie direkt an",
+      "tellink": "tel:+41768315837",
+      "telnumber": "+41 76 831 58 37"
+    },
     "config.params": {
       "email": "info@pavingways.com",
       "location1": "Badstrasse 13a",
       "location2": "6045 Meggen",
       "location3": "Schweiz",
-      "phone": "076 831 58 37",
-      "contact_form_action": "#",
+      "phone": "+41 76 831 58 37",
+      "contact_form_action": "",
       "copyright": "&copy; 2024 PavingWays GmbH \uD83E\uDED5",
-      "footer_description": "We are experts in building mobile apps. Since 2006 we research mobile browsers, libraries and frameworks. We also create automated build chains and app developer setups for our clients."
+      "footer_description": "Wir sind Experten für die Entwicklung von Mobile Apps. Wir forschen wir an mobilen Browsern, Bibliotheken und Frameworks schon seit 2006. Wir automatisieren Build Chains und helfen unseren Kunden, in den App Stores erfolgreich zu sein."
     }
   },
   "i18n_fr": {
@@ -51,7 +73,7 @@
       "location2": "6045 Meggen",
       "location3": "Switzerland",
       "phone": "+41 76 831 58 37",
-      "contact_form_action": "#",
+      "contact_form_action": "",
       "copyright": "&copy; 2024 PavingWays GmbH \uD83C\uDDE8\uD83C\uDDED",
       "footer_description": "We are experts in building mobile apps. Since 2006 we research mobile browsers, libraries and frameworks. We also create automated build chains and app developer setups for our clients."
     }
@@ -70,7 +92,7 @@
       "location2": "6045 Meggen",
       "location3": "Switzerland",
       "phone": "+41 76 831 58 37",
-      "contact_form_action": "#",
+      "contact_form_action": "",
       "copyright": "&copy; 2024 PavingWays GmbH \uD83C\uDDE8\uD83C\uDDED",
       "footer_description": "We are experts in building mobile apps. Since 2006 we research mobile browsers, libraries and frameworks. We also create automated build chains and app developer setups for our clients."
     }

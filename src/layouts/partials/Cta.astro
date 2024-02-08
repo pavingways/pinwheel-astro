@@ -1,13 +1,23 @@
 ---
 import config from "@config/config.json";
-
-const {
-  call_to_action: {
-    title,
-    description,
-    button: { label, link },
-  },
-} = config;
+import i18nAll from "../../config/i18n.json";
+let { i18n_en, i18n_de, i18n_fr, i18n_it } = i18nAll;
+let i18n = {};
+switch (Astro.currentLocale) {
+  case "en":
+    i18n = i18n_en;
+    break;
+  case "de":
+    i18n = i18n_de;
+    break;
+  case "fr":
+    i18n = i18n_fr;
+    break;
+  case "it":
+    i18n = i18n_it;
+    break;
+}
+console.log('i18n', i18n);
 ---
 
 <section class="px-5 py-20 xl:py-[120px]">
@@ -15,15 +25,18 @@ const {
     <div
       class="bg-gradient row justify-center rounded-b-[20px] rounded-t-[20px] px-[30px] pb-[75px] pt-16"
     >
-      <div class="lg:col-11">
+      <div class="lg:col-10">
         <div class="row">
-          <div class="lg:col-7">
-            <h2 class="h1 text-white">{title}</h2>
-            <a class="btn btn-white mt-8" href={link}>{label}</a>
+          <div class="lg:col-6">
+            <h2 class="h1 text-white">{i18n['cta']['title']}</h2>
+            <a class="btn btn-white mt-8" href={i18n['cta']['link']}>{i18n['cta']['label']}</a>
           </div>
-          <div class="mt-8 lg:col-5 lg:mt-0">
+          <div class="mt-8 lg:mt-0 lg:col-6">
             <p class="text-white">
-              {description}
+              {i18n['cta']['description']}
+            </p>
+            <p class="mt-4 text-white">
+              {i18n['cta']['tellabel']}: <a href={i18n['cta']['tellink']} style="white-space: nowrap">{i18n['cta']['telnumber']}</a>
             </p>
           </div>
         </div>

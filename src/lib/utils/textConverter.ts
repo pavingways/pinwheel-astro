@@ -18,7 +18,7 @@ export const markdownifyInline = (content: string) => {
 export const markdownify = (content: string) => {
   if (!content) return null;
 
-  return marked.parse(content);
+  return marked.parse(content.replaceAll("\n", "<br>"));
 };
 
 // humanize
@@ -26,11 +26,11 @@ export const humanize = (content: string) => {
   if (!content) return null;
 
   return content
-    .replace(/^[\s_]+|[\s_]+$/g, "")
-    .replace(/[_\s]+/g, " ")
-    .replace(/^[a-z]/, function (m) {
-      return m.toUpperCase();
-    });
+    .split('-')
+    .map(word => {
+      return word.charAt(0).toUpperCase() + word.slice(1);
+    })
+    .join('');
 };
 
 // plainify
@@ -41,6 +41,13 @@ export const plainify = (content: string) => {
   const filterSpaces = filterBrackets.replace(/[\r\n]\s*[\r\n]/gm, "");
   const stripHTML = htmlEntityDecoder(filterSpaces);
   return stripHTML;
+};
+
+// despaceify
+export const despaceify = (content: string) => {
+  if (!content) return null;
+
+  return content.replaceAll(' ', '');
 };
 
 // strip entities for plainify

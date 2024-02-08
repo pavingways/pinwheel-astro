@@ -1,48 +1,79 @@
 ---
 banner:
-  title: "Mobile App Development"
+  title: "We Develop Mobile Apps"
   content: "
-  Crafting the mobile future, one app at a time, PavingWays turns your ideas into app store realities. 
-  We offer <strong>full-spectrum app development</strong> from technology selection to app store distribution.
-  With <strong>tons of years of mobile app and web experience</strong> and a diverse range of tiny to huge customers and projects in our portfolio, we not only build state-of-the-art apps, 
-  <strong>we amplify your innovative potential in the mobile world</strong>."
+    **We have been developing **mobile apps for iOS, Android** and other platforms since 2006**. 
+    Since 2022 we are **located in Switzerland, LU**.
+    
+    
+    We work as **development partners for digital agencies**, **know-how providers for SMEs** and as part of **IT departments in global corporations**.
+    
+    
+    We are _paving ways_ for our clients **from initial idea to app store deployment** and beyond.
+  "
   image: /images/banner-img.webp
   button:
-    label: Take my money already!
-    link: "https://www.pavingways.com/"
-    enable: true
+    label: Ask a question, book a meeting!
+    link: "https://calendly.com/pavingways_com/ms-teams-meeting"
+  tel:
+    label: ... or call directly
+    link: tel:+41768315837 
+    number: +41 76 831 58 37
 
 ##key features
 key_features:
-  title: "Things We Do"
-  description: With experience since 2006 we have seen it all. Small and huge Apps, tons of frameworks, millions of app users. 
-    Here is what we provide our customers with. 
+  title: "What We Do"
+  description: 
+    As a **full service partner**, we go far beyond pure programming.
+    
+    We can contribute our **years of experience** to the entire app development chain. 
   feature_list:
-    - icon: "map"  #icon package react-feather-icon [https://feathericons.com/]
-      title: Tech Select
-      content: Finding what your app's tech stack should look like and if our stack can match that.
-    - icon: "lock"  #icon package react-feather-icon [https://feathericons.com/]
-      title: App Development
-      content: Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-    - icon: "link"  #icon package react-feather-icon [https://feathericons.com/]
-      title: Workshops
-      content: Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-    - icon: "bell"  #icon package react-feather-icon [https://feathericons.com/]
-      title: Store Deploy
-      content: Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-    - icon: "monitor"  #icon package react-feather-icon [https://feathericons.com/]
-      title: App Marketing
-      content: Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-    - icon: "monitor"  #icon package react-feather-icon [https://feathericons.com/]
-      title: Pipeline Setup
-      content: Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-    - icon: "monitor"  #icon package react-feather-icon [https://feathericons.com/]
+    #icon package react-feather-icon [https://feathericons.com/]
+    - icon: "sun"
+      title: App Ideation
+      content: We support our customers as a sparring partner from the idea generation onwards. Our experience allows us to provide useful input at an early stage.
+    - icon: "layout"
+      title: Conception
+      content: With personas, user journeys and wireframes, we help to shape the app idea and make it come alive.
+    - icon: "clipboard"
+      title: Requirements
+      content: Understanding what is needed, analyzing, defining and documenting are important first steps in each of our app projects.
+    - icon: "cpu"
+      title: Tech Selection
+      content: Analyzing available technology, competencies and possibilities enables us to select and integrate the appropriate tech for your development setup.
+    - icon: "file"
+      title: Prototyping
+      content: Many projects require a prototype or click dummy. We use tools that enable us to further develop the app on the basis of our prototypes.
+    - icon: "image"
+      title: UX/UI Design
+      content: We work closely with designers, agencies, CI/CD managers and marketing departments to generate the best possible user experience.    
+    - icon: "tool"
       title: Dev Setup
-      content: Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-    - icon: "monitor"  #icon package react-feather-icon [https://feathericons.com/]
-      title: App-As-A-Service
-      content: Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-
+      content: Every team works differently. We help you integrate app development into your workflow and maximize the developer experience.
+    - icon: "repeat"
+      title: Pipeline Setup
+      content: We love automation. Git-based workflows, continuous integration and delivery, GitHub actions and end-to-end testing are just some of our tools. 
+    - icon: "link-2"
+      title: API Development
+      content: The specification of interfaces and APIs is essential. We develop interfaces and implement APIs in the app, on the server side and to third-party systems.
+    - icon: "square"
+      title: App Development
+      content: The implementation of requirements in well-structured, high-performance and well documented code is an art that we have mastered for years.
+    - icon: "zoom-in"
+      title: Quality Assurance
+      content: We ensure the quality of our and your apps with coding guidelines, workflow tools, peer reviews, unit- and end-to-end tests, user labs and hallways.
+    - icon: "shopping-bag"
+      title: App Store Deployment
+      content: The developed app must be deployed to the store. We take care of certificates, private keys, provisioning profiles and entitles. 
+    - icon: "check-square"
+      title: App Review
+      content: We start app review processes at an early stage to speed up the final live launch in the app stores. Numerous review rounds have allowed us to gain valuable experience.
+    - icon: "trending-up"
+      title: App Marketing
+      content: The release in the App Store is not the end of the story. App Store Optimization (ASO) is at least as important as SEO for websites. We can help you with this!
+    - icon: "users"
+      title: Workshops
+      content: We are happy to pass on our knowledge and experience. Preferably hands-on in a team, but also in a half-day or full-day workshop.
 #service
 service:
   homepage_tab:

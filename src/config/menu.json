@@ -1,5 +1,6 @@
 {
-  "main": [
+  "main": [],
+  "hidden_main": [
     {
       "i18nKey": "menu_home",
       "url": "/"
@@ -19,6 +20,16 @@
   ],
 
   "footer": [
+    {
+      "i18nKey": "menu_imprint",
+      "url": "/imprint/"
+    },
+    {
+      "i18nKey": "menu_privacy",
+      "url": "/privacy/"
+    }
+  ],
+  "hidden_footer": [
     {
       "i18nKey": "menu_about",
       "url": "/about/"

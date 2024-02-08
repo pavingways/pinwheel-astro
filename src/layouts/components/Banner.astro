@@ -1,44 +1,36 @@
 ---
-import { markdownify } from "@lib/utils/textConverter";
+import { markdownify, despaceify } from "@lib/utils/textConverter";
 import { Image } from 'astro:assets'
 const { banner } = Astro.props;
-const { title, button, image, content } = banner;
+const { title, button, image, content, tel } = banner;
 ---
 
 <section class="section banner relative">
   <div class="container">
     <div class="row items-center">
-      <div class="lg:col-6">
+      <div class="lg:col-8 sm:col-12">
         <h1 class="banner-title" set:html={markdownify(title)} />
-
         <p class="mt-6" set:html={markdownify(content)} />
-        {
-          button.enable && (
-            <a class="btn btn-primary mt-8" href={button.link}>
-              {button.label}
-            </a>
-          )
-        }
       </div>
-      <div class="lg:col-6">
+      <div class="lg:col-4 sm:col-6">
         <Image
-          class="w-full object-contain"
+          class="w-full object-contain mt-8"
           alt="banner"
           src={image}
-          width={603}
-          height={396}
+          width={400}
+          height={400}
           decoding="sync"
           loading="eager"
         />
       </div>
+      <div class="sm:col-6 text-center lg:text-left">
+        <a class="btn btn-primary sm:mt-8 sm:mb-8 lg:mb-0" href={button.link}>
+          {button.label}
+        </a>
+        <p class="mt-4">
+          {tel.label}: <a href={tel.link} style="white-space: nowrap">{tel.number}</a>
+        </p>
+      </div>
     </div>
   </div>
-
-  <!--<Image-->
-  <!--  class="banner-shape absolute -top-28 right-0 -z-[1] w-full max-w-[30%]"-->
-  <!--  alt="banner"-->
-  <!--  src="/images/top-shape.png"-->
-  <!--  width={496}-->
-  <!--  height={466}-->
-  <!--/>-->
 </section>

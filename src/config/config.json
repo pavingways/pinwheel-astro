@@ -15,14 +15,6 @@
     "summary_length": 100,
     "blog_folder": "blog"
   },
-  "call_to_action": {
-    "title": "Lassen Sie uns Ihre App gemeinsam realisieren",
-    "description": "Buchen Sie einen Termin, der Ihnen gut passt. Wir sprechen ganz unverbindlich über Ihr Projekt oder Ihre Fragen zur App-Entwicklung allgemein.",
-    "button": {
-      "label": "Termin eintragen",
-      "link": "https://calendly.com/pavingways_com/ms-teams-meeting"
-    }
-  },
   "metadata": {
     "meta_author": "PavingWays GmbH",
     "meta_image": "/images/og-image.png",

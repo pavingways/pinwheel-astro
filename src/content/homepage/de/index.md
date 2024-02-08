@@ -1,56 +1,79 @@
 ---
 banner:
-  title: "Wir entwickeln Mobile Apps"
+  title: "Wir Entwickeln Mobile Apps"
   content: "
-    Seit 2006 entwickeln wir **Mobile Apps für iOS, Android** und andere Plattformen.<br>
-    <br>
-    Wir arbeiten als **Entwicklungs-Partner für Digitalagenturen**, **Technologie-Provider für KMUs** und als Teil von **IT-Abteilungen in Weltkonzernen**.<br/>
-    <br/>
-    Als _PavingWays_ ebnen wir unseren Kunden den Weg **von der Idee bis in die App Stores**, indem wir unsere **jahrelangen Erfahrungen** in der gesamten App-Entwicklungs-Kette einbringen.
+    **Seit 2006** entwickeln wir **Mobile Apps für iOS, Android** und andere Plattformen. 
+    Seit 2022 sind wir **vor Ort in der Schweiz, LU** zu finden.
+    
+    
+    Wir arbeiten als **Entwicklungs-Partner für Digitalagenturen**, **Know-How-Provider für KMUs** und als Teil von **IT-Abteilungen in Weltkonzernen**.
+    
+    
+    Als _PavingWays_ ebnen wir unseren Kunden den Weg **von der Idee bis in die App Stores** und darüber hinaus.
   "
   image: /images/banner-img.webp
   button:
-    label: Unser neuestes Projekt
-    link: "https://www.pavingways.com"
-    enable: true
+    label: Jetzt einen Termin buchen!
+    link: "https://calendly.com/pavingways_com/ms-teams-meeting"
+  tel:
+    label: ... oder direkt anrufen
+    link: tel:+41768315837 
+    number: +41 76 831 58 37
 
 key_features:
-  title: "So arbeiten wir"
+  title: "Das bieten wir"
   description: "
-    Als passionierte App-Entwickler gehen wir über das reine Programmieren hinaus. 
-    Von der **Konzeptionierung** und der **Technologie-Auswahl** an, über die **agile Entwicklung** bis hin zur **Platzierung in den App Stores** 
-    begleiten wir unsere Kunden ab der ersten Idee mit unserem Know-How. Wir setzen die Projekte dabei nicht nur um, sondern übertragen aktiv Wissen, Tools und Projekt-Setups.<br/>
-    <br/>    
-    Wir entwickeln nicht nur state-of-the-art Apps, sondern beraten Sie auch hinsichtlich passender Frameworks und Entwicklungswerkzeuge. 
-    Bei uns steht nicht nur die qualitative Umsetzung Ihrer Ideen im Vordergrund, sondern auch eine klare, offene und ehrliche Kommunikation.
-    Wir legen großen Wert darauf, dass Sie jederzeit über den Entwicklungsprozess informiert sind und bieten Ihnen vollständige Projekt- und Kostentransparenz.
-    Mit uns wird Ihr Weg zur eigenen App somit klar und unkompliziert.
+    Als **Full-Service-Partner** gehen wir weit über das reine Programmieren hinaus.
+    
+    Unsere **jahrelangen Erfahrungen** können wir in der gesamten App-Entwicklungs-Kette einbringen.
   " 
   feature_list:
-    - icon: "image"  #icon package react-feather-icon [https://feathericons.com/]
-      title: Technologieauswahl
-      content: Finding what your app's tech stack should look like and if our stack can match that.
-    - icon: "lock"  #icon package react-feather-icon [https://feathericons.com/]
-      title: App Development
-      content: Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-    - icon: "link"  #icon package react-feather-icon [https://feathericons.com/]
-      title: Workshops
-      content: Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-    - icon: "bell"  #icon package react-feather-icon [https://feathericons.com/]
-      title: Store Deploy
-      content: Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-    - icon: "monitor"  #icon package react-feather-icon [https://feathericons.com/]
-      title: App Marketing
-      content: Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-    - icon: "monitor"  #icon package react-feather-icon [https://feathericons.com/]
+    #icon package react-feather-icon [https://feathericons.com/]
+    - icon: "sun"
+      title: App Ideation
+      content: Gern stehen wir unseren Kunden als Sparring-Partner schon während der Ideenfindung zur Seite. Unsere Erfahrungen lassen uns frühzeitig nützlichen Input geben.
+    - icon: "layout"
+      title: Konzeption
+      content: Mit Personas, User-Journeys und Wireframes helfen wir dabei, der App-Idee einen Gestalt zu verleihen und sie konkret werden zu lassen.
+    - icon: "clipboard"
+      title: Requirements
+      content: Verstehen, was benötigt wird. Analysieren, Abwägen, Definieren und Dokumentieren sind wichtige erste Schritte in jedem unserer App-Projekte.
+    - icon: "cpu"
+      title: Tech Auswahl
+      content: Das Analysieren der technischen Gegebenheiten, Kompetenzen und Möglichkeiten ermöglicht uns die Auswahl der passenden Technologien und Definition in Ihrem Entwicklung-Setup.
+    - icon: "file"
+      title: Prototyping
+      content: Viele Projekte benötigen einen Prototypen oder Click-Dummy. Wir benutzen Tools, die es uns ermöglichen, die App auf Basis unserer Prototypen weiterzuentwickeln.
+    - icon: "image"
+      title: UX/UI Design
+      content: Wir arbeiten eng mit Designern, Agenturen, CI/CD Verantwortlichen und Marketing-Abteilungen zusammen, um die bestmögliche User Experience zu generieren.    
+    - icon: "tool"
+      title: Entwicklungs-Setup
+      content: Jedes Team arbeitet anders. Wir helfen dabei, die App-Entwicklung in Ihren Workflow einzubinden und die Developer Experience zu maximieren.
+    - icon: "repeat"
       title: Pipeline Setup
-      content: Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-    - icon: "monitor"  #icon package react-feather-icon [https://feathericons.com/]
-      title: Dev Setup
-      content: Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-    - icon: "monitor"  #icon package react-feather-icon [https://feathericons.com/]
-      title: App-As-A-Service
-      content: Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+      content: Wir lieben Automatisierung. Git-basierte Workflows, Continuous Integration und Delivery, GitHub Actions und End-to-End Tests sind nur einige unserer Tools. 
+    - icon: "link-2"
+      title: API Entwicklung
+      content: Die Spezifikation der Schnittstellen und APIs ist essentiell. Wir entwickeln Interfaces und implementieren APIs in App, auf Server-Seite und zu Drittsystemen.
+    - icon: "square"
+      title: App Entwicklung
+      content: Die Umsetzung der Anforderungen in gut strukturierten, performanten und dokumentierten Code ist eine Kunst, die wir seit Jahren beherrschen.
+    - icon: "zoom-in"
+      title: Qualitäts-Sicherung
+      content: Mit Coding-Guidelines, Workflow-Tools, Peer-Reviews, Unit- und End-to-End Tests, User Labs und Hallway gewährleisten wir die Qualität unserer und Ihrer Apps.
+    - icon: "shopping-bag"
+      title: App Store Deployment
+      content: Die entwickelte App muss in den Store. Wir kümmern uns um Zertifikate, Private Keys, Provisioning Profile und Entitles. 
+    - icon: "check-square"
+      title: App Review
+      content: Frühzeitig starten wir App-Review Prozesse, um den finalen Live-Gang in den App Stores zu beschleunigen. Zahlreiche Review-Runden haben uns wertvolle Erfahrungen sammeln lassen.
+    - icon: "trending-up"
+      title: App Marketing
+      content: Mit dem Release im App Store ist es nicht getan. App Store Optimizaton (ASO) ist mindestens genau so wichtig wie SEO bei Websites. Wir helfen Ihnen dabei!
+    - icon: "users"
+      title: Workshops
+      content: Wir geben Wissen und Erfahrung gern weiter. Am besten hands-On im Team, aber auch als halb- oder ganztägiger Workshop.
 
 service:
   homepage_tab:
@@ -60,13 +83,13 @@ service:
     "
     tab_list:
         - title: VHV - Kundenportal
-          icon: "lock"  #icon package react-feather-icon [https://feathericons.com/]
+          icon: "lock"
           image: "/images/sales-by-country.webp"
         - title: ELMA - Suchtberatung
-          icon: "clock"  #icon package react-feather-icon [https://feathericons.com/]
+          icon: "clock"
           image: "/images/collaboration.webp"
         - title: Tree-Shop - Verkaufen per QR Code 
-          icon: "bell"  #icon package react-feather-icon [https://feathericons.com/]
+          icon: "bell"
           image: "/images/sales-by-country.webp"
 
   our_service:
@@ -87,7 +110,6 @@ service:
         link: "#"
         enable: true
 
-#testimonial
 testimonial:
   title: Zufriedene Kunden
   description: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi egestas Werat viverra id et aliquet. vulputate egestas sollicitudin.

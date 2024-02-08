@@ -6,6 +6,7 @@ import social from "@config/social.json";
 import { markdownify } from "@lib/utils/textConverter";
 import { NavigationLink } from "@lib/utils/interfaces";
 import Config from "../../../astro.config.mjs";
+import type { LocaleDef } from "@lib/utils/i18n";
 import i18nAll from "../../config/i18n.json";
 
 const { footer }: { main: NavigationLink[] } = menu;
@@ -32,18 +33,34 @@ switch (Astro.currentLocale) {
 <footer class="footer bg-[#F1F1F1]">
   <div class="container">
     <div class="gx-5 row pb-10 pt-[52px]">
-      <div class="col-12 mt-12 md:col-6 lg:col-3">
+      <div class="col-12 mt-12 md:col-6 lg:col-4">
         <Logo max_width="180px" max_height="56px" />
         <p class="mt-6">
           {i18n['config.params']['footer_description']}
         </p>
       </div>
       <div class="col-12 mt-12 md:col-6 lg:col-3">
-        <h3 class="h6">Socials</h3>
+        <h3 class="h6">{i18n['menu_socials']}</h3>
         <Social source={social} className="social-icons mt-5" />
       </div>
+
       <div class="col-12 mt-12 md:col-6 lg:col-3">
-        <h3 class="h6">Quick Links</h3>
+        <h3 class="h6">{i18n['menu_location']}</h3>
+        <ul class="mt-4">
+          <li class="mb-2">
+            {i18n['config.params']['location1']}<br>
+            {i18n['config.params']['location2']}<br>
+            {i18n['config.params']['location3']}
+          </li>
+          <li class="mb-2">
+            <a class="hover:text-primary" href={`mailto:${i18n['config.params']['email']}`}
+            >{i18n['config.params']['email']}</a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="col-12 mt-12 md:col-6 lg:col-2">
+        <h3 class="h6">{i18n['menu_quick_links']}</h3>
         <nav class="mt-4">
           {
             footer.map((item) => (
@@ -55,32 +72,22 @@ switch (Astro.currentLocale) {
               >{i18n[item.i18nKey]}</a>
             ))
           }
+
+          {Object.entries(Config.i18n.locales).map(
+            (it) => it[1]
+          ).map((localeNow: LocaleDef) =>
+            <a
+              class="nav-link-footer"
+              href={`/${localeNow.path !== Config.i18n.defaultLocale ? localeNow.path + "/" : ""}`}
+            ><span class="lang">{localeNow.name}</span></a>
+          )}
         </nav>
       </div>
-      <div class="col-12 mt-12 md:col-6 lg:col-3">
-        <h3 class="h6">Location & Contact</h3>
-        <ul class="mt-4">
-          <li class="mb-2">
-            {i18n['config.params']['location1']}<br>
-            {i18n['config.params']['location2']}<br>
-            {i18n['config.params']['location3']}
-          </li>
-          <li class="mb-2">
-            <a class="mb-2 hover:text-primary" href={`mailto:${i18n['config.params']['email']}`}
-            >{i18n['config.params']['email']}</a>
-          </li>
-          <li>
-            <a class="hover:text-primary hover:underline" href={`tel:${i18n['config.params']['phone']}`}
-            >{i18n['config.params']['email']}</a>
-          </li>
-        </ul>
-      </div>
+
     </div>
   </div>
   <div class="container max-w-[1440px]">
-    <div
-      class="footer-copyright mx-auto border-t border-border pb-10 pt-7 text-center"
-    >
+    <div class="footer-copyright mx-auto border-t border-border pb-10 pt-7 text-center">
       <p class="content text-text" set:html={markdownify(i18n['config.params']['copyright'])}} />
     </div>
   </div>

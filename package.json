@@ -7,7 +7,7 @@
   "scripts": {
     "dev": "astro dev",
     "build": "astro build",
-    "deploy": "bin/deploy-dev.sh",
+    "deploy-dev": "bin/deploy-dev.sh",
     "json": "node scripts/jsonGenerator.js",
     "format": "prettier -w ."
   },
