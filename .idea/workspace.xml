@@ -5,8 +5,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d2d6658b-20ca-4d31-9309-cfe0c6c3172e" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/content/pages/datenschutz.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/layouts/partials/Cta.astro" beforeDir="false" afterPath="$PROJECT_DIR$/src/layouts/partials/Cta.astro" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/astro.config.mjs" beforeDir="false" afterPath="$PROJECT_DIR$/astro.config.mjs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/config/config.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/config/config.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/config/i18n.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/config/i18n.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/config/menu.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/config/menu.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/content/pages/privacy.md" beforeDir="false" afterPath="$PROJECT_DIR$/src/content/pages/privacy.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/layouts/partials/Footer.astro" beforeDir="false" afterPath="$PROJECT_DIR$/src/layouts/partials/Footer.astro" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/layouts/partials/Header.astro" beforeDir="false" afterPath="$PROJECT_DIR$/src/layouts/partials/Header.astro" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/de/about.astro" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/de/imprint.astro" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/en/imprint.astro" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/de/index.astro" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/en/index.astro" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/de/privacy.astro" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/en/privacy.astro" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/index.astro" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/index.astro" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles/base.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/base.scss" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,7 +47,7 @@
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "git-widget-placeholder": "main",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "/Users/Rocco/Develop/pavingways/pavingways.com/src/pages",
+    "last_opened_file_path": "/Users/Rocco/Develop/pavingways/pavingways.com/src/content/pages",
     "node.js.detected.package.eslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "nodejs_package_manager_path": "yarn",
@@ -53,11 +66,11 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/content/pages" />
       <recent name="$PROJECT_DIR$/src/pages" />
       <recent name="$PROJECT_DIR$/src/config" />
       <recent name="$PROJECT_DIR$/src/pages/de" />
       <recent name="$PROJECT_DIR$/src/content/pages" />
-      <recent name="$PROJECT_DIR$/src/pages/it" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/bin" />
@@ -67,7 +80,7 @@
       <recent name="$PROJECT_DIR$/src/config" />
     </key>
   </component>
-  <component name="RunManager" selected="npm.dev (1)">
+  <component name="RunManager" selected="npm.dev">
     <configuration name="build" type="js.build_tools.npm" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/package.json" />
       <command value="run" />
@@ -149,16 +162,5 @@
     <MESSAGE value="1st version WIP" />
     <MESSAGE value="1st version web" />
     <option name="LAST_COMMIT_MESSAGE" value="1st version web" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/astro.config.mjs</url>
-          <line>11</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>

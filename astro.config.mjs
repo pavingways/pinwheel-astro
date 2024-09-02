@@ -10,19 +10,20 @@ import config from "./src/config/config.json";
 
 // https://astro.build/config
 export default defineConfig({
+  output: "static",
   i18n: {
-    defaultLocale: "en",
+    defaultLocale: "de",
     locales: [
       {
-        path: "en",
-        codes: ["en", "en-US", "en-GB", "en-CA"],
-        name: "English",
-        flag: "🇺🇸"
-      }, {
         path: "de",
         codes: ["de", "de-CH", "de-DE"],
         name: "Deutsch",
         flag: '🇨🇭🇩🇪'
+      }, {
+        path: "en",
+        codes: ["en", "en-US", "en-GB", "en-CA"],
+        name: "English",
+        flag: "🇺🇸"
       // }, {
       //   path: "fr",
       //   codes: ["fr", "fr-BR", "fr-CA"],
@@ -38,7 +39,7 @@ export default defineConfig({
       prefixDefaultLocale: false
     },
     fallback: {
-      de: "en",
+      en: "de",
       // fr: "en",
       // it: "en"
     }

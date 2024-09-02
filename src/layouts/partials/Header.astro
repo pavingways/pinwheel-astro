@@ -9,14 +9,14 @@ import LanguagePicker from "../components/LanguagePicker.astro";
 const { main }: { main: NavigationLink[] } = menu;
 const { pathname } = Astro.url;
 
-let { i18n_en, i18n_de, i18n_fr, i18n_it } = i18nAll;
+let { i18n_de, i18n_en, i18n_fr, i18n_it } = i18nAll;
 let i18n = {};
 switch (Astro.currentLocale) {
-  case "en":
-    i18n = i18n_en;
-    break;
   case "de":
     i18n = i18n_de;
+    break;
+  case "en":
+    i18n = i18n_en;
     break;
   case "fr":
     i18n = i18n_fr;

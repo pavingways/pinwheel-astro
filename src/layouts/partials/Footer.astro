@@ -40,12 +40,12 @@ switch (Astro.currentLocale) {
         </p>
       </div>
       <div class="col-12 mt-12 md:col-6 lg:col-3">
-        <h3 class="h6">{i18n['menu_socials']}</h3>
+        <div class="h6">{i18n['menu_socials']}</div>
         <Social source={social} className="social-icons mt-5" />
       </div>
 
       <div class="col-12 mt-12 md:col-6 lg:col-3">
-        <h3 class="h6">{i18n['menu_location']}</h3>
+        <div class="h6">{i18n['menu_location']}</div>
         <ul class="mt-4">
           <li class="mb-2">
             {i18n['config.params']['location1']}<br>
@@ -60,12 +60,15 @@ switch (Astro.currentLocale) {
       </div>
 
       <div class="col-12 mt-12 md:col-6 lg:col-2">
-        <h3 class="h6">{i18n['menu_quick_links']}</h3>
+        <div class="h6">{i18n['menu_quick_links']}</div>
         <nav class="mt-4">
           {
+            // footer menu items
             footer.map((item) => (
               <a
-                href={Astro.currentLocale !== Config.i18n.defaultLocale ? `/${Astro.currentLocale}${item.url}` : `${item.url}`}
+                href={(
+                  Astro.currentLocale !== Config.i18n.defaultLocale ? `/${Astro.currentLocale}` : ``
+                ) + `${item['url'] ? item['url'] : item['url_' + Astro.currentLocale]}`}
                 class={`nav-link-footer ${
                   (pathname === item.url || pathname === `/${Astro.currentLocale}${item.url}`) && "active"
                 }`}
@@ -73,14 +76,17 @@ switch (Astro.currentLocale) {
             ))
           }
 
-          {Object.entries(Config.i18n.locales).map(
-            (it) => it[1]
-          ).map((localeNow: LocaleDef) =>
-            <a
-              class="nav-link-footer"
-              href={`/${localeNow.path !== Config.i18n.defaultLocale ? localeNow.path + "/" : ""}`}
-            ><span class="lang">{localeNow.name}</span></a>
-          )}
+          {
+            // language picker
+            Object.entries(Config.i18n.locales).map(
+              (it) => it[1]
+            ).map((localeNow: LocaleDef) =>
+              <a
+                class="nav-link-footer"
+                href={`/${localeNow.path !== Config.i18n.defaultLocale ? localeNow.path + "/" : ""}`}
+              ><span class="lang">{localeNow.name}</span></a>
+            )
+          }
         </nav>
       </div>
 

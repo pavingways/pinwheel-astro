@@ -1,6 +1,5 @@
 {
-  "main": [],
-  "hidden_main": [
+  "main": [
     {
       "i18nKey": "menu_home",
       "url": "/"
@@ -22,20 +21,21 @@
   "footer": [
     {
       "i18nKey": "menu_imprint",
-      "url": "/imprint/"
+      "url_de": "/impressum/",
+      "url_en": "/imprint/"
     },
     {
       "i18nKey": "menu_privacy",
-      "url": "/privacy/"
-    }
-  ],
-  "hidden_footer": [
+      "url_de": "/datenschutz/",
+      "url_en": "/privacy/"
+    },
+
     {
       "i18nKey": "menu_about",
       "url": "/about/"
     },
     {
-      "i18nKey": "menu_technologies",
+      "i18nKey": "menu_projects",
       "url": "/technologies/"
     },
     {

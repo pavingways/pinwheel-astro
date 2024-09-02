@@ -1,6 +1,6 @@
 {
   "site": {
-    "title": "Mobile App Development in Central Switzerland - PavingWays GmbH",
+    "title": "Mobile Apps in Central Switzerland - PavingWays GmbH",
     "base_url": "https://www.pavingways.com",
     "base_path": "/",
     "trailing_slash": "always",
@@ -18,6 +18,6 @@
   "metadata": {
     "meta_author": "PavingWays GmbH",
     "meta_image": "/images/og-image.png",
-    "meta_description": "PavingWays GmbH develops mobile applications and is based in Switzerland."
+    "meta_description": "PavingWays GmbH develops mobile applications and is based in Lucerne, Switzerland."
   }
 }
