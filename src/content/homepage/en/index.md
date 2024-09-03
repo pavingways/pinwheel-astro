@@ -1,6 +1,9 @@
 ---
+page:
+  title: Mobile Apps in Central Switzerland - PavingWays GmbH
+  description: PavingWays GmbH develops Mobile Applications in Lucerne, Switzerland
 banner:
-  title: "We Develop Mobile Apps"
+  title: Mobile App Development
   content: "
     **We have been developing **mobile apps for iOS, Android** and other platforms since 2006**. 
     Since 2022 we are **located in Switzerland, LU**.
@@ -11,7 +14,7 @@ banner:
     
     We are _paving ways_ for our clients **from initial idea to app store deployment** and beyond.
   "
-  image: /images/banner-img.webp
+  image: /images/hero-image.webp
   button:
     label: Ask a question, book a meeting!
     link: "https://calendly.com/pavingways_com/ms-teams-meeting"

@@ -84,6 +84,7 @@ switch (Astro.currentLocale) {
               <a
                 class="nav-link-footer"
                 href={`/${localeNow.path !== Config.i18n.defaultLocale ? localeNow.path + "/" : ""}`}
+                onclick={`forceLang('${localeNow.path}')`}
               ><span class="lang">{localeNow.name}</span></a>
             )
           }

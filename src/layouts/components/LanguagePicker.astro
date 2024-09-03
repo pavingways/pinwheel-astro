@@ -2,8 +2,37 @@
 import Config from "astro.config.mjs";
 import type { LocaleDef } from "@lib/utils/i18n";
 ---
+<script is:inline>
+  function forceLang(language){
+    const cookieName = "language_selection";
+    const cookieValue = language;
+    const expirationDays = 365; // The cookie will expire in 1 year
 
+    // Calculate the expiration date
+    const date = new Date();
+    date.setTime(date.getTime() + (expirationDays * 24 * 60 * 60 * 1000));
+    const expires = "expires=" + date.toUTCString();
 
+    // Set the cookie
+    document.cookie = cookieName + "=" + cookieValue + ";" + expires + ";path=/";
+  }
+  function getForcedLang() {
+    const name = "language_selection=";
+    const decodedCookie = decodeURIComponent(document.cookie);
+    const cookieArray = decodedCookie.split(';');
+
+    for(let i = 0; i < cookieArray.length; i++) {
+      let cookie = cookieArray[i].trim();
+      if (cookie.indexOf(name) === 0) {
+        return cookie.substring(name.length, cookie.length);
+      }
+    }
+    return null;
+  }
+  function deleteLanguageCookie() {
+    document.cookie = `language_selection=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;`;
+  }
+</script>
 <li class="nav-item nav-dropdown group relative cursor-pointer languages">
   <span class="nav-link inline-flex items-center notactive">
 
@@ -14,7 +43,6 @@ import type { LocaleDef } from "@lib/utils/i18n";
       <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" />
     </svg>
   </span>
-
   <ul class="nav-dropdown-list mx-auto hidden duration-300 lg:invisible lg:absolute lg:block lg:h-auto lg:w-[7.5rem] lg:opacity-0 lg:group-hover:visible lg:group-hover:opacity-100">
     {Object.entries(Config.i18n.locales).map(
       (it) => it[1]
@@ -23,6 +51,7 @@ import type { LocaleDef } from "@lib/utils/i18n";
         <a
           class={`${localeNow.path === Astro.currentLocale ? 'active' : ''}`}
           href={`/${localeNow.path !== Config.i18n.defaultLocale ? localeNow.path + "/" : ""}`}
+          onclick={`forceLang('${localeNow.path}')`}
         ><span class="flag">{localeNow.flag}</span> <span class="lang">{localeNow.name}</span></a>
       </li>
     )}

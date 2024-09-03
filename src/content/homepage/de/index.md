@@ -1,17 +1,20 @@
 ---
+page:
+  title: App-Entwicklung in der Schweiz - PavingWays GmbH
+  description: Die PavingWays GmbH entwickelt Mobile Applikationen in Luzern, Schweiz
 banner:
-  title: "Wir Entwickeln Mobile Apps"
+  title: Mobile Apps aus der Schweiz
   content: "
     **Seit 2006** entwickeln wir **Mobile Apps für iOS, Android** und andere Plattformen. 
-    Seit 2022 sind wir **vor Ort in der Schweiz, LU** zu finden.
+    Seit 2020 sind wir **vor Ort in der Schweiz, LU**.
     
     
     Wir arbeiten als **Entwicklungs-Partner für Digitalagenturen**, **Know-How-Provider für KMUs** und als Teil von **IT-Abteilungen in Weltkonzernen**.
     
     
-    Als _PavingWays_ ebnen wir unseren Kunden den Weg **von der Idee bis in die App Stores** und darüber hinaus.
+    Als _PavingWays_ ebnen wir unseren Kunden den Weg **von vom App-Konzept bis zum Deployment in die App Stores**.
   "
-  image: /images/banner-img.webp
+  image: /images/hero-image.webp
   button:
     label: Jetzt einen Termin buchen!
     link: "https://calendly.com/pavingways_com/ms-teams-meeting"

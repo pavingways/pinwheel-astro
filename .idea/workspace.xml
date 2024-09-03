@@ -5,21 +5,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d2d6658b-20ca-4d31-9309-cfe0c6c3172e" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/content/pages/datenschutz.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/astro.config.mjs" beforeDir="false" afterPath="$PROJECT_DIR$/astro.config.mjs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/config/config.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/config/config.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/config/i18n.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/config/i18n.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/config/menu.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/config/menu.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/content/pages/privacy.md" beforeDir="false" afterPath="$PROJECT_DIR$/src/content/pages/privacy.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/banner-img.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/hero-image.pxd" beforeDir="false" afterPath="$PROJECT_DIR$/public/images/hero-image.pxd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/hero-image.webp" beforeDir="false" afterPath="$PROJECT_DIR$/public/images/hero-image.webp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/content/homepage/de/index.md" beforeDir="false" afterPath="$PROJECT_DIR$/src/content/homepage/de/index.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/content/homepage/en/index.md" beforeDir="false" afterPath="$PROJECT_DIR$/src/content/homepage/en/index.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/layouts/Base.astro" beforeDir="false" afterPath="$PROJECT_DIR$/src/layouts/Base.astro" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/layouts/components/Banner.astro" beforeDir="false" afterPath="$PROJECT_DIR$/src/layouts/components/Banner.astro" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/layouts/components/LanguagePicker.astro" beforeDir="false" afterPath="$PROJECT_DIR$/src/layouts/components/LanguagePicker.astro" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/layouts/partials/Footer.astro" beforeDir="false" afterPath="$PROJECT_DIR$/src/layouts/partials/Footer.astro" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/layouts/partials/Header.astro" beforeDir="false" afterPath="$PROJECT_DIR$/src/layouts/partials/Header.astro" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/de/about.astro" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/de/imprint.astro" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/en/imprint.astro" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/de/index.astro" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/en/index.astro" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/de/privacy.astro" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/en/privacy.astro" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/en/index.astro" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/en/index.astro" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/index.astro" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/index.astro" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/base.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/base.scss" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

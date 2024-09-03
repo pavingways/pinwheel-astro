@@ -25,7 +25,6 @@ export interface Props {
 const currentLocale = Astro.currentLocale;
 const { title, meta_title, description, image, noindex, canonical } = Astro.props;
 ---
-
 <!DOCTYPE html>
 <html lang={currentLocale}>
   <head>
@@ -62,9 +61,7 @@ const { title, meta_title, description, image, noindex, canonical } = Astro.prop
     />
 
     <!-- title -->
-    <title>
-      {plainify(meta_title ? meta_title : title ? title : config.site.title)}
-    </title>
+    <title>{plainify(title || config.site.title)}</title>
 
     <!-- canonical url -->
     {canonical && <link rel="canonical" href={canonical} item-prop="url" />}
@@ -135,7 +132,7 @@ const { title, meta_title, description, image, noindex, canonical } = Astro.prop
         image ? image : config.metadata.meta_image
       }`}
     />
-    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:card" content="summary_large_image" rel="test" />
   </head>
   <body>
     <TwSizeIndicator />
@@ -145,4 +142,14 @@ const { title, meta_title, description, image, noindex, canonical } = Astro.prop
     </main>
     <Footer />
   </body>
+  <script is:inline>
+    const forcedLang = getForcedLang();
+    const browserLang = (navigator.language || navigator['userLanguage']).slice(0, 2);
+    const useLang = forcedLang || browserLang;
+    const compareLang = useLang === 'de' ? '/' : `/${useLang}/`;
+
+    if (!window.location.pathname.startsWith(compareLang)) {
+      window.location.href = compareLang;
+    }
+  </script>
 </html>

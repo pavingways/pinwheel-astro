@@ -8,11 +8,14 @@ import Cta from "@layouts/partials/Cta.astro";
 import { getEntry } from "astro:content";
 
 const homepage = await getEntry("homepage", Astro.currentLocale);
-const { banner, key_features, service, testimonial } = homepage.data;
+const { page, banner, key_features, service, testimonial } = homepage.data;
 ---
 
 
-<Base>
+<Base
+  title={page.title}
+  description={page.description}
+  >
   <Banner banner={banner} />
   <KeyFeatures key_features={key_features} />
   <!--<Service service={service} />-->
