@@ -28,7 +28,6 @@ const { title, meta_title, description, image, noindex, canonical } = Astro.prop
 <!DOCTYPE html>
 <html lang={currentLocale}>
   <head>
-    <!-- favicon -->
     <link rel="shortcut icon" href={config.site.favicon} />
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline' 'unsafe-eval' www.google-analytics.com ajax.googleapis.com www.googletagmanager.com www.google.com www.gstatic.com www.youtube.com;" />
@@ -48,9 +47,7 @@ const { title, meta_title, description, image, noindex, canonical } = Astro.prop
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href={`https://fonts.googleapis.com/css2?family=${pf}${
-        sf ? "&family=" + sf : ""
-      }&display=swap`}
+      href={`https://fonts.googleapis.com/css2?family=${pf}${sf ? "&family=" + sf : ""}&display=swap`}
       rel="stylesheet"
     />
 

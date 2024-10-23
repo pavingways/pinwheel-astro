@@ -43,14 +43,14 @@ import type { LocaleDef } from "@lib/utils/i18n";
       <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" />
     </svg>
   </span>
-  <ul class="nav-dropdown-list mx-auto hidden duration-300 lg:invisible lg:absolute lg:block lg:h-auto lg:w-[7.5rem] lg:opacity-0 lg:group-hover:visible lg:group-hover:opacity-100">
+  <ul class="nav-dropdown-list hidden duration-300 lg:invisible lg:absolute lg:block lg:h-auto lg:w-[7.5rem] lg:opacity-0 lg:group-hover:visible lg:group-hover:opacity-100">
     {Object.entries(Config.i18n.locales).map(
       (it) => it[1]
     ).map((localeNow: LocaleDef) =>
       <li class="nav-dropdown-item">
         <a
           class={`${localeNow.path === Astro.currentLocale ? 'active' : ''}`}
-          href={`/${localeNow.path !== Config.i18n.defaultLocale ? localeNow.path + "/" : ""}`}
+          href={`/${localeNow.path !== Config?.i18n?.defaultLocale ? localeNow.path + "/" : ""}`}
           onclick={`forceLang('${localeNow.path}')`}
         ><span class="flag">{localeNow.flag}</span> <span class="lang">{localeNow.name}</span></a>
       </li>

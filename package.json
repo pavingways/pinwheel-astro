@@ -9,7 +9,8 @@
     "build": "astro build",
     "deploy-dev": "bin/deploy-dev.sh",
     "json": "node scripts/jsonGenerator.js",
-    "format": "prettier -w ."
+    "format": "prettier -w .",
+    "ngrok": "ngrok start s4321"
   },
   "dependencies": {
     "@astrojs/mdx": "^2.0.3",

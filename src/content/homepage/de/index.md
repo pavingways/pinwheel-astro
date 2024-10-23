@@ -1,22 +1,22 @@
 ---
 page:
-  title: App-Entwicklung in der Schweiz - PavingWays GmbH
+  title: Mobile Apps Schweiz - PavingWays GmbH
   description: Die PavingWays GmbH entwickelt Mobile Applikationen in Luzern, Schweiz
 banner:
-  title: Mobile Apps aus der Schweiz
+  title: Mobile Apps
   content: "
-    **Seit 2006** entwickeln wir **Mobile Apps für iOS, Android** und andere Plattformen. 
-    Seit 2020 sind wir **vor Ort in der Schweiz, LU**.
+    Wir entwickeln **seit 2006** **Mobile Apps für iOS, Android** und andere Plattformen.
+    Seit 2020 sind wir **vor Ort in Luzern, Schweiz**, .
+    
+
+    Wir arbeiten als **Entwicklungs-Partner für <span style=\"color: rgb(85, 189, 185)\">Digitalagenturen</span>**, **Know-How-Provider für <span style=\"color: rgb(85, 189, 185)\">KMUs</span>** und als Teil von **IT-Abteilungen in <span style=\"color: rgb(85, 189, 185)\">Weltkonzernen</span>**.
     
     
-    Wir arbeiten als **Entwicklungs-Partner für Digitalagenturen**, **Know-How-Provider für KMUs** und als Teil von **IT-Abteilungen in Weltkonzernen**.
-    
-    
-    Als _PavingWays_ ebnen wir unseren Kunden den Weg **von vom App-Konzept bis zum Deployment in die App Stores**.
+    Als _PavingWays_ ebnen wir unseren Kunden den Weg **<span style=\"color: rgb(85, 189, 185)\">vom App-Konzept bis zum Deployment</span>** in die App Stores.
   "
   image: /images/hero-image.webp
   button:
-    label: Jetzt einen Termin buchen!
+    label: Fragen? Meeting buchen!
     link: "https://calendly.com/pavingways_com/ms-teams-meeting"
   tel:
     label: ... oder direkt anrufen
@@ -26,18 +26,21 @@ banner:
 key_features:
   title: "Das bieten wir"
   description: "
-    Als **Full-Service-Partner** gehen wir weit über das reine Programmieren hinaus.
-    
-    Unsere **jahrelangen Erfahrungen** können wir in der gesamten App-Entwicklungs-Kette einbringen.
+    Als **Full-Service-Partner** gehen wir weit über das reine Programmieren von Apps hinaus.
+    Unsere **jahrelangen Erfahrungen** in zahlreichen Projekten erlauben uns, die gesamte Kette der App-Entwicklungs in hoher Qualität anzubieten.
   " 
   feature_list:
     #icon package react-feather-icon [https://feathericons.com/]
     - icon: "sun"
       title: App Ideation
-      content: Gern stehen wir unseren Kunden als Sparring-Partner schon während der Ideenfindung zur Seite. Unsere Erfahrungen lassen uns frühzeitig nützlichen Input geben.
+      content: 
+        Gern stehen wir unseren Kunden als Sparring-Partner schon während der Ideenfindung zur Seite. 
+        Unsere Erfahrungen lassen uns frühzeitig nützlichen Input geben.
+      link: app-ideation
     - icon: "layout"
       title: Konzeption
       content: Mit Personas, User-Journeys und Wireframes helfen wir dabei, der App-Idee einen Gestalt zu verleihen und sie konkret werden zu lassen.
+      link: app-konzeption
     - icon: "clipboard"
       title: Requirements
       content: Verstehen, was benötigt wird. Analysieren, Abwägen, Definieren und Dokumentieren sind wichtige erste Schritte in jedem unserer App-Projekte.
@@ -80,10 +83,8 @@ key_features:
 
 service:
   homepage_tab:
-    title: Unsere neuesten Projekte
-    description: "
-      Eine Übersicht unserer letzten Projekte
-    "
+    title: Beispiel-Projekte
+    description: Eine Übersicht unserer letzten Projekte.
     tab_list:
         - title: VHV - Kundenportal
           icon: "lock"
@@ -91,8 +92,8 @@ service:
         - title: ELMA - Suchtberatung
           icon: "clock"
           image: "/images/collaboration.webp"
-        - title: Tree-Shop - Verkaufen per QR Code 
-          icon: "bell"
+        - title: MS Kognition 
+          icon: "cpu"
           image: "/images/sales-by-country.webp"
 
   our_service:

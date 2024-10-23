@@ -6,11 +6,13 @@
     },
     {
       "i18nKey": "menu_about",
-      "url": "/about/"
+      "url_de": "/ueberuns/",
+      "url_en": "/about/"
     },
     {
       "i18nKey": "menu_technologies",
-      "url": "/technologies/"
+      "url_de": "/technologien/",
+      "url_en": "/technologies/"
     },
     {
       "i18nKey": "menu_blog",
@@ -32,7 +34,8 @@
 
     {
       "i18nKey": "menu_about",
-      "url": "/about/"
+      "url_de": "/ueberuns/",
+      "url_en": "/about/"
     },
     {
       "i18nKey": "menu_projects",

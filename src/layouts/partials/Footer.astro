@@ -70,7 +70,7 @@ switch (Astro.currentLocale) {
                   Astro.currentLocale !== Config.i18n.defaultLocale ? `/${Astro.currentLocale}` : ``
                 ) + `${item['url'] ? item['url'] : item['url_' + Astro.currentLocale]}`}
                 class={`nav-link-footer ${
-                  (pathname === item.url || pathname === `/${Astro.currentLocale}${item.url}`) && "active"
+                  (pathname === (item['url'] ? item['url'] : item['url_' + Astro.currentLocale]) || pathname === `/${Astro.currentLocale}${item['url']}`) && "active"
                 }`}
               >{i18n[item.i18nKey]}</a>
             ))

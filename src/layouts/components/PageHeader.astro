@@ -4,9 +4,7 @@ const { page_data } = Astro.props || {};
 const { title, page_title, slug, content } = page_data || {};
 ---
 
-<div class="text-center">
   <h1
-    class="mb-5 mt-8"
     set:html={markdownify(
       page_data?.page_title ? page_data?.page_title : page_data?.title
     )}
@@ -32,4 +30,3 @@ const { title, page_title, slug, content } = page_data || {};
       </div>
     )
   }
-</div>

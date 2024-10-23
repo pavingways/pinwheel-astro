@@ -21,7 +21,11 @@ li.languages {
 }
 
 input#nav-toggle:checked ~ #nav-menu {
-  @apply block lg:flex;
+  @apply block lg:flex mt-8;
+
+  li {
+    @apply pt-2 pb-2;
+  }
 
   li.languages {
     > span {
@@ -55,6 +59,7 @@ input#nav-toggle:checked ~ #nav-menu {
 .header {
   @apply sticky top-0 z-50 bg-white py-6 transition-all duration-300 lg:bg-transparent;
   min-width: 320px;
+  min-height: 107px;
 
   &.header-sticky {
     background-color: rgba(255, 255, 255, 0.98);
@@ -75,7 +80,7 @@ input#nav-toggle:checked ~ #nav-menu {
 }
 
 .navbar-nav {
-  @apply text-center lg:text-left;
+  @apply text-right lg:text-left;
 }
 
 .nav-link {
@@ -113,12 +118,17 @@ input#nav-toggle:checked ~ #nav-menu {
 .nav-dropdown-item {
   @apply mb-1;
 
-  a.active {
+  a {
     @apply relative;
+    @apply sm:block;
+    @apply lg:inline-block lg:pt-2 lg:pb-2;
 
-    &::after {
-      @apply absolute bottom-0 left-0 right-0 h-0.5 bg-gradient-to-tl content-[''];
+    &.active {
+      &::after {
+        @apply absolute bottom-0 left-0 right-0 h-0.5 bg-gradient-to-tl content-[''];
+      }
     }
+
   }
 }
 

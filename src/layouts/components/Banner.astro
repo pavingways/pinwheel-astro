@@ -12,9 +12,9 @@ const { title, button, image, content, tel } = banner;
         <h1 class="banner-title" set:text={title} />
         <p class="mt-6" set:html={markdownify(content)} />
       </div>
-      <div class="lg:col-4 sm:col-6">
+      <div class="hidden lg:block lg:col-4">
         <Image
-          class="w-full object-contain mt-8"
+          class="mx-auto max-w-[50%] lg:max-w-full object-contain mt-8"
           alt="banner"
           src={image}
           width={400}
@@ -23,6 +23,7 @@ const { title, button, image, content, tel } = banner;
           loading="eager"
         />
       </div>
+      <!--
       <div class="sm:col-6 text-center lg:text-left">
         <a class="btn btn-primary sm:mt-8 sm:mb-8 lg:mb-0" href={button.link}>
           {button.label}
@@ -31,6 +32,7 @@ const { title, button, image, content, tel } = banner;
           {tel.label}: <a href={tel.link} style="white-space: nowrap">{tel.number}</a>
         </p>
       </div>
+      -->
     </div>
   </div>
 </section>

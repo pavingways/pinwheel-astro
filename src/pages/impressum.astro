@@ -6,7 +6,7 @@ import { Image } from 'astro:assets'
 import config from "@config/config.json";
 
 const { logo } = config.site;
-const entry = await getEntryBySlug("pages", "imprint");
+const entry = await getEntryBySlug("pages", "impressum");
 const { Content } = await entry.render();
 ---
 

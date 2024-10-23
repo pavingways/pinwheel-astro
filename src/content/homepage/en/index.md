@@ -5,18 +5,18 @@ page:
 banner:
   title: Mobile App Development
   content: "
-    **We have been developing **mobile apps for iOS, Android** and other platforms since 2006**. 
+    We have been developing **mobile apps for iOS, Android** and other platforms since 2006. 
     Since 2022 we are **located in Switzerland, LU**.
     
     
     We work as **development partners for digital agencies**, **know-how providers for SMEs** and as part of **IT departments in global corporations**.
     
     
-    We are _paving ways_ for our clients **from initial idea to app store deployment** and beyond.
+    We are _paving ways_ for our clients **from initial idea to app store deployment**.
   "
   image: /images/hero-image.webp
   button:
-    label: Ask a question, book a meeting!
+    label: Question? Book a meeting!
     link: "https://calendly.com/pavingways_com/ms-teams-meeting"
   tel:
     label: ... or call directly

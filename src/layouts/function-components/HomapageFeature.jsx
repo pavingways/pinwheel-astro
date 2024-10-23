@@ -7,11 +7,8 @@ const HomapageFeature = ({ feature_list }) => {
     <div className="key-feature-grid mt-10 grid grid-cols-1 gap-7 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4">
       {feature_list.map((item, i) => {
         const FeatherIcon = Icon[humanize(item.icon)];
-        return (
-          <div
-            key={i}
-            className="flex flex-col justify-between rounded-lg bg-white p-5 shadow-lg"
-          >
+        const content = (
+          <>
             <div>
               <h3 className="h4 text-xl lg:text-2xl">{item.title}</h3>
               <p>{item.content}</p>
@@ -19,8 +16,20 @@ const HomapageFeature = ({ feature_list }) => {
             <span className="icon mt-4">
               <FeatherIcon />
             </span>
+          </>
+        );
+
+        // conditional links
+        return item.link ? (
+          <a href={item.link} key={i} className="flex flex-col justify-between rounded-lg bg-white p-5 shadow-lg">
+            {content}
+          </a>
+        ) : (
+          <div key={i} className="flex flex-col justify-between rounded-lg bg-white p-5 shadow-lg">
+            {content}
           </div>
         );
+
       })}
     </div>
   );
