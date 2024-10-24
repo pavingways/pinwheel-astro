@@ -46,7 +46,7 @@ export default defineConfig({
   },
   site: config.site.base_url ? config.site.base_url : "https://skatepark.pilatustools.com",
   base: config.site.base_path ? config.site.base_path : "/",
-  trailingSlash: config.site.trailing_slash ? config.site.trailing_slash : "ignore",
+  trailingSlash: "ignore",
   integrations: [
     react(),
     sitemap(),

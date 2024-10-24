@@ -3,7 +3,6 @@
     "title": "Mobile Apps in Central Switzerland - PavingWays GmbH",
     "base_url": "https://www.pavingways.com",
     "base_path": "/",
-    "trailing_slash": "always",
     "favicon": "/images/favicon.png",
     "logo": "/images/logo.webp",
     "logo_width": "190",

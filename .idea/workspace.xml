@@ -5,42 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d2d6658b-20ca-4d31-9309-cfe0c6c3172e" name="Changes" comment="1st version web">
-      <change afterPath="$PROJECT_DIR$/src/content/blog/historic-a-happy-new-year-and-website.mdx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/content/pages/impressum.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/ueberuns/index.astro" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bin/migrate-old-blog-posts.sh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/a-happy-new-year-and-website-2_1140.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/mobile-apps-building-deployment-jsugfra1_2221.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/astro.config.mjs" beforeDir="false" afterPath="$PROJECT_DIR$/astro.config.mjs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/hero-image.pxd" beforeDir="false" afterPath="$PROJECT_DIR$/public/images/hero-image.pxd" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/hero-image.webp" beforeDir="false" afterPath="$PROJECT_DIR$/public/images/hero-image.webp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/config/config.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/config/config.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/config/menu.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/config/menu.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/content/blog/-index.md" beforeDir="false" afterPath="$PROJECT_DIR$/src/content/blog/-index.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/content/blog/historic-a-happy-new-year-and-website.mdx" beforeDir="false" afterPath="$PROJECT_DIR$/src/content/blog/historic-a-happy-new-year-and-website.mdx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/content/blog/post-1.mdx" beforeDir="false" afterPath="$PROJECT_DIR$/src/content/blog/post-1.mdx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/content/homepage/de/index.md" beforeDir="false" afterPath="$PROJECT_DIR$/src/content/homepage/de/index.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/content/homepage/en/index.md" beforeDir="false" afterPath="$PROJECT_DIR$/src/content/homepage/en/index.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/content/pages/imprint.md" beforeDir="false" afterPath="$PROJECT_DIR$/src/content/pages/imprint.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/layouts/Base.astro" beforeDir="false" afterPath="$PROJECT_DIR$/src/layouts/Base.astro" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/layouts/components/Banner.astro" beforeDir="false" afterPath="$PROJECT_DIR$/src/layouts/components/Banner.astro" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/layouts/components/LanguagePicker.astro" beforeDir="false" afterPath="$PROJECT_DIR$/src/layouts/components/LanguagePicker.astro" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/layouts/components/PageHeader.astro" beforeDir="false" afterPath="$PROJECT_DIR$/src/layouts/components/PageHeader.astro" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/layouts/function-components/HomapageFeature.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/layouts/function-components/HomapageFeature.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/layouts/function-components/HomepageTab.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/layouts/function-components/HomepageTab.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/layouts/partials/Footer.astro" beforeDir="false" afterPath="$PROJECT_DIR$/src/layouts/partials/Footer.astro" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/layouts/partials/Header.astro" beforeDir="false" afterPath="$PROJECT_DIR$/src/layouts/partials/Header.astro" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lib/utils/i18n.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/utils/i18n.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/[regular].astro" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/_examples/[regular].astro" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/about.astro" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/about/index.astro" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/blog/[single].astro" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/blog/[single].astro" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/blog/index.astro" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/blog/index.astro" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/contact.astro" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/_examples/contact.astro" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/en/index.astro" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/en/index.astro" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/how-it-works.astro" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/_examples/how-it-works.astro" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/imprint.astro" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/impressum.astro" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/index.astro" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/index.astro" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/pricing.astro" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/_examples/pricing.astro" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/signin.astro" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/_examples/signin.astro" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/signup.astro" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/_examples/signup.astro" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/navigation.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/navigation.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -109,14 +83,14 @@
       <recent name="$PROJECT_DIR$/src/content/pages" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/public" />
       <recent name="$PROJECT_DIR$/src/pages/_examples" />
       <recent name="$PROJECT_DIR$/src/pages" />
       <recent name="$PROJECT_DIR$/src/pages/de" />
       <recent name="$PROJECT_DIR$/src/pages/about" />
-      <recent name="$PROJECT_DIR$/bin" />
     </key>
   </component>
-  <component name="RunManager" selected="npm.dev --host 127.0.0.1">
+  <component name="RunManager" selected="npm.build">
     <configuration name="build" type="js.build_tools.npm" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/package.json" />
       <command value="run" />
@@ -220,6 +194,17 @@
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.History.Properties">
+    <option name="COLUMN_ID_ORDER">
+      <list>
+        <option value="Default.Root" />
+        <option value="Default.Author" />
+        <option value="Default.Date" />
+        <option value="Default.Subject" />
+        <option value="GitHub.CommitStatus" />
+      </list>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="1st version WIP" />

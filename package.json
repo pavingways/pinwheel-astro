@@ -13,6 +13,7 @@
     "ngrok": "ngrok start s4321"
   },
   "dependencies": {
+    "@astrojs/markdown-remark": "v4",
     "@astrojs/mdx": "^2.0.3",
     "@astrojs/rss": "^4.0.1",
     "astro": "^4.1.0",
