@@ -4,8 +4,23 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d2d6658b-20ca-4d31-9309-cfe0c6c3172e" name="Changes" comment="1st version web">
-      <change beforePath="$PROJECT_DIR$/bin/migrate-old-blog-posts.sh" beforeDir="false" afterPath="$PROJECT_DIR$/bin/migrate-old-blog-posts.sh" afterDir="false" />
+    <list default="true" id="d2d6658b-20ca-4d31-9309-cfe0c6c3172e" name="Changes" comment="new version of blog migration script">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/a-happy-new-year-and-website-2_1140.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/mobile-apps-building-deployment-jsugfra1_2221.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/content/blog/historic-a-happy-new-year-and-website.mdx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/content/blog/post-1.mdx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/content/blog/post-10.mdx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/content/blog/post-11.mdx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/content/blog/post-12.mdx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/content/blog/post-2.mdx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/content/blog/post-3.mdx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/content/blog/post-4.mdx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/content/blog/post-5.mdx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/content/blog/post-6.mdx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/content/blog/post-7.mdx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/content/blog/post-8.mdx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/content/blog/post-9.mdx" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -180,7 +195,15 @@
       <option name="project" value="LOCAL" />
       <updated>1707385739979</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="new version of blog migration script">
+      <option name="closed" value="true" />
+      <created>1729775280299</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1729775280299</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -200,6 +223,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="1st version WIP" />
     <MESSAGE value="1st version web" />
-    <option name="LAST_COMMIT_MESSAGE" value="1st version web" />
+    <MESSAGE value="new version of blog migration script" />
+    <option name="LAST_COMMIT_MESSAGE" value="new version of blog migration script" />
   </component>
 </project>
