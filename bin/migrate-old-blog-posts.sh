@@ -22,8 +22,8 @@ in_div && !/<footer>/ {
   gsub(/<p>/, "\n<p>")
   gsub(/&#8211;/, "–")
   gsub(/&#8212;/, "—")
-  gsub(/&#8216;/, "‘")
-  gsub(/&#8217;/, "’")
+  gsub(/&#8216;/, "\‘")
+  gsub(/&#8217;/, "\’")
   gsub(/&#8220;/, "“")
   gsub(/&#8221;/, "”")
   gsub(/&#8230;/, "...")
@@ -52,10 +52,10 @@ in_div && !/<footer>/ {
 }' "$file")
   _DEL_IMAGE_URL=$(sed -n 's:.*<div class="entry-content">.*<img src="\([^"]*\)".*:\1:p' "$file")
   IMAGE_URL=${IMAGE_URL:-/images/blog-default.webp}
-  NEW_MDX_FILE="$NEW_BLOG_DIR/${ORIGINAL_FILENAME%.html}.mdx"
+  NEW_MDX_FILE="$NEW_BLOG_DIR/${ORIGINAL_FILENAME%.html}.md"
   REDIRECT_FILE="$NEW_PUBLIC_DIR/$ORIGINAL_FILENAME"
 
-  # Create new .mdx file with frontmatter
+  # Create new .md file with frontmatter
   cat <<EOF > "$NEW_MDX_FILE"
 ---
 title: $TITLE
