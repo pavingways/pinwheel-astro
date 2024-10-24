@@ -1,35 +1,5 @@
 #!/bin/bash
 
-# read all .html files from the old repo in CURRENT_DIR/../../pavingways.github.io/*.html
-# for each file, extract:
-# - file name ORIGINAL_FILENAME
-# - title (from title tag)
-# - post time (in <time datetime="POST_TIME_HERE"></time>
-# - content in <div class="entry-content">CONTENT_HERE</div>
-# - image URL (first image tag within the content just extracted)
-# then for each file:
-# - create a new file in CURRENT_DIR/../src/content/blog/ with the following format: OLD_FILENAME.mdx
-# - add the following frontmatter:
-# ---
-# title: TITLE
-# date: POST_TIME
-# image: IMAGE_URL
-# ---
-# add content from CONTENT_HERE in the new file, also between <div class="entry-content">...</div>
-# also create a new file in CURRENT_DIR/../src/content/blog/ with the same file name as the original one
-# and add the following content:
-#<!DOCTYPE html>
-#<html lang="en">
-#<head>
-#  <meta charset="UTF-8">
-#  <meta http-equiv="refresh" content="0; url=/blog/historic-OLD_FILENAME(without.html)" />
-#  <title>Redirecting...</title>
-#</head>
-#<body>
-#<p>If you are not redirected, <a href="/blog/historic-OLD_FILENAME(without.html)">go to the new location of this post</a>.</p>
-#</body>
-#</html>
-
 CURRENT_DIR=$(dirname "$0")
 OLD_REPO_DIR="$CURRENT_DIR/../../pavingways.github.io"
 NEW_BLOG_DIR="$CURRENT_DIR/../src/content/blog"
@@ -37,16 +7,16 @@ NEW_PUBLIC_DIR="$CURRENT_DIR/../public"
 
 for file in "$OLD_REPO_DIR"/*.html; do
   case "$(basename "$file")" in
-    "404.html"|"datenschutz.html"|"impressum.html"|"rocco.html")
+    "404.html"|"index.html"|"datenschutz.html"|"impressum.html"|"imprint.html"|"rocco.html")
       continue
       ;;
   esac
   ORIGINAL_FILENAME=$(basename "$file")
-  TITLE=$(sed -n 's:.*<title>\(.*\)</title>.*:\1:p' "$file")
-  POST_TIME=$(sed -n 's:.*<time datetime="\([^"]*\)"></time>.*:\1:p' "$file")
+  TITLE=$(sed -n 's:.*<title>\(.*\)</title>.*:\1:p' "$file" | sed 's/:/ - /g' | sed 's/@/(at)/g' | sed 's/"//g')
+  POST_TIME=$(sed -n 's/.*<time datetime="\([^"]*\)".*/\1/p' "$file" | head -n 1)
   CONTENT=$(sed -n 's:.*<div class="entry-content">\([^<]*\)</div>.*:\1:p' "$file")
   IMAGE_URL=$(sed -n 's:.*<div class="entry-content">.*<img src="\([^"]*\)".*:\1:p' "$file")
-
+  IMAGE_URL=${IMAGE_URL:-/images/blog-default.webp}
   NEW_MDX_FILE="$NEW_BLOG_DIR/historic-${ORIGINAL_FILENAME%.html}.mdx"
   REDIRECT_FILE="$NEW_PUBLIC_DIR/$ORIGINAL_FILENAME"
 
