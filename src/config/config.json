@@ -10,7 +10,7 @@
     "logo_text": "PavingWays Mobile Apps Logo"
   },
   "settings": {
-    "pagination": 6,
+    "pagination": 100,
     "summary_length": 100,
     "blog_folder": "blog"
   },
