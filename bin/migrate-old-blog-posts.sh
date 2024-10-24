@@ -33,19 +33,25 @@
 CURRENT_DIR=$(dirname "$0")
 OLD_REPO_DIR="$CURRENT_DIR/../../pavingways.github.io"
 NEW_BLOG_DIR="$CURRENT_DIR/../src/content/blog"
+NEW_PUBLIC_DIR="$CURRENT_DIR/../public"
 
 for file in "$OLD_REPO_DIR"/*.html; do
+  case "$(basename "$file")" in
+    "404.html"|"datenschutz.html"|"impressum.html"|"rocco.html")
+      continue
+      ;;
+  esac
   ORIGINAL_FILENAME=$(basename "$file")
-  TITLE=$(grep -oP '(?<=<title>)(.*)(?=</title>)' "$file")
-  POST_TIME=$(grep -oP '(?<=<time datetime=")(.*)(?="></time>)' "$file")
-  CONTENT=$(grep -oP '(?<=<div class="entry-content">)(.*)(?=</div>)' "$file")
-  IMAGE_URL=$(grep -oP '(?<=<div class="entry-content">.*<img src=")([^"]+)' "$file")
+  TITLE=$(sed -n 's:.*<title>\(.*\)</title>.*:\1:p' "$file")
+  POST_TIME=$(sed -n 's:.*<time datetime="\([^"]*\)"></time>.*:\1:p' "$file")
+  CONTENT=$(sed -n 's:.*<div class="entry-content">\([^<]*\)</div>.*:\1:p' "$file")
+  IMAGE_URL=$(sed -n 's:.*<div class="entry-content">.*<img src="\([^"]*\)".*:\1:p' "$file")
 
-  NEW_FILE="$NEW_BLOG_DIR/${ORIGINAL_FILENAME%.html}.mdx"
-  REDIRECT_FILE="$NEW_BLOG_DIR/$ORIGINAL_FILENAME"
+  NEW_MDX_FILE="$NEW_BLOG_DIR/historic-${ORIGINAL_FILENAME%.html}.mdx"
+  REDIRECT_FILE="$NEW_PUBLIC_DIR/$ORIGINAL_FILENAME"
 
   # Create new .mdx file with frontmatter
-  cat <<EOF > "$NEW_FILE"
+  cat <<EOF > "$NEW_MDX_FILE"
 ---
 title: $TITLE
 date: $POST_TIME

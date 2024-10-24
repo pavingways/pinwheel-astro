@@ -5,16 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d2d6658b-20ca-4d31-9309-cfe0c6c3172e" name="Changes" comment="1st version web">
-      <change afterPath="$PROJECT_DIR$/bin/migrate-old-blog-posts.sh" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/a-happy-new-year-and-website-2_1140.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/mobile-apps-building-deployment-jsugfra1_2221.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/astro.config.mjs" beforeDir="false" afterPath="$PROJECT_DIR$/astro.config.mjs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/config/config.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/config/config.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/content/blog/historic-a-happy-new-year-and-website.mdx" beforeDir="false" afterPath="$PROJECT_DIR$/src/content/blog/historic-a-happy-new-year-and-website.mdx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/content/blog/post-1.mdx" beforeDir="false" afterPath="$PROJECT_DIR$/src/content/blog/post-1.mdx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/migrate-old-blog-posts.sh" beforeDir="false" afterPath="$PROJECT_DIR$/bin/migrate-old-blog-posts.sh" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
