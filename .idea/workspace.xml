@@ -5,22 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d2d6658b-20ca-4d31-9309-cfe0c6c3172e" name="Changes" comment="new version of blog migration script">
+      <change afterPath="$PROJECT_DIR$/public/images/blog-default-1.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/blog-default.webp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/a-happy-new-year-and-website-2_1140.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/mobile-apps-building-deployment-jsugfra1_2221.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/content/blog/historic-a-happy-new-year-and-website.mdx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/content/blog/post-1.mdx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/content/blog/post-10.mdx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/content/blog/post-11.mdx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/content/blog/post-12.mdx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/content/blog/post-2.mdx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/content/blog/post-3.mdx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/content/blog/post-4.mdx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/content/blog/post-5.mdx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/content/blog/post-6.mdx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/content/blog/post-7.mdx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/content/blog/post-8.mdx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/content/blog/post-9.mdx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/migrate-old-blog-posts.sh" beforeDir="false" afterPath="$PROJECT_DIR$/bin/migrate-old-blog-posts.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/hero-image.pxd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/hero-image.webp" beforeDir="false" afterPath="$PROJECT_DIR$/public/images/hero-image.webp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -70,7 +60,7 @@
     "npm.dev --host 127.0.0.1.executor": "Run",
     "npm.dev.executor": "Run",
     "npm.ngrok.executor": "Run",
-    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "settings.editor.selected.configurable": "editor.reader.mode",
     "ts.external.directory.path": "/Users/Rocco/Applications/IntelliJ IDEA Ultimate.app/Contents/plugins/javascript-plugin/jsLanguageServicesImpl/external"
   },
   "keyToStringList": {
@@ -89,11 +79,11 @@
       <recent name="$PROJECT_DIR$/src/content/pages" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/public/images" />
       <recent name="$PROJECT_DIR$/public" />
       <recent name="$PROJECT_DIR$/src/pages/_examples" />
       <recent name="$PROJECT_DIR$/src/pages" />
       <recent name="$PROJECT_DIR$/src/pages/de" />
-      <recent name="$PROJECT_DIR$/src/pages/about" />
     </key>
   </component>
   <component name="RunManager" selected="npm.build">

@@ -12,12 +12,47 @@ for file in "$OLD_REPO_DIR"/*.html; do
       ;;
   esac
   ORIGINAL_FILENAME=$(basename "$file")
-  TITLE=$(sed -n 's:.*<title>\(.*\)</title>.*:\1:p' "$file" | sed 's/:/ - /g' | sed 's/@/(at)/g' | sed 's/"//g')
+  TITLE=$(sed -n 's:.*<title>\(.*\)</title>.*:\1:p' "$file" | sed 's/:/ - /g' | sed 's/@/(at)/g' | sed 's/"//g' | sed 's/ - PavingWays JavaScript Applications//g')
   POST_TIME=$(sed -n 's/.*<time datetime="\([^"]*\)".*/\1/p' "$file" | head -n 1)
-  CONTENT=$(sed -n 's:.*<div class="entry-content">\([^<]*\)</div>.*:\1:p' "$file")
-  IMAGE_URL=$(sed -n 's:.*<div class="entry-content">.*<img src="\([^"]*\)".*:\1:p' "$file")
+  AUTHOR=$(sed -n 's/.*  <meta name="author" content="\([^"]*\)".*/\1/p' "$file" | head -n 1)
+  AUTHOR=${AUTHOR:-Diana/Rocco}
+CONTENT=$(awk '
+/<div class="entry-content">/ {in_div=1}
+in_div && !/<footer>/ {
+  gsub(/<p>/, "\n<p>")
+  gsub(/&#8211;/, "–")
+  gsub(/&#8212;/, "—")
+  gsub(/&#8216;/, "‘")
+  gsub(/&#8217;/, "’")
+  gsub(/&#8220;/, "“")
+  gsub(/&#8221;/, "”")
+  gsub(/&#8230;/, "...")
+  gsub(/<a[^>]*>/, "")
+  gsub(/<\/a>/, "")
+  gsub(/<pre><code>/, "```\n")
+  gsub(/<\/code><\/pre>/, "\n```")
+  gsub(/<code>/, "`")
+  gsub(/<\/code>/, "`")
+  gsub(/<pre>/, "")
+  gsub(/<\/pre>/, "")
+  gsub(/<strong>/, "**")
+  gsub(/<\/strong>/, "** ")
+  gsub(/\n<\/strong>/, "**")
+  gsub(/<br>/, "\n")
+  gsub(/ /, " ")
+  gsub(/<div[^>]*>/, "&\n")
+  gsub(/<p[^>]*>/, "&\n")
+  gsub(/<\/p>/, "\n&")
+  gsub(/<!--more-->/, "")
+  gsub(/\*\*\*\*/, "")
+  gsub(/www./, "")
+  gsub(/http:\/\//, "")
+  print
+  if (/<\/div>/) { in_div=0 }
+}' "$file")
+  _DEL_IMAGE_URL=$(sed -n 's:.*<div class="entry-content">.*<img src="\([^"]*\)".*:\1:p' "$file")
   IMAGE_URL=${IMAGE_URL:-/images/blog-default.webp}
-  NEW_MDX_FILE="$NEW_BLOG_DIR/historic-${ORIGINAL_FILENAME%.html}.mdx"
+  NEW_MDX_FILE="$NEW_BLOG_DIR/${ORIGINAL_FILENAME%.html}.mdx"
   REDIRECT_FILE="$NEW_PUBLIC_DIR/$ORIGINAL_FILENAME"
 
   # Create new .mdx file with frontmatter
@@ -26,10 +61,12 @@ for file in "$OLD_REPO_DIR"/*.html; do
 title: $TITLE
 date: $POST_TIME
 image: $IMAGE_URL
+categories: [mobile, historic]
+author: $AUTHOR
 ---
-<div class="entry-content">
+
 $CONTENT
-</div>
+
 EOF
 
   # Create redirect HTML file
@@ -38,11 +75,11 @@ EOF
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta http-equiv="refresh" content="0; url=/blog/historic-${ORIGINAL_FILENAME%.html}" />
+  <meta http-equiv="refresh" content="0; url=/blog/${ORIGINAL_FILENAME%.html}" />
   <title>Redirecting...</title>
 </head>
 <body>
-<p>If you are not redirected, <a href="/blog/historic-${ORIGINAL_FILENAME%.html}">go to the new location of this post</a>.</p>
+<p>If you are not redirected, <a href="/blog/${ORIGINAL_FILENAME%.html}">go to the new location of this post</a>.</p>
 </body>
 </html>
 EOF
