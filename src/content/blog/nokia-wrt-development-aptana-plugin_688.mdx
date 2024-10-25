@@ -1,0 +1,48 @@
+---
+title: Hands-On Nokia WRT Development with Aptana
+date: 2009-09-14T00:00:00+02:00
+image: /images/blog-default.webp
+categories: [mobile, historic]
+author: Diana/Rocco
+---
+
+<div class="entry-content">
+Back in April we were invited to participate in the Nokia WRT Widget Hackathon in Monaco. The event took place during the Nokia Developer Summit and it was all about hacking a WRT widget together within 24 hours. 12 teams from around the world implemented widget ideas nominated in beforehand by the Nokia community. We chose to work on the travel planner idea because it relates pretty well to one of our upcoming services called Panda Route - a travel diary service.
+
+
+
+With this article I want to provide some basic insights on Nokia WRT widgets, how they work and how to implement and deploy them to handsets.
+
+
+
+WRT stands for Web runtime and it enables you to create small applications, namely widgets, entirely built on HTML, CSS and JavaScript. Widgets are packaged and then deployed and installed on the device alongside native applications where the run in a chrome-less web browser, the web runtime environment.
+
+
+
+The most basic widget consists of not more than a HTML file and a widget description file that defines some settings for the runtime and tells it where the widget’s entry point is. Of course you would normally add images, a CSS file and some JavaScript that handles all the logic and enables you to access device specific capabilities, such as calendar entries or the messaging application. Nokia offers a WRT JavaScript library to render message boxes and buttons, we used jQuery for our widget, so this is definitely possible too.
+
+
+
+Widget files are then packaged into a .wgz file which really is just a renamed ZIP file. If you then send this .wgz file to a compatible device, it will detect that this is a widget and ask you to install it as an application.
+
+
+
+The basic work flow to develop such a widget would be like this:<ol>	<li>write HTML/CSS/JavaScript in an editor, add images</li>	<li>create the XML widget description file, namely Info.plist</li>	<li>test your widget in a web browser</li>	<li>ZIP it all into a package and rename it to .wgz</li>	<li>send it to the device via bluetooth or upload it to a web server and download it via the device’s web browser</li>	<li>now your widget installs in the device’s applications menu and can be used</li></ol>
+
+While this is feasible you might have noticed that this work flow has its flaws, especially when it comes to testing and deploying your widget.
+
+
+
+Therefore we were happy that Nokia joined forces with Aptana and created a WRT plugin for Aptana Studio that helps you to speed up this work flow and actually enables you to write and deploy a widget in such a short time that on-device testing becomes possible.
+
+Additional to code completion, syntax highlighting and all the other nice features Aptana Studio has to offer, you can very easily create, preview, package and even deploy your widget right out of the IDE to your device.
+
+
+
+We were using the windows version of Aptana Studio during the hackathon, but are usually working on Macs - it works there just as easily: You can switch to the preview pane while editing the widget’s HTML file and choose from a collection of compatible Nokia phones defined by screen sizes. This gives you a more or less rough idea how the widget will look like on the device. Then you can right-click on the widget project and choose to package the whole thing into a .wgz file. Another right-click option is to deploy the widget to a device via bluetooth. This is the best feature because you can directly test your work on a real device this way. You can also deploy to Nokia’s device emulator which however only runs on windows.
+
+
+
+Bottom line is if you have some experience with web development and want to get into developing widgets for Nokia, we can only recommend to read some documentation, get Aptana Studio and the WRT plugin and get going in no time. Oh and don’t forget to publish your widget on Nokia’s brand new OVI store to make it accessible to millions of users and maybe even make a buck or two by selling it there.
+</div>
+

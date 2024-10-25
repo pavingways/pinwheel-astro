@@ -1,0 +1,30 @@
+---
+title: A Little IE Mobile Forms POST finding
+date: 2008-05-03T00:00:00+02:00
+image: /images/blog-default.webp
+categories: [mobile, historic]
+author: Diana/Rocco
+---
+
+<div class="entry-content">
+While working on a couple of things we realized strange behavior in IE Mobile on a Windows 5.0 phone. It’s not really a big issue but it could lead to tiny hiccups for developers, so I felt like posting it here.
+
+
+
+The issue occurs then POSTing a form (multipart/form-data) to the server (running PHP 5.x) which contains an input field of type “file” and you leave this file empty.
+
+
+
+What you on the server side normally do is to read the form values submitted by the user through the $_POST and the $_FILES array (in PHP) and then do whatever you like with it. These arrays are populated by PHP with the values of the various input fields on your form, and inputs of type=”file” don’t appear in $_POST, but in the $_FILES array, any other input type’s value goes to $_POST.
+
+Now as long as you fill in all field on your form everything is fine, and IE Mobile works as described.
+
+
+
+BUT: While any other browser seems to not send empty inputs of type=”file” to the server at all, IE Mobile does just that AND it goes to $_POST causing you to have a key with the name of your input=”file” field with en empty value in the $_POST array after sending the form. This doesn’t hurt at all, but it is weird, especially because this ONLY happens if you leave the input=”file” form element empty.
+
+
+
+While this is a bit strange, it’s not really a problem, maybe not even a bug, maybe not even against the standard (I didn’t look it up). After all, uploading files through a form on a mobile browser does not seem to be what many people do (although it works pretty well...mostly).
+</div>
+

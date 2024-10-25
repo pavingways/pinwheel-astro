@@ -1,0 +1,163 @@
+---
+title: New Year, New Blog
+date: 2014-01-06T00:00:00+01:00
+image: /images/blog-default.webp
+categories: [mobile, historic]
+author: Diana/Rocco
+---
+
+<div class="entry-content">
+
+<p>
+Happy 2014 and welcome to our new blog!
+</p>
+
+
+<p>
+It has been very quiet around here for a while &ndash; **over two years**  have passed since our last blog entry.
+Now we&rsquo;re redefining, tightening and updating PavingWays and we made some changes to our blog too.
+</p>
+
+<h2>New Blog</h2>
+
+
+<p>
+We transferred the old pavingways.com from a self-hosted and heavily modified WordPress installation to a Jekyll/Octopress blog on GitHub Pages.
+The page is additionally delivered through CloudFlare as we had CF set up before and it had proven to be reliable and fast.
+</p>
+
+
+<p>
+The whole migration process went relatively smoothly however I had to make some adjustments here and there.
+</p>
+
+<h3>Migrate old WordPress Posts to Markdown</h3>
+
+
+<p>
+Before we settled with Octopress I tried Ghost and Jekyll directly, so it was clear I would need to have our old posts as Markdown files or HTML if everything else would fail.
+</p>
+
+
+<p>
+So I wrote a PHP script that exported all of our old WordPress posts to Markdown files using an old PHP class called Markdownify.
+Trouble was that this class needed way too many adjustments and I never was satisfied with the results, so I discarded wanting to have ALL posts in Markdown and decided to go with the Jekyll importer which produces HTML files.
+The process looked simple and roughly goes like this:
+</p>
+
+<ul>
+<li>export a WXR file from your WordPress &ldquo;Tools&rdquo; section</li>
+<li>follow a few simple steps on the Jekyll importer page</li>
+<li>have your old blog posts in _posts (as .html files)</li>
+</ul>
+
+
+
+<p>
+Guess what &hellip; this did not work and first I got this:
+</p>
+
+```
+$ jekyll import wordpress --source pavingways.wordpress.2014-01-05.xml
+
+Could not require 'htmlentities', so the :clean_entities option is now disabled.
+error: LoadError: cannot load such file -- mysql2. Use --trace to view backtrace
+
+```
+
+
+<p>
+This is caused by some missing gems and you should &ldquo;gem install&rdquo; `htmlentities`, `sequel`, `mysql` and `mysql2` just to be sure.
+</p>
+
+
+<p>
+Some more playing around with this revealed that apparently the command line suggested on the Jekyll importer page is/was simply wrong see my bug report:
+The importer consists of several sub-importers for various systems and for wordpress there are two &ndash; one for self-hosted blogs and one for blogs on wordpress.com.
+</p>
+
+
+<p>
+I had no local DB of my old blog at hand &ndash; unfortunately the wordpress importer requires one in contrast to above command line example. That was initially not clear to me and I already had my WXR file &hellip;<br/>
+And so I went with the `wordpressdotcom` importer, also because I found a blog post on the matter and tried another command line (also contained in the Jekyll importer docs) which works:
+</p>
+
+```
+$ruby -rubygems -e 'require "jekyll-import"; JekyllImport::Importers::WordpressDotCom.run({ "source" =&gt; "pavingways.wordpress.2014-01-05.xml" })'
+
+```
+
+
+<p>
+Basically I could also have done this and had saved some time, oh well:
+</p>
+
+```
+$ jekyll import wordpressdotcom --source pavingways.wordpress.2014-01-05.xml
+
+```
+
+
+<p>
+Now I had all my files in <em>_posts</em> as I wanted. My remaining issues with the wordpressdotcom importer were as follows:
+</p>
+
+<ul>
+<li>filenames did not match my old URL scheme `/{post_name}_{ID}.html` .</li>
+<li>files do not contain a `date` field in their head section</li>
+<li>files do not contain a `comments` field in their head section</li>
+<li>HTML in WordPress is apparently outputted using PHP&rsquo;s nl2br() function, so the HTML files did not contain the necessary `&lt;br&gt;`s</li>
+</ul>
+
+
+
+<p>
+In my first stab at Ruby source code ever since I read this Rails book in 2005 I changed the jekyll-import Gem (the file is called `wordpressdotcom.rb`) so it did all of the above and finally I was happy with my old post files.
+</p>
+
+
+<p>
+Some changes to the default Octopress theme and (S)CSS I had a working site and especially all of our old blog posts on GitHub.
+</p>
+
+<h3>Hosted Comments and Migration</h3>
+
+
+<p>
+The same WXR file I used for importing our old post can be used to import all comments to Disqus. Details see this blog post again.
+The import worked alright, however I did not see any comments in the Disqus box below our posts.
+</p>
+
+
+<p>
+Apparently Disqus and CloudFlare don&rsquo;t just work together as planned and so I followed this post and It worked &ndash; unfortunately only partly&hellip;
+</p>
+
+
+<p>
+As it turns out I had to do a <em>domain migration</em> in Disqus (Discussions &ndash;> Tools) in order to see all my old comments.
+Strangely this required me to migrate from my (unchanged) domain `pavingways.com` to `pavingways.github.io` so they now appear in Disqus like this:
+</p>
+
+```
+pavingways.github.io/new-year-new-blog.html
+
+```
+
+
+<p>
+I had no time digging deeper but apparetly disqus realizes that my page is hosted on GitHub.
+Finally all comments show up and we have a working blog again.
+</p>
+
+
+<p>
+Octopress’ rake commands make it now simple and easy to write/debug posts and deploy them to GitHub.
+</p>
+
+
+<p>
+**Happy New Year!** 
+</p>
+</div>
+

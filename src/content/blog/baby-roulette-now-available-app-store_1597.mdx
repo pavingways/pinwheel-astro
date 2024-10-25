@@ -1,0 +1,72 @@
+---
+title: Baby Roulette now in App Store - some insights...
+date: 2010-03-17T00:00:00+01:00
+image: /images/blog-default.webp
+categories: [mobile, historic]
+author: Diana/Rocco
+---
+
+<div class="entry-content">
+<img class="size-medium wp-image-1262 alignleft" style="margin: 1px 5px;" title="ladebildschirm" src="http://pavingways.com/wp-content/uploads/ladebildschirm-200x300.jpg" alt="" width="200" height="300" /> Today our **first iPhone game**  called ”**Baby Roulette** ” was published on the Apple App Store. The whole submission process was really fast. We submitted our app to Apple on Sunday afternoon, it went into review on Monday noon and today (Wednesday) morning it was published on the iTunes Application Store.
+
+ 
+
+The game is very very simple, so maybe that’s one of the factors for a speedy release...
+
+ **Why did we build an app like this?** 
+
+ 
+
+Baby Roulette is a really simple and fun game for kids (mostly) to learn animal sounds. Our main intention for building this game is to get a simple and nice looking game quickly in as many App Stores as possible starting with Apple. Our next targets will be the Ovi Store , Android Market and Vodafone 360, which is still running the ”Vodafone 360 App Star Competition”.
+
+ 
+
+We mainly want to gain insights about different application stores regarding users, downloads, major downloading countries, devices and of course we want to practically go through the whole process of building an application/game and releasing and actually selling it on different app stores. This will help us to enlighten our clients and of course we are also blogging about it. So here are some first facts...
+
+ 
+
+ **What did we want to build?** 
+
+ 
+
+Our goal was to create a game or something to play with that would employ 2 major components for any game: animation and sound. We have a spinning arrow as an animation and we are playing sounds when the arrow spins and whenever the arrow stops (plays the animal’s voice). The game concept itself has been around for ages of course, there are similar offers on the app store but it was simple enough to implement it quickly (a few days).
+
+ 
+
+Another main goal was to go international - that’s the reason we left out playing the typical, but localized “The pig says...” voice acting before the (international) animal sound. There is also no text except the title - however “Baby” and “Roulette” are both terms recognizable in a lot of languages even if they use a different alphabet.
+
+ **How did we build it?** 
+
+ Phonegap - make sure you know about this application framework! It enables developers to write their application using web technologies - namely HTML, CSS and JavaScript - and then wrap it into a native application. The cool thing is, phonegap targets not only the iPhone, but all other major platforms, such as Android or BlackBerry and it provides access to device functionalities, such as the accelerometer or GPS location by extending the JavaScript API.
+
+ 
+
+Originally the plan was not to use phonegap. The plan was to build a simple UIwebView application in Objective-C, the iPhone’s native programming language.**The main application would then also have been written in HTML/CSS and JavaScript** . This is essential to us as we see ourselves as a mobile web development company, not as iPhone or Android developers. We strongly believe that creating native applications is just an **interim solution**  - the web will take over as the main application platform just as it did on the desktop. It’s just a matter of time, HTML5 guys!
+
+ 
+
+Unfortunately the mobile version of Safari does not play sound in the browser, but opens up the fullscreen audio player. The &lt;audio&gt; tag of HTML5 is also not available (yet), so no sound and we went with phonegap. This means carrying a little overhead, but also brings the advantage of simpler portability to other platforms and we are very happy with this decision.
+
+ **Problems so far** 
+
+ 
+
+One major problem occurred as we were in the early stages of developing the web app: The spinning arrow used to be a &lt;canvas&gt; element that loads an image and is then rotated. As this rotation was scripted and angles were dynamically calculated, movement of the arrow was very smooth and without any obvious stepping. Also there was only one image - the arrow. Unfortunately this seems to result in heavy CPU load for anything below 3GS devices, so on an iPhone 3G the frame rate dropped notably.
+
+ 
+
+Our solution was to go back to good old sprite animations. So now the arrow is just a &lt;div&gt; with a background sprite containing 60 versions of the arrow in 6 degree steps. The script now still calculates the current angle of the arrow as it spins, but now instead of rotating the image we are sliding the background image through the div so the matching version of the arrow is visible. This works, is fast enough on a 3G and it’s a proven technology. Too bad there’s no real HTML5 in there for now.
+
+ **Next steps** 
+
+ 
+
+We’ll release Baby Roulette for as many platforms as possible trying to keep porting efforts as low as possible and we’ll surely gain many insights as we do this. We are also  already working on other games, of course. These will all be web based and cross-platform, but next time interaction and multi-player functionality will be our main topics. Maybe we will target grownups next time too :)
+
+ 
+
+In the meantime we’ll keep you up-to-date on porting to and releasing on different platforms and we hope you have fun playing Baby Roulette with your kids or on your own!
+
+ <img class="alignleft size-medium wp-image-1268" title="Baby Roulette on the App Store" src="http://pavingways.com/wp-content/uploads/appstore_button1.png" alt="" width="140" height="47" />
+</div>
+

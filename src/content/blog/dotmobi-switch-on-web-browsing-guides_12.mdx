@@ -1,0 +1,270 @@
+---
+title: dotMobi Switch On! Web Browsing Guides
+date: 2006-06-28T00:00:00+02:00
+image: /images/blog-default.webp
+categories: [mobile, historic]
+author: Diana/Rocco
+---
+
+<div class="entry-content">
+Following our post about the dotMobi TLD, here are the rules of the dotMobi Switch On! Web Browsing Guides:
+
+**1. Mandatory Registrant Rules** 
+
+**- XHTML Mobile Profile** 
+
+When a dotMobi web site is accessed using a URI consisting only of the second-level domain name or second and third level domain name (e.g. example.mobi, example.mobi, de.example.mobi) the response must be encoded in XHTML-MP (zipped .doc) unless the device accessing it is known to support an alternative choice of markup.
+
+If the site provides its home page by redirection then all intermediate pages that are delivered in the course of the redirection must comply with this rule.
+
+**- Second-Level Domain Site** 
+
+Sites must implement a page at the second level domain i.e. a web server must respond to HTTP requests to example.mobi (if necessary in addition to example.mobi.)
+
+**- Use of Frames** 
+
+Do not use frames under any circumstances. i.e. in HTML, XHTML or other mark-up languages that support similar constructs, frames must not be present.
+
+**2. Highly Recommended Best Practices** 
+
+**- URIs for Country Specific Sites** 
+
+Identify national variations of dotMobi sites by using the corresponding country code top level domain identifier (ccTLD) as the third level domain identifier.
+
+**- General Best Practice** 
+
+Take all reasonable steps to find out about the device/browser (client) capabilities, adaptation and other transformation that takes place for any instance of an access to a resource.
+
+
+
+Exploit device capabilities. Do not take a least common denominator approach.
+
+
+
+Take reasonable steps to work around deficient implementations.
+
+
+
+Carry out testing on actual devices as well as emulators.
+
+**- Navigation** 
+
+Keep the URIs of site entry points short.
+
+
+
+Provide minimal navigation at the top of the page.
+
+
+
+Design the service with a broadly balanced navigation tree where numbers of links on pages is balanced against depth of navigation.
+
+
+
+Use navigation mechanisms in a consistent manner.
+
+
+
+Assign access keys to links in navigational menus and frequently accessed functionality.
+
+
+
+Clearly identify the target of each link. Use clear, concise, descriptive link text to help users decide whether to follow a link. Identify the implications of following a link if the target is notably large and the user might not anticipate this from the context.
+
+
+
+Note the target file’s format unless you know the device supports it.
+
+
+
+Do not use image maps unless you know the target client supports them and has sufficient screen area and an appropriate means of selection, such as a stylus or navigation keys. When using image maps under these circumstances, use client side image maps unless the regions required cannot be described with an available geometric shape.
+
+
+
+Do not use a server side image map unless you know that the client provides a means of selection within the image map.
+
+
+
+Do not cause pop-ups or other windows to appear and do not change the current window without informing the user.
+
+
+
+Do not create periodically auto-refreshing pages, unless you have informed the user and provided a means of stopping it.
+
+
+
+Do not use markup to redirect pages automatically. Instead, configure the server to perform redirects by means of HTTP 3XX codes.
+
+**- Page Content and Layout** 
+
+Limit content to what the user has requested.
+
+
+
+Divide pages into usable but limited size portions.
+
+
+
+Ensure that the overall size of page is appropriate to bandwidth, the memory limitations of the device and other device and delivery channel characteristics if they can be determined.
+
+
+
+Limit scrolling to one direction, unless secondary scrolling cannot be avoided.
+
+
+
+Limit secondary scrolling to objects that require it, where it cannot be avoided.
+
+
+
+Do not use graphics for spacing.
+
+
+
+Do not use images that cannot be rendered by the device. Avoid large or high resolution images except where critical information would otherwise be lost.
+
+
+
+Ensure that information conveyed with color is also available without color.
+
+**- Page Definition** 
+
+Provide a short but descriptive page title.
+
+
+
+Ensure that perceivable structures within the content can be programmatically determined.
+
+
+
+Do not use tables unless the client is known to support them. Do not use multi-layer tables.
+
+
+
+Do not use tables for layout.
+
+
+
+Where possible, use an alternative to tabular presentation.
+
+
+
+Provide textual alternatives for non-text elements.
+
+
+
+Do not embed objects or script in pages unless you know the device supports them.
+
+
+
+Always specify the size of images in markup.
+
+
+
+Resize images at the server.
+
+
+
+Create documents that validate to published formal grammars.
+
+
+
+Use style sheets to control layout and presentation, unless the device is known not to support them.
+
+
+
+Organize documents so that they may be read without style sheets.
+
+
+
+Keep style sheets as small as possible.
+
+
+
+Use terse efficient markup.
+
+
+
+Send content in a format that is known to be supported by the device.
+
+
+
+Where possible send content in a client’s preferred format.
+
+
+
+Ensure that content is encoded using a character encoding that is known to be supported by the target device.
+
+
+
+Indicate in the response the character encoding being used.
+
+
+
+Provide informative error messages, and a means of navigating away from an error message back to useful information.
+
+
+
+Do not use cookies unless you know the device supports them.
+
+
+
+Attach caching information to the content.
+
+
+
+Avoid free text entry where possible.
+
+
+
+Specify a default text entry mode, language and/or input format, if the target device is known to support it.
+
+
+
+Create a logical tab order through links, form controls and objects.
+
+
+
+Label all controls appropriately. Explicitly associate labels with controls where the device supports this. Position labels relative to controls appropriately.
+
+**3. Other Best Practices** 
+
+
+
+Ensure that links provide a thematically coherent experience when accessed from a device other than the one on which they were captured.
+
+
+
+Ensure that content is suitable for use in a mobile context.
+
+
+
+Use clear and simple language.
+
+
+
+Ensure that material that is central to the meaning of the page precedes material that is not.
+
+
+
+Ensure that foreground and background color combinations provide sufficient contrast.
+
+
+
+When using background images make sure that content remains readable on the device.
+
+
+
+Do not use pixel measures and do not use absolute units in markup language attribute values and style sheet property values.
+
+
+
+Keep the number of keystrokes to a minimum.
+
+
+
+Provide pre-selected default values where possible.
+
+**The complete dotMobi Switch On! Web Browsing Guides: ** pc.mtld.mobi
+</div>
+

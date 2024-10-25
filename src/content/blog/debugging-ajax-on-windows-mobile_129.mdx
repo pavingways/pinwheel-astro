@@ -1,0 +1,30 @@
+---
+title: Debugging Ajax on Windows Mobile
+date: 2007-09-05T00:00:00+02:00
+image: /images/blog-default.webp
+categories: [mobile, historic]
+author: Diana/Rocco
+---
+
+<div class="entry-content">
+I just found an interesting article about Ajax development for Windows Mobile. It looks like the Microsoft crowd is really into Ajax on their mobile platform, which makes sense...after all makeing a platform appealing to developers is a good thing for the platform. The approach is however different from ours - Microsofties (can you call them like this?) tend to rely on their own tools, namely ASP.net, not open source based tools and libraries.
+
+
+
+The article mentions a nice hint for debugging directly on the device: turning on the display of script errors in IE mobile. This is achieved by editing a registry entry, which can be done e.g. with the PHM Registry Editor, a freeware tool. The registry key to change should be this:
+
+<em>HKCU\Software\Microsoft\Internet Explorer\Main</em>
+
+
+
+There you need to add a DWORD value called <em>ShowScriptErrors </em>and set its value to 1.
+
+
+
+The Article also describes how to enable cross-site access for XMLHttpRequest, which might be useful for development purposes, not so much for end-user apps. And there’s also a workaround for a JSON relates quirk in IE mobile, which does not allow cross-site JSON scripts to be executed if the browser is in “One Column” view mode - I decided not to think about the “why ?” in this case, probably it’s a weird bug.
+
+
+
+So make sure you check out the article if you’re interested!
+</div>
+

@@ -1,0 +1,76 @@
+---
+title: Mobile Ajax post answered
+date: 2007-09-04T00:00:00+02:00
+image: /images/blog-default.webp
+categories: [mobile, historic]
+author: Diana/Rocco
+---
+
+				<div class="entry-content">
+
+					We are constantly monitoring the web for blog posts about Mobile Ajax and I came across an interesting one. I want to use this occasion to reflect on some of the points in Ben’s post on Technology Evangelist in which he discusses Ajax as a future platform for phone applications and in which he brought up 11 random
+					points on the topic and I want to comment on some of them here (don’t want to spam his comments):
+					
+						Being able to develop once and deploy to not only iPhones everywhere but any mobile device that’s AJAX enabled would be very powerful.
+							
+								Indeed, that’s where the Frost Ajax library comes in, because fragmentation is the hugest issue here.
+							
+						
+						 No mobile hardware is ready for this yet. It’s all too slow. Heck a 3GHz computer is barely able to deal with heavy AJAX apps, how is a 400MHz phone going to be able to do the same?
+							
+								This question should not be asked, I think! Ajax is not the main constraint for mobile phones, screen and input methods are. Also it’s a MOBILE device, not a desktop, so you probably don’t need /want
+									the exact same software you use on your desktop to use on your phone. Another point of this is that the MHz value of a computer’s CPU is not the factor that makes Ajax slow or fast - it’s all based on
+									JavaScript, so the implementation of a JS engine has a great deal in this too, also the JS engine runs in a web browser which again runs on the phone’s OS, so there’s a whole chain of software that
+									needs to be created right in order to allow Ajax apps to run fast.
+								
+							
+						
+						 The AJAX apps need to behave like an integrated app. It shouldn’t feel like a web app. The browser status bars should all auto hide and make way for the AJAX application.
+							
+								Usually phones allow to switch to a full screen mode, however since a browser needs to provide user feedback about active connections and ideally transferred data (currently very rarely done), so a user knows what’s
+									going on. Also web apps need to show that they’re trustworthy and usually the address bar indicated this (lock symbol, color). So yes and no.
+								
+							
+						
+						 There needs to be offline support such as Google Gears for any AJAX app. If I have no or slow bandwidth the mobile device should be able to run the app from cache.
+							
+								Yes this would really improve the Ajax usefulness and user experience. “Needs to be” is a bit strong, since we don’t even have that on the desktop yet (but better conections there).
+							
+						
+						 The device needs uber fast data connection at all times. WiFi is a good first step, HSDPA is a good second step, HSUPA would be a better step. EDGE is not on the map anywhere.
+							
+								That’s simply not true - the really speed killer in mobile connections, esp in Ajax is network latency. How much data will be transfered to a mobile phone by an Ajax app? If done right this should be tiny
+									amounts of data in a asynchronous way, usually HTML or XML, maybe some images.
+								
+							
+						
+						 There should be a mobile AJAX standard that all handsets follow. This would allow me to develop an app for an iPhone and have it work on a Windows Mobile, Symbian or Palm device. I won’t hold my breath on this one.
+							
+								Yes, we need standards!!!
+							
+						
+						 The AJAX app needs to have hooks to the mobile device. The mobile device needs to know what a phone number is, address is, etc. and allow me to dial right from the app. There could be special code snippets that tell the
+							device what a phone number is which would get around the device itself trying to interpret this. The benefit of tags is that the phone always knows what’s what.
+							
+								I agree halfway, because sure it would be nice, but I don’t think this is a real issue because first of all not every mobile web app would need this integration, secondly not even installable apps need this
+									kind of integration all the time, thirdly because not even desktop Ajax has this feature available and lastly because we run into so many new issues (privacy and trustworthiness-wise) with this. The only way to do
+									this would again be standards (W3C and some others are working on this)!
+								
+							
+						
+						 If AJAX is the premiere development platform for the iPhone then why are there any integrated apps at all? Why not run everything as an AJAX app (probably because the iPhone isn’t ready for this yet).
+							
+								No, probably because it doesn’t make sense to run a calculator as a web app. - and that’s only one example.
+							
+						
+						 An AJAX app needs to have a button or launcher item just like an integrated app. n00b users who don’t know AJAX from soap should not be able to tell the difference between the two apps, which means that even the way
+							they launch should be the same.
+							
+								Being able to save bookmarks with their favicon to the application menu in the phone’s OS should do it (should work on some already). If the browser then could open more or less in the background that would
+									be nice too.
+								
+							
+						
+					
+				</div>
+
