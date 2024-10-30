@@ -4,9 +4,28 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d2d6658b-20ca-4d31-9309-cfe0c6c3172e" name="Changes" comment="big blog pagination, migration script update">
+    <list default="true" id="d2d6658b-20ca-4d31-9309-cfe0c6c3172e" name="Changes" comment="migration script update">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bin/migrate-old-blog-posts.sh" beforeDir="false" afterPath="$PROJECT_DIR$/bin/migrate-old-blog-posts.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images_src/blog-default.pxd" beforeDir="false" afterPath="$PROJECT_DIR$/images_src/blog-default.pxd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images_src/hero-image.pxd" beforeDir="false" afterPath="$PROJECT_DIR$/images_src/hero-image.pxd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/blog-default.webp" beforeDir="false" afterPath="$PROJECT_DIR$/public/images/blog-default.webp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/hero-image.webp" beforeDir="false" afterPath="$PROJECT_DIR$/public/images/hero-image.webp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/config/config.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/config/config.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/content/blog/-index.md" beforeDir="false" afterPath="$PROJECT_DIR$/src/content/blog/-index.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/content/blog/a-happy-new-year-and-website-2_1140.mdx" beforeDir="false" afterPath="$PROJECT_DIR$/src/content/blog/a-happy-new-year-and-website-2_1140.mdx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/content/blog/apple-startet-b2b-app-store-in-den-usa_2413.mdx" beforeDir="false" afterPath="$PROJECT_DIR$/src/content/blog/apple-startet-b2b-app-store-in-den-usa_2413.mdx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/content/blog/bloggertreffen-at-hofbraukeller-in-munich_157.mdx" beforeDir="false" afterPath="$PROJECT_DIR$/src/content/blog/bloggertreffen-at-hofbraukeller-in-munich_157.mdx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/content/homepage/de/index.md" beforeDir="false" afterPath="$PROJECT_DIR$/src/content/homepage/de/index.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/layouts/Base.astro" beforeDir="false" afterPath="$PROJECT_DIR$/src/layouts/Base.astro" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/layouts/components/Banner.astro" beforeDir="false" afterPath="$PROJECT_DIR$/src/layouts/components/Banner.astro" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/layouts/components/blog/FeaturedBlog.astro" beforeDir="false" afterPath="$PROJECT_DIR$/src/layouts/components/blog/FeaturedBlog.astro" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/about/index.astro" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/en/about.astro" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/blog/index.astro" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/blog/index.astro" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/technologies.astro" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/technologien.astro" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/ueberuns/index.astro" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/ueberuns/index.astro" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles/components.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/components.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles/navigation.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/navigation.scss" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,6 +78,7 @@
     "npm.dev --host 127.0.0.1.executor": "Run",
     "npm.dev.executor": "Run",
     "npm.ngrok.executor": "Run",
+    "npm.serve.executor": "Run",
     "settings.editor.selected.configurable": "editor.reader.mode",
     "ts.external.directory.path": "/Users/Rocco/Applications/IntelliJ IDEA Ultimate.app/Contents/plugins/javascript-plugin/jsLanguageServicesImpl/external"
   },
@@ -78,14 +98,14 @@
       <recent name="$PROJECT_DIR$/src/content/pages" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/pages/en" />
       <recent name="$PROJECT_DIR$/images_src" />
       <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/public/images" />
       <recent name="$PROJECT_DIR$/public" />
-      <recent name="$PROJECT_DIR$/src/pages/_examples" />
     </key>
   </component>
-  <component name="RunManager" selected="npm.build">
+  <component name="RunManager" selected="npm.serve">
     <configuration name="build" type="js.build_tools.npm" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/package.json" />
       <command value="run" />
@@ -102,17 +122,6 @@
       <scripts>
         <script value="deploy" />
       </scripts>
-      <node-interpreter value="project" />
-      <envs />
-      <method v="2" />
-    </configuration>
-    <configuration name="dev --host 127.0.0.1" type="js.build_tools.npm" nameIsGenerated="true">
-      <package-json value="$PROJECT_DIR$/package.json" />
-      <command value="run" />
-      <scripts>
-        <script value="dev" />
-      </scripts>
-      <arguments value="--host 127.0.0.1" />
       <node-interpreter value="project" />
       <envs />
       <method v="2" />
@@ -137,10 +146,21 @@
       <envs />
       <method v="2" />
     </configuration>
+    <configuration name="serve" type="js.build_tools.npm">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="dev" />
+      </scripts>
+      <arguments value="--host 127.0.0.1" />
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
     <list>
       <item itemvalue="npm.build" />
       <item itemvalue="npm.deploy" />
-      <item itemvalue="npm.dev --host 127.0.0.1" />
+      <item itemvalue="npm.serve" />
       <item itemvalue="npm.dev (1)" />
       <item itemvalue="npm.ngrok" />
     </list>
@@ -216,7 +236,15 @@
       <option name="project" value="LOCAL" />
       <updated>1729808579835</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="migration script update">
+      <option name="closed" value="true" />
+      <created>1729816637360</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1729816637360</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -240,6 +268,7 @@
     <MESSAGE value="new version of blog migration script, image sources added" />
     <MESSAGE value="new version of blog migration script, image sources consolidated" />
     <MESSAGE value="big blog pagination, migration script update" />
-    <option name="LAST_COMMIT_MESSAGE" value="big blog pagination, migration script update" />
+    <MESSAGE value="migration script update" />
+    <option name="LAST_COMMIT_MESSAGE" value="migration script update" />
   </component>
 </project>

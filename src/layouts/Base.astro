@@ -11,7 +11,7 @@ import "@styles/main.scss";
 const pf = theme.fonts.font_family.primary;
 const sf = theme.fonts.font_family.secondary;
 
-// types for frontmatters
+// types for frontmatter
 export interface Props {
   title?: string;
   meta_title?: string;
@@ -19,16 +19,24 @@ export interface Props {
   image?: string;
   noindex?: boolean;
   canonical?: string;
+  language?: string;
 }
 
 // destructure front matter
 const currentLocale = Astro.currentLocale;
 const { title, meta_title, description, image, noindex, canonical } = Astro.props;
+const pagetitle = title ? title + config.site.titleaddon : config.site.title;
 ---
 <!DOCTYPE html>
 <html lang={currentLocale}>
   <head>
     <link rel="shortcut icon" href={config.site.favicon} />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href={`https://fonts.googleapis.com/css2?family=${pf}${sf ? "&family=" + sf : ""}&display=swap`}
+      rel="stylesheet"
+    />
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline' 'unsafe-eval' www.google-analytics.com ajax.googleapis.com www.googletagmanager.com www.google.com www.gstatic.com www.youtube.com;" />
     <meta name="msapplication-TileColor" content="#000000" />
@@ -42,50 +50,26 @@ const { title, meta_title, description, image, noindex, canonical } = Astro.prop
       media="(prefers-color-scheme: dark)"
       content="#000000"
     />
-
-    <!-- google font css -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href={`https://fonts.googleapis.com/css2?family=${pf}${sf ? "&family=" + sf : ""}&display=swap`}
-      rel="stylesheet"
-    />
-
-    <!-- responsive meta -->
     <meta
       name="viewport"
       content="width=device-width, initial-scale=1, maximum-scale=5"
     />
-
-    <!-- title -->
-    <title>{plainify(title || config.site.title)}</title>
-
-    <!-- canonical url -->
+    <title>{plainify(pagetitle)}</title>
     {canonical && <link rel="canonical" href={canonical} item-prop="url" />}
-
-    <!-- noindex robots -->
     {noindex && <meta name="robots" content="noindex,nofollow" />}
-
-    <!-- meta-description -->
     <meta
       name="description"
       content={plainify(
         description ? description : config.metadata.meta_description
       )}
     />
-
-    <!-- author from config.json -->
     <meta name="author" content={config.metadata.meta_author} />
-
-    <!-- og-title -->
     <meta
       property="og:title"
       content={plainify(
         meta_title ? meta_title : title ? title : config.site.title
       )}
     />
-
-    <!-- og-description -->
     <meta
       property="og:description"
       content={plainify(
@@ -97,39 +81,31 @@ const { title, meta_title, description, image, noindex, canonical } = Astro.prop
       property="og:url"
       content={`${config.site.base_url}/${Astro.url.pathname.replace("/", "")}`}
     />
-
-    <!-- twitter-title -->
     <meta
       name="twitter:title"
       content={plainify(
         meta_title ? meta_title : title ? title : config.site.title
       )}
     />
-
-    <!-- twitter-description -->
     <meta
       name="twitter:description"
       content={plainify(
         description ? description : config.metadata.meta_description
       )}
     />
-
-    <!-- og-image -->
     <meta
       property="og:image"
       content={`${config.site.base_url}${
         image ? image : config.metadata.meta_image
       }`}
     />
-
-    <!-- twitter-image -->
     <meta
       name="twitter:image"
       content={`${config.site.base_url}${
         image ? image : config.metadata.meta_image
       }`}
     />
-    <meta name="twitter:card" content="summary_large_image" rel="test" />
+    <meta name="twitter:card" content="summary_large_image" />
   </head>
   <body>
     <TwSizeIndicator />

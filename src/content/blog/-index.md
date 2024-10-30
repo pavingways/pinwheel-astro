@@ -1,4 +1,7 @@
 ---
-title: "PavingWays Blog"
-page_title: Insight and advice from our expert team.
+title: "News and Insights"
+page_title: "News and Insights from PavingWays"
+meta_title: "News and Insights from PavingWays"
+description: "News and Insights from PavingWays"
+image: "/images/logo.webp"
 ---

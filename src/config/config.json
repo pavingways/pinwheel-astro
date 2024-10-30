@@ -1,22 +1,23 @@
 {
   "site": {
     "title": "Mobile Apps in Central Switzerland - PavingWays GmbH",
+    "titleaddon": " - PavingWays Mobile Apps",
     "base_url": "https://www.pavingways.com",
     "base_path": "/",
     "favicon": "/images/favicon.png",
     "logo": "/images/logo.webp",
     "logo_width": "190",
     "logo_height": "59",
-    "logo_text": "PavingWays Mobile Apps Logo"
+    "logo_text": "Mobile Apps Logo - PavingWays GmbH"
   },
   "settings": {
-    "pagination": 100,
+    "pagination": 27,
     "summary_length": 100,
     "blog_folder": "blog"
   },
   "metadata": {
     "meta_author": "PavingWays GmbH",
-    "meta_image": "/images/og-image.png",
+    "meta_image": "/images/logo.webp",
     "meta_description": "PavingWays GmbH develops mobile applications in Lucerne, Switzerland."
   }
 }

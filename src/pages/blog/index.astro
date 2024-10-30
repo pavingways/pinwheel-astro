@@ -20,7 +20,8 @@ const sortedPosts = sortByDate(posts);
 const featuredPost = sortedPosts.filter((item) => item.data.featured);
 const recentPost = sortedPosts.filter((item) => !item.data.featured);
 const totalPages = Math.ceil(recentPost.length / config.settings.pagination);
-const currentPosts = recentPost.slice(0, config.settings.pagination);
+const currentPosts = recentPost.slice(0, 3);
+const olderPosts = recentPost.slice(3, config.settings.pagination);
 ---
 
 <Base
@@ -29,17 +30,20 @@ const currentPosts = recentPost.slice(0, config.settings.pagination);
   description={blogIndex.data.description}
   image={blogIndex.data.image}
 >
-  <!--<section class="page-hero pt-16">-->
-  <!--  <div class="container">-->
-  <!--    <PageHeader page_data={blogIndex.data} />-->
-  <!--  </div>-->
-  <!--</section>-->
+  <section class="page-hero pt-16">
+    <div class="container">
+      <PageHeader page_data={blogIndex.data} />
+    </div>
+  </section>
+
   <section class="section">
     <div class="container">
-      <!--<FeaturedBlog posts={featuredPost} />-->
-      <!--<BlogCategories categories={categories} />-->
-      <h2 class="h4 mb-4">Recent Posts</h2>
+      <FeaturedBlog posts={featuredPost} />
+      1<h2 class="h4 mb-4">{blogIndex.data.recent_posts}</h2>
       <Blogs posts={currentPosts} />
+      <BlogCategories categories={categories} />
+      2<h2 class="h4 mb-4">{blogIndex.data.archived_posts}</h2>
+      <Blogs posts={olderPosts} />
       <Pagination
         section={blog_folder}
         currentPage={1}

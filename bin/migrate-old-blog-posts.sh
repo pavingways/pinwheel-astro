@@ -62,7 +62,7 @@ in_div && !/<footer>/ {
   IMAGE_URL=${IMAGE_URL:-/images/blog-default.webp}
   NEW_MDX_FILE="$NEW_BLOG_DIR/${ORIGINAL_FILENAME%.html}.mdx"
   REDIRECT_FILE="$NEW_PUBLIC_DIR/$ORIGINAL_FILENAME"
-
+  LANGUAGE=$(sed -n 's/.*<html[^>]* lang="\([^"]*\)".*/\1/p' "$file" | head -n 1)
   # Create new .mdx file with frontmatter
   cat <<EOF > "$NEW_MDX_FILE"
 ---
@@ -71,6 +71,8 @@ date: $POST_TIME
 image: $IMAGE_URL
 categories: [mobile, historic]
 author: $AUTHOR
+featured: false
+language: en
 ---
 
 $CONTENT
