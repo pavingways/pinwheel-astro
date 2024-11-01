@@ -1,7 +1,7 @@
 ---
 import config from "@config/config.json";
-import i18nAll from "../../config/i18n.json";
-let { i18n_en, i18n_de, i18n_fr, i18n_it } = i18nAll;
+import i18nAll from "@lib/i18n.json";
+const { i18n_en, i18n_de, i18n_fr, i18n_it } = i18nAll;
 let i18n = {};
 switch (Astro.currentLocale) {
   case "en":

@@ -5,13 +5,13 @@ const blogCollection = defineCollection({
   schema: z.object({
     id: z.string().optional(),
     title: z.string(),
-    subtitle: z.string().optional(),
+    subtitle: z.string().optional().default("subtitle"),
     date: z.date().optional(),
     image: z.string().optional(),
-    author: z.string().optional(),
+    author: z.string().optional().default("author"),
     categories: z.array(z.string()).default(["others"]),
     draft: z.boolean().optional(),
-    featured: z.boolean().optional(),
+    featured: z.boolean().optional().default(true),
   }),
 });
 

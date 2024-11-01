@@ -7,12 +7,12 @@ import { markdownify } from "@lib/utils/textConverter";
 import { NavigationLink } from "@lib/utils/interfaces";
 import Config from "../../../astro.config.mjs";
 import type { LocaleDef } from "@lib/utils/i18n";
-import i18nAll from "../../config/i18n.json";
+import i18nAll from "@lib/i18n.json";
 
 const { footer }: { main: NavigationLink[] } = menu;
 const { pathname } = Astro.url;
 
-let { i18n_en, i18n_de, i18n_fr, i18n_it } = i18nAll;
+const { i18n_en, i18n_de, i18n_fr, i18n_it } = i18nAll;
 let i18n = {};
 switch (Astro.currentLocale) {
   case "en":

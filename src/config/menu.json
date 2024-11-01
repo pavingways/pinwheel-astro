@@ -3,20 +3,22 @@
     {
       "i18nKey": "menu_home",
       "url": "/"
-    },
+    }
+  ],
+  "main_extended": [
     {
       "i18nKey": "menu_about",
       "url_de": "/ueberuns/",
       "url_en": "/about/"
     },
     {
+      "i18nKey": "menu_blog",
+      "url": "/blog/"
+    },
+    {
       "i18nKey": "menu_technologies",
       "url_de": "/technologien/",
       "url_en": "/technologies/"
-    },
-    {
-      "i18nKey": "menu_blog",
-      "url": "/blog/"
     }
   ],
 
@@ -31,19 +33,21 @@
       "url_de": "/datenschutz/",
       "url_en": "/privacy/"
     },
-
+    {
+      "i18nKey": "menu_blog",
+      "url": "/blog/"
+    }
+  ],
+  "footer_extended": [
     {
       "i18nKey": "menu_about",
       "url_de": "/ueberuns/",
       "url_en": "/about/"
     },
     {
-      "i18nKey": "menu_projects",
-      "url": "/technologies/"
-    },
-    {
-      "i18nKey": "menu_blog",
-      "url": "/blog/"
+      "i18nKey": "menu_technologies",
+      "url_de": "/technologien/",
+      "url_en": "/technologies/"
     }
   ]
 }

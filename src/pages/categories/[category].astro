@@ -38,13 +38,13 @@ const page_data = {
 };
 ---
 
-<Base title={category}>
+<Base title={category ? category : undefined}>
   <section class="page-hero pb-8 pt-16">
     <div class="container">
       <div class="page-hero-content mx-auto max-w-[883px] text-center">
         <PageHeader page_data={page_data} />
-        <h1 class="h2 mb-14 text-center">
-          Showing posts from <span class="text-primary">{humanize(item)}</span> category
+        <h1 class="h2 mb-2 text-center">
+          <span class="text-primary">{humanize(item)}</span>
         </h1>
       </div>
     </div>

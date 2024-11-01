@@ -1,5 +1,5 @@
 // similer products
-const similerItems = (currentItem: any, allItems: any, slug: string) => {
+const similarItems = (currentItem: any, allItems: any, slug: string) => {
   let categories: [] = [];
   let tags: [] = [];
 
@@ -33,4 +33,4 @@ const similerItems = (currentItem: any, allItems: any, slug: string) => {
   return filterBySlug;
 };
 
-export default similerItems;
+export default similarItems;

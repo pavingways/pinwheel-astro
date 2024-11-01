@@ -37,7 +37,8 @@ export const humanize = (content: string) => {
 export const plainify = (content: string) => {
   if (!content) return null;
 
-  const filterBrackets = content.replace(/<\/?[^>]+(>|$)/gm, "");
+  const filterStrongs = content.replace(/\*\*/g, "");
+  const filterBrackets = filterStrongs.replace(/<\/?[^>]+(>|$)/gm, "");
   const filterSpaces = filterBrackets.replace(/[\r\n]\s*[\r\n]/gm, "");
   const stripHTML = htmlEntityDecoder(filterSpaces);
   return stripHTML;
