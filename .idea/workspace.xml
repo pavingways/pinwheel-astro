@@ -4,201 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d2d6658b-20ca-4d31-9309-cfe0c6c3172e" name="Changes" comment="customer logos higher res">
-      <change afterPath="$PROJECT_DIR$/src/pages/en/blog/[single].astro" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/en/blog/index.astro" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/en/blog/page/[slug].astro" afterDir="false" />
+    <list default="true" id="d2d6658b-20ca-4d31-9309-cfe0c6c3172e" name="Changes" comment="cleanup and re-import blog with featured and lang">
+      <change afterPath="$PROJECT_DIR$/src/layouts/components/CustomerLogos.astro" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/migrate-old-blog-posts.sh" beforeDir="false" afterPath="$PROJECT_DIR$/bin/migrate-old-blog-posts.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/config/i18n.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/i18n.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/config/menu.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/config/menu.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/content/blog/-index.md" beforeDir="false" afterPath="$PROJECT_DIR$/src/content/blog/-index.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/content/blog/3jam-lands-an-amazing-deal-with-virgin-mobile_146.mdx" beforeDir="false" afterPath="$PROJECT_DIR$/src/content/blog/3jam-lands-an-amazing-deal-with-virgin-mobile_146.mdx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/content/blog/a-happy-new-year-and-website-2_1140.mdx" beforeDir="false" afterPath="$PROJECT_DIR$/src/content/blog/a-happy-new-year-and-website-2_1140.mdx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/content/blog/a-little-ie-mobile-forms-post-finding_180.mdx" beforeDir="false" afterPath="$PROJECT_DIR$/src/content/blog/a-little-ie-mobile-forms-post-finding_180.mdx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/content/blog/adobe-air-goes-mobile-joins-limo-2_1534.mdx" beforeDir="false" afterPath="$PROJECT_DIR$/src/content/blog/adobe-air-goes-mobile-joins-limo-2_1534.mdx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/content/blog/ajaxworld-in-santa-clara-092407_139.mdx" beforeDir="false" afterPath="$PROJECT_DIR$/src/content/blog/ajaxworld-in-santa-clara-092407_139.mdx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/content/blog/apple-iphone-safari-on-a-mobile-phone_71.mdx" beforeDir="false" afterPath="$PROJECT_DIR$/src/content/blog/apple-iphone-safari-on-a-mobile-phone_71.mdx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/content/blog/apple-launches-volume-purchasing-for-business-customers_2396.mdx" beforeDir="false" afterPath="$PROJECT_DIR$/src/content/blog/apple-launches-volume-purchasing-for-business-customers_2396.mdx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/content/blog/apple-sells-more-iphones-than-rim-blackberrys_215.mdx" beforeDir="false" afterPath="$PROJECT_DIR$/src/content/blog/apple-sells-more-iphones-than-rim-blackberrys_215.mdx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/content/blog/apple-startet-b2b-app-store-in-den-usa_2413.mdx" beforeDir="false" afterPath="$PROJECT_DIR$/src/content/blog/apple-startet-b2b-app-store-in-den-usa_2413.mdx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/content/blog/article-on-devoperacom_155.mdx" beforeDir="false" afterPath="$PROJECT_DIR$/src/content/blog/article-on-devoperacom_155.mdx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/content/blog/article-on-mobile-ajax-in-net-magazine_99.mdx" beforeDir="false" afterPath="$PROJECT_DIR$/src/content/blog/article-on-mobile-ajax-in-net-magazine_99.mdx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/content/blog/atmedia-conference-2006-summary-day-1_13.mdx" beforeDir="false" afterPath="$PROJECT_DIR$/src/content/blog/atmedia-conference-2006-summary-day-1_13.mdx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/content/blog/atmedia-conference-2006-summary-day-2_15.mdx" beforeDir="false" afterPath="$PROJECT_DIR$/src/content/blog/atmedia-conference-2006-summary-day-2_15.mdx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/content/blog/attend-3-exciting-mobile-events-on-1-day_1872.mdx" beforeDir="false" afterPath="$PROJECT_DIR$/src/content/blog/attend-3-exciting-mobile-events-on-1-day_1872.mdx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/content/blog/attending-nokia-developer-summit-2009_293.mdx" beforeDir="false" afterPath="$PROJECT_DIR$/src/content/blog/attending-nokia-developer-summit-2009_293.mdx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/content/blog/baby-roulette-now-available-app-store_1597.mdx" beforeDir="false" afterPath="$PROJECT_DIR$/src/content/blog/baby-roulette-now-available-app-store_1597.mdx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/content/blog/barcampblock-in-palo-alto_121.mdx" beforeDir="false" afterPath="$PROJECT_DIR$/src/content/blog/barcampblock-in-palo-alto_121.mdx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/content/blog/blackberry-app-world_825.mdx" beforeDir="false" afterPath="$PROJECT_DIR$/src/content/blog/blackberry-app-world_825.mdx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/content/blog/blackberry-browser-can-accesses-gps-location_192.mdx" beforeDir="false" afterPath="$PROJECT_DIR$/src/content/blog/blackberry-browser-can-accesses-gps-location_192.mdx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/content/blog/bloggertreffen-at-hofbraukeller-in-munich_157.mdx" beforeDir="false" afterPath="$PROJECT_DIR$/src/content/blog/bloggertreffen-at-hofbraukeller-in-munich_157.mdx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/content/blog/bolt-mobile-browser-to-include-widgets_1222.mdx" beforeDir="false" afterPath="$PROJECT_DIR$/src/content/blog/bolt-mobile-browser-to-include-widgets_1222.mdx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/content/blog/book-bulletproof-ajax-by-jeremy-keith_135.mdx" beforeDir="false" afterPath="$PROJECT_DIR$/src/content/blog/book-bulletproof-ajax-by-jeremy-keith_135.mdx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/content/blog/book-mobile-web-design-by-cameron-moll_136.mdx" beforeDir="false" afterPath="$PROJECT_DIR$/src/content/blog/book-mobile-web-design-by-cameron-moll_136.mdx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/content/blog/books-i-recommend_122.mdx" beforeDir="false" afterPath="$PROJECT_DIR$/src/content/blog/books-i-recommend_122.mdx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/content/blog/cebit-new-mobile-flat-rates_82.mdx" beforeDir="false" afterPath="$PROJECT_DIR$/src/content/blog/cebit-new-mobile-flat-rates_82.mdx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/content/blog/cheap-mobile-web-for-prepaid-users-in-germany_73.mdx" beforeDir="false" afterPath="$PROJECT_DIR$/src/content/blog/cheap-mobile-web-for-prepaid-users-in-germany_73.mdx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/content/blog/china-mobile-worlds-largest-operator_42.mdx" beforeDir="false" afterPath="$PROJECT_DIR$/src/content/blog/china-mobile-worlds-largest-operator_42.mdx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/content/blog/chrome-extension-with-1500-installs_1318.mdx" beforeDir="false" afterPath="$PROJECT_DIR$/src/content/blog/chrome-extension-with-1500-installs_1318.mdx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/content/blog/coworking-in-san-francisco_113.mdx" beforeDir="false" afterPath="$PROJECT_DIR$/src/content/blog/coworking-in-san-francisco_113.mdx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/content/blog/dconstruct-2006-has-started_48.mdx" beforeDir="false" afterPath="$PROJECT_DIR$/src/content/blog/dconstruct-2006-has-started_48.mdx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/content/blog/debugging-ajax-on-windows-mobile_129.mdx" beforeDir="false" afterPath="$PROJECT_DIR$/src/content/blog/debugging-ajax-on-windows-mobile_129.mdx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/content/blog/detecting-mobile-browsers-mobile-intenet-explorer_56.mdx" beforeDir="false" afterPath="$PROJECT_DIR$/src/content/blog/detecting-mobile-browsers-mobile-intenet-explorer_56.mdx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/content/blog/dotmobi-switch-on-web-browsing-guides_12.mdx" beforeDir="false" afterPath="$PROJECT_DIR$/src/content/blog/dotmobi-switch-on-web-browsing-guides_12.mdx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/content/blog/dotmobi-top-level-domain-for-mobile-devices_11.mdx" beforeDir="false" afterPath="$PROJECT_DIR$/src/content/blog/dotmobi-top-level-domain-for-mobile-devices_11.mdx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/content/blog/even-more-mobile-applications-hit-cars-2_1514.mdx" beforeDir="false" afterPath="$PROJECT_DIR$/src/content/blog/even-more-mobile-applications-hit-cars-2_1514.mdx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/content/blog/frost-mentioned-in-ct-magazine_178.mdx" beforeDir="false" afterPath="$PROJECT_DIR$/src/content/blog/frost-mentioned-in-ct-magazine_178.mdx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/content/blog/geeksessions_115.mdx" beforeDir="false" afterPath="$PROJECT_DIR$/src/content/blog/geeksessions_115.mdx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/content/blog/google-android-developer-day-munich_167.mdx" beforeDir="false" afterPath="$PROJECT_DIR$/src/content/blog/google-android-developer-day-munich_167.mdx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/content/blog/google-heading-into-japans-mobile-market_159.mdx" beforeDir="false" afterPath="$PROJECT_DIR$/src/content/blog/google-heading-into-japans-mobile-market_159.mdx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/content/blog/great-mobile-events-coming-up_1907.mdx" beforeDir="false" afterPath="$PROJECT_DIR$/src/content/blog/great-mobile-events-coming-up_1907.mdx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/content/blog/guy-kawasaki-at-baychi_120.mdx" beforeDir="false" afterPath="$PROJECT_DIR$/src/content/blog/guy-kawasaki-at-baychi_120.mdx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/content/blog/happy-belated-new-year_154.mdx" beforeDir="false" afterPath="$PROJECT_DIR$/src/content/blog/happy-belated-new-year_154.mdx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/content/blog/happy-easter_1626.mdx" beforeDir="false" afterPath="$PROJECT_DIR$/src/content/blog/happy-easter_1626.mdx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/content/blog/happy-new-year-2011_1920.mdx" beforeDir="false" afterPath="$PROJECT_DIR$/src/content/blog/happy-new-year-2011_1920.mdx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/content/blog/have-you-heard-of-mywaves_137.mdx" beforeDir="false" afterPath="$PROJECT_DIR$/src/content/blog/have-you-heard-of-mywaves_137.mdx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/content/blog/hello-world_1.mdx" beforeDir="false" afterPath="$PROJECT_DIR$/src/content/blog/hello-world_1.mdx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/content/blog/here-we-go_8.mdx" beforeDir="false" afterPath="$PROJECT_DIR$/src/content/blog/here-we-go_8.mdx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/content/blog/hot-mobile-news-from-last-weeks_148.mdx" beforeDir="false" afterPath="$PROJECT_DIR$/src/content/blog/hot-mobile-news-from-last-weeks_148.mdx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/content/blog/hot-mobile-news-this-week-2_153.mdx" beforeDir="false" afterPath="$PROJECT_DIR$/src/content/blog/hot-mobile-news-this-week-2_153.mdx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/content/blog/hot-mobile-news-this-week_149.mdx" beforeDir="false" afterPath="$PROJECT_DIR$/src/content/blog/hot-mobile-news-this-week_149.mdx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/content/blog/html5-meetup-october-recap_1831.mdx" beforeDir="false" afterPath="$PROJECT_DIR$/src/content/blog/html5-meetup-october-recap_1831.mdx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/content/blog/html5css3-meetup-april-recap_1647.mdx" beforeDir="false" afterPath="$PROJECT_DIR$/src/content/blog/html5css3-meetup-april-recap_1647.mdx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/content/blog/html5css3-meetup-june-recap_1711.mdx" beforeDir="false" afterPath="$PROJECT_DIR$/src/content/blog/html5css3-meetup-june-recap_1711.mdx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/content/blog/html5css3-meetup-march-recap_1572.mdx" beforeDir="false" afterPath="$PROJECT_DIR$/src/content/blog/html5css3-meetup-march-recap_1572.mdx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/content/blog/huge-deal-between-nokia-and-facebook_158.mdx" beforeDir="false" afterPath="$PROJECT_DIR$/src/content/blog/huge-deal-between-nokia-and-facebook_158.mdx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/content/blog/iirsept-mobile-monday-munich_193.mdx" beforeDir="false" afterPath="$PROJECT_DIR$/src/content/blog/iirsept-mobile-monday-munich_193.mdx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/content/blog/interesting-mobile-news-nokia-ericsson-t-mobile-aol-etc_169.mdx" beforeDir="false" afterPath="$PROJECT_DIR$/src/content/blog/interesting-mobile-news-nokia-ericsson-t-mobile-aol-etc_169.mdx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/content/blog/interesting-mobile-news_161.mdx" beforeDir="false" afterPath="$PROJECT_DIR$/src/content/blog/interesting-mobile-news_161.mdx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/content/blog/iphone-4g-gets-dashboard-widgets_1698.mdx" beforeDir="false" afterPath="$PROJECT_DIR$/src/content/blog/iphone-4g-gets-dashboard-widgets_1698.mdx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/content/blog/javascript-user-group-frankfurt-1_2197.mdx" beforeDir="false" afterPath="$PROJECT_DIR$/src/content/blog/javascript-user-group-frankfurt-1_2197.mdx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/content/blog/leveling-the-mobile-playing-field-mobile-startups-microsoft-motorola-verizon_64.mdx" beforeDir="false" afterPath="$PROJECT_DIR$/src/content/blog/leveling-the-mobile-playing-field-mobile-startups-microsoft-motorola-verizon_64.mdx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/content/blog/lunch-20-at-familyoven-09252007_142.mdx" beforeDir="false" afterPath="$PROJECT_DIR$/src/content/blog/lunch-20-at-familyoven-09252007_142.mdx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/content/blog/mapquest-mobile-the-top-mobile-application-in-the-us_38.mdx" beforeDir="false" afterPath="$PROJECT_DIR$/src/content/blog/mapquest-mobile-the-top-mobile-application-in-the-us_38.mdx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/content/blog/meeting-jajah-web2-and-poland_66.mdx" beforeDir="false" afterPath="$PROJECT_DIR$/src/content/blog/meeting-jajah-web2-and-poland_66.mdx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/content/blog/missionfuture-emergency-session-4_239.mdx" beforeDir="false" afterPath="$PROJECT_DIR$/src/content/blog/missionfuture-emergency-session-4_239.mdx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/content/blog/missionfuture-emergency-session_224.mdx" beforeDir="false" afterPath="$PROJECT_DIR$/src/content/blog/missionfuture-emergency-session_224.mdx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/content/blog/mmm-mobile-monday-munich_177.mdx" beforeDir="false" afterPath="$PROJECT_DIR$/src/content/blog/mmm-mobile-monday-munich_177.mdx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/content/blog/mobi-time-frame_32.mdx" beforeDir="false" afterPath="$PROJECT_DIR$/src/content/blog/mobi-time-frame_32.mdx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/content/blog/mobile-20-event-in-san-francisco-well-be-there_58.mdx" beforeDir="false" afterPath="$PROJECT_DIR$/src/content/blog/mobile-20-event-in-san-francisco-well-be-there_58.mdx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/content/blog/mobile-ajax-application-test-and-demo_69.mdx" beforeDir="false" afterPath="$PROJECT_DIR$/src/content/blog/mobile-ajax-application-test-and-demo_69.mdx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/content/blog/mobile-ajax-faq_96.mdx" beforeDir="false" afterPath="$PROJECT_DIR$/src/content/blog/mobile-ajax-faq_96.mdx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/content/blog/mobile-ajax-post-answered_127.mdx" beforeDir="false" afterPath="$PROJECT_DIR$/src/content/blog/mobile-ajax-post-answered_127.mdx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/content/blog/mobile-ajax-slides-and-explanations_76.mdx" beforeDir="false" afterPath="$PROJECT_DIR$/src/content/blog/mobile-ajax-slides-and-explanations_76.mdx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/content/blog/mobile-ajax-wokshop-mountain-view-09282007_144.mdx" beforeDir="false" afterPath="$PROJECT_DIR$/src/content/blog/mobile-ajax-wokshop-mountain-view-09282007_144.mdx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/content/blog/mobile-ajax-workshop-in-mountain-view_102.mdx" beforeDir="false" afterPath="$PROJECT_DIR$/src/content/blog/mobile-ajax-workshop-in-mountain-view_102.mdx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/content/blog/mobile-applications-hit-cars_1031.mdx" beforeDir="false" afterPath="$PROJECT_DIR$/src/content/blog/mobile-applications-hit-cars_1031.mdx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/content/blog/mobile-applications-on-tvs_1252.mdx" beforeDir="false" afterPath="$PROJECT_DIR$/src/content/blog/mobile-applications-on-tvs_1252.mdx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/content/blog/mobile-apps-becoming-as-big-as-the-internet_783.mdx" beforeDir="false" afterPath="$PROJECT_DIR$/src/content/blog/mobile-apps-becoming-as-big-as-the-internet_783.mdx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/content/blog/mobile-apps-building-deployment-jsugfra1_2221.mdx" beforeDir="false" afterPath="$PROJECT_DIR$/src/content/blog/mobile-apps-building-deployment-jsugfra1_2221.mdx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/content/blog/mobile-devices-market-mobile-messaging-adaption-2_1388.mdx" beforeDir="false" afterPath="$PROJECT_DIR$/src/content/blog/mobile-devices-market-mobile-messaging-adaption-2_1388.mdx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/content/blog/mobile-generated-content_89.mdx" beforeDir="false" afterPath="$PROJECT_DIR$/src/content/blog/mobile-generated-content_89.mdx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/content/blog/mobile-internet-conference-in-berlin_174.mdx" beforeDir="false" afterPath="$PROJECT_DIR$/src/content/blog/mobile-internet-conference-in-berlin_174.mdx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/content/blog/mobile-internet-sig-mobile-user-experience_117.mdx" beforeDir="false" afterPath="$PROJECT_DIR$/src/content/blog/mobile-internet-sig-mobile-user-experience_117.mdx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/content/blog/mobile-monday-aol_119.mdx" beforeDir="false" afterPath="$PROJECT_DIR$/src/content/blog/mobile-monday-aol_119.mdx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/content/blog/mobile-monday-frankfurt-mobile-internet-and-applications_366.mdx" beforeDir="false" afterPath="$PROJECT_DIR$/src/content/blog/mobile-monday-frankfurt-mobile-internet-and-applications_366.mdx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/content/blog/mobile-monday-munich-02052007_72.mdx" beforeDir="false" afterPath="$PROJECT_DIR$/src/content/blog/mobile-monday-munich-02052007_72.mdx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/content/blog/mobile-monday-nokia-mobile-social-software_133.mdx" beforeDir="false" afterPath="$PROJECT_DIR$/src/content/blog/mobile-monday-nokia-mobile-social-software_133.mdx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/content/blog/mobile-social-networks-are-growing_124.mdx" beforeDir="false" afterPath="$PROJECT_DIR$/src/content/blog/mobile-social-networks-are-growing_124.mdx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/content/blog/mobile-unconference-coming-to-germany_1799.mdx" beforeDir="false" afterPath="$PROJECT_DIR$/src/content/blog/mobile-unconference-coming-to-germany_1799.mdx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/content/blog/mobile-unconference-rotterdam-recap_1674.mdx" beforeDir="false" afterPath="$PROJECT_DIR$/src/content/blog/mobile-unconference-rotterdam-recap_1674.mdx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/content/blog/mobile-unconference-some-other-events_1659.mdx" beforeDir="false" afterPath="$PROJECT_DIR$/src/content/blog/mobile-unconference-some-other-events_1659.mdx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/content/blog/mobile-widgets-the-ubiquitous-mobile-web_84.mdx" beforeDir="false" afterPath="$PROJECT_DIR$/src/content/blog/mobile-widgets-the-ubiquitous-mobile-web_84.mdx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/content/blog/mobile2event-review_59.mdx" beforeDir="false" afterPath="$PROJECT_DIR$/src/content/blog/mobile2event-review_59.mdx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/content/blog/more-mobile-phones-than-residents_33.mdx" beforeDir="false" afterPath="$PROJECT_DIR$/src/content/blog/more-mobile-phones-than-residents_33.mdx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/content/blog/more-mwc-news-symbian-nokia-ericsson-2_1199.mdx" beforeDir="false" afterPath="$PROJECT_DIR$/src/content/blog/more-mwc-news-symbian-nokia-ericsson-2_1199.mdx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/content/blog/mwc-news-googles-strategy-and-android-windows-marketplace_1565.mdx" beforeDir="false" afterPath="$PROJECT_DIR$/src/content/blog/mwc-news-googles-strategy-and-android-windows-marketplace_1565.mdx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/content/blog/networking-in-palo-alto_118.mdx" beforeDir="false" afterPath="$PROJECT_DIR$/src/content/blog/networking-in-palo-alto_118.mdx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/content/blog/new-year-new-blog.mdx" beforeDir="false" afterPath="$PROJECT_DIR$/src/content/blog/new-year-new-blog.mdx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/content/blog/nintendo-ds-opera-browser-available-in-europe-soon_35.mdx" beforeDir="false" afterPath="$PROJECT_DIR$/src/content/blog/nintendo-ds-opera-browser-available-in-europe-soon_35.mdx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/content/blog/nintendo-dsi-to-include-opera-web-browser_201.mdx" beforeDir="false" afterPath="$PROJECT_DIR$/src/content/blog/nintendo-dsi-to-include-opera-web-browser_201.mdx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/content/blog/nodejs-node-is-important-introduction_1618.mdx" beforeDir="false" afterPath="$PROJECT_DIR$/src/content/blog/nodejs-node-is-important-introduction_1618.mdx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/content/blog/nokia-acquires-trolltech-for-153-million_162.mdx" beforeDir="false" afterPath="$PROJECT_DIR$/src/content/blog/nokia-acquires-trolltech-for-153-million_162.mdx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/content/blog/nokia-developer-summit-2009-wrap-up-day-1_517.mdx" beforeDir="false" afterPath="$PROJECT_DIR$/src/content/blog/nokia-developer-summit-2009-wrap-up-day-1_517.mdx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/content/blog/nokia-wrt-development-aptana-plugin_688.mdx" beforeDir="false" afterPath="$PROJECT_DIR$/src/content/blog/nokia-wrt-development-aptana-plugin_688.mdx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/content/blog/nokias-ovi-store-goes-live_570.mdx" beforeDir="false" afterPath="$PROJECT_DIR$/src/content/blog/nokias-ovi-store-goes-live_570.mdx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/content/blog/o2-and-vodafone-launch-mpass_212.mdx" beforeDir="false" afterPath="$PROJECT_DIR$/src/content/blog/o2-and-vodafone-launch-mpass_212.mdx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/content/blog/o2-and-vodafone-starting-new-payment-system_160.mdx" beforeDir="false" afterPath="$PROJECT_DIR$/src/content/blog/o2-and-vodafone-starting-new-payment-system_160.mdx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/content/blog/opera-releases-state-of-the-mobile-web_171.mdx" beforeDir="false" afterPath="$PROJECT_DIR$/src/content/blog/opera-releases-state-of-the-mobile-web_171.mdx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/content/blog/our-new-website-is-online_2149.mdx" beforeDir="false" afterPath="$PROJECT_DIR$/src/content/blog/our-new-website-is-online_2149.mdx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/content/blog/over-the-air-event-reflections_943.mdx" beforeDir="false" afterPath="$PROJECT_DIR$/src/content/blog/over-the-air-event-reflections_943.mdx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/content/blog/ovi-store-publishing-first-insights_690.mdx" beforeDir="false" afterPath="$PROJECT_DIR$/src/content/blog/ovi-store-publishing-first-insights_690.mdx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/content/blog/panda-route-widget-now-available-in-ovi-store_680.mdx" beforeDir="false" afterPath="$PROJECT_DIR$/src/content/blog/panda-route-widget-now-available-in-ovi-store_680.mdx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/content/blog/panel-discussion-at-frankfurt-book-fair-2009_957.mdx" beforeDir="false" afterPath="$PROJECT_DIR$/src/content/blog/panel-discussion-at-frankfurt-book-fair-2009_957.mdx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/content/blog/pavingways-mentioned-in-nokias-press-release_655.mdx" beforeDir="false" afterPath="$PROJECT_DIR$/src/content/blog/pavingways-mentioned-in-nokias-press-release_655.mdx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/content/blog/phonegap-meetup-2-retrospektive_2431.mdx" beforeDir="false" afterPath="$PROJECT_DIR$/src/content/blog/phonegap-meetup-2-retrospektive_2431.mdx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/content/blog/phonegaphtml5-meetup-1-kick-off-2_2311.mdx" beforeDir="false" afterPath="$PROJECT_DIR$/src/content/blog/phonegaphtml5-meetup-1-kick-off-2_2311.mdx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/content/blog/phonegaphtml5-meetup-1-kick-off_2308.mdx" beforeDir="false" afterPath="$PROJECT_DIR$/src/content/blog/phonegaphtml5-meetup-1-kick-off_2308.mdx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/content/blog/phonegaphtml5-meetup-2_2418.mdx" beforeDir="false" afterPath="$PROJECT_DIR$/src/content/blog/phonegaphtml5-meetup-2_2418.mdx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/content/blog/pocket-web-from-11-first-affordable-mobile-flatrate-in-germany-2_1377.mdx" beforeDir="false" afterPath="$PROJECT_DIR$/src/content/blog/pocket-web-from-11-first-affordable-mobile-flatrate-in-germany-2_1377.mdx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/content/blog/presenting-groupile-at-the-fmc-summit-in-munich_172.mdx" beforeDir="false" afterPath="$PROJECT_DIR$/src/content/blog/presenting-groupile-at-the-fmc-summit-in-munich_172.mdx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/content/blog/qr-codes-als-marketinginstrument_2379.mdx" beforeDir="false" afterPath="$PROJECT_DIR$/src/content/blog/qr-codes-als-marketinginstrument_2379.mdx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/content/blog/qr-codes-as-marketing-tool_2323.mdx" beforeDir="false" afterPath="$PROJECT_DIR$/src/content/blog/qr-codes-as-marketing-tool_2323.mdx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/content/blog/recap-mobilemonday-tokyo-all-about-location_1839.mdx" beforeDir="false" afterPath="$PROJECT_DIR$/src/content/blog/recap-mobilemonday-tokyo-all-about-location_1839.mdx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/content/blog/recap-of-a-successful-mobile-unconference_1897.mdx" beforeDir="false" afterPath="$PROJECT_DIR$/src/content/blog/recap-of-a-successful-mobile-unconference_1897.mdx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/content/blog/review-browsergames-forum-2009-in-frankfurt_1107.mdx" beforeDir="false" afterPath="$PROJECT_DIR$/src/content/blog/review-browsergames-forum-2009-in-frankfurt_1107.mdx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/content/blog/review-frankfurt-book-fair-opportunities-for-publishers-retailers-2_1469.mdx" beforeDir="false" afterPath="$PROJECT_DIR$/src/content/blog/review-frankfurt-book-fair-opportunities-for-publishers-retailers-2_1469.mdx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/content/blog/review-mobile-internet-conference-in-berlin_176.mdx" beforeDir="false" afterPath="$PROJECT_DIR$/src/content/blog/review-mobile-internet-conference-in-berlin_176.mdx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/content/blog/review-onspeed-mobile_10.mdx" beforeDir="false" afterPath="$PROJECT_DIR$/src/content/blog/review-onspeed-mobile_10.mdx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/content/blog/review-tiggdocom-personal-mobile-homepage_17.mdx" beforeDir="false" afterPath="$PROJECT_DIR$/src/content/blog/review-tiggdocom-personal-mobile-homepage_17.mdx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/content/blog/rim-lg-sharp-samsung-join-jil-for-global-widget-platform-2_1479.mdx" beforeDir="false" afterPath="$PROJECT_DIR$/src/content/blog/rim-lg-sharp-samsung-join-jil-for-global-widget-platform-2_1479.mdx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/content/blog/rim-to-launch-blackberry-application-storefront-and-blackberry-application-center_218.mdx" beforeDir="false" afterPath="$PROJECT_DIR$/src/content/blog/rim-to-launch-blackberry-application-storefront-and-blackberry-application-center_218.mdx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/content/blog/san-francisco-and-frost-a-quick-heads-up_112.mdx" beforeDir="false" afterPath="$PROJECT_DIR$/src/content/blog/san-francisco-and-frost-a-quick-heads-up_112.mdx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/content/blog/sd-forum-06092007_134.mdx" beforeDir="false" afterPath="$PROJECT_DIR$/src/content/blog/sd-forum-06092007_134.mdx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/content/blog/see-you-at-dconstruct-2006_24.mdx" beforeDir="false" afterPath="$PROJECT_DIR$/src/content/blog/see-you-at-dconstruct-2006_24.mdx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/content/blog/server-down-mails-bounce_123.mdx" beforeDir="false" afterPath="$PROJECT_DIR$/src/content/blog/server-down-mails-bounce_123.mdx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/content/blog/sf-beta-november-clubbing-with-the-geeks_61.mdx" beforeDir="false" afterPath="$PROJECT_DIR$/src/content/blog/sf-beta-november-clubbing-with-the-geeks_61.mdx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/content/blog/sf-new-tech-september-meetup-09052007_132.mdx" beforeDir="false" afterPath="$PROJECT_DIR$/src/content/blog/sf-new-tech-september-meetup-09052007_132.mdx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/content/blog/sfbeta-1st-anniversary-party-09252007_140.mdx" beforeDir="false" afterPath="$PROJECT_DIR$/src/content/blog/sfbeta-1st-anniversary-party-09252007_140.mdx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/content/blog/smart-phone-sales-up-30-in-q4-2009-2_1174.mdx" beforeDir="false" afterPath="$PROJECT_DIR$/src/content/blog/smart-phone-sales-up-30-in-q4-2009-2_1174.mdx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/content/blog/some-interesting-mobile-events-coming-up_156.mdx" beforeDir="false" afterPath="$PROJECT_DIR$/src/content/blog/some-interesting-mobile-events-coming-up_156.mdx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/content/blog/speaking-at-mobile-web-americas-in-orlando_105.mdx" beforeDir="false" afterPath="$PROJECT_DIR$/src/content/blog/speaking-at-mobile-web-americas-in-orlando_105.mdx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/content/blog/speaking-at-over-the-air-london-sept-25-26_920.mdx" beforeDir="false" afterPath="$PROJECT_DIR$/src/content/blog/speaking-at-over-the-air-london-sept-25-26_920.mdx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/content/blog/speaking-at-xtech-2007-in-paris_80.mdx" beforeDir="false" afterPath="$PROJECT_DIR$/src/content/blog/speaking-at-xtech-2007-in-paris_80.mdx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/content/blog/state-of-the-mobile-web-2009-mobile-web-is-booming-in-developing-countries_276.mdx" beforeDir="false" afterPath="$PROJECT_DIR$/src/content/blog/state-of-the-mobile-web-2009-mobile-web-is-booming-in-developing-countries_276.mdx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/content/blog/successful-at-nokia-hackathon-in-monaco_479.mdx" beforeDir="false" afterPath="$PROJECT_DIR$/src/content/blog/successful-at-nokia-hackathon-in-monaco_479.mdx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/content/blog/technical-review-for-apress-book_1137.mdx" beforeDir="false" afterPath="$PROJECT_DIR$/src/content/blog/technical-review-for-apress-book_1137.mdx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/content/blog/tetris-most-downloaded-mobile-game-in-the-uk_55.mdx" beforeDir="false" afterPath="$PROJECT_DIR$/src/content/blog/tetris-most-downloaded-mobile-game-in-the-uk_55.mdx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/content/blog/the-holy-wholesale-applications-community-wac_1549.mdx" beforeDir="false" afterPath="$PROJECT_DIR$/src/content/blog/the-holy-wholesale-applications-community-wac_1549.mdx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/content/blog/the-market-for-mobile-services-status-quo_49.mdx" beforeDir="false" afterPath="$PROJECT_DIR$/src/content/blog/the-market-for-mobile-services-status-quo_49.mdx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/content/blog/the-mobile-internet-has-arrived_260.mdx" beforeDir="false" afterPath="$PROJECT_DIR$/src/content/blog/the-mobile-internet-has-arrived_260.mdx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/content/blog/the-new-meaning-of-social-networking-sites_88.mdx" beforeDir="false" afterPath="$PROJECT_DIR$/src/content/blog/the-new-meaning-of-social-networking-sites_88.mdx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/content/blog/time-for-an-anti-social-network_130.mdx" beforeDir="false" afterPath="$PROJECT_DIR$/src/content/blog/time-for-an-anti-social-network_130.mdx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/content/blog/unser-blog-ist-nun-auch-in-deutsch-verfugbar_2258.mdx" beforeDir="false" afterPath="$PROJECT_DIR$/src/content/blog/unser-blog-ist-nun-auch-in-deutsch-verfugbar_2258.mdx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/content/blog/upcoming-mobile-events-in-2009_258.mdx" beforeDir="false" afterPath="$PROJECT_DIR$/src/content/blog/upcoming-mobile-events-in-2009_258.mdx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/content/blog/upcoming-mobile-events_900.mdx" beforeDir="false" afterPath="$PROJECT_DIR$/src/content/blog/upcoming-mobile-events_900.mdx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/content/blog/web-2point2-event-review_60.mdx" beforeDir="false" afterPath="$PROJECT_DIR$/src/content/blog/web-2point2-event-review_60.mdx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/content/blog/webinos-new-project-to-enable-cross-platform-apps_1822.mdx" beforeDir="false" afterPath="$PROJECT_DIR$/src/content/blog/webinos-new-project-to-enable-cross-platform-apps_1822.mdx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/content/blog/webmontag-frankfurt_980.mdx" beforeDir="false" afterPath="$PROJECT_DIR$/src/content/blog/webmontag-frankfurt_980.mdx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/content/blog/webmontag-in-munich_170.mdx" beforeDir="false" afterPath="$PROJECT_DIR$/src/content/blog/webmontag-in-munich_170.mdx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/content/blog/webmontag-live-blog_844.mdx" beforeDir="false" afterPath="$PROJECT_DIR$/src/content/blog/webmontag-live-blog_844.mdx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/content/blog/webmontag-munich-02122007_74.mdx" beforeDir="false" afterPath="$PROJECT_DIR$/src/content/blog/webmontag-munich-02122007_74.mdx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/content/blog/wholesale-applications-community-wac-goes-live_2157.mdx" beforeDir="false" afterPath="$PROJECT_DIR$/src/content/blog/wholesale-applications-community-wac-goes-live_2157.mdx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/content/blog/widget-development-competitions_1078.mdx" beforeDir="false" afterPath="$PROJECT_DIR$/src/content/blog/widget-development-competitions_1078.mdx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/content/blog/wizzl-all-in-one-virtual-phone_150.mdx" beforeDir="false" afterPath="$PROJECT_DIR$/src/content/blog/wizzl-all-in-one-virtual-phone_150.mdx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/content/blog/xml-2006-conference-boston-co-speaking_68.mdx" beforeDir="false" afterPath="$PROJECT_DIR$/src/content/blog/xml-2006-conference-boston-co-speaking_68.mdx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/content/blog/xml-2006-conference-boston-pecha-kucha-pechakucha_67.mdx" beforeDir="false" afterPath="$PROJECT_DIR$/src/content/blog/xml-2006-conference-boston-pecha-kucha-pechakucha_67.mdx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/content/blog/xtech-2007-widgets-and-mobile_97.mdx" beforeDir="false" afterPath="$PROJECT_DIR$/src/content/blog/xtech-2007-widgets-and-mobile_97.mdx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/content/blog/your-life-is-your-work-of-art_116.mdx" beforeDir="false" afterPath="$PROJECT_DIR$/src/content/blog/your-life-is-your-work-of-art_116.mdx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/content/config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/content/config.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/layouts/Base.astro" beforeDir="false" afterPath="$PROJECT_DIR$/src/layouts/Base.astro" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/layouts/components/Blogs.astro" beforeDir="false" afterPath="$PROJECT_DIR$/src/layouts/components/Blogs.astro" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/layouts/components/Pagination.astro" beforeDir="false" afterPath="$PROJECT_DIR$/src/layouts/components/Pagination.astro" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/layouts/components/blog/BlogCategories.astro" beforeDir="false" afterPath="$PROJECT_DIR$/src/layouts/components/blog/BlogCategories.astro" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/layouts/partials/Cta.astro" beforeDir="false" afterPath="$PROJECT_DIR$/src/layouts/partials/Cta.astro" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/layouts/partials/Footer.astro" beforeDir="false" afterPath="$PROJECT_DIR$/src/layouts/partials/Footer.astro" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/layouts/partials/Header.astro" beforeDir="false" afterPath="$PROJECT_DIR$/src/layouts/partials/Header.astro" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lib/utils/dateFormat.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/utils/dateFormat.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lib/utils/readingTime.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/utils/readingTime.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lib/utils/similarItems.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/utils/similarItems.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lib/utils/textConverter.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/utils/textConverter.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/blog/index.astro" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/blog/index.astro" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/blog/page/[slug].astro" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/blog/page/[slug].astro" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/career/[single].astro" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/career/[single].astro" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/categories/[category].astro" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/categories/[category].astro" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/en/index.astro" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/en/index.astro" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images_src/customer-logos.pxd" beforeDir="false" afterPath="$PROJECT_DIR$/images_src/customer-logos.pxd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/customer-logos/pf.webp" beforeDir="false" afterPath="$PROJECT_DIR$/public/images/customer-logos/pf.webp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/customer-logos/vhv.webp" beforeDir="false" afterPath="$PROJECT_DIR$/public/images/customer-logos/vhv.webp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/content/homepage/de/index.md" beforeDir="false" afterPath="$PROJECT_DIR$/src/content/homepage/de/index.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/layouts/Default.astro" beforeDir="false" afterPath="$PROJECT_DIR$/src/layouts/Default.astro" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/layouts/components/Banner.astro" beforeDir="false" afterPath="$PROJECT_DIR$/src/layouts/components/Banner.astro" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/layouts/components/KeyFeatures.astro" beforeDir="false" afterPath="$PROJECT_DIR$/src/layouts/components/KeyFeatures.astro" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/index.astro" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/index.astro" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles/utilities.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/utilities.scss" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -241,7 +58,7 @@
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "git-widget-placeholder": "main",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "/Users/Rocco/Develop/pavingways/pavingways.com/src/pages/en/blog",
+    "last_opened_file_path": "/Users/Rocco/Develop/pavingways/pavingways.com/src/layouts/components",
     "node.js.detected.package.eslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "nodejs_package_manager_path": "yarn",
@@ -266,11 +83,11 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/layouts/components" />
       <recent name="$PROJECT_DIR$/src/pages/en/blog" />
       <recent name="$PROJECT_DIR$/src/lib" />
       <recent name="$PROJECT_DIR$/src/pages/en" />
       <recent name="$PROJECT_DIR$/src/pages/blog" />
-      <recent name="$PROJECT_DIR$/src/content/pages" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/content/blog" />
@@ -280,7 +97,7 @@
       <recent name="$PROJECT_DIR$" />
     </key>
   </component>
-  <component name="RunManager" selected="npm.build">
+  <component name="RunManager" selected="npm.serve">
     <configuration name="build (1)" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/package.json" />
       <command value="run" />
@@ -459,7 +276,23 @@
       <option name="project" value="LOCAL" />
       <updated>1730306059596</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="cleanup and re-import blog with featured and lang">
+      <option name="closed" value="true" />
+      <created>1730503025307</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1730503025307</updated>
+    </task>
+    <task id="LOCAL-00011" summary="cleanup and re-import blog with featured and lang">
+      <option name="closed" value="true" />
+      <created>1730503041170</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1730503041170</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -486,6 +319,7 @@
     <MESSAGE value="migration script update" />
     <MESSAGE value="migration script add featured and language" />
     <MESSAGE value="customer logos higher res" />
-    <option name="LAST_COMMIT_MESSAGE" value="customer logos higher res" />
+    <MESSAGE value="cleanup and re-import blog with featured and lang" />
+    <option name="LAST_COMMIT_MESSAGE" value="cleanup and re-import blog with featured and lang" />
   </component>
 </project>

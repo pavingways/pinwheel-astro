@@ -1,8 +1,9 @@
 ---
 import { markdownify, despaceify } from "@lib/utils/textConverter";
 import { Image } from 'astro:assets'
+import CustomerLogos from "./CustomerLogos.astro";
 const { banner } = Astro.props;
-const { title, button, image, content, tel } = banner;
+const { title, button, image, content, punchline, tel, customers } = banner;
 ---
 
 <section class="section banner relative">
@@ -11,6 +12,8 @@ const { title, button, image, content, tel } = banner;
       <div class="lg:col-8 sm:col-12">
         <h1 class="banner-title" set:text={title} />
         <p class="mt-6" set:html={markdownify(content)} />
+        <CustomerLogos customers={customers} />
+        <p class="mt-6" set:html={markdownify(punchline)} />
       </div>
       <div class="hidden lg:block lg:col-4">
         <Image

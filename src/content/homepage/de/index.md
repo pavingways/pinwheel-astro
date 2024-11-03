@@ -5,17 +5,55 @@ page:
 banner:
   title: Mobile App Entwicklung
   content: "
-    Wir entwickeln **seit 2006** **Mobile Apps für iOS, Android** und andere Plattformen.
-    Seit 2020 sind wir **vor Ort in Luzern, Schweiz**, .
-    
+    Wir entwickeln **Mobile Apps** für iOS, Android und andere Plattformen und sind **vor Ort in der Schweiz**.
 
-    Wir arbeiten als **Entwicklungs-Partner für <span style=\"color: rgb(85, 189, 185)\">Digitalagenturen</span>**, **Know-How-Provider für <span style=\"color: rgb(85, 189, 185)\">KMUs</span>** und als Teil von **IT-Abteilungen in <span style=\"color: rgb(85, 189, 185)\">Weltkonzernen</span>**.
     
-    
-    Als _PavingWays_ ebnen wir unseren Kunden den Weg. 
-    
-    Vom **<span style=\"color: rgb(85, 189, 185)\">App-Konzept bis zum Deployment</span>**.
+    Als
+        **Entwicklungs-Partner** für _Digitalagenturen_ 
+        **Know-How-Provider** für _KMUs_ und 
+        Teil von **IT-Abteilungen** in _Weltkonzernen_ waren wir bereits für diese Kunden tätig:
   "
+  customers:
+    title: ""
+    logos:
+      - src: "/images/customer-logos/pf.webp"
+        title: "PostFinance"
+      - src: "/images/customer-logos/vhv.webp"
+        title: "VHV Versicherungen"
+      - src: "/images/customer-logos/apress.webp"
+        title: "apress Publishing"
+      - src: "/images/customer-logos/t-systems.webp"
+        title: "T-Systems"
+      - src: "/images/customer-logos/dvag.webp"
+        title: "DVAG"
+      - src: "/images/customer-logos/mehrwerk.webp"
+        title: "Mehrwerk"
+      - src: "/images/customer-logos/amsel.webp"
+        title: "amsel"
+      - src: "/images/customer-logos/dmsg.webp"
+        title: "dmsg"
+      - src: "/images/customer-logos/ias.webp"
+        title: "interActive Systems Gesellschaft für interaktive Medien mbH"
+      - src: "/images/customer-logos/zi.webp"
+        title: "zi"
+      - src: "/images/customer-logos/hslu.webp"
+        title: "HSLU"
+      - src: "/images/customer-logos/fhnw.webp"
+        title: "FHNW"
+      - src: "/images/customer-logos/t-home.webp"
+        title: "T-Home"
+      - src: "/images/customer-logos/t.webp"
+        title: "Deutsche Telekom"
+      - src: "/images/customer-logos/vitagroup.webp"
+        title: "vitagroup AG"
+      - src: "/images/customer-logos/coop.webp"
+        title: "coop"
+      - src: "/images/customer-logos/suva.webp"
+        title: "suva"
+    punchline: "
+      Als PavingWays ebnen wir unseren Kunden den Weg.
+      Vom _App-Konzept_ zum _App-Store_.
+    "
   image: /images/hero-image.webp
   button:
     label: Fragen? Meeting buchen!

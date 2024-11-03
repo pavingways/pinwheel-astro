@@ -1,0 +1,79 @@
+---
+import { Image } from 'astro:assets'
+
+const { customers } = Astro.props;
+const logos_twice = customers?.logos.concat(customers.logos);
+---
+
+<style>
+  @keyframes scroll {
+    0% {
+      transform: translate3d(0, 0, 0);
+    }
+    100% {
+      transform: translate3d(
+        calc(
+          (var(--slide-width) + var(--slide-margin) * 2)
+          *
+          var(--no-of-slides)
+          * -1
+        ), 0, 0);
+    }
+  }
+
+  .carousel {
+    --no-of-slides: 17;
+    --slides-in-view: 4;
+    --slide-width: 150px;
+    --slide-height: 52px;
+    --slide-margin: 20px;
+    --iteration-time: 40s;
+
+    padding: 0;
+    width: calc(2 * var(--no-of-slides));
+    //user-select: none;
+    //pointer-events: none;
+  }
+
+  .carousel-wrapper {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    overflow-x: hidden;
+    border: 0;
+    margin: 0 auto;
+  }
+
+  .carousel-slide {
+    animation: scroll var(--iteration-time) linear infinite;
+    display: flex;
+    flex-direction: column;
+    margin: 0 var(--slide-margin);
+    flex: 0 0 auto;
+    width: var(--slide-width);
+    height: var(--slide-height);
+    box-sizing: border-box;
+  }
+</style>
+
+
+<section class="carousel mt-12 mb-12">
+  <div class="container-fluid px-0">
+    <div class="carousel-wrapper">
+      {logos_twice?.map(({ src, title }) => (
+        <Image
+          class="carousel-slide"
+          width=150
+          height=52
+          src={src}
+          alt={title}
+        />
+      ))}
+    </div>
+  </div>
+</section>
+
+
+
+
+
