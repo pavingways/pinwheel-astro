@@ -3,27 +3,34 @@ page:
   title: Mobile Apps Schweiz - PavingWays GmbH
   description: Die PavingWays GmbH entwickelt Mobile Applikationen in Luzern, Schweiz
 banner:
-  title: Mobile App Entwicklung
+  title: Mobile Apps.
   content: "
-    Wir entwickeln **Mobile Apps** für iOS, Android und andere Plattformen und sind **vor Ort in der Schweiz**.
+    Wir entwickeln **Mobile Apps** für iOS und Android.
+
+    Ansässig im Kanton Luzern in der Schweiz arbeiten wir vor Ort und international.
 
     
     Als
-        **Entwicklungs-Partner** für _Digitalagenturen_ 
+        **Entwicklungs-Partner** für _Digitalagenturen_, 
         **Know-How-Provider** für _KMUs_ und 
-        Teil von **IT-Abteilungen** in _Weltkonzernen_ waren wir bereits für diese Kunden tätig:
+        Teil von **IT-Abteilungen** in _Weltkonzernen_ 
+    waren wir bereits für diese Kunden tätig:
   "
   customers:
     title: ""
     logos:
-      - src: "/images/customer-logos/pf.webp"
-        title: "PostFinance"
-      - src: "/images/customer-logos/vhv.webp"
-        title: "VHV Versicherungen"
-      - src: "/images/customer-logos/apress.webp"
-        title: "apress Publishing"
       - src: "/images/customer-logos/t-systems.webp"
         title: "T-Systems"
+      - src: "/images/customer-logos/vhv.webp"
+        title: "VHV Versicherungen"
+      - src: "/images/customer-logos/t-home.webp"
+        title: "T-Home"
+      - src: "/images/customer-logos/apress.webp"
+        title: "apress Publishing"
+      - src: "/images/customer-logos/t.webp"
+        title: "Deutsche Telekom"
+      - src: "/images/customer-logos/pf.webp"
+        title: "PostFinance"
       - src: "/images/customer-logos/dvag.webp"
         title: "DVAG"
       - src: "/images/customer-logos/mehrwerk.webp"
@@ -36,31 +43,27 @@ banner:
         title: "interActive Systems Gesellschaft für interaktive Medien mbH"
       - src: "/images/customer-logos/zi.webp"
         title: "zi"
-      - src: "/images/customer-logos/hslu.webp"
-        title: "HSLU"
-      - src: "/images/customer-logos/fhnw.webp"
-        title: "FHNW"
-      - src: "/images/customer-logos/t-home.webp"
-        title: "T-Home"
-      - src: "/images/customer-logos/t.webp"
-        title: "Deutsche Telekom"
-      - src: "/images/customer-logos/vitagroup.webp"
-        title: "vitagroup AG"
-      - src: "/images/customer-logos/coop.webp"
-        title: "coop"
       - src: "/images/customer-logos/suva.webp"
         title: "suva"
-    punchline: "
-      Als PavingWays ebnen wir unseren Kunden den Weg.
-      Vom _App-Konzept_ zum _App-Store_.
-    "
+      - src: "/images/customer-logos/coop.webp"
+        title: "coop"
+      - src: "/images/customer-logos/fhnw.webp"
+        title: "FHNW"
+      - src: "/images/customer-logos/vitagroup.webp"
+        title: "vitagroup AG"
+      - src: "/images/customer-logos/hslu.webp"
+        title: "HSLU"
+  punchline: "
+    Als PavingWays ebnen wir unseren Kunden den Weg.
+    Vom _App-Konzept_ zum _App-Store_.
+  "
   image: /images/hero-image.webp
-  button:
-    label: Fragen? Meeting buchen!
-    link: "https://calendly.com/pavingways_com/ms-teams-meeting"
+  ctabutton:
+    label: 'Anrufen: +41 76 831 58 37'
+    link: tel:+41768315837
   tel:
     label: ... oder direkt anrufen
-    link: tel:+41768315837 
+    link:  
     number: +41 76 831 58 37
 
 key_features:

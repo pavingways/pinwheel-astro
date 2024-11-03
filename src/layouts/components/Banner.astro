@@ -1,9 +1,9 @@
 ---
-import { markdownify, despaceify } from "@lib/utils/textConverter";
+import { markdownify } from "@lib/utils/textConverter";
 import { Image } from 'astro:assets'
 import CustomerLogos from "./CustomerLogos.astro";
 const { banner } = Astro.props;
-const { title, button, image, content, punchline, tel, customers } = banner;
+const { title, ctabutton, image, content, punchline, tel, customers } = banner;
 ---
 
 <section class="section banner relative">
@@ -18,6 +18,7 @@ const { title, button, image, content, punchline, tel, customers } = banner;
       <div class="hidden lg:block lg:col-4">
         <Image
           class="mx-auto max-w-[50%] lg:max-w-full object-contain mt-8"
+          style="user-select: none; pointer-events: none;"
           alt="banner"
           src={image}
           width={400}
@@ -26,16 +27,14 @@ const { title, button, image, content, punchline, tel, customers } = banner;
           loading="eager"
         />
       </div>
-      <!--
       <div class="sm:col-6 text-center lg:text-left">
-        <a class="btn btn-primary sm:mt-8 sm:mb-8 lg:mb-0" href={button.link}>
-          {button.label}
+        <a class="btn btn-primary sm:mt-8 sm:mb-8 lg:mb-0" href={ctabutton.link}>
+          {ctabutton.label}
         </a>
-        <p class="mt-4">
-          {tel.label}: <a href={tel.link} style="white-space: nowrap">{tel.number}</a>
-        </p>
+        <!--<p class="mt-4">-->
+        <!--  {tel.label}: <a href={tel.link} style="white-space: nowrap">{tel.number}</a>-->
+        <!--</p>-->
       </div>
-      -->
     </div>
   </div>
 </section>

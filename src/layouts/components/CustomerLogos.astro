@@ -6,6 +6,15 @@ const logos_twice = customers?.logos.concat(customers.logos);
 ---
 
 <style>
+  .carousel {
+    --no-of-slides: 17;  /* overridden inline below */
+    --slides-in-view: 4;
+    --slide-width: 150px;
+    --slide-height: 52px;
+    --slide-margin: 20px;
+    --iteration-time: 40s;
+  }
+
   @keyframes scroll {
     0% {
       transform: translate3d(0, 0, 0);
@@ -22,17 +31,10 @@ const logos_twice = customers?.logos.concat(customers.logos);
   }
 
   .carousel {
-    --no-of-slides: 17;
-    --slides-in-view: 4;
-    --slide-width: 150px;
-    --slide-height: 52px;
-    --slide-margin: 20px;
-    --iteration-time: 40s;
-
     padding: 0;
     width: calc(2 * var(--no-of-slides));
-    //user-select: none;
-    //pointer-events: none;
+    user-select: none;
+    pointer-events: none;
   }
 
   .carousel-wrapper {
@@ -57,7 +59,7 @@ const logos_twice = customers?.logos.concat(customers.logos);
 </style>
 
 
-<section class="carousel mt-12 mb-12">
+<section class="carousel mt-14" style={`--no-of-slides: ${customers?.logos?.length};`}>
   <div class="container-fluid px-0">
     <div class="carousel-wrapper">
       {logos_twice?.map(({ src, title }) => (
