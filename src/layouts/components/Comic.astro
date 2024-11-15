@@ -1,0 +1,20 @@
+---
+import { Image } from "astro:assets";
+const { comic } = Astro.props;
+---
+
+<div class="container">
+  <Image
+    class="comic mx-auto max-w-full lg:max-w-[50%] object-contain mt-8 border: 5px solid black; border-radius: 20px; background-color: floralwhite;"
+    style="user-select: none; pointer-events: none;"
+    alt="Comic {comic}"
+    src={comic}
+    width={1200}
+    height={800}
+    decoding="sync"
+    loading="eager"
+  />
+</div>
+<div class="container">
+
+</div>

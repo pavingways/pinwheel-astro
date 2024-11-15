@@ -115,6 +115,7 @@ const pagetitle = title ? title + config.site.titleaddon : config.site.title;
     </main>
     <Footer />
   </body>
+
   <script is:inline>
     const forcedLang = getForcedLang();
     const browserLang = (navigator.language || navigator['userLanguage']).slice(0, 2);
@@ -125,4 +126,5 @@ const pagetitle = title ? title + config.site.titleaddon : config.site.title;
       window.location.href = compareLang;
     }
   </script>
+
 </html>

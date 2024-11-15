@@ -1,40 +1,102 @@
 ---
 import { markdownify } from "@lib/utils/textConverter";
-import { Image } from 'astro:assets'
+import { Image } from "astro:assets";
 import CustomerLogos from "./CustomerLogos.astro";
 const { banner } = Astro.props;
-const { title, ctabutton, image, content, punchline, tel, customers } = banner;
+const { title, subtitle, image, content, customers } = banner;
+
+// first 3 words are default, then randomized
+function getInitialWords() {
+  return [...subtitle.split(", ")].slice(0, 3).join(", ");
+}
 ---
+
 
 <section class="section banner relative">
   <div class="container">
     <div class="row">
       <div class="lg:col-8 sm:col-12">
-        <h1 class="banner-title" set:text={title} />
-        <p class="mt-6" set:html={markdownify(content)} />
-        <CustomerLogos customers={customers} />
-        <p class="mt-6" set:html={markdownify(punchline)} />
+        <h1 set:text={title} />
+        {subtitle &&
+          <p id="word-container" class="text-primary text-2xl mt-2">{getInitialWords()}</p>
+        }
+        <p class="mt-8" set:html={markdownify(content)} />
+        {customers &&
+          <CustomerLogos customers={customers} />
+        }
       </div>
-      <div class="hidden lg:block lg:col-4">
-        <Image
-          class="mx-auto max-w-[50%] lg:max-w-full object-contain mt-8"
-          style="user-select: none; pointer-events: none;"
-          alt="banner"
-          src={image}
-          width={400}
-          height={400}
-          decoding="sync"
-          loading="eager"
-        />
-      </div>
-      <div class="sm:col-6 text-center lg:text-left">
-        <a class="btn btn-primary sm:mt-8 sm:mb-8 lg:mb-0" href={ctabutton.link}>
-          {ctabutton.label}
-        </a>
-        <!--<p class="mt-4">-->
-        <!--  {tel.label}: <a href={tel.link} style="white-space: nowrap">{tel.number}</a>-->
-        <!--</p>-->
-      </div>
+      {image &&
+        <div class="hidden lg:block lg:col-4">
+          <Image
+            class="mx-auto max-w-[50%] lg:max-w-full object-contain mt-8"
+            style="user-select: none; pointer-events: none;"
+            alt="banner"
+            src={image}
+            width={400}
+            height={400}
+            decoding="sync"
+            loading="eager"
+          />
+        </div>
+      }
     </div>
   </div>
 </section>
+
+{ subtitle &&
+<>
+  <style is:inline>
+    #word-container {
+      user-select: none;
+      transition: opacity 0.2s ease-in-out;
+    }
+
+    .fade-out {
+      opacity: 0;
+    }
+
+    .fade-in {
+      opacity: 1;
+    }
+  </style>
+  <script is:inline define:vars={{ subtitle }}>
+    const words = subtitle.split(", ");
+    let wordInterval;
+
+    function getRandomWords() {
+      const shuffled = [...words].sort(() => 0.5 - Math.random());
+      return shuffled.slice(0, 3);
+    }
+
+    function updateWords() {
+      const wordContainer = document.getElementById("word-container");
+      wordContainer.classList.remove("fade-in");
+      wordContainer.classList.add("fade-out");
+      wordContainer.addEventListener("transitionend", function handler(event) {
+        if (event.propertyName === "opacity") {
+          wordContainer.removeEventListener("transitionend", handler);
+          const newWords = getRandomWords();
+          wordContainer.textContent = newWords.join(", ");
+          wordContainer.classList.remove("fade-out");
+          wordContainer.classList.add("fade-in");
+        }
+      });
+    }
+
+    function reLoopWords(updateNow = false) {
+      clearInterval(wordInterval);
+      if (updateNow) {
+        updateWords();
+      }
+      wordInterval = setInterval(updateWords, 10000);
+    }
+
+    reLoopWords();
+
+    // connect to #word-container, on click call reloopWords with updateNow = true
+    document.getElementById("word-container").addEventListener("click", () => reLoopWords(true));
+
+  </script>
+</>
+}
+

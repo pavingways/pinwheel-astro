@@ -1,0 +1,9 @@
+---
+const { content } = Astro.props;
+---
+
+<div class="container">
+  <a class="btn btn-primary" href={content.link}>
+    {content.label}
+  </a>
+</div>

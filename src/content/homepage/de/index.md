@@ -3,18 +3,16 @@ page:
   title: Mobile Apps Schweiz - PavingWays GmbH
   description: Die PavingWays GmbH entwickelt Mobile Applikationen in Luzern, Schweiz
 banner:
-  title: Mobile Apps.
+  title: Mobile Apps. 
+  subtitle: erprobt, günstig, professionell, schnell, zuverlässig, international, lokal, erfahren, innovativ, kreativ, individuell, source-available, komplett, getestet
   content: "
-    Wir entwickeln **Mobile Apps** für iOS und Android.
+    Wir entwickeln **Mobile Apps** für iOS und Android. Ansässig im Kanton Luzern in der Schweiz arbeiten wir vor Ort und international.
 
-    Ansässig im Kanton Luzern in der Schweiz arbeiten wir vor Ort und international.
 
-    
-    Als
-        **Entwicklungs-Partner** für _Digitalagenturen_, 
-        **Know-How-Provider** für _KMUs_ und 
-        Teil von **IT-Abteilungen** in _Weltkonzernen_ 
-    waren wir bereits für diese Kunden tätig:
+    Als **Entwicklungs-Partner** für [Digitalagenturen](/mobile-apps-fuer-digitalagenturen), 
+        **Know-How-Provider** für [KMUs und Start-Ups](/mobile-apps-fuer-kmu-und-startups) sowie 
+        Teil von **IT-Abteilungen** in [Weltkonzernen](/enterprise-mobile-apps) 
+        waren wir unter anderem für diese Kunden tätig:
   "
   customers:
     title: ""
@@ -54,20 +52,117 @@ banner:
       - src: "/images/customer-logos/hslu.webp"
         title: "HSLU"
   punchline: "
-    Als PavingWays ebnen wir unseren Kunden den Weg.
-    Vom _App-Konzept_ zum _App-Store_.
+    _PavingWays_: Wir ebnen den Weg für unseren Kunden, vom _App-Konzept_ zum _App-Store_.
   "
   image: /images/hero-image.webp
   ctabutton:
     label: 'Anrufen: +41 76 831 58 37'
     link: tel:+41768315837
-  tel:
-    label: ... oder direkt anrufen
-    link:  
-    number: +41 76 831 58 37
+
+sales_pitch:
+  title: App Entwicklung neu gedacht.
+
+for_customer:
+  digitalagenturen:
+    title: Apps für Digitalagenturen
+    description: "
+      **Schnelligkeit und Kreativität.** Mit unserer App-Lösung setzen wir in kürzester Zeit Ihre Ideen um, ohne den Setup-Overhead von klassischer Entwicklung.
+      Als **Full-Service-Partner** gehen wir weit über das reine Programmieren von Apps hinaus. 
+      Ihre Apps in ihre digitalen Produkte integriert.
+      
+- cachable API connections to CMSes like Drupal, WordPress, TYPO3, Adobe Experience Manager
+ -API Connectinos to CMSes 
+      
+- diverse clients all with their special needs
+- high expectations regarding timelines, quality and price
+- quickly changing requirements
+- budget friendly solutions
+- clear pricing structure with plannable costs
+- after-launch support and maintenance
+- management of publishing in app stores for clients
+- ensuring compliance with app store policies
+- integration in other digital products
+- integration to client APIs and services
+- short lived marketing campaigns and long-running info apps
+- flexibility and adaptability in UI/UX design
+- quick requirement changes and updates possible including
+- content control without publishing
+- flexible IP ownership models
+- unique billing and payment models
+- tailored and compliant data protection and privacy features
+- we take your IT along or handle everything for you
+- well documented and tested code allows new developers to take over quickly
+    "
+    subtitle:
+    subdescription: "
+      
+    "
+    feature_list:
+      #icon package react-feather-icon [https://feathericons.com/]
+      - icon: "sun"
+        title: App Ideation
+        content:
+          Gern stehen wir unseren Kunden als Sparring-Partner schon während der Ideenfindung zur Seite.
+          Unsere Erfahrungen lassen uns frühzeitig nützlichen Input geben.
+        link: app-ideation
+      - icon: "layout"
+        title: Konzeption
+        content: Mit Personas, User-Journeys und Wireframes helfen wir dabei, der App-Idee einen Gestalt zu verleihen und sie konkret werden zu lassen.
+        link: app-konzeption
+      - icon: "clipboard"
+        title: Requirements
+        content: Verstehen, was benötigt wird. Analysieren, Abwägen, Definieren und Dokumentieren sind wichtige erste Schritte in jedem unserer App-Projekte.
+    comic:
+      url: /images/comics/apps-inexpensive.webp
+      description: Apps sind kompliziert und teuer? Nicht mit uns. Wir haben da was!
+    cta:
+      label: Mehr erfahren
+      link: /mobile-apps-fuer-digitalagenturen
+      
+  kmu_startups:
+    title: Apps für den Mittelstand und Start-Ups
+    description: "
+      Unsere **jahrelangen Erfahrungen** in zahlreichen Projekten erlauben uns, die gesamte Kette der App-Entwicklungs in hoher Qualität anzubieten.
+      - enhance your product with a mobile app
+      - companion app as a perfect match for your product
+      - unique features for your customers
+      - customer retention and feedback
+      - news and interaction channel to your customers
+      - integration into existing IT landscape
+      - App-Entwicklung in Ihrem Team
+      - Schulung Ihrer IT-Mitarbeiter
+      - Support und Wartung
+    "
+    subtitle: Was leisten wir für Digitalagenturen?
+    subdescription: "
+      Als **Full-Service-Partner** gehen wir weit über das reine Programmieren von Apps hinaus.
+    "
+    comic:
+      url: /images/comics/apps-inexpensive.webp
+      description: Apps sind kompliziert und teuer? Nicht mit uns. Wir haben da was!
+    cta:
+      label: Mehr erfahren
+      link: /mobile-apps-fuer-kmu-und-startups
+      
+  enterprise:
+    title: Enterprise Apps
+    description: "
+        Als **Full-Service-Partner** gehen wir weit über das reine Programmieren von Apps hinaus.
+        Unsere **jahrelangen Erfahrungen** in zahlreichen Projekten erlauben uns, die gesamte Kette der App-Entwicklungs in hoher Qualität anzubieten.
+      "
+    subtitle: Was leisten wir für Digitalagenturen?
+    subdescription: "
+      Als **Full-Service-Partner** gehen wir weit über das reine Programmieren von Apps hinaus.
+    "
+    comic:
+      url: /images/comics/apps-inexpensive.webp
+      description: Apps sind kompliziert und teuer? Nicht mit uns. Wir haben da was!
+    cta:  
+      label: Mehr erfahren
+      link: /enterprise-mobile-apps
 
 key_features:
-  title: "Das bieten wir"
+  title: Full-Stack Mobile Apps
   description: "
     Als **Full-Service-Partner** gehen wir weit über das reine Programmieren von Apps hinaus.
     Unsere **jahrelangen Erfahrungen** in zahlreichen Projekten erlauben uns, die gesamte Kette der App-Entwicklungs in hoher Qualität anzubieten.
