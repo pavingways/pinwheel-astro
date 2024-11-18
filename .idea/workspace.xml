@@ -6,6 +6,12 @@
   <component name="ChangeListManager">
     <list default="true" id="d2d6658b-20ca-4d31-9309-cfe0c6c3172e" name="Changes" comment="WIP content">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/comics/1-welcome.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/comics/apps-inexpensive.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/comics/comics.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lib/i18n.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/i18n.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/en/index.astro" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/en/index.astro" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/index.astro" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/index.astro" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,7 +55,7 @@
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "git-widget-placeholder": "main",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "/Users/Rocco/Develop/pavingways/pavingways.com/src/pages",
+    "last_opened_file_path": "/Users/Rocco/Develop/pavingways/pavingways.com/src/pages/en",
     "node.js.detected.package.eslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "nodejs_package_manager_path": "yarn",
@@ -75,11 +81,11 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/pages/en" />
       <recent name="$PROJECT_DIR$/src/pages" />
       <recent name="$PROJECT_DIR$/src/layouts/components" />
       <recent name="$PROJECT_DIR$/src/pages/en/blog" />
       <recent name="$PROJECT_DIR$/src/lib" />
-      <recent name="$PROJECT_DIR$/src/pages/en" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/content/blog" />
