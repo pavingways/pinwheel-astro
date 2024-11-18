@@ -104,7 +104,7 @@ for_customer:
         title: Requirements
         content: Verstehen, was benötigt wird. Analysieren, Abwägen, Definieren und Dokumentieren sind wichtige erste Schritte in jedem unserer App-Projekte.
     cta:
-      label: Mobile Apps für Digitalagenturen
+      label: Mobile Apps für Agenturen
       link: /mobile-apps-fuer-digitalagenturen
       
   - title: Apps für den Mittelstand und Start-Ups
