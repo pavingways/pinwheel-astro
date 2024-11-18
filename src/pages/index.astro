@@ -3,12 +3,9 @@ import { getEntry } from "astro:content";
 import Config from "astro.config.mjs";
 import Base from "@layouts/Base.astro";
 import Banner from "@layouts/components/Banner.astro";
-import KeyFeatures from "@layouts/components/KeyFeatures.astro";
 import Testimonial from "@layouts/components/Testimonial.astro";
 import Service from "@layouts/components/Service.astro";
 import Cta from "@layouts/partials/Cta.astro";
-import Comic from "@layouts/components/Comic.astro";
-import CtaButton from "@layouts/components/CtaButton.astro";
 import ForCustomer from "@layouts/components/ForCustomer.astro";
 
 const homepage = await getEntry("homepage", Astro.currentLocale ?? Config?.i18n?.defaultLocale ?? "de");
@@ -19,11 +16,9 @@ const { page, banner, banner2, for_customer } = homepage?.data;
 <Base title={page.title} description={page.description}>
   <Banner banner={banner} />
 
-  <ForCustomer content_data={for_customer.digitalagenturen} />
-
-  <ForCustomer content_data={for_customer.kmu_startups} />
-
-  <ForCustomer content_data={for_customer.enterprise} />
+  {for_customer.map((content) => (
+    <ForCustomer content={content} />
+  ))}
 
   <!--
   Process
@@ -46,6 +41,7 @@ const { page, banner, banner2, for_customer } = homepage?.data;
   <!--
   FAQ
   -->
+  <!--<Faq content={faq} />-->
 
   <!--
   CTA

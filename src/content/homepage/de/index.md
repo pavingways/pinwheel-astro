@@ -27,6 +27,11 @@ banner:
         title: "apress Publishing"
       - src: "/images/customer-logos/t.webp"
         title: "Deutsche Telekom"
+      - src: "/images/customer-logos/stylepark.webp"
+        title: "Stylepark"
+      - src: "/images/customer-logos/reply.webp"
+        title: "Triplesense Reply"
+        url: "https://www.triplesensereply.de"
       - src: "/images/customer-logos/pf.webp"
         title: "PostFinance"
       - src: "/images/customer-logos/dvag.webp"
@@ -63,40 +68,26 @@ sales_pitch:
   title: App Entwicklung neu gedacht.
 
 for_customer:
-  digitalagenturen:
-    title: Apps für Digitalagenturen
+  - title: Apps für Digitalagenturen
     description: "
-      **Schnelligkeit und Kreativität.** Mit unserer App-Lösung setzen wir in kürzester Zeit Ihre Ideen um, ohne den Setup-Overhead von klassischer Entwicklung.
-      Als **Full-Service-Partner** gehen wir weit über das reine Programmieren von Apps hinaus. 
-      Ihre Apps in ihre digitalen Produkte integriert.
-      
-- cachable API connections to CMSes like Drupal, WordPress, TYPO3, Adobe Experience Manager
- -API Connectinos to CMSes 
-      
-- diverse clients all with their special needs
-- high expectations regarding timelines, quality and price
-- quickly changing requirements
-- budget friendly solutions
-- clear pricing structure with plannable costs
-- after-launch support and maintenance
-- management of publishing in app stores for clients
-- ensuring compliance with app store policies
-- integration in other digital products
-- integration to client APIs and services
-- short lived marketing campaigns and long-running info apps
-- flexibility and adaptability in UI/UX design
-- quick requirement changes and updates possible including
-- content control without publishing
-- flexible IP ownership models
-- unique billing and payment models
-- tailored and compliant data protection and privacy features
-- we take your IT along or handle everything for you
-- well documented and tested code allows new developers to take over quickly
+      **Schnell, flexibel und zuverlässig - so wie ihre Agentur**
+
+      Ihre Kunden bringen neue Ideen, und Sie möchten diese _schnell umsetzen_?
+      Unsere Mobile App-Lösung erweitert Ihr Angebot über Websites hinaus – ohne eigenen Entwicklungsaufwand. 
+      Features wie _CMS-Anbindung_, _individuelle UI_ und _Customer-Tracking_ ermöglichen innovative Apps und erweitern Ihren Produktportfolio um _einen wertvollen Marketingkanal_.
     "
-    subtitle:
-    subdescription: "
-      
-    "
+    comic:
+      panels:
+        - height: 160px
+          image: /images/comics/comic1.webp
+          bubble1:
+            text: "The client requests an app. This could be big! Do you think we can have this ready by the end of the month?"
+        - height: 150px
+          image: /images/comics/comic2.webp
+          align: right
+          top: 5vw
+          bubble1:
+            text: "All good dude, PW gots your back."
     feature_list:
       #icon package react-feather-icon [https://feathericons.com/]
       - icon: "sun"
@@ -112,15 +103,11 @@ for_customer:
       - icon: "clipboard"
         title: Requirements
         content: Verstehen, was benötigt wird. Analysieren, Abwägen, Definieren und Dokumentieren sind wichtige erste Schritte in jedem unserer App-Projekte.
-    comic:
-      url: /images/comics/apps-inexpensive.webp
-      description: Apps sind kompliziert und teuer? Nicht mit uns. Wir haben da was!
     cta:
-      label: Mehr erfahren
+      label: Mobile Apps für Digitalagenturen
       link: /mobile-apps-fuer-digitalagenturen
       
-  kmu_startups:
-    title: Apps für den Mittelstand und Start-Ups
+  - title: Apps für den Mittelstand und Start-Ups
     description: "
       Unsere **jahrelangen Erfahrungen** in zahlreichen Projekten erlauben uns, die gesamte Kette der App-Entwicklungs in hoher Qualität anzubieten.
       - enhance your product with a mobile app
@@ -133,32 +120,41 @@ for_customer:
       - Schulung Ihrer IT-Mitarbeiter
       - Support und Wartung
     "
-    subtitle: Was leisten wir für Digitalagenturen?
-    subdescription: "
-      Als **Full-Service-Partner** gehen wir weit über das reine Programmieren von Apps hinaus.
-    "
     comic:
-      url: /images/comics/apps-inexpensive.webp
-      description: Apps sind kompliziert und teuer? Nicht mit uns. Wir haben da was!
+      panels:
+        - height: 160px
+          image: /images/comics/comic1.webp
+          bubble1:
+            text: "The client requests an app. This could be big! Do you think we can have this ready by the end of the month?"
+        - height: 150px
+          image: /images/comics/comic2.webp
+          align: right
+          top: 5vw
+          bubble1:
+            text: "All good dude, PW gots your back."
     cta:
-      label: Mehr erfahren
+      label: Mobile Apps für KMU
       link: /mobile-apps-fuer-kmu-und-startups
       
-  enterprise:
-    title: Enterprise Apps
+  - title: Enterprise Apps und Services
     description: "
         Als **Full-Service-Partner** gehen wir weit über das reine Programmieren von Apps hinaus.
         Unsere **jahrelangen Erfahrungen** in zahlreichen Projekten erlauben uns, die gesamte Kette der App-Entwicklungs in hoher Qualität anzubieten.
       "
-    subtitle: Was leisten wir für Digitalagenturen?
-    subdescription: "
-      Als **Full-Service-Partner** gehen wir weit über das reine Programmieren von Apps hinaus.
-    "
     comic:
-      url: /images/comics/apps-inexpensive.webp
-      description: Apps sind kompliziert und teuer? Nicht mit uns. Wir haben da was!
+      panels:
+        - height: 160px
+          image: /images/comics/comic1.webp
+          bubble1:
+            text: "The client requests an app. This could be big! Do you think we can have this ready by the end of the month?"
+        - height: 150px
+          image: /images/comics/comic2.webp
+          align: right
+          top: 5vw
+          bubble1:
+            text: "All good dude, PW gots your back."
     cta:  
-      label: Mehr erfahren
+      label: Enterprise Services
       link: /enterprise-mobile-apps
 
 key_features:

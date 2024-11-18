@@ -1,20 +1,31 @@
 ---
 import { Image } from "astro:assets";
-const { comic } = Astro.props;
+const { content } = Astro.props;
+const { panels } = content;
 ---
 
-<div class="container">
-  <Image
-    class="comic mx-auto max-w-full lg:max-w-[50%] object-contain mt-8 border: 5px solid black; border-radius: 20px; background-color: floralwhite;"
-    style="user-select: none; pointer-events: none;"
-    alt="Comic {comic}"
-    src={comic}
-    width={1200}
-    height={800}
-    decoding="sync"
-    loading="eager"
-  />
-</div>
-<div class="container">
-
+<div class="grid grid-cols-1 lg:grid-cols-2 mt-10 max-w-fit">
+  {panels?.map((panel) => (
+    <div
+      style=`
+        height: ${panel.height};
+        overflow: hidden;
+        ${panel.top ? "margin-top: " + panel.top : ""}
+      `>
+      <Image
+        class="comic mx-auto max-w-full object-contain"
+        style=`
+          user-select: none;
+          pointer-events: none;
+          ${panel.align === "right" ? "float: right;" : "float: left;"}
+        `
+        alt={panel.bubble1.text}
+        src={panel.image}
+        width={424}
+        height={200}
+        decoding="sync"
+        loading="eager"
+      />
+    </div>
+  ))}
 </div>

@@ -1,11 +1,10 @@
 ---
 import { markdownify } from "@lib/utils/textConverter";
-import FeatureTile from "../function-components/FeatureTile";
 import Comic from "./Comic.astro";
 import CtaButton from "./CtaButton.astro";
 
-const { content_data } = Astro.props;
-const { title, description, subtitle, subdescription, feature_list, comic, cta } = content_data;
+const { content } = Astro.props;
+const { title, description, comic, cta } = content;
 ---
 
 
@@ -17,26 +16,15 @@ const { title, description, subtitle, subdescription, feature_list, comic, cta }
         <p set:html={markdownify(description)} />
       </div>
     </div>
-    { comic && (
-      <div class="row">
-        <Comic comic={comic.url} description={comic.description} />
+    {comic && (
+      <div class="row justify-center">
+        <Comic content={comic} alignment="left" />
       </div>
     )}
-    <div class="row">
-      { subtitle && (
-        <h4 set:html={markdownify(subtitle)} />
-      )}
-      { subdescription && (
-        <div class="mt-6">
-          <p set:html={markdownify(subdescription)} />
-        </div>
-      )}
-      { feature_list?.length > 0 && (
-        <FeatureTile feature_list={feature_list} client:load />
-      )}
-      { cta && (
+    {cta && (
+      <div class="text-center mt-4">
         <CtaButton content={cta} />
-      )}
-    </div>
+      </div>
+    )}
   </div>
 </section>
