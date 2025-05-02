@@ -5,7 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d2d6658b-20ca-4d31-9309-cfe0c6c3172e" name="Changes" comment="WIP content">
-      <change beforePath="$PROJECT_DIR$/bin/deploy-dev.sh" beforeDir="false" afterPath="$PROJECT_DIR$/bin/deploy-dev.sh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bin/deploy-prod.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,11 +51,12 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "SHELLCHECK.PATH": "/Users/rocco/Library/Application Support/JetBrains/IntelliJIdea2025.1/plugins/Shell Script/shellcheck",
     "dart.analysis.tool.window.visible": "false",
     "git-widget-placeholder": "main",
     "junie.onboarding.icon.badge.shown": "true",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "/Users/Rocco/Develop/pavingways/pavingways.com/src/pages/en",
+    "last_opened_file_path": "/Users/Rocco/Develop/pavingways/pavingways.com/bin",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -99,7 +101,7 @@
       <recent name="$PROJECT_DIR$" />
     </key>
   </component>
-  <component name="RunManager" selected="npm.build">
+  <component name="RunManager" selected="npm.deploy-dev">
     <configuration name="build (1)" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/package.json" />
       <command value="run" />
@@ -193,8 +195,8 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="npm.dev" />
         <item itemvalue="npm.deploy-dev" />
+        <item itemvalue="npm.dev" />
         <item itemvalue="npm.build (2)" />
         <item itemvalue="npm.build (1)" />
         <item itemvalue="npm.ngrok" />
@@ -217,7 +219,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1705163928747</updated>
-      <workItem from="1746179028528" duration="4344000" />
+      <workItem from="1746179028528" duration="6767000" />
     </task>
     <task id="LOCAL-00001" summary="1st version WIP">
       <option name="closed" value="true" />
