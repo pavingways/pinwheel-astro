@@ -1,3 +1,4 @@
+npm run build
 rsync -avr --delete-before  \
                          --exclude '.*'  \
                          --exclude '_deploy-dev.sh' \
