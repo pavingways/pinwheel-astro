@@ -8,6 +8,7 @@
     "dev": "astro dev",
     "build": "astro build",
     "deploy-dev": "bin/deploy-dev.sh",
+    "deploy-prod": "bin/deploy-prod.sh",
     "json": "node scripts/jsonGenerator.js",
     "format": "prettier -w .",
     "ngrok": "ngrok start s4321"
