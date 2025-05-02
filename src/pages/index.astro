@@ -16,7 +16,7 @@ const { page, banner, banner2, for_customer } = homepage?.data;
 <Base title={page.title} description={page.description}>
   <Banner banner={banner} />
 
-  {for_customer?.map((content) => (
+  {for_customer?.map((content:string) => (
     <ForCustomer content={content} />
   ))}
 
