@@ -44,7 +44,7 @@ export default defineConfig({
       // it: "en"
     }
   },
-  site: config.site.base_url ? config.site.base_url : "https://skatepark.pilatustools.com",
+  site: config.site.base_url ? config.site.base_url : "https://pumptrack.pilatustools.com",
   base: config.site.base_path ? config.site.base_path : "/",
   trailingSlash: "ignore",
   integrations: [

@@ -5,11 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d2d6658b-20ca-4d31-9309-cfe0c6c3172e" name="Changes" comment="WIP content">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images_src/WonderDotsFlyer.pxd" beforeDir="false" afterPath="$PROJECT_DIR$/images_src/WonderDotsFlyer.pxd" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images_src/comics.pxd" beforeDir="false" afterPath="$PROJECT_DIR$/images_src/comics.pxd" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/index.astro" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/index.astro" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/astro.config.mjs" beforeDir="false" afterPath="$PROJECT_DIR$/astro.config.mjs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/deploy-dev.sh" beforeDir="false" afterPath="$PROJECT_DIR$/bin/deploy-dev.sh" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -221,7 +219,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1705163928747</updated>
-      <workItem from="1746179028528" duration="2161000" />
+      <workItem from="1746179028528" duration="2291000" />
     </task>
     <task id="LOCAL-00001" summary="1st version WIP">
       <option name="closed" value="true" />
