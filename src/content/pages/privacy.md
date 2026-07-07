@@ -82,7 +82,7 @@ title: "Privacy Policy"
   Switzerland</p>
 
 <p>Phone: 076 730 77 84<br>
-  Email: <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="026b6c646d427263746b6c6575637b712c616d6f">[email&#160;protected]</a><br>
+  Email: <a href="mailto:info@pavingways.com">info@pavingways.com</a><br>
   Website: https://www.pavingways.com</p>
 
 <ol>

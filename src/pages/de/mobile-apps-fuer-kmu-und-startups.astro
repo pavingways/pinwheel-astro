@@ -1,0 +1,23 @@
+---
+import Base from "@layouts/Base.astro";
+import Cta from "@layouts/partials/Cta.astro";
+import { markdownify } from "@lib/utils/textConverter";
+import { getEntryBySlug } from "astro:content";
+
+const entry = await getEntryBySlug("pages", "mobile-apps-fuer-kmu-und-startups");
+const { Content } = await entry.render();
+---
+
+<Base
+  title={entry.data.title}
+  meta_title={entry.data.meta_title}
+  description={entry.data.description}
+>
+  <section class="section">
+    <div class="container content">
+      <h1 class="mb-4" set:html={markdownify(entry.data.title)} />
+      <Content />
+    </div>
+  </section>
+  <Cta />
+</Base>

@@ -67,6 +67,9 @@ export default defineConfig({
     "/datenschutz": "/de/datenschutz",
     "/impressum": "/de/impressum",
     "/ueberuns": "/de/ueberuns",
+    "/mobile-apps-fuer-digitalagenturen": "/de/mobile-apps-fuer-digitalagenturen",
+    "/mobile-apps-fuer-kmu-und-startups": "/de/mobile-apps-fuer-kmu-und-startups",
+    "/enterprise-mobile-apps": "/de/enterprise-mobile-apps",
     "/blog": "/de/blog",
     // old paginated lists were dominated by English posts and the German
     // tree no longer paginates (6 posts) — send them to the English pages
