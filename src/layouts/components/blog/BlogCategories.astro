@@ -1,7 +1,9 @@
 ---
 import { humanize, slugify } from "@lib/utils/textConverter";
+import { localizeUrl } from "@lib/utils/i18n";
 const { categories, all_categories } = Astro.props;
 const params = Astro.params;
+const currentLocale = Astro.currentLocale;
 ---
 
 <div class="category-filter mb-10 mt-3 rounded-xl bg-[#EEEEEE] p-4">
@@ -13,7 +15,7 @@ const params = Astro.params;
             class={`filter-btn ${
               !params.category ? "filter-btn-active" : undefined
             } btn btn-sm`}
-            href="/categories">{all_categories}</a
+            href={localizeUrl("/categories", currentLocale)}>{all_categories}</a
           >
         </li>
       )
@@ -27,7 +29,7 @@ const params = Astro.params;
                 ? "filter-btn-active"
                 : undefined
             } btn btn-sm`}
-            href={`/categories/${slugify(category)}`}
+            href={localizeUrl(`/categories/${slugify(category)}`, currentLocale)}
           >
             {humanize(category)}
           </a>

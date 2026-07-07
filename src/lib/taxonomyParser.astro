@@ -3,8 +3,8 @@ import { getSinglePage } from "./contentParser.astro";
 import { slugify } from "./utils/textConverter";
 
 // get all taxonomies from frontmatter
-export const getTaxonomy = async (collection: string, name: string) => {
-  const singlePages = await getSinglePage(collection);
+export const getTaxonomy = async (collection: string, name: string, language?: string) => {
+  const singlePages = await getSinglePage(collection, language);
   const taxonomyPages = singlePages.map((page) => page.data[name]);
   let taxonomies = [];
   for (let i = 0; i < taxonomyPages.length; i++) {

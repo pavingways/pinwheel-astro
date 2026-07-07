@@ -1,7 +1,7 @@
 ---
 import { Image } from 'astro:assets'
 import config from "@config/config.json";
-import Config from "../../../astro.config.mjs";
+import { localizeUrl } from "@lib/utils/i18n";
 const { src, max_width, max_height } = Astro.props;
 
 const maxWidth = max_width || config.site.logo_width;
@@ -20,7 +20,7 @@ const {
 ---
 
 <a
-  href={Astro.currentLocale !== Config.i18n.defaultLocale ? `/${Astro.currentLocale}/` : `/`}
+  href={localizeUrl("/", Astro.currentLocale)}
   class="navbar-brand block">
   {
     src || logo ? (

@@ -9,8 +9,8 @@ import { getSinglePage } from "@lib/contentParser.astro";
 import { getTaxonomy } from "@lib/taxonomyParser.astro";
 
 const { blog_folder } = config.settings;
-const posts = await getSinglePage(blog_folder);
-const categories = await getTaxonomy(blog_folder, "categories");
+const posts = await getSinglePage(blog_folder, "en");
+const categories = await getTaxonomy(blog_folder, "categories", "en");
 ---
 
 <Base title={"categories"}>

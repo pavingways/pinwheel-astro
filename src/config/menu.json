@@ -18,7 +18,7 @@
     {
       "i18nKey": "menu_technologies",
       "url_de": "/technologien/",
-      "url_en": "/technologies/"
+      "url_en": "/technologien/"
     }
   ],
 
@@ -47,7 +47,7 @@
     {
       "i18nKey": "menu_technologies",
       "url_de": "/technologien/",
-      "url_en": "/technologies/"
+      "url_en": "/technologien/"
     }
   ]
 }

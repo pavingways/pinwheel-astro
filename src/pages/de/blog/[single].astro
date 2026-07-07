@@ -5,7 +5,7 @@ import BlogSingle from "@layouts/BlogSingle.astro";
 import { getSinglePage } from "@lib/contentParser.astro";
 
 export async function getStaticPaths() {
-  const posts = await getSinglePage(config.settings.blog_folder);
+  const posts = await getSinglePage(config.settings.blog_folder, "de");
 
   const paths = posts.map((post) => ({
     params: {

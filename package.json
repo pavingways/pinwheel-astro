@@ -17,7 +17,7 @@
     "@astrojs/markdown-remark": "v4",
     "@astrojs/mdx": "^2.0.3",
     "@astrojs/rss": "^4.0.1",
-    "astro": "^4.1.0",
+    "astro": "^4.16.19",
     "astro-auto-import": "^0.4.2",
     "date-fns": "^2.30.0",
     "date-fns-tz": "^2.0.0",

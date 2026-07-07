@@ -5,6 +5,7 @@ import readingTime from "@lib/utils/readingTime";
 import Disqus from "./function-components/Disqus";
 
 import { humanize, slugify } from "@lib/utils/textConverter";
+import { localizeUrl } from "@lib/utils/i18n";
 import {
   FaRegCalendarAlt,
   FaRegClock,
@@ -52,7 +53,7 @@ const { Content } = await post.render();
               {
                 post.data.categories.map((category: string, index: number) => (
                   <a
-                    href={`/categories/${slugify(category)}`}
+                    href={localizeUrl(`/categories/${slugify(category)}`, Astro.currentLocale)}
                     class="hover:text-primary"
                   >
                     {humanize(category)}

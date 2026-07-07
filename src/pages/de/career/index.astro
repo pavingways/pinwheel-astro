@@ -61,6 +61,7 @@ const page_data = {
   <CareerBenifits benifits={benifits} client:load />
   <JobPosts
     client:load
+    locale={Astro.currentLocale}
     categories={categories}
     career={career}
     posts={jobposts}

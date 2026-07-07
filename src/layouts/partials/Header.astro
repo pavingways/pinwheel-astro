@@ -2,7 +2,7 @@
 import Logo from "@components/Logo.astro";
 import menu from "@config/menu.json";
 import { NavigationLink } from "@lib/utils/interfaces";
-import Config from "astro.config.mjs";
+import { localizeUrl } from "@lib/utils/i18n";
 import i18nAll from "@lib/i18n.json";
 import LanguagePicker from "../components/LanguagePicker.astro";
 
@@ -64,18 +64,22 @@ switch (Astro.currentLocale) {
       class="navbar-nav order-3 hidden w-full lg:order-1 lg:flex lg:w-auto lg:space-x-2"
     >
       {
-        main.map((item) => (
-          <li class="nav-item">
-            <a
-              href={(
-                Astro.currentLocale !== Config.i18n.defaultLocale ? `/${Astro.currentLocale}` : ``
-              ) + `${item['url'] ? item['url'] : item['url_' + Astro.currentLocale]}`}
-              class={`nav-link inline-block lg:block ${
-                (pathname === (item['url'] ? item['url'] : item['url_' + Astro.currentLocale]) || pathname === `/${Astro.currentLocale}${item['url']}`) && "active"
-              }`}
-            >{i18n[item.i18nKey]}</a>
-          </li>
-        ))
+        main.map((item) => {
+          const href = localizeUrl(
+            item['url'] ? item['url'] : item['url_' + Astro.currentLocale],
+            Astro.currentLocale
+          );
+          return (
+            <li class="nav-item">
+              <a
+                href={href}
+                class={`nav-link inline-block lg:block ${
+                  (pathname === href || pathname === href.replace(/\/+$/, "")) && "active"
+                }`}
+              >{i18n[item.i18nKey]}</a>
+            </li>
+          );
+        })
       }
 
       <LanguagePicker></LanguagePicker>

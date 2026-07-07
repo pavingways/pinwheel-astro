@@ -31,8 +31,8 @@ switch (Astro.currentLocale) {
 
 const { blog_folder } = config.settings;
 const blogIndex: Record<string, any> = await getEntryBySlug<any, string>(blog_folder, "-index") || {};
-const posts = await getSinglePage(blog_folder);
-const categories = await getTaxonomy(config.settings.blog_folder, "categories");
+const posts = await getSinglePage(blog_folder, "de");
+const categories = await getTaxonomy(config.settings.blog_folder, "categories", "de");
 const sortedPosts = sortByDate(posts);
 const featuredPost = sortedPosts.filter((item) => item.data.featured);
 const unfeaturedPosts = sortedPosts.filter((item) => !item.data.featured);
@@ -85,7 +85,7 @@ const olderPosts = unfeaturedPosts.slice(3, config.settings.pagination);
       }
 
       <Pagination
-        section={blog_folder}
+        section={`${Astro.currentLocale}/${blog_folder}`}
         currentPage={1}
         totalPages={totalPages}
       />

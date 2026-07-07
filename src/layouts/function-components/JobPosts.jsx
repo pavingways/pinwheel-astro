@@ -3,7 +3,7 @@ import { useState } from "react";
 import { humanize } from "@lib/utils/textConverter";
 import { marked } from "marked";
 import { AiOutlineArrowRight } from "react-icons/ai";
-const JobPosts = ({ posts, categories, career: { title, subtitle } }) => {
+const JobPosts = ({ posts, categories, career: { title, subtitle }, locale = "de" }) => {
   const [tab, setTab] = useState("");
   const filterPost = !tab
     ? posts
@@ -87,7 +87,7 @@ const JobPosts = ({ posts, categories, career: { title, subtitle } }) => {
                   <li className="my-1 mr-8">
                     <a
                       className="inline-flex items-center font-semibold text-primary"
-                      href={`/career/${post.slug}`}
+                      href={`/${locale}/career/${post.slug}`}
                     >
                       Read More
                       <AiOutlineArrowRight className="ml-1.5 text-xl font-bold" />

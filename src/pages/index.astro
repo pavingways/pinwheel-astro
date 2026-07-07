@@ -1,51 +1,85 @@
 ---
-import { getEntry } from "astro:content";
-import Config from "astro.config.mjs";
-import Base from "@layouts/Base.astro";
-import Banner from "@layouts/components/Banner.astro";
-import Testimonial from "@layouts/components/Testimonial.astro";
-import Service from "@layouts/components/Service.astro";
-import Cta from "@layouts/partials/Cta.astro";
-import ForCustomer from "@layouts/components/ForCustomer.astro";
+import config from "@config/config.json";
 
-const homepage = await getEntry("homepage", Astro.currentLocale ?? Config?.i18n?.defaultLocale ?? "de");
-const { page, banner, banner2, for_customer } = homepage?.data;
+// Language detector page at "/":
+// 1. previously saved choice (localStorage, cookie fallback)
+// 2. browser languages (navigator.languages)
+// 3. default: de (we're based in Switzerland)
+// Search engines see a real, indexable x-default page with hreflang links
+// to both language trees; without JS a meta refresh leads to /de/.
+const { base_url } = config.site;
 ---
 
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>PavingWays GmbH – Mobile Apps</title>
+    <meta
+      name="description"
+      content="PavingWays GmbH entwickelt Mobile Apps in Luzern, Schweiz. / PavingWays GmbH develops mobile applications in Lucerne, Switzerland."
+    />
+    <link rel="shortcut icon" href={config.site.favicon} />
+    <link rel="canonical" href={`${base_url}/`} />
+    <link rel="alternate" hreflang="de" href={`${base_url}/de/`} />
+    <link rel="alternate" hreflang="en" href={`${base_url}/en/`} />
+    <link rel="alternate" hreflang="x-default" href={`${base_url}/`} />
 
-<Base title={page.title} description={page.description}>
-  <Banner banner={banner} />
+    <script is:inline>
+      (function () {
+        var KEY = "language_selection";
+        var SUPPORTED = ["de", "en"];
+        var lang = null;
 
-  {for_customer?.map((content:string) => (
-    <ForCustomer content={content} />
-  ))}
+        try {
+          lang = window.localStorage.getItem(KEY);
+        } catch (e) {}
+        if (SUPPORTED.indexOf(lang) === -1) {
+          var match = document.cookie.match(/(?:^|;\s*)language_selection=(de|en)(?:;|$)/);
+          lang = match ? match[1] : null;
+        }
+        if (SUPPORTED.indexOf(lang) === -1) {
+          lang = null;
+          var candidates = navigator.languages || [navigator.language || ""];
+          for (var i = 0; i < candidates.length && !lang; i++) {
+            var code = String(candidates[i]).slice(0, 2).toLowerCase();
+            if (SUPPORTED.indexOf(code) !== -1) lang = code;
+          }
+        }
+        if (!lang) lang = "de";
 
-  <!--
-  Process
-  How it works
-  Step 1-x
-  -->
-  <!--<Service service={service} />-->
+        window.location.replace("/" + lang + "/");
+      })();
+    </script>
 
-  <!--
-  Pricing
-  Basic - Pro - Enterprise
-  -->
+    <noscript>
+      <meta http-equiv="refresh" content="0; url=/de/" />
+    </noscript>
 
-  <!--
-  Testimonials
-  1-x
-  -->
-  <!--<Testimonial testimonial={testimonial} />-->
-
-  <!--
-  FAQ
-  -->
-  <!--<Faq content={faq} />-->
-
-  <!--
-  CTA
-  -->
-  <Cta />
-
-</Base>
+    <style>
+      body {
+        font-family: system-ui, -apple-system, sans-serif;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+        margin: 0;
+        gap: 1.5rem;
+      }
+      a {
+        font-size: 1.25rem;
+        color: #1d4ed8;
+      }
+    </style>
+  </head>
+  <body>
+    <p>
+      <a href="/de/">Deutsch&nbsp;→&nbsp;pavingways.com/de/</a>
+    </p>
+    <p>
+      <a href="/en/">English&nbsp;→&nbsp;pavingways.com/en/</a>
+    </p>
+  </body>
+</html>

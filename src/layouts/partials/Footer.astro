@@ -6,7 +6,7 @@ import social from "@config/social.json";
 import { markdownify } from "@lib/utils/textConverter";
 import { NavigationLink } from "@lib/utils/interfaces";
 import Config from "../../../astro.config.mjs";
-import type { LocaleDef } from "@lib/utils/i18n";
+import { localizeUrl, type LocaleDef } from "@lib/utils/i18n";
 import i18nAll from "@lib/i18n.json";
 
 const { footer }: { main: NavigationLink[] } = menu;
@@ -64,16 +64,20 @@ switch (Astro.currentLocale) {
         <nav class="mt-4">
           {
             // footer menu items
-            footer.map((item) => (
-              <a
-                href={(
-                  Astro.currentLocale !== Config.i18n.defaultLocale ? `/${Astro.currentLocale}` : ``
-                ) + `${item['url'] ? item['url'] : item['url_' + Astro.currentLocale]}`}
-                class={`nav-link-footer ${
-                  (pathname === (item['url'] ? item['url'] : item['url_' + Astro.currentLocale]) || pathname === `/${Astro.currentLocale}${item['url']}`) && "active"
-                }`}
-              >{i18n[item.i18nKey]}</a>
-            ))
+            footer.map((item) => {
+              const href = localizeUrl(
+                item['url'] ? item['url'] : item['url_' + Astro.currentLocale],
+                Astro.currentLocale
+              );
+              return (
+                <a
+                  href={href}
+                  class={`nav-link-footer ${
+                    (pathname === href || pathname === href.replace(/\/+$/, "")) && "active"
+                  }`}
+                >{i18n[item.i18nKey]}</a>
+              );
+            })
           }
 
           {
@@ -83,8 +87,7 @@ switch (Astro.currentLocale) {
             ).map((localeNow: LocaleDef) =>
               <a
                 class="nav-link-footer"
-                href={`/${localeNow.path !== Config.i18n.defaultLocale ? localeNow.path + "/" : ""}`}
-                onclick={`forceLang('${localeNow.path}')`}
+                href={`/${localeNow.path}/`}
               ><span class="lang">{localeNow.name}</span></a>
             )
           }

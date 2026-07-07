@@ -4,7 +4,7 @@ import { humanize } from "@lib/utils/textConverter";
 import { marked } from "marked";
 import { AiOutlineArrowRight } from "react-icons/ai";
 
-const IntegrateMedia = ({ integrations, categories }) => {
+const IntegrateMedia = ({ integrations, categories, locale = "de" }) => {
   const [tab, setTab] = useState("");
   const filterPost = !tab
     ? integrations
@@ -69,7 +69,7 @@ const IntegrateMedia = ({ integrations, categories }) => {
 
                 <a
                   className="group inline-flex items-center font-semibold text-dark hover:text-primary"
-                  href={`/integrations/${item.slug}`}
+                  href={`/${locale}/integrations/${item.slug}`}
                 >
                   View integration
                   <AiOutlineArrowRight className="ml-1.5 text-xl font-bold duration-300 group-hover:ml-3" />

@@ -9,9 +9,9 @@ banner:
     Wir entwickeln **Mobile Apps** für iOS und Android. Ansässig im Kanton Luzern in der Schweiz arbeiten wir vor Ort und international.
 
 
-    Als **Entwicklungs-Partner** für [Digitalagenturen](/mobile-apps-fuer-digitalagenturen), 
-        **Know-How-Provider** für [KMUs und Start-Ups](/mobile-apps-fuer-kmu-und-startups) sowie 
-        Teil von **IT-Abteilungen** in [Weltkonzernen](/enterprise-mobile-apps) 
+    Als **Entwicklungs-Partner** für [Digitalagenturen](/de/mobile-apps-fuer-digitalagenturen), 
+        **Know-How-Provider** für [KMUs und Start-Ups](/de/mobile-apps-fuer-kmu-und-startups) sowie 
+        Teil von **IT-Abteilungen** in [Weltkonzernen](/de/enterprise-mobile-apps) 
         waren wir unter anderem für diese Kunden tätig:
   "
   customers:
@@ -105,7 +105,7 @@ for_customer:
         content: Verstehen, was benötigt wird. Analysieren, Abwägen, Definieren und Dokumentieren sind wichtige erste Schritte in jedem unserer App-Projekte.
     cta:
       label: Mobile Apps für Agenturen
-      link: /mobile-apps-fuer-digitalagenturen
+      link: /de/mobile-apps-fuer-digitalagenturen
       
   - title: Apps für den Mittelstand und Start-Ups
     description: "
@@ -134,7 +134,7 @@ for_customer:
             text: "All good dude, PW gots your back."
     cta:
       label: Mobile Apps für KMU
-      link: /mobile-apps-fuer-kmu-und-startups
+      link: /de/mobile-apps-fuer-kmu-und-startups
       
   - title: Enterprise Apps und Services
     description: "
@@ -155,7 +155,7 @@ for_customer:
             text: "All good dude, PW gots your back."
     cta:  
       label: Enterprise Services
-      link: /enterprise-mobile-apps
+      link: /de/enterprise-mobile-apps
 
 key_features:
   title: Full-Stack Mobile Apps
