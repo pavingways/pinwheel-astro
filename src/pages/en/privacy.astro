@@ -10,7 +10,7 @@ const entry = await getEntryBySlug("pages", "privacy");
 const { Content } = await entry.render();
 ---
 
-<Base title={entry.data.title}>
+<Base title={entry.data.title} translation={entry.data.translation}>
   <section class="section">
     <div class="container">
           <h1 class="mb-4" set:html={markdownify(entry.data.title)} />

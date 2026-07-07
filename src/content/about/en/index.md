@@ -72,5 +72,6 @@ members:
     - name: Ortrin Okaster
       field: Software Engineer
       image: "/images/users/user-3.webp"
+translation: /de/ueberuns/
 ---
 Donec sollicitudin molestie malesda. Donec sollitudin molestie malesuada. Mauris pellentesque nec, egestas non nisi. Cras ultricies ligula sed magna dictum porta. Lorem

@@ -1,5 +1,6 @@
 ---
 title: "Imprint"
+translation: /de/impressum/
 ---
 PavingWays GmbH<br>
 <br>

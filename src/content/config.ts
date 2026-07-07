@@ -13,6 +13,8 @@ const blogCollection = defineCollection({
     draft: z.boolean().optional(),
     featured: z.boolean().optional().default(true),
     language: z.string().default("de"),
+    // URL of the same post in the other language, e.g. /en/blog/some-slug
+    translation: z.string().optional(),
   }),
 });
 
@@ -26,6 +28,8 @@ const pagesCollection = defineCollection({
     image: z.string().optional(),
     layout: z.string().optional(),
     draft: z.boolean().optional(),
+    // URL of the same page in the other language, e.g. /en/imprint
+    translation: z.string().optional(),
   }),
 });
 

@@ -19,18 +19,16 @@ export function localizeUrl(url: string, locale?: string): string {
   return path === "/" ? `/${lang}/` : `/${lang}${path}`;
 }
 
-// German page slugs and their real English counterparts (only pages that
-// exist in both languages — fallback redirect routes are deliberately absent)
-const DE_TO_EN_PAGES: Record<string, string> = {
-  ueberuns: "about",
-  impressum: "imprint",
-  datenschutz: "privacy",
-};
+// Ensure a site-relative URL ends with a trailing slash: /en/imprint -> /en/imprint/
+export function withTrailingSlash(url: string): string {
+  return url.endsWith("/") ? url : `${url}/`;
+}
 
-// For a given pathname, return the URL of the page in each language,
-// or null when no real translation exists (e.g. /de/technologien).
-// Blog posts are single-language (language frontmatter decides the tree),
-// so only the blog index and the category pages pair up 1:1.
+// Structural 1:1 pairs — pages whose slug is identical in both language
+// trees (home, blog index, category pages). Pages with diverging slugs
+// (/de/impressum vs /en/imprint) and paired blog posts declare their
+// counterpart via `translation:` frontmatter instead; the route passes it
+// to Base.astro, which prefers it over this fallback.
 export function getHreflangAlternates(
   pathname: string
 ): { de: string; en: string } | null {
@@ -39,27 +37,27 @@ export function getHreflangAlternates(
   if (!SUPPORTED_LANGUAGES.includes(locale)) return null;
   const subpath = rest.join("/");
 
-  let de: string | null = null;
-  let en: string | null = null;
+  const isStructural =
+    subpath === "" ||
+    subpath === "blog" ||
+    subpath === "categories" ||
+    subpath.startsWith("categories/");
+  if (!isStructural) return null;
 
-  if (subpath === "") {
-    de = "";
-    en = "";
-  } else if (subpath === "blog" || subpath === "categories" || subpath.startsWith("categories/")) {
-    de = subpath;
-    en = subpath;
-  } else if (locale === "de" && subpath in DE_TO_EN_PAGES) {
-    de = subpath;
-    en = DE_TO_EN_PAGES[subpath];
-  } else if (locale === "en") {
-    const pair = Object.entries(DE_TO_EN_PAGES).find(([, enSlug]) => enSlug === subpath);
-    if (pair) {
-      de = pair[0];
-      en = subpath;
-    }
-  }
+  const format = (lang: string) => (subpath ? `/${lang}/${subpath}/` : `/${lang}/`);
+  return { de: format("de"), en: format("en") };
+}
 
-  if (de === null || en === null) return null;
-  const format = (lang: string, slug: string) => (slug ? `/${lang}/${slug}/` : `/${lang}/`);
-  return { de: format("de", de), en: format("en", en) };
+// Where the language switcher should send the visitor: the page's own
+// translation when one exists, otherwise the nearest sensible index
+// (blog pages fall back to the other blog index, everything else to home).
+export function getLanguageSwitchUrl(
+  lang: string,
+  alternates: { de: string; en: string } | null,
+  pathname: string
+): string {
+  const target = alternates?.[lang as "de" | "en"];
+  if (target) return target;
+  if (/^\/(de|en)\/blog(\/|$)/.test(pathname)) return `/${lang}/blog/`;
+  return `/${lang}/`;
 }

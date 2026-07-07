@@ -6,11 +6,12 @@ import social from "@config/social.json";
 import { markdownify } from "@lib/utils/textConverter";
 import { NavigationLink } from "@lib/utils/interfaces";
 import Config from "../../../astro.config.mjs";
-import { localizeUrl, type LocaleDef } from "@lib/utils/i18n";
+import { getLanguageSwitchUrl, localizeUrl, type LocaleDef } from "@lib/utils/i18n";
 import i18nAll from "@lib/i18n.json";
 
 const { footer }: { main: NavigationLink[] } = menu;
 const { pathname } = Astro.url;
+const { alternates } = Astro.props;
 
 const { i18n_en, i18n_de, i18n_fr, i18n_it } = i18nAll;
 let i18n = {};
@@ -87,7 +88,7 @@ switch (Astro.currentLocale) {
             ).map((localeNow: LocaleDef) =>
               <a
                 class="nav-link-footer"
-                href={`/${localeNow.path}/`}
+                href={getLanguageSwitchUrl(localeNow.path, alternates, pathname)}
               ><span class="lang">{localeNow.name}</span></a>
             )
           }

@@ -1,5 +1,6 @@
 ---
 title: "Privacy Policy"
+translation: /de/datenschutz/
 ---
 <style>
   h1,

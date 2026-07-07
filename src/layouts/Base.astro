@@ -2,7 +2,7 @@
 import TwSizeIndicator from "@components/TwSizeIndicator.astro";
 import config from "@config/config.json";
 import theme from "@config/theme.json";
-import { getHreflangAlternates } from "@lib/utils/i18n";
+import { getHreflangAlternates, withTrailingSlash } from "@lib/utils/i18n";
 import { plainify } from "@lib/utils/textConverter";
 import Footer from "@partials/Footer.astro";
 import Header from "@partials/Header.astro";
@@ -21,15 +21,21 @@ export interface Props {
   image?: string;
   noindex?: boolean;
   canonical?: string;
+  translation?: string; // URL of this page in the other language (from frontmatter)
 }
 
 // destructure front matter
 const currentLocale = Astro.currentLocale;
-const { title, meta_title, description, image, noindex, canonical } = Astro.props;
+const { title, meta_title, description, image, noindex, canonical, translation } = Astro.props;
 const pagetitle = title ? title + config.site.titleaddon : config.site.title;
 
-// hreflang links to the page's translation (only where one really exists)
-const alternates = getHreflangAlternates(Astro.url.pathname);
+// hreflang links to the page's translation (only where one really exists):
+// an explicit `translation` from frontmatter wins, same-slug pages pair automatically
+const alternates = translation
+  ? currentLocale === "de"
+    ? { de: withTrailingSlash(Astro.url.pathname), en: withTrailingSlash(translation) }
+    : { de: withTrailingSlash(translation), en: withTrailingSlash(Astro.url.pathname) }
+  : getHreflangAlternates(Astro.url.pathname);
 const isHome = alternates?.de === "/de/";
 ---
 <!DOCTYPE html>
@@ -123,11 +129,11 @@ const isHome = alternates?.de === "/de/";
   </head>
   <body>
     <TwSizeIndicator />
-    <Header />
+    <Header alternates={alternates} />
     <main id="main-content">
       <slot />
     </main>
-    <Footer />
+    <Footer alternates={alternates} />
   </body>
 
   <script is:inline>

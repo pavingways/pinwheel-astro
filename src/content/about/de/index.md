@@ -66,6 +66,7 @@ members:
     - name: Eleanor Pena
       field: Co-founder & COO
       image: "/images/users/user-1.webp"
+translation: /en/about/
 ---
 
 Bei PavingWays vereinen wir Leidenschaft, Erfahrung und Innovation, um digitale Lösungen zu schaffen, die begeistern.

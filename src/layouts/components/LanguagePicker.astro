@@ -1,6 +1,9 @@
 ---
 import Config from "astro.config.mjs";
-import type { LocaleDef } from "@lib/utils/i18n";
+import { getLanguageSwitchUrl, type LocaleDef } from "@lib/utils/i18n";
+
+const { alternates } = Astro.props;
+const { pathname } = Astro.url;
 ---
 <li class="nav-item nav-dropdown group relative cursor-pointer languages">
   <span class="nav-link inline-flex items-center notactive">
@@ -19,7 +22,7 @@ import type { LocaleDef } from "@lib/utils/i18n";
       <li class="nav-dropdown-item">
         <a
           class={`${localeNow.path === Astro.currentLocale ? 'active' : ''}`}
-          href={`/${localeNow.path}/`}
+          href={getLanguageSwitchUrl(localeNow.path, alternates, pathname)}
         ><span class="flag">{localeNow.flag}</span> <span class="lang">{localeNow.name}</span></a>
       </li>
     )}

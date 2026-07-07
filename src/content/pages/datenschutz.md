@@ -1,5 +1,6 @@
 ---
 title: "Datenschutzerklärung"
+translation: /en/privacy/
 ---
 <style>
   h1,
