@@ -75,12 +75,8 @@ export default defineConfig({
     // tree no longer paginates (6 posts) — send them to the English pages
     "/blog/page/[slug]": "/en/blog/page/[slug]",
     ...blogRedirects,
-    "/career": "/de/career",
-    "/career/[single]": "/de/career/[single]",
     "/categories": "/de/categories",
-    "/categories/[category]": "/de/categories/[category]",
-    "/integrations": "/de/integrations",
-    "/integrations/[single]": "/de/integrations/[single]"
+    "/categories/[category]": "/de/categories/[category]"
   },
   site: config.site.base_url ? config.site.base_url : "https://pumptrack.pilatustools.com",
   base: config.site.base_path ? config.site.base_path : "/",

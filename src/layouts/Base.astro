@@ -1,16 +1,17 @@
 ---
 import TwSizeIndicator from "@components/TwSizeIndicator.astro";
 import config from "@config/config.json";
-import theme from "@config/theme.json";
 import { getHreflangAlternates, withTrailingSlash } from "@lib/utils/i18n";
 import { plainify } from "@lib/utils/textConverter";
 import Footer from "@partials/Footer.astro";
 import Header from "@partials/Header.astro";
 import "@styles/main.scss";
-
-// font families
-const pf = theme.fonts.font_family.primary;
-const sf = theme.fonts.font_family.secondary;
+// Poppins is self-hosted (GDPR: no requests to fonts.googleapis.com)
+import "@fontsource/poppins/400.css";
+import "@fontsource/poppins/400-italic.css";
+import "@fontsource/poppins/500.css";
+import "@fontsource/poppins/600.css";
+import "@fontsource/poppins/700.css";
 
 // types for frontmatter
 export interface Props {
@@ -42,12 +43,6 @@ const isHome = alternates?.de === "/de/";
 <html lang={currentLocale}>
   <head>
     <link rel="shortcut icon" href={config.site.favicon} />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href={`https://fonts.googleapis.com/css2?family=${pf}${sf ? "&family=" + sf : ""}&display=swap`}
-      rel="stylesheet"
-    />
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline' 'unsafe-eval' www.google-analytics.com ajax.googleapis.com www.googletagmanager.com www.google.com www.gstatic.com www.youtube.com;" />
     <meta name="msapplication-TileColor" content="#000000" />
