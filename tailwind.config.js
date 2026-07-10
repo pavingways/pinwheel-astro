@@ -24,7 +24,12 @@ if (theme.fonts.font_family.secondary) {
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ["./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}"],
+  content: [
+    "./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}",
+    // unrouted theme demos — scanning them generates unused utilities and
+    // their `after:hidden` candidate collides with our ul.hidden nav rule
+    "!./src/pages/_examples/**",
+  ],
   darkMode: "class",
   theme: {
     screens: {

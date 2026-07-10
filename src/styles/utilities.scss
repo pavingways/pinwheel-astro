@@ -5,8 +5,12 @@ b,
 strong {
   @apply font-semibold;
 }
-code {
-  @apply after:border-none;
+code::after {
+  // plain CSS instead of `@apply after:border-none`: Tailwind's pseudo-element
+  // variants inside @apply emit rules without source info, which Vite warns
+  // about and grafts into the wrong selector in the built stylesheet
+  content: "";
+  border-style: none;
 }
 
 .shadow {
