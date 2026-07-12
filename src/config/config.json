@@ -15,6 +15,9 @@
     "summary_length": 100,
     "blog_folder": "blog"
   },
+  "analytics": {
+    "goatcounter": "pavingways"
+  },
   "metadata": {
     "meta_author": "PavingWays GmbH",
     "meta_image": "/images/logo.webp",
