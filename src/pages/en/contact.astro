@@ -1,0 +1,50 @@
+---
+import Base from "@layouts/Base.astro";
+import ContactForm from "@layouts/components/ContactForm.astro";
+import { getI18nStrings } from "@lib/utils/i18n";
+import { markdownify } from "@lib/utils/textConverter";
+import { getEntryBySlug } from "astro:content";
+
+const entry = await getEntryBySlug("pages", "contact");
+const { Content } = await entry.render();
+const i18n = getI18nStrings(Astro.currentLocale);
+const params = i18n["config.params"];
+---
+
+<Base
+  title={entry.data.title}
+  meta_title={entry.data.meta_title}
+  description={entry.data.description}
+  translation={entry.data.translation}
+>
+  <section class="section">
+    <div class="container">
+      <h1 class="mb-4" set:html={markdownify(entry.data.title)} />
+      <div class="row mt-8">
+        <div class="lg:col-7">
+          <Content />
+          <div class="mt-8">
+            <ContactForm />
+          </div>
+        </div>
+        <div class="mt-12 lg:col-4 lg:mt-0 lg:ml-auto">
+          <div class="h6">{i18n["menu_location"]}</div>
+          <p class="mt-4">
+            PavingWays GmbH<br />
+            {params["location1"]}<br />
+            {params["location2"]}<br />
+            {params["location3"]}
+          </p>
+          <p class="mt-4">
+            <a href={i18n["cta"]["tellink"]}>{params["phone"]}</a><br />
+            <a href={`mailto:${params["email"]}`}>{params["email"]}</a>
+          </p>
+          <p class="mt-4">
+            {i18n["cta"]["description"]}<br />
+            <a class="btn btn-outline-primary btn-sm mt-4" href={i18n["cta"]["link"]}>{i18n["cta"]["label"]}</a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+</Base>

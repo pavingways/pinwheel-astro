@@ -2,6 +2,7 @@
 title: "Enterprise Mobile Apps"
 meta_title: "Enterprise Mobile Apps und Services - PavingWays GmbH"
 description: "PavingWays entwickelt Enterprise Mobile Apps als Teil von IT-Abteilungen in Weltkonzernen: Full-Service von der Konzeption über CI/CD bis zum App-Store."
+translation: /en/enterprise-mobile-apps/
 ---
 
 **Full-Service-Partner für Enterprise Apps und Services.**

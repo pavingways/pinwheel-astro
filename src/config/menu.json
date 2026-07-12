@@ -3,9 +3,12 @@
     {
       "i18nKey": "menu_home",
       "url": "/"
-    }
-  ],
-  "main_extended": [
+    },
+    {
+      "i18nKey": "menu_technologies",
+      "url_de": "/technologien/",
+      "url_en": "/technologies/"
+    },
     {
       "i18nKey": "menu_about",
       "url_de": "/ueberuns/",
@@ -14,13 +17,13 @@
     {
       "i18nKey": "menu_blog",
       "url": "/blog/"
-    },
-    {
-      "i18nKey": "menu_technologies",
-      "url_de": "/technologien/",
-      "url_en": "/technologien/"
     }
   ],
+  "contact": {
+    "i18nKey": "menu_contact",
+    "url_de": "/kontakt/",
+    "url_en": "/contact/"
+  },
 
   "footer": [
     {
@@ -36,6 +39,11 @@
     {
       "i18nKey": "menu_blog",
       "url": "/blog/"
+    },
+    {
+      "i18nKey": "menu_contact",
+      "url_de": "/kontakt/",
+      "url_en": "/contact/"
     }
   ],
   "footer_extended": [
@@ -47,7 +55,7 @@
     {
       "i18nKey": "menu_technologies",
       "url_de": "/technologien/",
-      "url_en": "/technologien/"
+      "url_en": "/technologies/"
     }
   ]
 }

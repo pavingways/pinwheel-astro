@@ -1,22 +1,6 @@
 ---
-import config from "@config/config.json";
-import i18nAll from "@lib/i18n.json";
-const { i18n_en, i18n_de, i18n_fr, i18n_it } = i18nAll;
-let i18n = {};
-switch (Astro.currentLocale) {
-  case "en":
-    i18n = i18n_en;
-    break;
-  case "de":
-    i18n = i18n_de;
-    break;
-  case "fr":
-    i18n = i18n_fr;
-    break;
-  case "it":
-    i18n = i18n_it;
-    break;
-}
+import { getI18nStrings, localizeUrl } from "@lib/utils/i18n";
+const i18n = getI18nStrings(Astro.currentLocale);
 ---
 
 <section class="px-5 py-20 xl:py-[120px]">
@@ -36,6 +20,9 @@ switch (Astro.currentLocale) {
             </p>
             <p class="mt-4 text-white">
               {i18n['cta']['tellabel']}: <a href={i18n['cta']['tellink']} style="white-space: nowrap">{i18n['cta']['telnumber']}</a>
+            </p>
+            <p class="mt-4 text-white">
+              {i18n['cta']['formlabel']} <a class="underline" href={localizeUrl(i18n['cta']['formlink'], Astro.currentLocale)}>{i18n['cta']['formlinklabel']}</a>
             </p>
           </div>
         </div>

@@ -1,0 +1,129 @@
+---
+import config from "@config/config.json";
+import { getI18nStrings } from "@lib/utils/i18n";
+
+const i18n = getI18nStrings(Astro.currentLocale);
+const t = i18n["contact_form"];
+const endpoint = config.contact?.form_endpoint;
+---
+
+<form
+  id="contact-form"
+  class="form-inputs"
+  method="POST"
+  action={endpoint}
+  novalidate
+>
+  <input type="hidden" name="page" value={Astro.url.pathname} />
+  <input type="hidden" name="language" value={Astro.currentLocale} />
+  <!-- honeypot: hidden from humans, bots fill it in -->
+  <div class="hp-field" aria-hidden="true">
+    <label for="cf-website">Website</label>
+    <input id="cf-website" type="text" name="website" tabindex="-1" autocomplete="off" />
+  </div>
+
+  <div>
+    <label class="form-label" for="cf-name">{t["name"]} *</label>
+    <input class="form-control" id="cf-name" type="text" name="name" required autocomplete="name" />
+  </div>
+  <div>
+    <label class="form-label" for="cf-email">{t["email"]} *</label>
+    <input class="form-control" id="cf-email" type="email" name="email" required autocomplete="email" />
+  </div>
+  <div>
+    <label class="form-label" for="cf-company">{t["company"]}</label>
+    <input class="form-control" id="cf-company" type="text" name="company" autocomplete="organization" />
+  </div>
+  <div>
+    <label class="form-label" for="cf-message">{t["message"]} *</label>
+    <textarea class="form-control h-auto" id="cf-message" name="message" rows="6" required></textarea>
+  </div>
+
+  <button class="btn btn-primary" type="submit" data-label={t["submit"]} data-sending={t["sending"]}>
+    {t["submit"]}
+  </button>
+
+  <p id="contact-form-success" class="alert-success" hidden>{t["success"]}</p>
+  <p id="contact-form-error" class="alert-error" hidden>{t["error"]}</p>
+</form>
+
+<style>
+  .hp-field {
+    position: absolute;
+    left: -9999px;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+  }
+  .alert-success {
+    @apply mt-4 rounded-lg border border-primary p-4;
+  }
+  .alert-error {
+    @apply mt-4 rounded-lg border border-red-600 p-4 text-red-700;
+  }
+</style>
+
+<script is:inline>
+  (function () {
+    var form = document.getElementById("contact-form");
+    if (!form) return;
+    var success = document.getElementById("contact-form-success");
+    var error = document.getElementById("contact-form-error");
+    var button = form.querySelector("button[type=submit]");
+
+    form.addEventListener("submit", function (e) {
+      e.preventDefault();
+      success.hidden = true;
+      error.hidden = true;
+
+      // native validation UI for required/email fields
+      if (!form.checkValidity()) {
+        form.reportValidity();
+        return;
+      }
+
+      // honeypot filled -> pretend success, don't send
+      if (form.elements["website"] && form.elements["website"].value) {
+        form.hidden = true;
+        success.hidden = false;
+        return;
+      }
+
+      button.disabled = true;
+      button.textContent = button.dataset.sending;
+
+      fetch(form.action, {
+        method: "POST",
+        body: new FormData(form),
+        headers: { Accept: "application/json" },
+      })
+        .then(function (resp) {
+          if (resp.ok) {
+            form.reset();
+            form.hidden = true;
+            success.hidden = false;
+            if (window.goatcounter && window.goatcounter.count) {
+              window.goatcounter.count({ path: "contact-form", title: "contact-form", event: true });
+            }
+            return;
+          }
+          // endpoint answers errors with a JSON error object
+          return resp
+            .json()
+            .catch(function () { return {}; })
+            .then(function (data) {
+              var message = data && (data.error || data.message);
+              if (message) error.textContent = message;
+              error.hidden = false;
+            });
+        })
+        .catch(function () {
+          error.hidden = false;
+        })
+        .finally(function () {
+          button.disabled = false;
+          button.textContent = button.dataset.label;
+        });
+    });
+  })();
+</script>

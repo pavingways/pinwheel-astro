@@ -2,6 +2,7 @@
 title: "Technologien"
 meta_title: "Technologien für Mobile Apps - PavingWays GmbH"
 description: "Cross-Platform App-Entwicklung mit Ionic/Capacitor, React Native und Flutter – dazu CI/CD mit fastlane und Testautomatisierung. So wählen wir die passende Technologie für Ihr Projekt."
+translation: /en/technologies/
 ---
 
 **Die richtige Technologie ist die, die zu Ihrem Projekt passt.**

@@ -18,6 +18,9 @@
   "analytics": {
     "goatcounter": "pavingways"
   },
+  "contact": {
+    "form_endpoint": "/api/contact"
+  },
   "metadata": {
     "meta_author": "PavingWays GmbH",
     "meta_image": "/images/logo.webp",
