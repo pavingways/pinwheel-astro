@@ -1,20 +1,24 @@
 ---
-import FeatureBanner from "@components/features/FeatureBanner.astro";
-import ProjecManagement from "@components/features/ProjecManagement.astro";
 import Base from "@layouts/Base.astro";
 import Cta from "@layouts/partials/Cta.astro";
+import { markdownify } from "@lib/utils/textConverter";
 import { getEntryBySlug } from "astro:content";
 
-const features = await getEntryBySlug("features", "index");
+const entry = await getEntryBySlug("pages", "technologien");
+const { Content } = await entry.render();
 ---
 
 <Base
-  title={features.data.title}
-  meta_title={features.data.meta_title}
-  description={features.data.description}
-  image={features.data.image}
+  title={entry.data.title}
+  meta_title={entry.data.meta_title}
+  description={entry.data.description}
+  translation={entry.data.translation}
 >
-  <FeatureBanner features={features.data} />
-  <ProjecManagement features={features.data} />
+  <section class="section">
+    <div class="container">
+      <h1 class="mb-4" set:html={markdownify(entry.data.title)} />
+      <Content />
+    </div>
+  </section>
   <Cta />
 </Base>

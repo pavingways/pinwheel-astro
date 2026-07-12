@@ -1,4 +1,6 @@
-npm run build
+npm run build || exit 1
+bash scripts/check-placeholders.sh || exit 1
+node scripts/check-hreflang.js || exit 1
 rsync -avr --delete-before  \
                          --exclude '.*'  \
                          --exclude '_deploy-dev.sh' \

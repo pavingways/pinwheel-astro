@@ -4,7 +4,7 @@ page:
   description: Die PavingWays GmbH entwickelt Mobile Applikationen in Luzern, Schweiz
 banner:
   title: Mobile Apps. 
-  subtitle: erprobt, günstig, professionell, schnell, zuverlässig, international, lokal, erfahren, innovativ, kreativ, individuell, source-available, komplett, getestet
+  subtitle: erprobt, professionell, schnell, zuverlässig, international, lokal, erfahren, innovativ, kreativ, individuell, source-available, komplett, getestet
   content: "
     Wir entwickeln **Mobile Apps** für iOS und Android. Ansässig im Kanton Luzern in der Schweiz arbeiten wir vor Ort und international.
 
@@ -70,24 +70,24 @@ sales_pitch:
 for_customer:
   - title: Apps für Digitalagenturen
     description: "
-      **Schnell, flexibel und zuverlässig - so wie ihre Agentur**
+      **Schnell, flexibel und zuverlässig - so wie Ihre Agentur**
 
       Ihre Kunden bringen neue Ideen, und Sie möchten diese _schnell umsetzen_?
       Unsere Mobile App-Lösung erweitert Ihr Angebot über Websites hinaus – ohne eigenen Entwicklungsaufwand. 
-      Features wie _CMS-Anbindung_, _individuelle UI_ und _Customer-Tracking_ ermöglichen innovative Apps und erweitern Ihren Produktportfolio um _einen wertvollen Marketingkanal_.
+      Features wie _CMS-Anbindung_, _individuelle UI_ und _Customer-Tracking_ ermöglichen innovative Apps und erweitern Ihr Produktportfolio um _einen wertvollen Marketingkanal_.
     "
     comic:
       panels:
         - height: 160px
           image: /images/comics/comic1.webp
           bubble1:
-            text: "The client requests an app. This could be big! Do you think we can have this ready by the end of the month?"
+            text: "Der Kunde möchte eine App. Das könnte gross werden! Schaffen wir das bis Ende des Monats?"
         - height: 150px
           image: /images/comics/comic2.webp
           align: right
           top: 5vw
           bubble1:
-            text: "All good dude, PW gots your back."
+            text: "Alles gut - PavingWays hat das im Griff."
     feature_list:
       #icon package react-feather-icon [https://feathericons.com/]
       - icon: "sun"
@@ -109,29 +109,34 @@ for_customer:
       
   - title: Apps für den Mittelstand und Start-Ups
     description: "
-      Unsere **jahrelangen Erfahrungen** in zahlreichen Projekten erlauben uns, die gesamte Kette der App-Entwicklungs in hoher Qualität anzubieten.
-      - enhance your product with a mobile app
-      - companion app as a perfect match for your product
-      - unique features for your customers
-      - customer retention and feedback
-      - news and interaction channel to your customers
-      - integration into existing IT landscape
+      Unsere **jahrelangen Erfahrungen** aus zahlreichen Projekten erlauben uns, die gesamte Kette der App-Entwicklung in hoher Qualität anzubieten:
+
+      - Ihr Produkt um eine Mobile App erweitern
+
+
+      - Companion App als perfekte Ergänzung zu Ihrem Produkt
+
+
+      - einzigartige Features für Ihre Kunden
+
+
+      - Kundenbindung und Feedback
+
+
+      - News- und Interaktionskanal zu Ihren Kunden
+
+
+      - Integration in die bestehende IT-Landschaft
+
+
       - App-Entwicklung in Ihrem Team
+
+
       - Schulung Ihrer IT-Mitarbeiter
+
+
       - Support und Wartung
     "
-    comic:
-      panels:
-        - height: 160px
-          image: /images/comics/comic1.webp
-          bubble1:
-            text: "The client requests an app. This could be big! Do you think we can have this ready by the end of the month?"
-        - height: 150px
-          image: /images/comics/comic2.webp
-          align: right
-          top: 5vw
-          bubble1:
-            text: "All good dude, PW gots your back."
     cta:
       label: Mobile Apps für KMU
       link: /de/mobile-apps-fuer-kmu-und-startups
@@ -139,20 +144,8 @@ for_customer:
   - title: Enterprise Apps und Services
     description: "
         Als **Full-Service-Partner** gehen wir weit über das reine Programmieren von Apps hinaus.
-        Unsere **jahrelangen Erfahrungen** in zahlreichen Projekten erlauben uns, die gesamte Kette der App-Entwicklungs in hoher Qualität anzubieten.
+        Unsere **jahrelangen Erfahrungen** aus zahlreichen Projekten erlauben uns, die gesamte Kette der App-Entwicklung in hoher Qualität anzubieten.
       "
-    comic:
-      panels:
-        - height: 160px
-          image: /images/comics/comic1.webp
-          bubble1:
-            text: "The client requests an app. This could be big! Do you think we can have this ready by the end of the month?"
-        - height: 150px
-          image: /images/comics/comic2.webp
-          align: right
-          top: 5vw
-          bubble1:
-            text: "All good dude, PW gots your back."
     cta:  
       label: Enterprise Services
       link: /de/enterprise-mobile-apps
@@ -161,7 +154,7 @@ key_features:
   title: Full-Stack Mobile Apps
   description: "
     Als **Full-Service-Partner** gehen wir weit über das reine Programmieren von Apps hinaus.
-    Unsere **jahrelangen Erfahrungen** in zahlreichen Projekten erlauben uns, die gesamte Kette der App-Entwicklungs in hoher Qualität anzubieten.
+    Unsere **jahrelangen Erfahrungen** aus zahlreichen Projekten erlauben uns, die gesamte Kette der App-Entwicklung in hoher Qualität anzubieten.
   " 
   feature_list:
     #icon package react-feather-icon [https://feathericons.com/]
@@ -214,87 +207,4 @@ key_features:
     - icon: "users"
       title: Workshops
       content: Wir geben Wissen und Erfahrung gern weiter. Am besten hands-On im Team, aber auch als halb- oder ganztägiger Workshop.
-
-service:
-  homepage_tab:
-    title: Beispiel-Projekte
-    description: Eine Übersicht unserer letzten Projekte.
-    tab_list:
-        - title: VHV - Kundenportal
-          icon: "lock"
-          image: "/images/sales-by-country.webp"
-        - title: ELMA - Suchtberatung
-          icon: "clock"
-          image: "/images/collaboration.webp"
-        - title: MS Kognition 
-          icon: "cpu"
-          image: "/images/sales-by-country.webp"
-
-  our_service:
-    - title: Accept payments any country in this whole universe
-      desctiption: Donec sollicitudin molestie malesda. Donec sollitudin molestie malesuada. Mauris pellentesque nec, egestas non nisi. Cras ultricies ligula sed
-      image: "/images/collaboration.webp"
-      list:
-        - Supporting more than 119 country world
-        - Open transaction with more than currencies
-        - Customer Service with 79 languages
-    - title: Accountability that works for you
-      description: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi egestas Werat viverra id et aliquet. vulputate egestas sollicitudin.
-      video:
-        thumbnail: "/images/intro-thumbnail.webp"
-        video_id: "g3-VxLQO7do"
-      button:
-        label: Know About Us
-        link: "#"
-        enable: true
-
-testimonial:
-  title: Zufriedene Kunden
-  description: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi egestas Werat viverra id et aliquet. vulputate egestas sollicitudin.
-  testimonial_list:
-    - author: David Cameron
-      avatar: "/images/users/user-5.webp"
-      organization: meta limited
-      rating: four
-      content: Our platform helps build secure onboarding authentica experiences & engage your users. We build .
-    - author: David Cameron
-      avatar: "/images/users/user-6.webp"
-      organization: meta limited
-      rating: four
-      content: Our platform helps build secure onboarding authentica experiences & engage your users. We build .
-    - author: David Cameron
-      avatar: "/images/users/user-2.webp"
-      organization: meta limited
-      rating: three
-      content: Our platform helps build secure onboarding authentica experiences & engage your users. We build .
-    - author: David Cameron
-      avatar: "/images/users/user-3.webp"
-      organization: meta limited
-      rating: five
-      content: Our platform helps build secure onboarding authentica experiences & engage your users. We build .
-    - author: David Cameron
-      avatar: "/images/users/user-4.webp"
-      organization: meta limited
-      rating: five
-      content: Our platform helps build secure onboarding authentica experiences & engage your users. We build .
-    - author: David Cameron
-      avatar: "/images/users/user-1.webp"
-      organization: meta limited
-      rating: three
-      content: Our platform helps build secure onboarding authentica experiences & engage your users. We build .
-    - author: David Cameron
-      avatar: "/images/users/user-5.webp"
-      organization: meta limited
-      rating: five
-      content: Our platform helps build secure onboarding authentica experiences & engage your users. We build .
-    - author: David Cameron
-      avatar: "/images/users/user-5.webp"
-      organization: meta limited
-      rating: five
-      content: Our platform helps build secure onboarding authentica experiences & engage your users. We build .
-    - author: David Cameron
-      avatar: "/images/users/user-5.webp"
-      organization: meta limited
-      rating: five
-      content: Our platform helps build secure onboarding authentica experiences & engage your users. We build .
 ---
