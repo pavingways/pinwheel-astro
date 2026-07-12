@@ -1,7 +1,7 @@
 ---
 import Base from "@layouts/Base.astro";
 import Cta from "@layouts/partials/Cta.astro";
-import { markdownify } from "@lib/utils/textConverter";
+import { markdownifyInline } from "@lib/utils/textConverter";
 import { getEntryBySlug } from "astro:content";
 
 const entry = await getEntryBySlug("pages", "technologien");
@@ -16,8 +16,14 @@ const { Content } = await entry.render();
 >
   <section class="section">
     <div class="container">
-      <h1 class="mb-4" set:html={markdownify(entry.data.title)} />
-      <Content />
+      <div class="row justify-center">
+        <div class="lg:col-10">
+          <h1 class="mb-4" set:html={markdownifyInline(entry.data.title)} />
+          <div class="content">
+            <Content />
+          </div>
+        </div>
+      </div>
     </div>
   </section>
   <Cta />

@@ -2,7 +2,7 @@
 import Base from "@layouts/Base.astro";
 import ContactForm from "@layouts/components/ContactForm.astro";
 import { getI18nStrings } from "@lib/utils/i18n";
-import { markdownify } from "@lib/utils/textConverter";
+import { markdownifyInline } from "@lib/utils/textConverter";
 import { getEntryBySlug } from "astro:content";
 
 const entry = await getEntryBySlug("pages", "kontakt");
@@ -19,10 +19,12 @@ const params = i18n["config.params"];
 >
   <section class="section">
     <div class="container">
-      <h1 class="mb-4" set:html={markdownify(entry.data.title)} />
+      <h1 class="mb-4" set:html={markdownifyInline(entry.data.title)} />
       <div class="row mt-8">
         <div class="lg:col-7">
-          <Content />
+          <div class="content">
+            <Content />
+          </div>
           <div class="mt-8">
             <ContactForm />
           </div>
