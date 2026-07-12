@@ -3,10 +3,10 @@ import Logo from "@components/Logo.astro";
 import Social from "@components/Social.astro";
 import menu from "@config/menu.json";
 import social from "@config/social.json";
-import { markdownify } from "@lib/utils/textConverter";
 import { NavigationLink } from "@lib/utils/interfaces";
 import Config from "../../../astro.config.mjs";
 import { getI18nStrings, getLanguageSwitchUrl, localizeUrl, type LocaleDef } from "@lib/utils/i18n";
+import { markdownifyInline } from "@lib/utils/textConverter";
 
 const { footer }: { main: NavigationLink[] } = menu;
 const { pathname } = Astro.url;
@@ -82,7 +82,7 @@ const i18n = getI18nStrings(Astro.currentLocale);
   </div>
   <div class="container max-w-[1440px]">
     <div class="footer-copyright mx-auto border-t border-border pb-10 pt-7 text-center">
-      <p class="content text-text" set:html={markdownify(i18n['config.params']['copyright'])}} />
+      <p class="text-text" set:html={markdownifyInline(i18n['config.params']['copyright'])} />
     </div>
   </div>
 </footer>

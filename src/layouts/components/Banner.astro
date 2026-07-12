@@ -20,7 +20,7 @@ function getInitialWords() {
         {subtitle &&
           <p id="word-container" class="text-primary text-2xl mt-2">{getInitialWords()}</p>
         }
-        <p class="mt-8" set:html={markdownify(content)} />
+        <div class="mt-8" set:html={markdownify(content)} />
         {customers &&
           <CustomerLogos customers={customers} />
         }
