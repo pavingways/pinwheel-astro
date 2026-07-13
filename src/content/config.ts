@@ -33,8 +33,33 @@ const pagesCollection = defineCollection({
   }),
 });
 
+// Case studies: one folder per language (de/..., en/...), so slugs look
+// like "de/vhv-kundenportal"; drafts are excluded from list pages and routes
+const caseStudiesCollection = defineCollection({
+  schema: z.object({
+    title: z.string(),
+    meta_title: z.string().optional(),
+    description: z.string().optional(),
+    client: z.string(),
+    industry: z.string().optional(),
+    platforms: z.array(z.string()).default([]),
+    stack: z.array(z.string()).default([]),
+    duration: z.string().optional(),
+    quote: z
+      .object({
+        text: z.string(),
+        author: z.string(),
+      })
+      .optional(),
+    draft: z.boolean().default(false),
+    // URL of the same case study in the other language
+    translation: z.string().optional(),
+  }),
+});
+
 // Export collections
 export const collections = {
   blog: blogCollection,
   pages: pagesCollection,
+  casestudies: caseStudiesCollection,
 };

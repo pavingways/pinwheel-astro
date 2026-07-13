@@ -1,0 +1,62 @@
+---
+import Base from "@layouts/Base.astro";
+import Cta from "@layouts/partials/Cta.astro";
+import CustomerLogos from "@layouts/components/CustomerLogos.astro";
+import { getCollection, getEntry } from "astro:content";
+
+const studies = await getCollection(
+  "casestudies",
+  ({ slug, data }) => slug.startsWith("de/") && !data.draft
+);
+const homepage = await getEntry("homepage", "de");
+const customers = homepage?.data?.banner?.customers;
+---
+
+<Base
+  title="Referenzen"
+  meta_title="Referenzen: Mobile Apps für Agenturen, KMU und Konzerne - PavingWays GmbH"
+  description="Ausgewählte App-Projekte der PavingWays GmbH – für Kunden von Deutsche Telekom über VHV und Suva bis PostFinance, seit 2006."
+  translation="/en/case-studies/"
+>
+  <section class="section">
+    <div class="container">
+      <div class="row justify-center">
+        <div class="lg:col-10">
+          <h1 class="mb-4">Referenzen</h1>
+          <div class="content">
+            <p>
+              Seit 2006 entwickeln, deployen und pflegen wir Mobile Apps – für Digitalagenturen,
+              KMUs und Konzerne in der Schweiz und in Deutschland. Ein Auszug der Unternehmen,
+              für die wir tätig waren:
+            </p>
+          </div>
+        </div>
+      </div>
+
+      {customers && <CustomerLogos customers={customers} />}
+
+      {studies.length > 0 && (
+        <div class="row justify-center mt-16">
+          <div class="lg:col-10">
+            <div class="row">
+              {studies.map((study) => (
+                <div class="mt-8 md:col-6">
+                  <div class="rounded-lg border border-border bg-white p-8 h-full">
+                    <h2 class="h4">
+                      <a class="hover:text-primary" href={`/de/referenzen/${study.slug.replace("de/", "")}/`}>
+                        {study.data.title}
+                      </a>
+                    </h2>
+                    <p class="mt-2 text-sm text-text">{study.data.client}{study.data.industry && ` · ${study.data.industry}`}</p>
+                    <p class="mt-4">{study.data.description}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      )}
+    </div>
+  </section>
+  <Cta />
+</Base>

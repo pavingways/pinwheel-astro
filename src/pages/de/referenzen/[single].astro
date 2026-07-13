@@ -1,0 +1,69 @@
+---
+import Base from "@layouts/Base.astro";
+import Cta from "@layouts/partials/Cta.astro";
+import { getCollection } from "astro:content";
+
+export async function getStaticPaths() {
+  const studies = await getCollection(
+    "casestudies",
+    ({ slug, data }) => slug.startsWith("de/") && !data.draft
+  );
+  return studies.map((study) => ({
+    params: { single: study.slug.replace("de/", "") },
+    props: { study },
+  }));
+}
+
+const { study } = Astro.props;
+const { Content } = await study.render();
+const facts: [string, string | undefined][] = [
+  ["Kunde", study.data.client],
+  ["Branche", study.data.industry],
+  ["Plattformen", study.data.platforms?.join(", ") || undefined],
+  ["Technologie", study.data.stack?.join(", ") || undefined],
+  ["Zusammenarbeit", study.data.duration],
+];
+---
+
+<Base
+  title={study.data.title}
+  meta_title={study.data.meta_title}
+  description={study.data.description}
+  translation={study.data.translation}
+>
+  <section class="section">
+    <div class="container">
+      <div class="row justify-center">
+        <div class="lg:col-7">
+          <h1 class="mb-4">{study.data.title}</h1>
+          <div class="content">
+            <Content />
+          </div>
+          {study.data.quote && (
+            <blockquote class="mt-8 border-l-4 border-primary pl-4">
+              <p>«{study.data.quote.text}»</p>
+              <footer class="mt-2 text-sm text-text">— {study.data.quote.author}</footer>
+            </blockquote>
+          )}
+          <p class="mt-10">
+            <a href="/de/referenzen/">← Alle Referenzen</a>
+          </p>
+        </div>
+        <div class="mt-12 lg:col-3 lg:mt-0 lg:ml-auto">
+          <div class="rounded-lg border border-border bg-white p-6">
+            <div class="h6">Auf einen Blick</div>
+            <dl class="mt-4">
+              {facts.filter(([, value]) => value).map(([label, value]) => (
+                <>
+                  <dt class="mt-3 text-sm font-semibold text-dark">{label}</dt>
+                  <dd>{value}</dd>
+                </>
+              ))}
+            </dl>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <Cta />
+</Base>

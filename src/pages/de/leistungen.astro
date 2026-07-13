@@ -1,0 +1,30 @@
+---
+import Base from "@layouts/Base.astro";
+import Cta from "@layouts/partials/Cta.astro";
+import { markdownifyInline } from "@lib/utils/textConverter";
+import { getEntryBySlug } from "astro:content";
+
+const entry = await getEntryBySlug("pages", "leistungen");
+const { Content } = await entry.render();
+---
+
+<Base
+  title={entry.data.title}
+  meta_title={entry.data.meta_title}
+  description={entry.data.description}
+  translation={entry.data.translation}
+>
+  <section class="section">
+    <div class="container">
+      <div class="row justify-center">
+        <div class="lg:col-10">
+          <h1 class="mb-4" set:html={markdownifyInline(entry.data.title)} />
+          <div class="content">
+            <Content />
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <Cta />
+</Base>
