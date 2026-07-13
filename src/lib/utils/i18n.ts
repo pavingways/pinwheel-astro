@@ -44,11 +44,12 @@ export function getHreflangAlternates(
   if (!SUPPORTED_LANGUAGES.includes(locale)) return null;
   const subpath = rest.join("/");
 
+  // category *detail* pages are not structural: a category only exists in a
+  // language when a post uses it there — the routes pass `translation` explicitly
   const isStructural =
     subpath === "" ||
     subpath === "blog" ||
-    subpath === "categories" ||
-    subpath.startsWith("categories/");
+    subpath === "categories";
   if (!isStructural) return null;
 
   const format = (lang: string) => (subpath ? `/${lang}/${subpath}/` : `/${lang}/`);

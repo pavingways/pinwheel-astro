@@ -3,7 +3,7 @@ import config from "@config/config.json";
 import Base from "@layouts/Base.astro";
 import BlogSingle from "@layouts/BlogSingle.astro";
 import { getSinglePage } from "@lib/contentParser.astro";
-import { blogPostingSchema } from "@lib/utils/schema";
+import { blogPostingSchema, faqSchemaFromMarkdown } from "@lib/utils/schema";
 
 export async function getStaticPaths() {
   const posts = await getSinglePage(config.settings.blog_folder, "de");
@@ -30,6 +30,9 @@ const schemas = [
     image,
   }),
 ];
+// cornerstone posts may carry an FAQ section
+const faq = faqSchemaFromMarkdown(post.body);
+if (faq) schemas.push(faq);
 ---
 
 <Base
