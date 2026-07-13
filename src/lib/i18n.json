@@ -1,6 +1,8 @@
 {
   "i18n_de": {
     "menu_home": "Home",
+    "menu_services": "Leistungen",
+    "menu_references": "Referenzen",
     "menu_about": "Über Uns",
     "menu_projects": "Projekte",
     "menu_technologies": "Technologien",
@@ -55,6 +57,8 @@
   },
   "i18n_en": {
     "menu_home": "Home",
+    "menu_services": "Services",
+    "menu_references": "Case Studies",
     "menu_about": "About",
     "menu_technologies": "Technologies",
     "menu_blog": "Blog",

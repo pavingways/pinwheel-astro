@@ -47,8 +47,8 @@ const i18n = getI18nStrings(Astro.currentLocale);
         <div class="h6">{i18n['menu_quick_links']}</div>
         <nav class="mt-4">
           {
-            // footer menu items
-            footer.map((item) => {
+            // footer menu items (main pages first, then legal/blog/contact)
+            [...menu.footer_extended, ...footer].map((item) => {
               const href = localizeUrl(
                 item['url'] ? item['url'] : item['url_' + Astro.currentLocale],
                 Astro.currentLocale

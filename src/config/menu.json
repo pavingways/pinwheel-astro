@@ -5,9 +5,14 @@
       "url": "/"
     },
     {
-      "i18nKey": "menu_technologies",
-      "url_de": "/technologien/",
-      "url_en": "/technologies/"
+      "i18nKey": "menu_services",
+      "url_de": "/leistungen/",
+      "url_en": "/services/"
+    },
+    {
+      "i18nKey": "menu_references",
+      "url_de": "/referenzen/",
+      "url_en": "/case-studies/"
     },
     {
       "i18nKey": "menu_about",
@@ -47,6 +52,16 @@
     }
   ],
   "footer_extended": [
+    {
+      "i18nKey": "menu_services",
+      "url_de": "/leistungen/",
+      "url_en": "/services/"
+    },
+    {
+      "i18nKey": "menu_references",
+      "url_de": "/referenzen/",
+      "url_en": "/case-studies/"
+    },
     {
       "i18nKey": "menu_about",
       "url_de": "/ueberuns/",
