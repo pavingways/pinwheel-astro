@@ -84,6 +84,8 @@ export default defineConfig({
   integrations: [
     react(),
     sitemap({
+      // /fr/ and /it/ are meta-refresh stubs to /de/, not real pages
+      filter: (page) => !/\/(fr|it)\/$/.test(page),
       i18n: {
         defaultLocale: "de",
         locales: {

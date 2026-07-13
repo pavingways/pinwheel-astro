@@ -53,7 +53,8 @@
       "phone": "+41 76 831 58 37",
       "copyright": "&copy; 2026 PavingWays GmbH 🫕",
       "footer_description": "Wir sind Experten für die Entwicklung von Mobile Apps. Wir forschen an mobilen Browsern, Bibliotheken und Frameworks schon seit 2006. Wir automatisieren Build Chains und helfen unseren Kunden, in den App Stores erfolgreich zu sein."
-    }
+    },
+    "meta_description": "Die PavingWays GmbH entwickelt, deployt und pflegt Mobile Apps für iOS und Android – seit 2006, aus Meggen bei Luzern für die Schweiz und Deutschland."
   },
   "i18n_en": {
     "menu_home": "Home",
@@ -108,6 +109,7 @@
       "phone": "+41 76 831 58 37",
       "copyright": "&copy; 2026 PavingWays GmbH 🇨🇭",
       "footer_description": "We are experts in the development of mobile apps. We have been researching mobile browsers, libraries and frameworks since 2006. We automate build chains and help our clients to be successful in the app stores."
-    }
+    },
+    "meta_description": "PavingWays GmbH develops, deploys and maintains mobile apps for iOS and Android – since 2006, from Meggen near Lucerne for Switzerland and Germany."
   }
 }

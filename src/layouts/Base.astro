@@ -1,7 +1,8 @@
 ---
 import TwSizeIndicator from "@components/TwSizeIndicator.astro";
 import config from "@config/config.json";
-import { getHreflangAlternates, withTrailingSlash } from "@lib/utils/i18n";
+import { getHreflangAlternates, getI18nStrings, withTrailingSlash } from "@lib/utils/i18n";
+import { breadcrumbSchema, organizationSchema } from "@lib/utils/schema";
 import { plainify } from "@lib/utils/textConverter";
 import Footer from "@partials/Footer.astro";
 import Header from "@partials/Header.astro";
@@ -23,12 +24,15 @@ export interface Props {
   noindex?: boolean;
   canonical?: string;
   translation?: string; // URL of this page in the other language (from frontmatter)
+  schemas?: object[]; // page-specific JSON-LD nodes (Service, FAQPage, Person, ...)
 }
 
 // destructure front matter
 const currentLocale = Astro.currentLocale;
-const { title, meta_title, description, image, noindex, canonical, translation } = Astro.props;
+const { title, meta_title, description, image, noindex, canonical, translation, schemas } = Astro.props;
 const pagetitle = title ? title + config.site.titleaddon : config.site.title;
+const i18n = getI18nStrings(currentLocale);
+const metaDescription = plainify(description ?? i18n["meta_description"] ?? config.metadata.meta_description);
 
 // hreflang links to the page's translation (only where one really exists):
 // an explicit `translation` from frontmatter wins, same-slug pages pair automatically
@@ -38,6 +42,25 @@ const alternates = translation
     : { de: withTrailingSlash(translation), en: withTrailingSlash(Astro.url.pathname) }
   : getHreflangAlternates(Astro.url.pathname);
 const isHome = alternates?.de === "/de/";
+
+// JSON-LD: organization on every page, breadcrumbs on subpages, page nodes via props
+const pathSegments = Astro.url.pathname.replace(/^\/+|\/+$/g, "").split("/");
+const isSubPage = ["de", "en"].includes(pathSegments[0]) && pathSegments.length > 1;
+const breadcrumbItems = isSubPage
+  ? [
+      { name: "Home", path: `/${pathSegments[0]}/` },
+      // blog posts get the blog index as an intermediate level
+      ...(pathSegments[1] === "blog" && pathSegments.length > 2
+        ? [{ name: "Blog", path: `/${pathSegments[0]}/blog/` }]
+        : []),
+      { name: plainify(title ?? pagetitle), path: withTrailingSlash(Astro.url.pathname) },
+    ]
+  : null;
+const jsonLd = [
+  organizationSchema(),
+  ...(breadcrumbItems ? [breadcrumbSchema(breadcrumbItems)] : []),
+  ...(schemas ?? []),
+];
 ---
 <!DOCTYPE html>
 <html lang={currentLocale}>
@@ -72,12 +95,13 @@ const isHome = alternates?.de === "/de/";
       <link rel="alternate" hreflang="x-default" href={`${config.site.base_url}/`} />
     )}
     {noindex && <meta name="robots" content="noindex,nofollow" />}
-    <meta
-      name="description"
-      content={plainify(
-        description ? description : config.metadata.meta_description
-      )}
+    <link
+      rel="alternate"
+      type="application/rss+xml"
+      title={`PavingWays Blog (${currentLocale === "de" ? "Deutsch" : "English"})`}
+      href={`/${currentLocale ?? "de"}/blog/rss.xml`}
     />
+    <meta name="description" content={metaDescription} />
     <meta name="author" content={config.metadata.meta_author} />
     <meta
       property="og:title"
@@ -85,13 +109,9 @@ const isHome = alternates?.de === "/de/";
         meta_title ? meta_title : title ? title : config.site.title
       )}
     />
-    <meta
-      property="og:description"
-      content={plainify(
-        description ? description : config.metadata.meta_description
-      )}
-    />
+    <meta property="og:description" content={metaDescription} />
     <meta property="og:type" content="website" />
+    <meta property="og:locale" content={currentLocale === "de" ? "de_CH" : "en_US"} />
     <meta
       property="og:url"
       content={`${config.site.base_url}/${Astro.url.pathname.replace("/", "")}`}
@@ -102,12 +122,7 @@ const isHome = alternates?.de === "/de/";
         meta_title ? meta_title : title ? title : config.site.title
       )}
     />
-    <meta
-      name="twitter:description"
-      content={plainify(
-        description ? description : config.metadata.meta_description
-      )}
-    />
+    <meta name="twitter:description" content={metaDescription} />
     <meta
       property="og:image"
       content={`${config.site.base_url}${
@@ -121,6 +136,9 @@ const isHome = alternates?.de === "/de/";
       }`}
     />
     <meta name="twitter:card" content="summary_large_image" />
+    {jsonLd.map((node) => (
+      <script is:inline type="application/ld+json" set:html={JSON.stringify(node)} />
+    ))}
   </head>
   <body>
     <TwSizeIndicator />
