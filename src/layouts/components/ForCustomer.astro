@@ -1,5 +1,5 @@
 ---
-import { markdownify } from "@lib/utils/textConverter";
+import { markdownify, markdownifyInline } from "@lib/utils/textConverter";
 import Comic from "./Comic.astro";
 import CtaButton from "./CtaButton.astro";
 
@@ -11,9 +11,10 @@ const { title, description, comic, cta } = content;
 <section class="section mt-32">
   <div class="container">
     <div class="row">
-      <h3 set:html={markdownify(title)} />
+      <!-- h2 keeps the document outline intact under the page h1; .h3 keeps the previous size -->
+      <h2 class="h3" set:html={markdownifyInline(title)} />
       <div class="mt-6">
-        <p set:html={markdownify(description)} />
+        <div set:html={markdownify(description)} />
       </div>
     </div>
     {comic && (

@@ -4,7 +4,8 @@ import Cta from "@layouts/partials/Cta.astro";
 import { markdownifyInline } from "@lib/utils/textConverter";
 import { getEntryBySlug } from "astro:content";
 
-const entry = await getEntryBySlug("pages", "mobile-apps-fuer-digitalagenturen");
+// content file is enterprise-mobile-apps-en: the DE page owns the plain slug
+const entry = await getEntryBySlug("pages", "enterprise-mobile-apps-en");
 const { Content } = await entry.render();
 ---
 

@@ -5,6 +5,7 @@
     "menu_projects": "Projekte",
     "menu_technologies": "Technologien",
     "menu_blog": "Blog",
+    "menu_contact": "Kontakt",
     "menu_socials": "PavingWays Online",
     "menu_quick_links": "Menü",
     "menu_location": "Adresse & Kontakt",
@@ -14,8 +15,8 @@
       "title": "News und Einblicke",
       "subtitle": "Projekte, Gedanken, Neuigkeiten vom Team PavingWays und aus der Welt der Mobilen Softwareentwicklung",
       "page_title": "News und Einblicke",
-      "meta_title": "News and Insights from PavingWays",
-      "description": "News and Insights from PavingWays",
+      "meta_title": "News und Einblicke von PavingWays",
+      "description": "News und Einblicke vom Team PavingWays und aus der Welt der Mobilen Softwareentwicklung",
       "latest_posts": "",
       "older_posts": "Ältere Artikel",
       "all_categories": "Alle Kategorien"
@@ -27,7 +28,20 @@
       "link": "https://calendly.com/pavingways_com/ms-teams-meeting",
       "tellabel": "... oder rufen Sie direkt an",
       "tellink": "tel:+41768315837",
-      "telnumber": "+41 76 831 58 37"
+      "telnumber": "+41 76 831 58 37",
+      "formlabel": "... oder schreiben Sie uns über das",
+      "formlinklabel": "Kontaktformular",
+      "formlink": "/kontakt/"
+    },
+    "contact_form": {
+      "name": "Name",
+      "email": "E-Mail",
+      "company": "Firma (optional)",
+      "message": "Ihre Nachricht",
+      "submit": "Nachricht senden",
+      "sending": "Wird gesendet ...",
+      "success": "Vielen Dank! Ihre Nachricht ist bei uns angekommen – wir melden uns schnellstmöglich.",
+      "error": "Das hat leider nicht geklappt. Bitte versuchen Sie es erneut oder schreiben Sie uns direkt an info@pavingways.com."
     },
     "config.params": {
       "email": "info@pavingways.com",
@@ -35,9 +49,8 @@
       "location2": "6045 Meggen",
       "location3": "Schweiz",
       "phone": "+41 76 831 58 37",
-      "contact_form_action": "",
-      "copyright": "&copy; 2024 PavingWays GmbH \uD83E\uDED5",
-      "footer_description": "Wir sind Experten für die Entwicklung von Mobile Apps. Wir forschen wir an mobilen Browsern, Bibliotheken und Frameworks schon seit 2006. Wir automatisieren Build Chains und helfen unseren Kunden, in den App Stores erfolgreich zu sein."
+      "copyright": "&copy; 2026 PavingWays GmbH 🫕",
+      "footer_description": "Wir sind Experten für die Entwicklung von Mobile Apps. Wir forschen an mobilen Browsern, Bibliotheken und Frameworks schon seit 2006. Wir automatisieren Build Chains und helfen unseren Kunden, in den App Stores erfolgreich zu sein."
     }
   },
   "i18n_en": {
@@ -45,17 +58,18 @@
     "menu_about": "About",
     "menu_technologies": "Technologies",
     "menu_blog": "Blog",
+    "menu_contact": "Contact",
     "menu_socials": "Find us online",
     "menu_quick_links": "Quick Links",
     "menu_location": "Location & Contact",
     "menu_imprint": "Imprint",
     "menu_privacy": "Privacy",
     "blog": {
-      "title": "News und Insights",
+      "title": "News and Insights",
       "subtitle": "Projects, thoughts, news from the PavingWays team and the world of mobile software development",
-      "page_title": "News und Insights",
+      "page_title": "News and Insights",
       "meta_title": "News and Insights from PavingWays",
-      "description": "News and Insights from PavingWays",
+      "description": "News and insights from the PavingWays team and the world of mobile software development",
       "latest_posts": "",
       "older_posts": "Older Posts",
       "all_categories": "All Categories"
@@ -67,7 +81,20 @@
       "link": "https://calendly.com/pavingways_com/ms-teams-meeting",
       "tellabel": "... or call us directly",
       "tellink": "tel:+41768315837",
-      "telnumber": "+41 76 831 58 37"
+      "telnumber": "+41 76 831 58 37",
+      "formlabel": "... or write to us via the",
+      "formlinklabel": "contact form",
+      "formlink": "/contact/"
+    },
+    "contact_form": {
+      "name": "Name",
+      "email": "E-mail",
+      "company": "Company (optional)",
+      "message": "Your message",
+      "submit": "Send message",
+      "sending": "Sending ...",
+      "success": "Thank you! Your message has reached us – we will get back to you as soon as possible.",
+      "error": "That didn't work, unfortunately. Please try again or write to us directly at info@pavingways.com."
     },
     "config.params": {
       "email": "info@pavingways.com",
@@ -75,47 +102,8 @@
       "location2": "6045 Meggen",
       "location3": "Switzerland",
       "phone": "+41 76 831 58 37",
-      "contact_form_action": "",
-      "copyright": "&copy; 2024 PavingWays GmbH \uD83C\uDDE8\uD83C\uDDED",
+      "copyright": "&copy; 2026 PavingWays GmbH 🇨🇭",
       "footer_description": "We are experts in the development of mobile apps. We have been researching mobile browsers, libraries and frameworks since 2006. We automate build chains and help our clients to be successful in the app stores."
-    }
-  },
-  "i18n_fr": {
-    "menu_home": "Page d'accueil",
-    "menu_about": "À propos de nous",
-    "menu_technologies": "Technologies",
-    "menu_blog": "Blog",
-    "menu_socials": "Trouvez-nous en ligne",
-    "menu_quick_links": "Liens rapides",
-    "menu_location": "Adresse & Contact",
-    "config.params": {
-      "email": "info@pavingways.com",
-      "location1": "Badstrasse 13a",
-      "location2": "6045 Meggen",
-      "location3": "Suisse",
-      "phone": "+41 76 831 58 37",
-      "contact_form_action": "",
-      "copyright": "&copy; 2024 PavingWays GmbH \uD83C\uDDE8\uD83C\uDDED",
-      "footer_description": "Nous sommes des experts dans le développement d'applications mobiles. Nous recherchons les navigateurs mobiles, les bibliothèques et les frameworks depuis 2006. Nous automatisons les chaînes de construction et aidons nos clients à réussir dans les magasins d'applications."
-    }
-  },
-  "i18n_it": {
-    "menu_home": "Pagina Iniziale",
-    "menu_about": "Informazioni",
-    "menu_technologies": "Tecnologie",
-    "menu_blog": "Blog",
-    "menu_socials": "Trova online",
-    "menu_quick_links": "Collegamenti rapidi",
-    "menu_location": "Indirizzo & Contatto",
-    "config.params": {
-      "email": "info@pavingways.com",
-      "location1": "Badstrasse 13a",
-      "location2": "6045 Meggen",
-      "location3": "Svizzera",
-      "phone": "+41 76 831 58 37",
-      "contact_form_action": "",
-      "copyright": "&copy; 2024 PavingWays GmbH \uD83C\uDDE8\uD83C\uDDED",
-      "footer_description": "Siamo esperti nello sviluppo di app mobili. Ricerchiamo browser mobili, librerie e framework dal 2006. Automatizziamo le catene di build e aiutiamo i nostri clienti a avere successo nei negozi di app."
     }
   }
 }

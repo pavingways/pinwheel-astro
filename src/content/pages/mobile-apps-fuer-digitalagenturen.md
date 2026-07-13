@@ -2,6 +2,7 @@
 title: "Mobile Apps für Digitalagenturen"
 meta_title: "Mobile Apps für Digitalagenturen - PavingWays GmbH"
 description: "PavingWays ist Entwicklungs-Partner für Digitalagenturen: White-Label App-Entwicklung für iOS und Android – schnell, flexibel und zuverlässig."
+translation: /en/apps-for-digital-agencies/
 ---
 
 **Schnell, flexibel und zuverlässig – so wie Ihre Agentur.**

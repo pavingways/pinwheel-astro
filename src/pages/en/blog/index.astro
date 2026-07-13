@@ -11,23 +11,8 @@ import { getSinglePage } from "@lib/contentParser.astro";
 import { getTaxonomy } from "@lib/taxonomyParser.astro";
 import { sortByDate } from "@lib/utils/sortFunctions";
 import { getEntryBySlug } from "astro:content";
-import i18nAll from "@lib/i18n.json";
-const { i18n_en, i18n_de, i18n_fr, i18n_it } = i18nAll;
-let i18n: Record<string, any> = {};
-switch (Astro.currentLocale) {
-  case "en":
-    i18n = i18n_en;
-    break;
-  case "de":
-    i18n = i18n_de;
-    break;
-  case "fr":
-    i18n = i18n_fr;
-    break;
-  case "it":
-    i18n = i18n_it;
-    break;
-}
+import { getI18nStrings } from "@lib/utils/i18n";
+const i18n = getI18nStrings(Astro.currentLocale);
 
 const { blog_folder } = config.settings;
 const blogIndex: Record<string, any> = await getEntryBySlug<any, string>(blog_folder, "-index") || {};

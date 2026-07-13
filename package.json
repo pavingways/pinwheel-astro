@@ -9,6 +9,7 @@
     "build": "astro build",
     "check-hreflang": "node scripts/check-hreflang.js",
     "check-placeholders": "bash scripts/check-placeholders.sh",
+    "check-nesting": "node scripts/check-html-nesting.js",
     "deploy-dev": "bin/deploy-dev.sh",
     "deploy-prod": "bin/deploy-prod.sh",
     "json": "node scripts/jsonGenerator.js",

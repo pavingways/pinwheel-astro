@@ -2,6 +2,7 @@
 title: "Mobile Apps für KMUs und Start-Ups"
 meta_title: "Mobile Apps für KMUs und Start-Ups - PavingWays GmbH"
 description: "PavingWays ist Know-How-Provider für KMUs und Start-Ups: App-Entwicklung für iOS und Android, Integration in bestehende IT, Schulung und Support."
+translation: /en/apps-for-smes-and-startups/
 ---
 
 **Know-How-Provider für den Mittelstand und Start-Ups.**

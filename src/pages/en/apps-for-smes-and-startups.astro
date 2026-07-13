@@ -4,7 +4,7 @@ import Cta from "@layouts/partials/Cta.astro";
 import { markdownifyInline } from "@lib/utils/textConverter";
 import { getEntryBySlug } from "astro:content";
 
-const entry = await getEntryBySlug("pages", "mobile-apps-fuer-digitalagenturen");
+const entry = await getEntryBySlug("pages", "apps-for-smes-and-startups");
 const { Content } = await entry.render();
 ---
 

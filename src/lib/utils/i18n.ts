@@ -1,3 +1,5 @@
+import i18nAll from "../i18n.json";
+
 export interface LocaleDef {
   path: string;
   codes: string[];
@@ -7,6 +9,11 @@ export interface LocaleDef {
 
 // Languages that have their own URL tree (/de/..., /en/...)
 export const SUPPORTED_LANGUAGES = ["de", "en"];
+
+// UI strings for a locale (defaults to "de", the default locale)
+export function getI18nStrings(locale?: string): Record<string, any> {
+  return locale === "en" ? i18nAll.i18n_en : i18nAll.i18n_de;
+}
 
 // Name of the cookie / localStorage key that stores the visitor's language.
 // Must match the inline scripts in Base.astro and pages/index.astro.

@@ -1,15 +1,15 @@
 ---
-import { markdownify } from "@lib/utils/textConverter";
+import { markdownify, markdownifyInline } from "@lib/utils/textConverter";
 const { page_data } = Astro.props || {};
 const { title, page_title, slug, content } = page_data || {};
 ---
 
   <h1
-    set:html={markdownify(
+    set:html={markdownifyInline(
       page_data?.page_title ? page_data?.page_title : page_data?.title
     )}
   />
-  <p set:html={markdownify(content)} />
+  <div set:html={markdownify(content)} />
 
   {
     page_data.buttons && (
