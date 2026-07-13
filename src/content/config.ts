@@ -30,6 +30,24 @@ const pagesCollection = defineCollection({
     draft: z.boolean().optional(),
     // URL of the same page in the other language, e.g. /en/imprint
     translation: z.string().optional(),
+    // hub pages (leistungen/services): whole-card links rendered by the route.
+    // descriptions must stay plain text — a card is one <a>, nested links are invalid
+    services: z
+      .array(
+        z.object({
+          title: z.string(),
+          anchor: z.string(),
+          url: z.string(),
+          description: z.string(),
+        })
+      )
+      .optional(),
+    audiences: z
+      .object({
+        title: z.string(),
+        links: z.array(z.object({ label: z.string(), url: z.string() })),
+      })
+      .optional(),
   }),
 });
 
