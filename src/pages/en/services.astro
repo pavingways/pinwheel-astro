@@ -6,6 +6,7 @@ import { getEntryBySlug } from "astro:content";
 
 const entry = await getEntryBySlug("pages", "services");
 const { Content } = await entry.render();
+const { services, audiences } = entry.data;
 ---
 
 <Base
@@ -22,6 +23,33 @@ const { Content } = await entry.render();
           <div class="content">
             <Content />
           </div>
+
+          <!-- whole card is one link: bigger click target, no nested anchors -->
+          <div class="row">
+            {services?.map((service) => (
+              <div class="mt-8 md:col-6">
+                <a
+                  href={service.url}
+                  class="block h-full rounded-lg border border-border bg-white p-8 transition-all duration-200 hover:border-primary hover:shadow-lg"
+                >
+                  <h2 id={service.anchor} class="h4 text-dark">{service.title}</h2>
+                  <p class="mt-4 text-text">{service.description}</p>
+                </a>
+              </div>
+            ))}
+          </div>
+
+          {audiences && (
+            <p class="mt-16">
+              <strong>{audiences.title}</strong>{" "}
+              {audiences.links.map((link, i) => (
+                <>
+                  <a class="text-primary hover:underline" href={link.url}>{link.label}</a>
+                  {i < audiences.links.length - 1 && " · "}
+                </>
+              ))}
+            </p>
+          )}
         </div>
       </div>
     </div>
