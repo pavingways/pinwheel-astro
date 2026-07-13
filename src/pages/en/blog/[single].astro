@@ -3,6 +3,7 @@ import config from "@config/config.json";
 import Base from "@layouts/Base.astro";
 import BlogSingle from "@layouts/BlogSingle.astro";
 import { getSinglePage } from "@lib/contentParser.astro";
+import { blogPostingSchema } from "@lib/utils/schema";
 
 export async function getStaticPaths() {
   const posts = await getSinglePage(config.settings.blog_folder, "en");
@@ -18,6 +19,17 @@ export async function getStaticPaths() {
 
 const { post } = Astro.props;
 const { title, meta_title, description, image } = post.data;
+const schemas = [
+  blogPostingSchema({
+    title,
+    description,
+    path: Astro.url.pathname,
+    date: post.data.date,
+    author: post.data.author,
+    locale: "en",
+    image,
+  }),
+];
 ---
 
 <Base
@@ -26,6 +38,7 @@ const { title, meta_title, description, image } = post.data;
   description={description}
   image={image}
   translation={post.data.translation}
+  schemas={schemas}
 >
   <BlogSingle post={post} />
 </Base>

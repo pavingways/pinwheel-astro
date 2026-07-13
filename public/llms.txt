@@ -1,0 +1,24 @@
+# PavingWays GmbH
+
+> Mobile app development company in Meggen near Lucerne, Switzerland (founded 2006, in Switzerland since 2022). Three-person team covering software engineering, development and digital marketing. We design, build, ship and maintain iOS and Android apps — from requirements engineering through cross-platform development (Ionic/Capacitor, React Native, Flutter) and app store deployment to long-term maintenance. We also automate mobile CI/CD pipelines with fastlane and GitHub Actions, and offer app marketing / app store optimization (ASO). Clients range from digital agencies and SMEs to enterprises such as Deutsche Telekom, DVAG, VHV Versicherungen, Suva, Coop, PostFinance, HSLU and FHNW, in Switzerland and Germany. Languages: German and English. Code is delivered source-available — clients own their code.
+
+## Services
+
+- [App Development](https://www.pavingways.com/en/app-development/): full lifecycle from requirements to store release ([Deutsch](https://www.pavingways.com/de/app-entwicklung/))
+- [CI/CD & Test Automation](https://www.pavingways.com/en/ci-cd-test-automation/): fastlane, GitHub Actions, pipeline setup and audits for existing teams ([Deutsch](https://www.pavingways.com/de/ci-cd-testautomation/))
+- [App Maintenance](https://www.pavingways.com/en/app-maintenance/): subscription packages "Care" and "Care+Grow" at fixed monthly prices, including takeover of apps built by others ([Deutsch](https://www.pavingways.com/de/app-wartung/))
+- [App Marketing & ASO](https://www.pavingways.com/en/app-marketing/): store presence, review management, app store optimization ([Deutsch](https://www.pavingways.com/de/app-marketing/))
+
+## Audiences
+
+- [For digital agencies](https://www.pavingways.com/en/apps-for-digital-agencies/): white-label app development
+- [For SMEs and start-ups](https://www.pavingways.com/en/apps-for-smes-and-startups/): full package with knowledge transfer
+- [For enterprise IT](https://www.pavingways.com/en/enterprise-mobile-apps/): embedded work in corporate IT departments
+
+## Company
+
+- [Technologies](https://www.pavingways.com/en/technologies/): how we choose between Ionic/Capacitor, React Native and Flutter
+- [Case studies](https://www.pavingways.com/en/case-studies/): selected projects and client list
+- [About](https://www.pavingways.com/en/about/): team and history since 2006
+- [Blog](https://www.pavingways.com/en/blog/): news and insights (archive since 2006)
+- [Contact](https://www.pavingways.com/en/contact/): form, phone +41 76 831 58 37, info@pavingways.com

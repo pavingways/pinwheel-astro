@@ -3,9 +3,20 @@ import Base from "@layouts/Base.astro";
 import Cta from "@layouts/partials/Cta.astro";
 import { markdownifyInline } from "@lib/utils/textConverter";
 import { getEntryBySlug } from "astro:content";
+import { faqSchemaFromMarkdown, serviceSchema } from "@lib/utils/schema";
 
 const entry = await getEntryBySlug("pages", "ci-cd-test-automation");
 const { Content } = await entry.render();
+const faq = faqSchemaFromMarkdown(entry.body);
+const schemas = [
+  serviceSchema({
+    name: entry.data.title,
+    description: entry.data.description,
+    path: Astro.url.pathname,
+    locale: "en",
+  }),
+  ...(faq ? [faq] : []),
+];
 ---
 
 <Base
@@ -13,6 +24,7 @@ const { Content } = await entry.render();
   meta_title={entry.data.meta_title}
   description={entry.data.description}
   translation={entry.data.translation}
+  schemas={schemas}
 >
   <section class="section">
     <div class="container">

@@ -2,9 +2,12 @@
 import Base from "@layouts/Base.astro";
 import { markdownifyInline } from "@lib/utils/textConverter";
 import { getEntry } from "astro:content";
+import { personSchema } from "@lib/utils/schema";
 
 const about = await getEntry("about", Astro.currentLocale);
 const { Content } = await about.render();
+// Diana and Joerg join here once their public bios are confirmed by the team
+const schemas = [personSchema({ name: "Rocco Georgi", jobTitle: "Software Engineering & Consulting" })];
 ---
 
 <Base
@@ -13,6 +16,7 @@ const { Content } = await about.render();
   description={about.data.description}
   image={about.data.image}
   translation={about.data.translation}
+  schemas={schemas}
 >
   <section class="section">
     <div class="container">
