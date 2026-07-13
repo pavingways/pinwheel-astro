@@ -19,6 +19,8 @@ for (const file of fs.readdirSync(blogDir)) {
   if (!file.endsWith(".mdx") || file.startsWith("-")) continue;
   const slug = file.replace(/\.mdx$/, "");
   const frontmatter = fs.readFileSync(path.join(blogDir, file), "utf8");
+  // drafts are not built, so a redirect would point at a 404
+  if (/^draft:\s*true/m.test(frontmatter)) continue;
   const match = frontmatter.match(/^language:\s*["']?([A-Za-z-]+)/m);
   const lang = match && match[1].toLowerCase().startsWith("en") ? "en" : "de";
   blogRedirects[`/blog/${slug}`] = `/${lang}/blog/${slug}`;

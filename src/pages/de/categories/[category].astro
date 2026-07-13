@@ -31,6 +31,12 @@ export async function getStaticPaths() {
 const { category } = Astro.params;
 const { item } = Astro.props;
 
+// pair hreflang only when the category also exists in the other language
+const otherCategories = await getTaxonomy(config.settings.blog_folder, "categories", "en");
+const translation = otherCategories.map((c) => slugify(c)).includes(category)
+  ? `/en/categories/${category}/`
+  : undefined;
+
 const posts = await getSinglePage(config.settings.blog_folder, "de");
 const filterByTags = taxonomyFilter(posts, "categories", category);
 const page_data = {
@@ -39,7 +45,7 @@ const page_data = {
 };
 ---
 
-<Base title={category ? category : undefined}>
+<Base title={category ? category : undefined} translation={translation}>
   <section class="page-hero pb-8 pt-16">
     <div class="container">
       <div class="page-hero-content mx-auto max-w-[883px] text-center">

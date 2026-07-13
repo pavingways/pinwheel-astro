@@ -1,0 +1,36 @@
+---
+title: "Our production fastlane pipeline for iOS & Android in 2026"
+date: 2026-10-15T09:00:00+02:00
+image: /images/blog-default.webp
+categories: [insights]
+author: Rocco
+featured: false
+language: en
+description: "TODO: one-sentence summary once the article is written."
+draft: true # TODO skeleton — needs real pipeline details from Jörg/Rocco before writing
+---
+
+{/*
+TODO — this post needs OUR REAL pipeline to be credible (technical authority piece).
+Collect from the team before writing:
+
+- actual lane structure (build/beta/release lanes, per platform)
+- how signing is managed (match? manual? keystore handling on CI)
+- which GitHub Actions runners (macOS version, self-hosted?), caching strategy, build times
+- how TestFlight / Play internal testing distribution is triggered
+- screenshot automation? metadata sync? staged rollouts config
+- one real war story (what broke, how the pipeline caught it)
+- code snippets from a real (sanitized) Fastfile
+
+Target audience: developers/CTOs evaluating us for CI/CD work.
+Feeds: /en/ci-cd-test-automation/ — link it prominently.
+*/}
+
+Outline (draft):
+
+1. Why we automate every release (the cost of manual releases)
+2. The lane structure we converged on after years of iteration
+3. Signing without tears: how certificates/keystores live on CI
+4. From merge to TestFlight in N minutes (real numbers)
+5. What still needs a human (and why that's fine)
+6. Steal this setup (link to CI/CD service page)
