@@ -1,7 +1,7 @@
 ---
 title: A Little IE Mobile Forms POST finding
 date: 2008-05-03T00:00:00+02:00
-image: /images/blog-default.webp
+image: /images/blog-default-old.webp
 categories: [mobile, historic]
 author: Diana/Rocco
 featured: false
@@ -19,7 +19,8 @@ The issue occurs then POSTing a form (multipart/form-data) to the server (runnin
 
 What you on the server side normally do is to read the form values submitted by the user through the $_POST and the $_FILES array (in PHP) and then do whatever you like with it. These arrays are populated by PHP with the values of the various input fields on your form, and inputs of type=”file” don’t appear in $_POST, but in the $_FILES array, any other input type’s value goes to $_POST.
 
-Now as long as you fill in all field on your form everything is fine, and IE Mobile works as described.
+
+Now as long as you fill in all field on your form everything is fine, and IE Mobile works as described.
 
 
 
