@@ -1,5 +1,6 @@
 ---
 title: "VHV Kundenportal"
+logo: "/images/customer-logos/vhv.webp"
 meta_title: "Case Study: VHV Kundenportal App - PavingWays GmbH"
 description: "TODO: Ein Satz, der Projekt und Ergebnis zusammenfasst."
 client: "VHV Versicherungen"
@@ -10,12 +11,9 @@ duration: ""       # TODO z.B. "seit 2018, laufend"
 # quote:
 #   text: "TODO Kundenzitat (Freigabe einholen!)"
 #   author: "TODO Name, Funktion, VHV"
-draft: true        # erst auf false setzen, wenn Fakten + Freigaben da sind
+draft: false        # erst auf false setzen, wenn Fakten + Freigaben da sind
 translation: /en/case-studies/vhv-customer-portal/
 ---
-
-<!-- WICHTIG vor Veröffentlichung: Naming-/Logo-Freigabe der VHV einholen. -->
-
 ## Die Aufgabe
 
 TODO: 2–3 Sätze in Business-Sprache. Was war das Problem/Ziel der VHV? Wer sind die Nutzer?

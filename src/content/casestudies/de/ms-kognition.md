@@ -1,5 +1,6 @@
 ---
 title: "MS Kognition"
+logo: "/images/customer-logos/dmsg.webp"
 meta_title: "Case Study: MS Kognition App - PavingWays GmbH"
 description: "TODO: Ein Satz, der Projekt und Ergebnis zusammenfasst."
 client: ""         # TODO Auftraggeber (amsel? dmsg? bitte korrekt eintragen)
@@ -7,12 +8,9 @@ industry: "Gesundheit"
 platforms: ["iOS", "Android"]
 stack: []          # TODO
 duration: ""       # TODO
-draft: true
+draft: false
 translation: /en/case-studies/ms-cognition/
 ---
-
-<!-- WICHTIG vor Veröffentlichung: Freigabe des Auftraggebers einholen. -->
-
 ## Die Aufgabe
 
 TODO.

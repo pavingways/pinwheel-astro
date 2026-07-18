@@ -60,6 +60,8 @@ const caseStudiesCollection = defineCollection({
     title: z.string(),
     meta_title: z.string().optional(),
     description: z.string().optional(),
+    // client logo, shown as a background decoration on list cards
+    logo: z.string().optional(),
     client: z.string(),
     industry: z.string().optional(),
     platforms: z.array(z.string()).default([]),

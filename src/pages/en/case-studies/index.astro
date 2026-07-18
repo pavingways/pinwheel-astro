@@ -41,15 +41,27 @@ const customers = homepage?.data?.banner?.customers;
             <div class="row">
               {studies.map((study) => (
                 <div class="mt-8 md:col-6">
-                  <div class="rounded-lg border border-border bg-white p-8 h-full">
-                    <h2 class="h4">
-                      <a class="hover:text-primary" href={`/en/case-studies/${study.slug.replace("en/", "")}/`}>
-                        {study.data.title}
-                      </a>
-                    </h2>
-                    <p class="mt-2 text-sm text-text">{study.data.client}{study.data.industry && ` · ${study.data.industry}`}</p>
-                    <p class="mt-4">{study.data.description}</p>
-                  </div>
+                  <a
+                    href={`/en/case-studies/${study.slug.replace("en/", "")}/`}
+                    class="relative block h-full overflow-hidden rounded-lg border border-border bg-white p-8 transition-all duration-200 hover:border-primary hover:shadow-lg"
+                  >
+                    {study.data.logo && (
+                      <img
+                        class="pointer-events-none absolute right-2 top-4 h-10 w-auto max-w-[30%] object-contain object-right opacity-50"
+                        src={study.data.logo}
+                        alt=""
+                        aria-hidden="true"
+                        width="120"
+                        height="50"
+                        loading="lazy"
+                      />
+                    )}
+                    <div class="relative">
+                      <h2 class="h4 max-w-[calc(100%_-_115px)] text-dark">{study.data.title}</h2>
+                      <p class="mt-2 text-sm text-text">{study.data.client}{study.data.industry && ` · ${study.data.industry}`}</p>
+                      <p class="mt-4 text-text">{study.data.description}</p>
+                    </div>
+                  </a>
                 </div>
               ))}
             </div>
