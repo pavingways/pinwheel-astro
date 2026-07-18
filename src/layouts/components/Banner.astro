@@ -3,24 +3,25 @@ import { markdownify } from "@lib/utils/textConverter";
 import { Image } from "astro:assets";
 import CustomerLogos from "./CustomerLogos.astro";
 const { banner } = Astro.props;
-const { title, subtitle, image, content, customers } = banner;
-
-// first 3 words are default, then randomized
-function getInitialWords() {
-  return [...subtitle.split(", ")].slice(0, 3).join(", ");
-}
+const { title, image, content, customers, ctabutton, ctaphone } = banner;
 ---
-
 
 <section class="section banner relative">
   <div class="container">
     <div class="row">
       <div class="lg:col-8 sm:col-12">
         <h1 set:text={title} />
-        {subtitle &&
-          <p id="word-container" class="text-primary text-2xl mt-2">{getInitialWords()}</p>
-        }
         <div class="mt-8" set:html={markdownify(content)} />
+        {(ctabutton || ctaphone) && (
+          <div class="mt-8 flex flex-wrap items-center gap-x-6 gap-y-4">
+            {ctabutton && (
+              <a class="btn btn-primary" href={ctabutton.link}>{ctabutton.label}</a>
+            )}
+            {ctaphone && (
+              <a class="whitespace-nowrap text-dark hover:text-primary" href={ctaphone.link}>{ctaphone.label}</a>
+            )}
+          </div>
+        )}
         {customers &&
           <CustomerLogos customers={customers} />
         }
@@ -42,61 +43,3 @@ function getInitialWords() {
     </div>
   </div>
 </section>
-
-{ subtitle &&
-<>
-  <style is:inline>
-    #word-container {
-      user-select: none;
-      transition: opacity 0.2s ease-in-out;
-    }
-
-    .fade-out {
-      opacity: 0;
-    }
-
-    .fade-in {
-      opacity: 1;
-    }
-  </style>
-  <script is:inline define:vars={{ subtitle }}>
-    const words = subtitle.split(", ");
-    let wordInterval;
-
-    function getRandomWords() {
-      const shuffled = [...words].sort(() => 0.5 - Math.random());
-      return shuffled.slice(0, 3);
-    }
-
-    function updateWords() {
-      const wordContainer = document.getElementById("word-container");
-      wordContainer.classList.remove("fade-in");
-      wordContainer.classList.add("fade-out");
-      wordContainer.addEventListener("transitionend", function handler(event) {
-        if (event.propertyName === "opacity") {
-          wordContainer.removeEventListener("transitionend", handler);
-          const newWords = getRandomWords();
-          wordContainer.textContent = newWords.join(", ");
-          wordContainer.classList.remove("fade-out");
-          wordContainer.classList.add("fade-in");
-        }
-      });
-    }
-
-    function reLoopWords(updateNow = false) {
-      clearInterval(wordInterval);
-      if (updateNow) {
-        updateWords();
-      }
-      wordInterval = setInterval(updateWords, 10000);
-    }
-
-    reLoopWords();
-
-    // connect to #word-container, on click call reloopWords with updateNow = true
-    document.getElementById("word-container").addEventListener("click", () => reLoopWords(true));
-
-  </script>
-</>
-}
-

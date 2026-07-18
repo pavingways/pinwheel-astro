@@ -1,19 +1,22 @@
 ---
 page:
   title: Mobile Apps in Central Switzerland - PavingWays GmbH
-  description: PavingWays GmbH develops Mobile Applications in Lucerne, Switzerland
+  description: "Full-lifecycle app development: we design, build, ship and maintain iOS and Android apps – since 2006, from Switzerland."
 banner:
-  title: Mobile App Development
-  subtitle: proven, professional, fast, reliable, international, local, experienced, innovative, creative, individual, source-available, complete, tested
+  title: Mobile apps, built to last.
   content: "
-    We develop **Mobile Apps** for iOS and Android. Based in the canton of Lucerne, Switzerland, we work locally and internationally.
-
-
-    As a **development partner** for digital agencies,
-        **know-how provider** for SMEs and start-ups and
-        part of **IT departments** in global corporations
-        we have worked for these clients, among others:
+    We design, build, ship and maintain **iOS and Android apps** – from
+    requirements engineering to app-store deployment to the tenth year of
+    updates. Since 2006, based in Switzerland since 2022. Trusted by
+    Deutsche Telekom, PostFinance, Suva and Coop.
   "
+  image: /images/hero-image.webp
+  ctabutton:
+    label: Let's talk about your project
+    link: /en/contact/
+  ctaphone:
+    label: "Or call us directly: +41 76 831 58 37"
+    link: tel:+41768315837
   customers:
     title: ""
     logos:
@@ -56,118 +59,70 @@ banner:
         title: "vitagroup AG"
       - src: "/images/customer-logos/hslu.webp"
         title: "HSLU"
-  image: /images/hero-image.webp
 
-for_customer:
-  - title: Apps for Digital Agencies
-    description: "
-      **Fast, flexible and reliable - just like your agency**
+lifecycle:
+  title: The whole lifecycle, from one team
+  intro:
+    An app is not finished at launch. Our services cover every phase –
+    available individually, strongest together.
+  steps:
+    - title: App Development
+      url: /en/app-development/
+      description:
+        Requirements engineering, concept, UX and development for iOS and
+        Android – cross-platform where it fits, native where it counts.
+    - title: CI/CD & Test Automation
+      url: /en/ci-cd-test-automation/
+      description:
+        Automated fastlane pipelines and automated testing – so every release
+        is fast, safe and repeatable.
+    - title: App Maintenance
+      url: /en/app-maintenance/
+      description:
+        "OS updates, security patches, store compliance: predictable
+        maintenance at a fixed monthly price, for years."
+    - title: App Marketing
+      url: /en/app-marketing/
+      description:
+        App store optimization, store presence and ratings – so your app gets
+        found and downloaded.
+  hub:
+    label: All services at a glance
+    url: /en/services/
 
-      Your clients keep bringing new ideas, and you want to _deliver quickly_?
-      Our mobile app solution extends your offering beyond websites - without any development effort in your own team.
-      Features like _CMS integration_, _individual UI_ and _customer tracking_ enable innovative apps and add _a valuable marketing channel_ to your product portfolio.
-    "
-    comic:
-      panels:
-        - height: 160px
-          image: /images/comics/comic1.webp
-          bubble1:
-            text: "The client requests an app. This could be big! Do you think we can have this ready by the end of the month?"
-        - height: 150px
-          image: /images/comics/comic2.webp
-          align: right
-          top: 5vw
-          bubble1:
-            text: "All good - PavingWays has got our back."
+audiences:
+  title: Who we work for
+  items:
+    - title: Digital agencies
+      url: /en/apps-for-digital-agencies/
+      description:
+        White-label development behind your brand – you own the client
+        relationship, we deliver the app. No development overhead in your
+        team.
+    - title: SMEs and start-ups
+      url: /en/apps-for-smes-and-startups/
+      description:
+        The whole development chain from one team – from prototype to
+        companion app to integration with your IT landscape.
+    - title: Enterprise
+      url: /en/enterprise-mobile-apps/
+      description:
+        Embedded in your IT department, we work within your processes and
+        compliance requirements – reliably, for years.
 
-  - title: Apps for SMEs and Start-Ups
-    description: "
-      Our **years of experience** from numerous projects allow us to cover the entire app development chain in high quality:
-
-      - enhance your product with a mobile app
-
-
-      - a companion app as the perfect match for your product
-
-
-      - unique features for your customers
-
-
-      - customer retention and feedback
-
-
-      - a news and interaction channel to your customers
-
-
-      - integration into your existing IT landscape
-
-
-      - app development within your team
-
-
-      - training for your IT staff
-
-
-      - support and maintenance
-    "
-
-  - title: Enterprise Apps and Services
-    description: "
-        As a **full-service partner** we go far beyond just programming apps.
-        Our **years of experience** from numerous projects allow us to offer the entire app development chain in high quality.
-      "
-
-key_features:
-  title: "What We Do"
-  description:
-    As a **full service partner**, we go far beyond pure programming.
-
-    We can contribute our **years of experience** to the entire app development chain.
-  feature_list:
-    #icon package react-feather-icon [https://feathericons.com/]
-    - icon: "sun"
-      title: App Ideation
-      content: We support our customers as a sparring partner from the idea generation onwards. Our experience allows us to provide useful input at an early stage.
-    - icon: "layout"
-      title: Conception
-      content: With personas, user journeys and wireframes, we help to shape the app idea and make it come alive.
-    - icon: "clipboard"
-      title: Requirements
-      content: Understanding what is needed, analyzing, defining and documenting are important first steps in each of our app projects.
-    - icon: "cpu"
-      title: Tech Selection
-      content: Analyzing available technology, competencies and possibilities enables us to select and integrate the appropriate tech for your development setup.
-    - icon: "file"
-      title: Prototyping
-      content: Many projects require a prototype or click dummy. We use tools that enable us to further develop the app on the basis of our prototypes.
-    - icon: "image"
-      title: UX/UI Design
-      content: We work closely with designers, agencies, CI/CD managers and marketing departments to generate the best possible user experience.
-    - icon: "tool"
-      title: Dev Setup
-      content: Every team works differently. We help you integrate app development into your workflow and maximize the developer experience.
-    - icon: "repeat"
-      title: Pipeline Setup
-      content: We love automation. Git-based workflows, continuous integration and delivery, GitHub actions and end-to-end testing are just some of our tools.
-    - icon: "link-2"
-      title: API Development
-      content: The specification of interfaces and APIs is essential. We develop interfaces and implement APIs in the app, on the server side and to third-party systems.
-    - icon: "square"
-      title: App Development
-      content: The implementation of requirements in well-structured, high-performance and well documented code is an art that we have mastered for years.
-    - icon: "zoom-in"
-      title: Quality Assurance
-      content: We ensure the quality of our and your apps with coding guidelines, workflow tools, peer reviews, unit- and end-to-end tests, user labs and hallways.
-    - icon: "shopping-bag"
-      title: App Store Deployment
-      content: The developed app must be deployed to the store. We take care of certificates, private keys, provisioning profiles and entitles.
-    - icon: "check-square"
-      title: App Review
-      content: We start app review processes at an early stage to speed up the final live launch in the app stores. Numerous review rounds have allowed us to gain valuable experience.
-    - icon: "trending-up"
-      title: App Marketing
-      content: The release in the App Store is not the end of the story. App Store Optimization (ASO) is at least as important as SEO for websites. We can help you with this!
-    - icon: "users"
-      title: Workshops
-      content: We are happy to pass on our knowledge and experience. Preferably hands-on in a team, but also in a half-day or full-day workshop.
+why:
+  title: Why PavingWays
+  items:
+    - title: Since 2006
+      description:
+        Two decades of mobile – from the mobile web through native apps to
+        cross-platform. We have shipped on every platform generation.
+    - title: Source-available
+      description:
+        Your code is yours. Full repository access from day one – no lock-in,
+        no black box.
+    - title: One team, the whole way
+      description:
+        A direct line to the people building your app – from requirements to
+        operations. No hand-offs, no friction.
 ---

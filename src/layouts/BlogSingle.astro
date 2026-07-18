@@ -42,7 +42,7 @@ const { Content } = await post.render();
 
             <li class="mr-4 inline-block">
               <FaRegCalendarAlt className={"mr-2 -mt-1 inline-block"} />
-              {dateFormat(post.data.date)}
+              {dateFormat(post.data.date, Astro.currentLocale)}
             </li>
             <li class="mr-4 inline-block">
               <FaRegClock className={"mr-2 -mt-1 inline-block"} />

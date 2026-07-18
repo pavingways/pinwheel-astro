@@ -1,19 +1,22 @@
 ---
 page:
   title: Mobile Apps Schweiz - PavingWays GmbH
-  description: Die PavingWays GmbH entwickelt Mobile Applikationen in Luzern, Schweiz
+  description: "App-Entwicklung über den ganzen Lebenszyklus: Wir entwickeln, deployen und pflegen Mobile Apps für iOS und Android – seit 2006, aus der Schweiz."
 banner:
-  title: Mobile Apps. 
-  subtitle: erprobt, professionell, schnell, zuverlässig, international, lokal, erfahren, innovativ, kreativ, individuell, source-available, komplett, getestet
+  title: App-Entwicklung, die den ganzen Weg geht.
   content: "
-    Wir entwickeln **Mobile Apps** für iOS und Android. Ansässig im Kanton Luzern in der Schweiz arbeiten wir vor Ort und international.
-
-
-    Als **Entwicklungs-Partner** für [Digitalagenturen](/de/mobile-apps-fuer-digitalagenturen), 
-        **Know-How-Provider** für [KMUs und Start-Ups](/de/mobile-apps-fuer-kmu-und-startups) sowie 
-        Teil von **IT-Abteilungen** in [Weltkonzernen](/de/enterprise-mobile-apps) 
-        waren wir unter anderem für diese Kunden tätig:
+    Von den Anforderungen bis in die App Stores – und durch jedes OS-Update danach.
+    Wir entwickeln, deployen und pflegen **Mobile Apps für iOS und Android**.
+    Seit 2006, seit 2022 aus der Schweiz. Für Digitalagenturen, KMU und Konzerne
+    wie Deutsche Telekom, PostFinance und Suva.
   "
+  image: /images/hero-image.webp
+  ctabutton:
+    label: Projekt unverbindlich besprechen
+    link: /de/kontakt/
+  ctaphone:
+    label: "Oder anrufen: +41 76 831 58 37"
+    link: tel:+41768315837
   customers:
     title: ""
     logos:
@@ -56,155 +59,72 @@ banner:
         title: "vitagroup AG"
       - src: "/images/customer-logos/hslu.webp"
         title: "HSLU"
-  punchline: "
-    _PavingWays_: Wir ebnen den Weg für unseren Kunden, vom _App-Konzept_ zum _App-Store_.
-  "
-  image: /images/hero-image.webp
-  ctabutton:
-    label: 'Anrufen: +41 76 831 58 37'
-    link: tel:+41768315837
 
-sales_pitch:
-  title: App Entwicklung neu gedacht.
+lifecycle:
+  title: Der ganze Lebenszyklus, aus einer Hand
+  intro:
+    Eine App ist mit dem Launch nicht fertig. Unsere Leistungen decken jede
+    Phase ab – einzeln buchbar, zusammen am wirksamsten.
+  steps:
+    - title: App-Entwicklung
+      url: /de/app-entwicklung/
+      description:
+        Requirements, Konzeption, UX und Entwicklung für iOS und Android –
+        cross-platform, wo es passt, nativ, wo es nötig ist.
+    - title: CI/CD & Testautomation
+      url: /de/ci-cd-testautomation/
+      description:
+        Automatisierte Pipelines mit fastlane und automatisierte Tests – damit
+        jedes Release schnell, sicher und wiederholbar ist.
+    - title: App-Wartung
+      url: /de/app-wartung/
+      description:
+        "OS-Updates, Security-Patches, Store-Compliance: planbare Wartung zum
+        fixen Monatspreis, über Jahre."
+    - title: App-Marketing
+      url: /de/app-marketing/
+      description:
+        App Store Optimization, Store-Präsenz und Bewertungen – damit Ihre App
+        gefunden und geladen wird.
+  hub:
+    label: Alle Leistungen im Überblick
+    url: /de/leistungen/
 
-for_customer:
-  - title: Apps für Digitalagenturen
-    description: "
-      **Schnell, flexibel und zuverlässig - so wie Ihre Agentur**
+audiences:
+  title: Für wen wir arbeiten
+  items:
+    - title: Digitalagenturen
+      url: /de/mobile-apps-fuer-digitalagenturen/
+      description:
+        White-Label-Entwicklung hinter Ihrer Marke – Sie führen die
+        Kundenbeziehung, wir liefern die App. Ohne Entwicklungsaufwand in
+        Ihrem Team.
+    - title: KMU und Start-ups
+      url: /de/mobile-apps-fuer-kmu-und-startups/
+      description:
+        Die ganze Entwicklungskette aus einer Hand – vom Prototyp über die
+        Companion App bis zur Integration in Ihre IT-Landschaft.
+    - title: Enterprise
+      url: /de/enterprise-mobile-apps/
+      description:
+        Als Teil Ihrer IT-Abteilung arbeiten wir in Ihren Prozessen und
+        Compliance-Vorgaben – zuverlässig, über Jahre.
 
-      Ihre Kunden bringen neue Ideen, und Sie möchten diese _schnell umsetzen_?
-      Unsere Mobile App-Lösung erweitert Ihr Angebot über Websites hinaus – ohne eigenen Entwicklungsaufwand. 
-      Features wie _CMS-Anbindung_, _individuelle UI_ und _Customer-Tracking_ ermöglichen innovative Apps und erweitern Ihr Produktportfolio um _einen wertvollen Marketingkanal_.
-    "
-    comic:
-      panels:
-        - height: 160px
-          image: /images/comics/comic1.webp
-          bubble1:
-            text: "Der Kunde möchte eine App. Das könnte gross werden! Schaffen wir das bis Ende des Monats?"
-        - height: 150px
-          image: /images/comics/comic2.webp
-          align: right
-          top: 5vw
-          bubble1:
-            text: "Alles gut - PavingWays hat das im Griff."
-    feature_list:
-      #icon package react-feather-icon [https://feathericons.com/]
-      - icon: "sun"
-        title: App Ideation
-        content:
-          Gern stehen wir unseren Kunden als Sparring-Partner schon während der Ideenfindung zur Seite.
-          Unsere Erfahrungen lassen uns frühzeitig nützlichen Input geben.
-        link: app-ideation
-      - icon: "layout"
-        title: Konzeption
-        content: Mit Personas, User-Journeys und Wireframes helfen wir dabei, der App-Idee einen Gestalt zu verleihen und sie konkret werden zu lassen.
-        link: app-konzeption
-      - icon: "clipboard"
-        title: Requirements
-        content: Verstehen, was benötigt wird. Analysieren, Abwägen, Definieren und Dokumentieren sind wichtige erste Schritte in jedem unserer App-Projekte.
-    cta:
-      label: Mobile Apps für Agenturen
-      link: /de/mobile-apps-fuer-digitalagenturen
-      
-  - title: Apps für den Mittelstand und Start-Ups
-    description: "
-      Unsere **jahrelangen Erfahrungen** aus zahlreichen Projekten erlauben uns, die gesamte Kette der App-Entwicklung in hoher Qualität anzubieten:
-
-      - Ihr Produkt um eine Mobile App erweitern
-
-
-      - Companion App als perfekte Ergänzung zu Ihrem Produkt
-
-
-      - einzigartige Features für Ihre Kunden
-
-
-      - Kundenbindung und Feedback
-
-
-      - News- und Interaktionskanal zu Ihren Kunden
-
-
-      - Integration in die bestehende IT-Landschaft
-
-
-      - App-Entwicklung in Ihrem Team
-
-
-      - Schulung Ihrer IT-Mitarbeiter
-
-
-      - Support und Wartung
-    "
-    cta:
-      label: Mobile Apps für KMU
-      link: /de/mobile-apps-fuer-kmu-und-startups
-      
-  - title: Enterprise Apps und Services
-    description: "
-        Als **Full-Service-Partner** gehen wir weit über das reine Programmieren von Apps hinaus.
-        Unsere **jahrelangen Erfahrungen** aus zahlreichen Projekten erlauben uns, die gesamte Kette der App-Entwicklung in hoher Qualität anzubieten.
-      "
-    cta:  
-      label: Enterprise Services
-      link: /de/enterprise-mobile-apps
-
-key_features:
-  title: Full-Stack Mobile Apps
-  description: "
-    Als **Full-Service-Partner** gehen wir weit über das reine Programmieren von Apps hinaus.
-    Unsere **jahrelangen Erfahrungen** aus zahlreichen Projekten erlauben uns, die gesamte Kette der App-Entwicklung in hoher Qualität anzubieten.
-  " 
-  feature_list:
-    #icon package react-feather-icon [https://feathericons.com/]
-    - icon: "sun"
-      title: App Ideation
-      content: 
-        Gern stehen wir unseren Kunden als Sparring-Partner schon während der Ideenfindung zur Seite. 
-        Unsere Erfahrungen lassen uns frühzeitig nützlichen Input geben.
-      link: app-ideation
-    - icon: "layout"
-      title: Konzeption
-      content: Mit Personas, User-Journeys und Wireframes helfen wir dabei, der App-Idee einen Gestalt zu verleihen und sie konkret werden zu lassen.
-      link: app-konzeption
-    - icon: "clipboard"
-      title: Requirements
-      content: Verstehen, was benötigt wird. Analysieren, Abwägen, Definieren und Dokumentieren sind wichtige erste Schritte in jedem unserer App-Projekte.
-    - icon: "cpu"
-      title: Tech Auswahl
-      content: Das Analysieren der technischen Gegebenheiten, Kompetenzen und Möglichkeiten ermöglicht uns die Auswahl der passenden Technologien und Definition in Ihrem Entwicklung-Setup.
-    - icon: "file"
-      title: Prototyping
-      content: Viele Projekte benötigen einen Prototypen oder Click-Dummy. Wir benutzen Tools, die es uns ermöglichen, die App auf Basis unserer Prototypen weiterzuentwickeln.
-    - icon: "image"
-      title: UX/UI Design
-      content: Wir arbeiten eng mit Designern, Agenturen, CI/CD Verantwortlichen und Marketing-Abteilungen zusammen, um die bestmögliche User Experience zu generieren.    
-    - icon: "tool"
-      title: Entwicklungs-Setup
-      content: Jedes Team arbeitet anders. Wir helfen dabei, die App-Entwicklung in Ihren Workflow einzubinden und die Developer Experience zu maximieren.
-    - icon: "repeat"
-      title: Pipeline Setup
-      content: Wir lieben Automatisierung. Git-basierte Workflows, Continuous Integration und Delivery, GitHub Actions und End-to-End Tests sind nur einige unserer Tools. 
-    - icon: "link-2"
-      title: API Entwicklung
-      content: Die Spezifikation der Schnittstellen und APIs ist essentiell. Wir entwickeln Interfaces und implementieren APIs in App, auf Server-Seite und zu Drittsystemen.
-    - icon: "square"
-      title: App Entwicklung
-      content: Die Umsetzung der Anforderungen in gut strukturierten, performanten und dokumentierten Code ist eine Kunst, die wir seit Jahren beherrschen.
-    - icon: "zoom-in"
-      title: Qualitäts-Sicherung
-      content: Mit Coding-Guidelines, Workflow-Tools, Peer-Reviews, Unit- und End-to-End Tests, User Labs und Hallway gewährleisten wir die Qualität unserer und Ihrer Apps.
-    - icon: "shopping-bag"
-      title: App Store Deployment
-      content: Die entwickelte App muss in den Store. Wir kümmern uns um Zertifikate, Private Keys, Provisioning Profile und Entitles. 
-    - icon: "check-square"
-      title: App Review
-      content: Frühzeitig starten wir App-Review Prozesse, um den finalen Live-Gang in den App Stores zu beschleunigen. Zahlreiche Review-Runden haben uns wertvolle Erfahrungen sammeln lassen.
-    - icon: "trending-up"
-      title: App Marketing
-      content: Mit dem Release im App Store ist es nicht getan. App Store Optimizaton (ASO) ist mindestens genau so wichtig wie SEO bei Websites. Wir helfen Ihnen dabei!
-    - icon: "users"
-      title: Workshops
-      content: Wir geben Wissen und Erfahrung gern weiter. Am besten hands-On im Team, aber auch als halb- oder ganztägiger Workshop.
+why:
+  title: Warum PavingWays
+  items:
+    - title: Seit 2006
+      description:
+        Zwei Jahrzehnte Mobile – vom Mobile Web über native Apps bis
+        Cross-Platform. Wir haben jede Plattform-Generation in die Stores
+        gebracht.
+    - title: Source-available
+      description:
+        Ihr Code gehört Ihnen. Volle Einsicht ins Repository ab dem ersten
+        Tag – kein Lock-in, keine Blackbox.
+    - title: Ein Team, der ganze Weg
+      description:
+        Direkter Draht zu den Menschen, die Ihre App bauen – von den
+        Requirements bis zum Betrieb. Keine Übergaben, keine
+        Reibungsverluste.
 ---

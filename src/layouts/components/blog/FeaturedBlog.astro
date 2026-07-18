@@ -52,7 +52,7 @@ const currentLocale = Astro.currentLocale;
                     fill="#939393"
                   />
                 </svg>
-                {dateFormat(post.data.date)}
+                {dateFormat(post.data.date, currentLocale)}
               </span>
               <span class="inline-flex items-center text-xs text-[#666]">
                 <svg

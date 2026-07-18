@@ -19,10 +19,10 @@ const i18n = getI18nStrings(Astro.currentLocale);
               {i18n['cta']['description']}
             </p>
             <p class="mt-4 text-white">
-              {i18n['cta']['tellabel']}: <a href={i18n['cta']['tellink']} style="white-space: nowrap">{i18n['cta']['telnumber']}</a>
+              {i18n['cta']['tellabel']}: <a class="whitespace-nowrap font-semibold !text-white underline" href={i18n['cta']['tellink']}>{i18n['cta']['telnumber']}</a>
             </p>
             <p class="mt-4 text-white">
-              {i18n['cta']['formlabel']} <a class="underline" href={localizeUrl(i18n['cta']['formlink'], Astro.currentLocale)}>{i18n['cta']['formlinklabel']}</a>
+              {i18n['cta']['formlabel']} <a class="font-semibold !text-white underline" href={localizeUrl(i18n['cta']['formlink'], Astro.currentLocale)}>{i18n['cta']['formlinklabel']}</a>
             </p>
           </div>
         </div>

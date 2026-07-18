@@ -8,7 +8,7 @@ month**, zero in a crunch month is fine.
 
 | # | Post | Lang | Status | Planned |
 |---|---|---|---|---|
-| 1 | Was kostet eine App? Der ehrliche Überblick 2026 | DE | **live on merge** — CHF ranges need Rocco's sign-off | Jul 2026 |
+| 1 | Was kostet eine App? Der ehrliche Überblick 2026 / What Does an App Cost? | DE+EN | **live on merge** — CHF ranges need Rocco's sign-off; EN twin paired via `translation:` | Jul 2026 |
 | 2 | Ionic/Capacitor vs. React Native vs. Flutter: So wählen wir aus / How We Choose | DE+EN | written, `draft: true` | Aug 2026 |
 | 3 | App-Wartung: Was nach dem Launch wirklich anfällt | DE | written, `draft: true` | Sep 2026 |
 | 4 | Our production fastlane pipeline for iOS & Android in 2026 | EN | **skeleton — needs real pipeline facts from Jörg/Rocco** | Oct 2026 |

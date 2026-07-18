@@ -3,47 +3,15 @@ import { getEntry } from "astro:content";
 import Config from "astro.config.mjs";
 import Base from "@layouts/Base.astro";
 import Banner from "@layouts/components/Banner.astro";
+import HomeSections from "@layouts/components/HomeSections.astro";
 import Cta from "@layouts/partials/Cta.astro";
-import ForCustomer from "@layouts/components/ForCustomer.astro";
 
 const homepage = await getEntry("homepage", Astro.currentLocale ?? Config?.i18n?.defaultLocale ?? "de");
-const { page, banner, banner2, for_customer } = homepage?.data;
+const { page, banner, lifecycle, audiences, why } = homepage?.data;
 ---
-
 
 <Base title={page.title} description={page.description}>
   <Banner banner={banner} />
-
-  {for_customer?.map((content) => (
-    <ForCustomer content={content} />
-  ))}
-
-  <!--
-  Process
-  How it works
-  Step 1-x
-  -->
-  <!--<Service service={service} />-->
-
-  <!--
-  Pricing
-  Basic - Pro - Enterprise
-  -->
-
-  <!--
-  Testimonials
-  1-x
-  -->
-  <!--<Testimonial testimonial={testimonial} />-->
-
-  <!--
-  FAQ
-  -->
-  <!--<Faq content={faq} />-->
-
-  <!--
-  CTA
-  -->
+  <HomeSections lifecycle={lifecycle} audiences={audiences} why={why} />
   <Cta />
-
 </Base>
