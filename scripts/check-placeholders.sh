@@ -17,4 +17,15 @@ if [ -n "$matches" ]; then
   exit 1
 fi
 
+# unfinished content: skeleton pages (e.g. demo case studies) carry "TODO:"
+# markers — they must not reach production. Case-sensitive on purpose;
+# /blog/ is excluded so archive posts and articles about code stay unaffected
+todos=$(grep -rl "TODO:" dist --include='*.html' | grep -v "/blog/")
+
+if [ -n "$todos" ]; then
+  echo "TODO markers found in dist/ — finish or re-draft this content before deploying:"
+  echo "$todos"
+  exit 1
+fi
+
 echo "dist/ is clean of known placeholder content."
