@@ -25,15 +25,12 @@
     },
     "cta": {
       "title": "Sprechen wir!",
-      "description": "Buchen Sie einen Termin, der Ihnen gut passt. Wir sprechen ganz unverbindlich über Ihr App-Projekt oder Ihre Fragen zur App-Entwicklung allgemein.",
-      "label": "Termin eintragen",
-      "link": "https://calendly.com/pavingways_com/ms-teams-meeting",
+      "description": "Schreiben Sie uns unverbindlich – wir sprechen über Ihr App-Projekt oder Ihre Fragen zur App-Entwicklung allgemein.",
+      "label": "Kontakt aufnehmen",
+      "link": "/kontakt/",
       "tellabel": "... oder rufen Sie direkt an",
       "tellink": "tel:+41768315837",
-      "telnumber": "+41 76 831 58 37",
-      "formlabel": "... oder schreiben Sie uns über das",
-      "formlinklabel": "Kontaktformular",
-      "formlink": "/kontakt/"
+      "telnumber": "+41 76 831 58 37"
     },
     "contact_form": {
       "name": "Name",
@@ -81,15 +78,12 @@
     },
     "cta": {
       "title": "Let's talk!",
-      "description": "Book an online-meeting that suits you. We'll talk about your app project or your questions about app development in general without any obligations.",
-      "label": "You pick the date!",
-      "link": "https://calendly.com/pavingways_com/ms-teams-meeting",
+      "description": "Get in touch without any obligations – we'll talk about your app project or your questions about app development in general.",
+      "label": "Get in touch",
+      "link": "/contact/",
       "tellabel": "... or call us directly",
       "tellink": "tel:+41768315837",
-      "telnumber": "+41 76 831 58 37",
-      "formlabel": "... or write to us via the",
-      "formlinklabel": "contact form",
-      "formlink": "/contact/"
+      "telnumber": "+41 76 831 58 37"
     },
     "contact_form": {
       "name": "Name",

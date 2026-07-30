@@ -172,7 +172,7 @@ const jsonLd = [
         src="https://gc.zgo.at/count.js"
       ></script>
       <script is:inline>
-        // Conversion events: clicks on phone, e-mail and Calendly links.
+        // Conversion events: clicks on phone and e-mail links.
         // GoatCounter is cookieless, so no consent banner is required.
         document.addEventListener("click", function (e) {
           var a = e.target && e.target.closest ? e.target.closest("a") : null;
@@ -181,7 +181,6 @@ const jsonLd = [
           var event =
             href.indexOf("tel:") === 0 ? "contact-phone"
             : href.indexOf("mailto:") === 0 ? "contact-email"
-            : href.indexOf("calendly.com") !== -1 ? "contact-calendly"
             : null;
           if (event) window.goatcounter.count({ path: event, title: event, event: true });
         });
