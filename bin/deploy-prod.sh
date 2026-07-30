@@ -1,3 +1,4 @@
+npx update-browserslist-db@latest || exit 1
 npm run build || exit 1
 bash scripts/check-placeholders.sh || exit 1
 node scripts/check-hreflang.js || exit 1
