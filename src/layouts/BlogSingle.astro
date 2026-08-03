@@ -5,7 +5,7 @@ import readingTime from "@lib/utils/readingTime";
 import Disqus from "./function-components/Disqus";
 
 import { humanize, slugify } from "@lib/utils/textConverter";
-import { localizeUrl } from "@lib/utils/i18n";
+import { getI18nStrings, localizeUrl } from "@lib/utils/i18n";
 import {
   FaRegCalendarAlt,
   FaRegClock,
@@ -15,6 +15,7 @@ import {
 
 const { post } = Astro.props;
 const { Content } = await post.render();
+const i18n = getI18nStrings(Astro.currentLocale);
 ---
 
 <section class="section blog-single">
@@ -64,6 +65,14 @@ const { Content } = await post.render();
             </li>
           </ul>
         </div>
+
+        {
+          post.data.aiAssisted && (
+            <small class="mb-6 -mt-3 block text-sm italic text-light">
+              {i18n.blog.ai_disclosure}
+            </small>
+          )
+        }
 
         <div class="content">
           <Content />

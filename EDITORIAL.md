@@ -70,3 +70,4 @@ Example (this post): `node scripts/gen-blog-image.js --out app-maintenance-after
 - **FAQ sections** (`## Häufige Fragen` / `## Frequently asked questions` with `###` questions) automatically emit FAQPage JSON-LD — use one on high-intent posts.
 - **Internal links**: every post should link at least one money page (`/de/app-entwicklung/`, `/de/app-wartung/`, …) and end with a soft CTA to `/de/kontakt/` / `/en/contact/`.
 - **No invented facts**: client names, numbers and war stories only with the team's sign-off (and naming approval where clients are identifiable).
+- **AI disclosure**: every new post generated with AI help gets `aiAssisted: true` in its frontmatter. `BlogSingle.astro` renders the localized disclosure line (`blog.ai_disclosure` in `src/lib/i18n.json`) under the byline automatically — no manual text needed in the post body.
