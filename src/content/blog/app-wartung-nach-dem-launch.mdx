@@ -1,13 +1,14 @@
 ---
 title: "App-Wartung: Was nach dem Launch wirklich anfällt"
-date: 2026-09-15T09:00:00+02:00
-image: /images/blog-default-old.webp
+date: 2026-08-03T09:00:00+02:00
+image: /images/blog-app-maintenance-after-launch.webp
 categories: [insights]
 author: Rocco
-featured: false
+featured: true
 language: de
 description: "Der Launch ist Tag eins: Was iOS- und Android-Apps nach dem Release wirklich an Pflege brauchen – OS-Updates, Store-Richtlinien, Security, Zertifikate – und was passiert, wenn man es lässt."
-draft: true # geplant für September — vor Veröffentlichung: draft entfernen und Datum prüfen
+translation: /en/blog/app-maintenance-after-launch
+aiAssisted: true
 ---
 
 Die App ist im Store, das Projekt gefeiert, das Team aufgelöst. Zwölf Monate später kommt die E-Mail: *«Ihre App entspricht nicht mehr den aktuellen Anforderungen und wird aus dem Store entfernt.»* Wer Apps nur baut, aber nicht betreibt, erlebt diese Geschichte regelmässig. Hier ist, was nach dem Launch wirklich anfällt – Jahr für Jahr.
@@ -18,9 +19,19 @@ Die App ist im Store, das Projekt gefeiert, das Team aufgelöst. Zwölf Monate s
 
 Apple und Google veröffentlichen jedes Jahr Major-Releases von iOS und Android. Meist läuft die App weiter – aber «meist» ist kein Betriebskonzept. Deprecated APIs, geändertes Berechtigungsverhalten, neue Gerätegrössen: Wer gegen die Beta-Versionen testet, behebt Probleme, bevor Nutzer sie bewerten.
 
+Dabei geht es längst nicht nur um API-Änderungen. Jede Plattform bringt eigene, tiefgreifende Umbrüche mit:
+
+- **Android – 16-KB Memory Pages:** Seit Android 15 verlangt Google, dass Apps 16-KB-Speicherseiten unterstützen. Native Libraries, die nur für 4-KB-Pages kompiliert wurden, stürzen auf betroffenen Geräten ab – und Google behält sich vor, nicht konforme Apps aus dem Store zu nehmen.
+- **iOS – das Ende von CocoaPods:** Apple hat das Ökosystem auf Swift Package Manager ausgerichtet; CocoaPods wird nicht mehr aktiv weiterentwickelt. Für React-Native-Projekte, die historisch stark auf CocoaPods setzen, bedeutet das: Abhängigkeiten müssen migriert werden, bevor sie inkompatibel werden – und damit unter Umständen auch ein Sprung auf eine neuere React-Native-Version.
+- **iOS – Liquid Glass:** Apples neues Designparadigma wird mittelfristig zum Standard. Apps, die es ignorieren, wirken auf neuen OS-Versionen zunehmend fremd – und der Umbau ist kein Nachmittagsprojekt.
+
 ### Steigende Mindestanforderungen der Stores
 
-Beide Stores erhöhen regelmässig das verpflichtende Target-SDK bzw. die Mindest-Toolchain. Apps, die nicht nachziehen, werden erst unsichtbar, dann entfernt – unabhängig davon, wie gut sie funktionieren.
+Beide Stores erhöhen regelmässig das verpflichtende Target-SDK bzw. die Mindest-Toolchain. Apps, die nicht nachziehen, werden erst unsichtbar, dann entfernt – unabhängig davon, wie gut sie funktionieren. Google und Apple erwarten, dass Entwickler ihre Apps aktuell halten – nicht irgendwann, sondern innerhalb konkreter Fristen.
+
+### Ständig neue Geräte
+
+Faltbare Bildschirme, neue Seitenverhältnisse, Dynamic Island, Always-On-Displays: Jedes Jahr erscheinen Geräte, die Ihr Layout auf die Probe stellen. Eine App, die auf dem Testgerät von gestern perfekt aussieht, kann auf dem Flaggschiff von morgen abgeschnittene Inhalte oder unbedienbare Bereiche zeigen.
 
 ### Zertifikate, Profile, Schlüssel
 

@@ -21,7 +21,8 @@
       "description": "News und Einblicke vom Team PavingWays und aus der Welt der Mobilen Softwareentwicklung",
       "latest_posts": "",
       "older_posts": "Ältere Artikel",
-      "all_categories": "Alle Kategorien"
+      "all_categories": "Alle Kategorien",
+      "ai_disclosure": "Text und Bild mit KI-Unterstützung erstellt."
     },
     "cta": {
       "title": "Sprechen wir!",
@@ -74,7 +75,8 @@
       "description": "News and insights from the PavingWays team and the world of mobile software development",
       "latest_posts": "",
       "older_posts": "Older Posts",
-      "all_categories": "All Categories"
+      "all_categories": "All Categories",
+      "ai_disclosure": "Text and image created with AI help."
     },
     "cta": {
       "title": "Let's talk!",

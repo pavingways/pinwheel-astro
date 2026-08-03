@@ -1,0 +1,68 @@
+---
+title: "App Maintenance: What Really Happens After Launch"
+date: 2026-08-03T09:00:00+02:00
+image: /images/blog-app-maintenance-after-launch.webp
+categories: [insights]
+author: Rocco
+featured: true
+language: en
+description: "Launch day is day one: what iOS and Android apps really need after release – OS updates, store policies, security, certificates – and what happens when you let it slide."
+translation: /de/blog/app-wartung-nach-dem-launch
+aiAssisted: true
+---
+
+The app is in the store, the project celebrated, the team disbanded. Twelve months later the email arrives: *"Your app no longer meets current requirements and will be removed from the store."* Anyone who builds apps but doesn't operate them sees this story play out regularly. Here is what really comes up after launch – year after year.
+
+## The annual maintenance cycle
+
+### New OS versions, every autumn
+
+Apple and Google ship major releases of iOS and Android every year. Usually the app keeps running – but "usually" is not an operations strategy. Deprecated APIs, changed permission behaviour, new screen sizes: testing against the betas means fixing problems before users rate them.
+
+And it is not just API changes. Each platform brings its own deep shifts:
+
+- **Android – 16 KB memory pages:** Since Android 15, Google requires apps to support 16 KB memory pages. Native libraries compiled only for 4 KB pages crash on affected devices – and Google reserves the right to remove non-compliant apps from the store.
+- **iOS – the end of CocoaPods:** Apple has steered the ecosystem towards Swift Package Manager; CocoaPods is no longer actively maintained. For React Native projects that historically rely heavily on CocoaPods, this means dependencies must be migrated before they become incompatible – and that may also require jumping to a newer React Native version.
+- **iOS – Liquid Glass:** Apple's new design paradigm will become the standard over time. Apps that ignore it will look increasingly out of place on newer OS versions – and the redesign is not an afternoon project.
+
+### Rising minimum requirements from the stores
+
+Both stores regularly raise the mandatory target SDK or minimum toolchain. Apps that don't keep up first become invisible, then get removed – regardless of how well they work. Google and Apple expect developers to keep their apps current – not eventually, but within concrete deadlines.
+
+### Constantly new devices
+
+Foldable screens, new aspect ratios, Dynamic Island, always-on displays: every year brings devices that put your layout to the test. An app that looks perfect on yesterday's test device can show clipped content or unreachable areas on tomorrow's flagship.
+
+### Certificates, profiles, keys
+
+iOS distribution certificates and provisioning profiles expire, push certificates even more so, and store accounts need to stay verified. None of this is hard – all of it has deadlines, and missing them takes your app offline.
+
+### Dependencies and security vulnerabilities
+
+Every app sits on libraries. Those libraries receive security patches, breaking changes, and deprecation notices – and the longer you defer updates, the more expensive the jump becomes. The difference between continuous maintenance and "a rescue project every two years" is substantial over the app's lifetime.
+
+### Privacy and compliance requirements
+
+Privacy labels, consent requirements, new regulations: the stores set deadlines, and app operators have to deliver.
+
+## What this does to your app's rating
+
+Users punish neglected apps quickly: crashes on new devices, a layout that ignores the latest screen size, a login that breaks after an OS update. The store rating drops – and with it visibility and conversion. [App marketing](/en/app-marketing/) starts with an app that works reliably.
+
+## Predictable, not surprising
+
+None of this is a scare tactic – it is a calendar. The dates are mostly known, the work is familiar, and the effort is calculable – as long as someone handles it continuously. That is exactly what our [app maintenance packages Care and Care+Grow](/en/app-maintenance/) are for: OS updates, security, store compliance, and monitoring at a fixed monthly price. Including for apps [originally built by someone else](/en/app-maintenance/).
+
+## Frequently asked questions
+
+### Our app works fine – why touch it?
+
+Because "works today" says nothing about next autumn. The stores remove hundreds of thousands of apps each year that no longer meet minimum requirements – working ones included.
+
+### What does app maintenance cost?
+
+It depends on the size and condition of the codebase. After a short code audit we name a fixed monthly price. [Let's talk about it](/en/contact/).
+
+### Can we handle maintenance ourselves?
+
+Yes – especially well when builds and tests are automated. We [set up the pipelines](/en/ci-cd-test-automation/) and train your team; after that you decide what to keep in-house and what to hand off.
