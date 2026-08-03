@@ -14,10 +14,10 @@ bash scripts/check-placeholders.sh || exit 1
 node scripts/check-hreflang.js || exit 1
 node scripts/check-html-nesting.js || exit 1
 rsync -avr --delete-before  \
-                         --exclude '.*'  \
-                         --exclude '_deploy-dev.sh' \
-                         --exclude '_deploy-prod.sh' \
-dist/* "$PAGES_DIR/"
+  --exclude '.*'  \
+  --exclude '_deploy-dev.sh' \
+  --exclude '_deploy-prod.sh' \
+  dist/* "$PAGES_DIR/"
 cp .gitignore "$PAGES_DIR/"
 cd "$PAGES_DIR" || exit 1
 git add .
