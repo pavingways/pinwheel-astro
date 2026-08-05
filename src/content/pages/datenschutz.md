@@ -16,6 +16,12 @@ translation: /en/privacy/
   die PavingWays GmbH geltenden landesspezifischen Datenschutzbestimmungen. Mittels dieser Datenschutzerklärung möchte unser Unternehmen die Öffentlichkeit über Art, Umfang und Zweck der von uns erhobenen, genutzten und verarbeiteten
   personenbezogenen Daten informieren. Ferner werden betroffene Personen mittels dieser Datenschutzerklärung über die ihnen zustehenden Rechte aufgeklärt.</p>
 
+<p>Verantwortliche Stelle im Sinne des Datenschutzrechts ist die PavingWays GmbH mit Sitz in Meggen, Schweiz (Kontaktdaten siehe Ziffer 2). Da unser Unternehmen seinen Sitz in der Schweiz hat, richtet sich die Bearbeitung personenbezogener
+  Daten in erster Linie nach dem Schweizerischen Bundesgesetz über den Datenschutz (Datenschutzgesetz, DSG) in der seit 1. September 2023 geltenden Fassung. Soweit unsere Internetseite auch von Personen mit Wohnsitz in der Europäischen Union
+  oder dem EWR genutzt wird und die Datenschutz-Grundverordnung (DSGVO) aufgrund ihres extraterritorialen Anwendungsbereichs (Art. 3 Abs. 2 DSGVO) zur Anwendung kommt, beachten wir zusätzlich deren Vorgaben. Die nachfolgenden Erläuterungen
+  orientieren sich – auch zur besseren Verständlichkeit für ein internationales Publikum – an den Begrifflichkeiten der DSGVO; die inhaltlich weitgehend entsprechenden Bestimmungen des Schweizerischen DSG (namentlich Art. 5, 6, 25 ff. und 30
+  ff. DSG) gelten parallel dazu, soweit das DSG anwendbar ist.</p>
+
 <p>Die PavingWays GmbH hat als für die Verarbeitung Verantwortlicher zahlreiche technische und organisatorische Maßnahmen umgesetzt, um einen möglichst lückenlosen Schutz der über diese Internetseite verarbeiteten personenbezogenen
   Daten sicherzustellen. Dennoch können Internetbasierte Datenübertragungen grundsätzlich Sicherheitslücken aufweisen, sodass ein absoluter Schutz nicht gewährleistet werden kann. Aus diesem Grund steht es jeder betroffenen Person frei,
   personenbezogene Daten auch auf alternativen Wegen, beispielsweise telefonisch, an uns zu übermitteln.</p>
@@ -28,6 +34,9 @@ translation: /en/privacy/
 </ol>
 
 <p>Wir verwenden in dieser Datenschutzerklärung unter anderem die folgenden Begriffe:</p>
+
+<p>Die nachfolgenden Begriffe orientieren sich an Art. 4 DSGVO. Das Schweizerische DSG verwendet in Art. 5 DSG inhaltlich weitgehend übereinstimmende Begriffe (u.a. „betroffene Person“, „verantwortliche Person“ [Art. 5 lit. j DSG] und
+  „Auftragsbearbeiter“ [Art. 5 lit. k DSG]); wir verwenden die Begriffe in dieser Datenschutzerklärung synonym.</p>
 
 <p>a) personenbezogene Daten
   Personenbezogene Daten sind alle Informationen, die sich auf eine identifizierte oder identifizierbare natürliche Person (im Folgenden „betroffene Person“) beziehen. Als identifizierbar wird eine natürliche Person angesehen, die direkt oder
@@ -77,7 +86,8 @@ translation: /en/privacy/
 
 <ol>
   <li>Name und Anschrift des für die Verarbeitung Verantwortlichen
-    Verantwortlicher im Sinne der Datenschutz-Grundverordnung, sonstiger in den Mitgliedstaaten der Europäischen Union geltenden Datenschutzgesetze und anderer Bestimmungen mit datenschutzrechtlichem Charakter ist:
+    Verantwortliche Person im Sinne von Art. 5 lit. j des Schweizerischen Datenschutzgesetzes (DSG) sowie – soweit anwendbar – Verantwortlicher im Sinne der Datenschutz-Grundverordnung, sonstiger in den Mitgliedstaaten der Europäischen Union
+    geltenden Datenschutzgesetze und anderer Bestimmungen mit datenschutzrechtlichem Charakter ist:
   </li>
 </ol>
 
@@ -108,6 +118,22 @@ translation: /en/privacy/
   Person angegebenen personenbezogenen Daten gespeichert.</p>
 
 <ol>
+  <li>Einsatz von GoatCounter (Webanalyse)
+    Auf dieser Internetseite setzen wir den datenschutzfreundlichen Webanalysedienst GoatCounter ein, betrieben von Martin Tournoij, Irland. GoatCounter wird eingesetzt, um die Nutzung unserer Internetseite statistisch auszuwerten und unser
+    Angebot fortlaufend zu verbessern. Rechtsgrundlage ist unser überwiegendes Interesse gemäß Art. 31 Abs. 1 DSG sowie – soweit die DSGVO daneben zur Anwendung kommt – Art. 6 Abs. 1 lit. f DSGVO an einer bedarfsgerechten Gestaltung und
+    fortlaufenden Optimierung unserer Internetseite.
+  </li>
+</ol>
+
+<p>GoatCounter speichert keine Cookies, kein LocalStorage und keine sonstigen Informationen im Browser der betroffenen Person; ein Tracking über mehrere Internetseiten hinweg findet nicht statt. Die IP-Adresse der betroffenen Person wird
+  ausschließlich vorübergehend zur groben Standortbestimmung (Land) herangezogen und anschließend nicht gespeichert. Erfasst werden ausschliesslich aggregierte, nicht personenbezogene Daten wie die aufgerufene Unterseite, der Referrer, der
+  Browsertyp, das Betriebssystem, die Bildschirmbreite und das Land sowie – als Konversionsereignisse – Klicks auf Telefon- und E-Mail-Links und erfolgreiche Absendungen unseres Kontaktformulars. Eine Identifizierung einzelner Personen ist
+  anhand dieser Daten nicht möglich.</p>
+
+<p>Die Daten werden auf Servern der Hetzner Online GmbH in Finnland und Deutschland gespeichert. Da GoatCounter keine personenbezogenen Daten erhebt, ist nach Auffassung des Anbieters keine gesonderte Cookie-Einwilligung erforderlich; weitere
+  Informationen finden sich in der Datenschutzerklärung von GoatCounter unter https://www.goatcounter.com/privacy.</p>
+
+<ol>
   <li>Routinemäßige Löschung und Sperrung von personenbezogenen Daten
     Der für die Verarbeitung Verantwortliche verarbeitet und speichert personenbezogene Daten der betroffenen Person nur für den Zeitraum, der zur Erreichung des Speicherungszwecks erforderlich ist oder sofern dies durch den Europäischen
     Richtlinien- und Verordnungsgeber oder einen anderen Gesetzgeber in Gesetzen oder Vorschriften, welchen der für die Verarbeitung Verantwortliche unterliegt, vorgesehen wurde.
@@ -116,6 +142,9 @@ translation: /en/privacy/
 
 <p>Entfällt der Speicherungszweck oder läuft eine vom Europäischen Richtlinien- und Verordnungsgeber oder einem anderen zuständigen Gesetzgeber vorgeschriebene Speicherfrist ab, werden die personenbezogenen Daten routinemäßig und entsprechend den
   gesetzlichen Vorschriften gesperrt oder gelöscht.</p>
+
+<p>Die nachfolgend unter a) bis i) beschriebenen Rechte sind den Vorgaben der DSGVO nachgebildet und stehen betroffenen Personen zu, soweit die DSGVO auf die jeweilige Bearbeitung Anwendung findet. Die inhaltlich weitgehend
+  entsprechenden Rechte nach Schweizerischem DSG sind im Anschluss an Buchstabe i) gesondert dargestellt.</p>
 
 <ol>
   <li>Rechte der betroffenen Person
@@ -232,84 +261,31 @@ translation: /en/privacy/
 
 <p>Möchte die betroffene Person ihr Recht auf Widerruf einer Einwilligung geltend machen, kann sie sich hierzu jederzeit an einen Mitarbeiter des für die Verarbeitung Verantwortlichen wenden.</p>
 
+<p>j) Rechte nach Schweizerischem Datenschutzgesetz (DSG)
+  Für betroffene Personen, deren Daten dem Schweizerischen DSG unterliegen, gelten – anstelle bzw. ergänzend zu den vorstehenden, an der DSGVO orientierten Rechten a) bis i) – insbesondere folgende, inhaltlich weitgehend entsprechende
+  Rechte: das Recht auf Auskunft über die bearbeiteten Personendaten (Art. 25 ff. DSG), das Recht auf Herausgabe bzw. Übertragung der Personendaten in einem gängigen elektronischen Format (Art. 28 f. DSG) sowie das Recht auf Berichtigung
+  unrichtiger Personendaten (Art. 32 Abs. 1 DSG). Bei einer widerrechtlichen Persönlichkeitsverletzung durch die Datenbearbeitung stehen der betroffenen Person zudem die Ansprüche nach Art. 32 Abs. 2 DSG in Verbindung mit Art. 28 ff. des
+  Schweizerischen Zivilgesetzbuches (ZGB) zu, namentlich auf Unterlassung, Beseitigung oder Feststellung einer Verletzung; das Schweizerische DSG kennt insoweit kein eigenständig kodifiziertes „Recht auf Vergessenwerden“, „Recht auf
+  Einschränkung der Verarbeitung“ oder „Widerspruchsrecht“ nach dem Vorbild der Art. 17, 18 und 21 DSGVO – vergleichbarer Schutz ergibt sich hier aus den genannten persönlichkeitsrechtlichen Ansprüchen.</p>
+
+<p>Betroffene Personen können sich mit einer Beschwerde zudem jederzeit an die zuständige Aufsichtsbehörde wenden. In der Schweiz ist dies der Eidgenössische Datenschutz- und Öffentlichkeitsbeauftragte (EDÖB, Art. 4 DSG;
+  www.edoeb.admin.ch); betroffene Personen mit Wohnsitz in der EU/EWR können sich zusätzlich an die Datenschutz-Aufsichtsbehörde ihres jeweiligen Aufenthaltsorts wenden.</p>
+
 <ol>
-  <li>Datenschutzbestimmungen zu Einsatz und Verwendung von LinkedIn
-    Der für die Verarbeitung Verantwortliche hat auf dieser Internetseite Komponenten der LinkedIn Corporation integriert. LinkedIn ist ein Internetbasiertes soziales Netzwerk, das eine Konnektierung der Nutzer mit bestehenden
-    Geschäftskontakten sowie das Knüpfen von neuen Businesskontakten ermöglicht. Über 400 Millionen registrierte Personen nutzen LinkedIn in mehr als 200 Ländern. Damit ist LinkedIn derzeit die größte Plattform für Businesskontakte und eine
-    der meistbesuchten Internetseiten der Welt.
+  <li>Links zu unseren Profilen bei LinkedIn und X
+    Im Footer unserer Internetseite verlinken wir auf unser LinkedIn-Unternehmensprofil sowie unser Profil bei X (vormals Twitter). Es handelt sich dabei um einfache Hyperlinks, nicht um eingebundene Plug-ins, Widgets oder sonstige
+    Komponenten dieser Anbieter.
   </li>
 </ol>
 
-<p>Betreibergesellschaft von LinkedIn ist die LinkedIn Corporation, 2029 Stierlin Court Mountain View, CA 94043, USA. Für Datenschutzangelegenheiten außerhalb der USA ist LinkedIn Ireland, Privacy Policy Issues, Wilton Plaza, Wilton Place, Dublin
-  2, Ireland, zuständig.</p>
+<p>Beim blossen Aufruf unserer Internetseite wird daher keine Verbindung zu LinkedIn oder X aufgebaut, keine Komponente dieser Anbieter geladen und keine Information über Ihren Besuch an diese Anbieter übermittelt. Erst wenn Sie einen
+  dieser Links aktiv anklicken, verlassen Sie unsere Internetseite und gelangen auf das jeweilige externe Profil. Für die Datenverarbeitung auf der jeweiligen Plattform ist ausschliesslich der betreffende Anbieter verantwortlich; es gelten
+  dessen eigene Datenschutzbestimmungen: LinkedIn Ireland Unlimited Company (https://www.linkedin.com/legal/privacy-policy) bzw. X Corp. (https://x.com/privacy).</p>
 
-<p>Bei jedem einzelnen Abruf unserer Internetseite, die mit einer LinkedIn-Komponente (LinkedIn-Plug-In) ausgestattet ist, veranlasst diese Komponente, dass der von der betroffenen Person verwendete Browser eine entsprechende Darstellung der
-  Komponente von LinkedIn herunterlädt. Weitere Informationen zu den LinkedIn-Plug-Ins können unter https://developer.linkedin.com/plugins abgerufen werden. Im Rahmen dieses technischen Verfahrens erhält LinkedIn Kenntnis darüber, welche
-  konkrete Unterseite unserer Internetseite durch die betroffene Person besucht wird.</p>
-
-<p>Sofern die betroffene Person gleichzeitig bei LinkedIn eingeloggt ist, erkennt LinkedIn mit jedem Aufruf unserer Internetseite durch die betroffene Person und während der gesamten Dauer des jeweiligen Aufenthaltes auf unserer Internetseite,
-  welche konkrete Unterseite unserer Internetseite die betroffene Person besucht. Diese Informationen werden durch die LinkedIn-Komponente gesammelt und durch LinkedIn dem jeweiligen LinkedIn-Account der betroffenen Person zugeordnet. Betätigt
-  die betroffene Person einen auf unserer Internetseite integrierten LinkedIn-Button, ordnet LinkedIn diese Information dem persönlichen LinkedIn-Benutzerkonto der betroffenen Person zu und speichert diese personenbezogenen Daten.</p>
-
-<p>LinkedIn erhält über die LinkedIn-Komponente immer dann eine Information darüber, dass die betroffene Person unsere Internetseite besucht hat, wenn die betroffene Person zum Zeitpunkt des Aufrufes unserer Internetseite gleichzeitig bei
-  LinkedIn eingeloggt ist; dies findet unabhängig davon statt, ob die betroffene Person die LinkedIn-Komponente anklickt oder nicht. Ist eine derartige Übermittlung dieser Informationen an LinkedIn von der betroffenen Person nicht gewollt, kann
-  diese die Übermittlung dadurch verhindern, dass sie sich vor einem Aufruf unserer Internetseite aus ihrem LinkedIn-Account ausloggt.</p>
-
-<p>LinkedIn bietet unter https://www.linkedin.com/psettings/guest-controls die Möglichkeit, E-Mail-Nachrichten, SMS-Nachrichten und zielgerichtete Anzeigen abzubestellen sowie Anzeigen-Einstellungen zu verwalten. LinkedIn nutzt ferner Partner wie
-  Quantcast, Google Analytics, BlueKai, DoubleClick, Nielsen, Comscore, Eloqua und Lotame, die Cookies setzen können. Solche Cookies können unter https://www.linkedin.com/legal/cookie-policy abgelehnt werden. Die geltenden
-  Datenschutzbestimmungen von LinkedIn sind unter https://www.linkedin.com/legal/privacy-policy abrufbar. Die Cookie-Richtlinie von LinkedIn ist unter https://www.linkedin.com/legal/cookie-policy abrufbar.</p>
-
-<ol>
-  <li>Datenschutzbestimmungen zu Einsatz und Verwendung von Twitter
-    Der für die Verarbeitung Verantwortliche hat auf dieser Internetseite Komponenten von Twitter integriert. Twitter ist ein multilingualer öffentlich zugänglicher Mikroblogging-Dienst, auf welchem die Nutzer sogenannte Tweets, also
-    Kurznachrichten, die auf 280 Zeichen begrenzt sind, veröffentlichen und verbreiten können. Diese Kurznachrichten sind für jedermann, also auch für nicht bei Twitter angemeldete Personen abrufbar. Die Tweets werden aber auch den
-    sogenannten Followern des jeweiligen Nutzers angezeigt. Follower sind andere Twitter-Nutzer, die den Tweets eines Nutzers folgen. Ferner ermöglicht Twitter über Hashtags, Verlinkungen oder Retweets die Ansprache eines breiten Publikums.
-  </li>
-</ol>
-
-<p>Betreibergesellschaft von Twitter ist die Twitter, Inc., 1355 Market Street, Suite 900, San Francisco, CA 94103, USA.</p>
-
-<p>Durch jeden Aufruf einer der Einzelseiten dieser Internetseite, die durch den für die Verarbeitung Verantwortlichen betrieben wird und auf welcher eine Twitter-Komponente (Twitter-Button) integriert wurde, wird der Internetbrowser auf dem
-  informationstechnologischen System der betroffenen Person automatisch durch die jeweilige Twitter-Komponente veranlasst, eine Darstellung der entsprechenden Twitter-Komponente von Twitter herunterzuladen. Weitere Informationen zu den
-  Twitter-Buttons sind unter https://about.twitter.com/de/resources/buttons abrufbar. Im Rahmen dieses technischen Verfahrens erhält Twitter Kenntnis darüber, welche konkrete Unterseite unserer Internetseite durch die betroffene Person besucht
-  wird. Zweck der Integration der Twitter-Komponente ist es, unseren Nutzern eine Weiterverbreitung der Inhalte diese Internetseite zu ermöglichen, diese Internetseite in der digitalen Welt bekannt zu machen und unsere Besucherzahlen zu
-  erhöhen.</p>
-
-<p>Sofern die betroffene Person gleichzeitig bei Twitter eingeloggt ist, erkennt Twitter mit jedem Aufruf unserer Internetseite durch die betroffene Person und während der gesamten Dauer des jeweiligen Aufenthaltes auf unserer Internetseite,
-  welche konkrete Unterseite unserer Internetseite die betroffene Person besucht. Diese Informationen werden durch die Twitter-Komponente gesammelt und durch Twitter dem jeweiligen Twitter-Account der betroffenen Person zugeordnet. Betätigt die
-  betroffene Person einen der auf unserer Internetseite integrierten Twitter-Buttons, werden die damit übertragenen Daten und Informationen dem persönlichen Twitter-Benutzerkonto der betroffenen Person zugeordnet und von Twitter gespeichert und
-  verarbeitet.</p>
-
-<p>Twitter erhält über die Twitter-Komponente immer dann eine Information darüber, dass die betroffene Person unsere Internetseite besucht hat, wenn die betroffene Person zum Zeitpunkt des Aufrufs unserer Internetseite gleichzeitig bei Twitter
-  eingeloggt ist; dies findet unabhängig davon statt, ob die betroffene Person die Twitter-Komponente anklickt oder nicht. Ist eine derartige Übermittlung dieser Informationen an Twitter von der betroffenen Person nicht gewollt, kann diese die
-  Übermittlung dadurch verhindern, dass sie sich vor einem Aufruf unserer Internetseite aus ihrem Twitter-Account ausloggt.</p>
-
-<p>Die geltenden Datenschutzbestimmungen von Twitter sind unter https://twitter.com/privacy?lang=de abrufbar.</p>
-
-<ol>
-  <li>Datenschutzbestimmungen zu Einsatz und Verwendung von Xing
-    Der für die Verarbeitung Verantwortliche hat auf dieser Internetseite Komponenten von Xing integriert. Xing ist ein Internetbasiertes soziales Netzwerk, das die Konnektierung der Nutzer mit bestehenden Geschäftskontakten sowie das Knüpfen
-    von neuen Businesskontakten ermöglicht. Die einzelnen Nutzer können bei Xing ein persönliches Profil von sich anlegen. Unternehmen können beispielsweise Unternehmensprofile erstellen oder Stellenangebote auf Xing veröffentlichen.
-  </li>
-</ol>
-
-<p>Betreibergesellschaft von Xing ist die XING SE, Dammtorstraße 30, 20354 Hamburg, Deutschland.</p>
-
-<p>Durch jeden Aufruf einer der Einzelseiten dieser Internetseite, die durch den für die Verarbeitung Verantwortlichen betrieben wird und auf welcher eine Xing-Komponente (Xing-Plug-In) integriert wurde, wird der Internetbrowser auf dem
-  informationstechnologischen System der betroffenen Person automatisch durch die jeweilige Xing-Komponente veranlasst, eine Darstellung der entsprechenden Xing-Komponente von Xing herunterzuladen. Weitere Informationen zum den Xing-Plug-Ins
-  können unter https://dev.xing.com/plugins abgerufen werden. Im Rahmen dieses technischen Verfahrens erhält Xing Kenntnis darüber, welche konkrete Unterseite unserer Internetseite durch die betroffene Person besucht wird.</p>
-
-<p>Sofern die betroffene Person gleichzeitig bei Xing eingeloggt ist, erkennt Xing mit jedem Aufruf unserer Internetseite durch die betroffene Person und während der gesamten Dauer des jeweiligen Aufenthaltes auf unserer Internetseite, welche
-  konkrete Unterseite unserer Internetseite die betroffene Person besucht. Diese Informationen werden durch die Xing-Komponente gesammelt und durch Xing dem jeweiligen Xing-Account der betroffenen Person zugeordnet. Betätigt die betroffene
-  Person einen der auf unserer Internetseite integrierten Xing-Buttons, beispielsweise den „Share“-Button, ordnet Xing diese Information dem persönlichen Xing-Benutzerkonto der betroffenen Person zu und speichert diese personenbezogenen
-  Daten.</p>
-
-<p>Xing erhält über die Xing-Komponente immer dann eine Information darüber, dass die betroffene Person unsere Internetseite besucht hat, wenn die betroffene Person zum Zeitpunkt des Aufrufs unserer Internetseite gleichzeitig bei Xing eingeloggt
-  ist; dies findet unabhängig davon statt, ob die betroffene Person die Xing-Komponente anklickt oder nicht. Ist eine derartige Übermittlung dieser Informationen an Xing von der betroffenen Person nicht gewollt, kann diese die Übermittlung
-  dadurch verhindern, dass sie sich vor einem Aufruf unserer Internetseite aus ihrem Xing-Account ausloggt.</p>
-
-<p>Die von Xing veröffentlichten Datenschutzbestimmungen, die unter https://www.xing.com/privacy abrufbar sind, geben Aufschluss über die Erhebung, Verarbeitung und Nutzung personenbezogener Daten durch Xing. Ferner hat Xing unter
-  https://www.xing.com/app/share?op=data_protection Datenschutzhinweise für den XING-Share-Button veröffentlicht.</p>
+<p>Da unser Unternehmen seinen Sitz in der Schweiz hat, kennt das Schweizerische DSG kein der DSGVO entsprechendes geschlossenes Enumerationssystem von Rechtsgrundlagen. Nach Art. 6 DSG (Bearbeitungsgrundsätze) ist eine Bearbeitung
+  zulässig, wenn sie nach Treu und Glauben, verhältnismässig sowie zweckgebunden erfolgt; unzulässig ist sie, soweit dadurch die Persönlichkeit der betroffenen Person widerrechtlich verletzt wird (Art. 30 DSG), es sei denn, es liegt ein
+  Rechtfertigungsgrund vor – namentlich die Einwilligung der betroffenen Person, ein überwiegendes privates oder öffentliches Interesse oder eine gesetzliche Grundlage (Art. 31 DSG). Soweit die DSGVO daneben zur Anwendung kommt, gilt
+  ergänzend Folgendes:</p>
 
 <ol>
   <li><p>Rechtsgrundlage der Verarbeitung
