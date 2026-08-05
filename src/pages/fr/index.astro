@@ -1,8 +1,11 @@
 ---
-
+import config from "@config/config.json";
+const canonical = new URL("/de/", config.site.base_url).toString();
 ---
 <head>
+  <meta name="robots" content="noindex" />
   <meta http-equiv="refresh" content={ `0; url=/de/` } />
+  <link rel="canonical" href={canonical} />
   <script>
     window.setTimeout(() => {
       document.getElementById('redirectlink').style.opacity = '1';

@@ -15,6 +15,10 @@ import config from "./src/config/config.json";
 // (cwd, not import.meta.url: the config is re-bundled under dist/ at build time)
 const blogDir = path.resolve(process.cwd(), "src/content/blog");
 const blogRedirects = {};
+// legacy 2006-2014 posts (categories: [mobile, historic]) get noindex'd on the
+// page itself (see src/pages/{de,en}/blog/[single].astro) but sitemap
+// generation happens outside Astro's render pipeline, so it needs its own list.
+const noindexedBlogPaths = new Set();
 for (const file of fs.readdirSync(blogDir)) {
   if (!file.endsWith(".mdx") || file.startsWith("-")) continue;
   const slug = file.replace(/\.mdx$/, "");
@@ -24,6 +28,15 @@ for (const file of fs.readdirSync(blogDir)) {
   const match = frontmatter.match(/^language:\s*["']?([A-Za-z-]+)/m);
   const lang = match && match[1].toLowerCase().startsWith("en") ? "en" : "de";
   blogRedirects[`/blog/${slug}`] = `/${lang}/blog/${slug}`;
+  if (/^categories:.*\bhistoric\b/m.test(frontmatter)) {
+    noindexedBlogPaths.add(`/${lang}/blog/${slug}`);
+  }
+}
+// the mobile/historic category archives are made up entirely of that same
+// legacy cohort (see src/pages/{de,en}/categories/[category].astro)
+for (const lang of ["de", "en"]) {
+  noindexedBlogPaths.add(`/${lang}/categories/mobile`);
+  noindexedBlogPaths.add(`/${lang}/categories/historic`);
 }
 
 // https://astro.build/config
@@ -82,8 +95,14 @@ export default defineConfig({
   integrations: [
     react(),
     sitemap({
-      // /fr/ and /it/ are meta-refresh stubs to /de/, not real pages
-      filter: (page) => !/\/(fr|it)\/$/.test(page),
+      filter: (page) => {
+        // /fr/ and /it/ are meta-refresh stubs to /de/, not real pages
+        if (/\/(fr|it)\/$/.test(page)) return false;
+        const pathname = new URL(page).pathname.replace(/\/$/, "");
+        // legacy 2006-2014 posts and their category archives are noindex'd
+        if (noindexedBlogPaths.has(pathname)) return false;
+        return true;
+      },
       i18n: {
         defaultLocale: "de",
         locales: {

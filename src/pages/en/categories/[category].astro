@@ -43,9 +43,11 @@ const page_data = {
   index_title: "Categories",
   slug: item,
 };
+// these archive pages are entirely made up of legacy 2006-2014 posts
+const noindex = category === "mobile" || category === "historic";
 ---
 
-<Base title={category ? category : undefined} translation={translation}>
+<Base title={category ? category : undefined} translation={translation} noindex={noindex}>
   <section class="page-hero pb-8 pt-16">
     <div class="container">
       <div class="page-hero-content mx-auto max-w-[883px] text-center">

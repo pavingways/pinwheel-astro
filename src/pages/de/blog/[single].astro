@@ -33,6 +33,8 @@ const schemas = [
 // cornerstone posts may carry an FAQ section
 const faq = faqSchemaFromMarkdown(post.body);
 if (faq) schemas.push(faq);
+// legacy 2006-2014 posts are kept on the site but excluded from search
+const noindex = post.data.categories.includes("historic");
 ---
 
 <Base
@@ -42,6 +44,7 @@ if (faq) schemas.push(faq);
   image={image}
   translation={post.data.translation}
   schemas={schemas}
+  noindex={noindex}
 >
   <BlogSingle post={post} />
 </Base>
