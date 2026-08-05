@@ -35,23 +35,19 @@ export default defineConfig({
       {
         path: "de",
         codes: ["de", "de-CH", "de-DE"],
-        name: "Deutsch",
-        flag: '🇨🇭🇩🇪'
+        name: "Deutsch"
       }, {
         path: "en",
         codes: ["en", "en-US", "en-GB", "en-CA"],
-        name: "English",
-        flag: "🇺🇸"
+        name: "English"
       // }, {
       //   path: "fr",
       //   codes: ["fr", "fr-BR", "fr-CA"],
-      //   name: "Français",
-      //   flag: "🇫🇷"
+      //   name: "Français"
       // }, {
       //   path: "it",
       //   codes: ["it", "it-IT"],
-      //   name: "Italiano",
-      //   flag: "🇮🇹"
+      //   name: "Italiano"
       }],
     routing: {
       prefixDefaultLocale: true,

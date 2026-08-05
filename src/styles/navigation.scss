@@ -15,24 +15,29 @@ input#nav-toggle:checked ~ label#hide-button {
 }
 
 li.languages {
-  span.flag {
+  span.code {
     display: none;
   }
 }
 
 input#nav-toggle:checked ~ #nav-menu {
-  @apply block lg:flex mt-8;
+  @apply flex flex-wrap gap-x-2 mt-8;
 
   li {
     @apply pt-2 pb-2;
   }
 
+  li.nav-item-cta,
+  li.languages {
+    @apply w-full;
+  }
+
+  .nav-link {
+    @apply flex h-[42px] items-center px-4;
+  }
+
   li.languages {
     > span {
-      display: none;
-    }
-
-    span.flag {
       display: none;
     }
 
@@ -47,18 +52,19 @@ input#nav-toggle:checked ~ #nav-menu {
       max-width: 100%;
 
       > li {
-        //apply bg-primary/10 rounded p-4 pt-2 pb-2;
         @apply ml-4;
 
-        > a > span {
-          &.flag {
-            display: block;
-            font-size: 2rem;
+        > a {
+          @apply flex h-[42px] items-center px-3 text-[15px] font-semibold;
+
+          > span.code {
+            display: inline;
           }
-          &.lang {
+
+          > span.lang {
             display: none;
           }
-      }
+        }
       }
     }
   }
@@ -88,7 +94,7 @@ input#nav-toggle:checked ~ #nav-menu {
 }
 
 .navbar-nav {
-  @apply text-right lg:text-left;
+  @apply text-left;
 }
 
 .nav-link {
@@ -139,15 +145,6 @@ input#nav-toggle:checked ~ #nav-menu {
     }
 
   }
-
-  //&.languages {
-  //  span.flag {
-  //    display: block;
-  //  }
-  //  span.lang {
-  //    display: none;
-  //  }
-  //}
 }
 
 .nav-dropdown-link {

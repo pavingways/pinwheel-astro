@@ -23,7 +23,7 @@ const { pathname } = Astro.url;
         <a
           class={`${localeNow.path === Astro.currentLocale ? 'active' : ''}`}
           href={getLanguageSwitchUrl(localeNow.path, alternates, pathname)}
-        ><span class="flag">{localeNow.flag}</span> <span class="lang">{localeNow.name}</span></a>
+        ><span class="code">{localeNow.path.toUpperCase()}</span> <span class="lang">{localeNow.name}</span></a>
       </li>
     )}
   </ul>

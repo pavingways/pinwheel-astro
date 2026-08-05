@@ -4,7 +4,6 @@ export interface LocaleDef {
   path: string;
   codes: string[];
   name: string;
-  flag?: string;
 }
 
 // Languages that have their own URL tree (/de/..., /en/...)
