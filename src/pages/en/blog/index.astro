@@ -16,7 +16,11 @@ const i18n = getI18nStrings(Astro.currentLocale);
 
 const { blog_folder } = config.settings;
 const blogIndex: Record<string, any> = await getEntryBySlug<any, string>(blog_folder, "-index") || {};
-const posts = await getSinglePage(blog_folder, "en");
+// legacy 2006-2014 posts have their own archive (/categories/historic/) so they
+// don't dilute the current posts on the main blog listing
+const posts = (await getSinglePage(blog_folder, "en")).filter(
+  (post) => !post.data.categories.includes("historic")
+);
 const categories = await getTaxonomy(config.settings.blog_folder, "categories", "en");
 const sortedPosts = sortByDate(posts);
 const featuredPost = sortedPosts.filter((item) => item.data.featured);
@@ -74,6 +78,13 @@ const olderPosts = unfeaturedPosts.slice(3, config.settings.pagination);
         currentPage={1}
         totalPages={totalPages}
       />
+
+      <div class="mx-auto mt-16 max-w-[883px] border-t border-border pt-8 text-center">
+        <p class="text-sm text-text">
+          {i18n.blog.archive_note}{" "}
+          <a href="/en/categories/historic/" class="font-medium text-primary hover:underline">{i18n.blog.archive_cta} →</a>
+        </p>
+      </div>
 
     </div>
   </section>

@@ -21,7 +21,9 @@
       "description": "News und Einblicke vom Team PavingWays und aus der Welt der Mobilen Softwareentwicklung",
       "latest_posts": "",
       "older_posts": "Ältere Artikel",
-      "all_categories": "Alle Kategorien"
+      "all_categories": "Alle Kategorien",
+      "archive_note": "Auf der Suche nach älteren Beiträgen? Unser Archiv enthält Artikel aus den Jahren 2006–2014.",
+      "archive_cta": "Zum Archiv"
     },
     "cta": {
       "title": "Sprechen wir!",
@@ -74,7 +76,9 @@
       "description": "News and insights from the PavingWays team and the world of mobile software development",
       "latest_posts": "",
       "older_posts": "Older Posts",
-      "all_categories": "All Categories"
+      "all_categories": "All Categories",
+      "archive_note": "Looking for older posts? Our archive holds articles from 2006–2014.",
+      "archive_cta": "Browse the archive"
     },
     "cta": {
       "title": "Let's talk!",
