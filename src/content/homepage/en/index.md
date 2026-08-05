@@ -1,6 +1,6 @@
 ---
 page:
-  title: Mobile Apps in Central Switzerland - PavingWays GmbH
+  title: Mobile Apps in Switzerland - PavingWays GmbH
   description: "Full-lifecycle app development: we design, build, ship and maintain iOS and Android apps – since 2006, from Switzerland."
 banner:
   title: Mobile apps, built to last.

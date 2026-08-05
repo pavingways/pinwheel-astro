@@ -21,7 +21,9 @@ export function organizationSchema() {
     name: "PavingWays GmbH",
     legalName: "PavingWays GmbH",
     url: `${BASE}/`,
-    logo: absolute(config.site.logo),
+    // schema.org logo should be near-square (Google's Knowledge Panel logo
+    // slot) — the wide wordmark in config.site.logo isn't a good fit here
+    logo: absolute(config.site.favicon),
     foundingDate: "2006",
     description:
       "Mobile app development for iOS and Android: requirements engineering, development, CI/CD automation with fastlane, app store deployment, maintenance and app marketing. Since 2006.",

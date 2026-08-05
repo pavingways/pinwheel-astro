@@ -17,6 +17,11 @@ translation: /de/datenschutz/
   protection regulations applicable to die PavingWays GmbH. By means of this data protection declaration, our enterprise would like to inform the general public of the nature, scope, and purpose of the personal data we collect, use
   and process. Furthermore, data subjects are informed, by means of this data protection declaration, of the rights to which they are entitled.</p>
 
+<p>The controller within the meaning of data protection law is PavingWays GmbH, based in Meggen, Switzerland (contact details see section 2). As our company is based in Switzerland, the processing of personal data is governed primarily
+  by the Swiss Federal Act on Data Protection (FADP), in the version in force since 1 September 2023. Insofar as our website is also used by individuals resident in the European Union or the EEA and the General Data Protection Regulation
+  (GDPR) applies by virtue of its extraterritorial scope (Art. 3(2) GDPR), we additionally observe its requirements. The following explanations are phrased — also for the benefit of an international audience — using GDPR terminology;
+  the largely corresponding provisions of the Swiss FADP (in particular Art. 5, 6, 25 et seq. and 30 et seq. FADP) apply in parallel, to the extent the FADP is applicable.</p>
+
 <p>As the controller, die PavingWays GmbH has implemented numerous technical and organizational measures to ensure the most complete protection of personal data processed through this website. However, Internet-based data transmissions
   may in principle have security gaps, so absolute protection may not be guaranteed. For this reason, every data subject is free to transfer personal data to us via alternative means, e.g. by telephone.</p>
 
@@ -28,6 +33,9 @@ translation: /de/datenschutz/
 </ol>
 
 <p>In this data protection declaration, we use, inter alia, the following terms:</p>
+
+<p>The following terms are phrased using GDPR terminology (Art. 4 GDPR). The Swiss FADP uses largely corresponding terms in Art. 5 FADP (including "data subject", "controller" [Art. 5 lit. j FADP] and "processor" [Art. 5 lit. k FADP]);
+  we use the terms in this data protection declaration synonymously.</p>
 
 <p>a) Personal data
   Personal data means any information relating to an identified or identifiable natural person (“data subject”). An identifiable natural person is one who can be identified, directly or indirectly, in particular by reference to an identifier
@@ -73,7 +81,8 @@ translation: /de/datenschutz/
 
 <ol>
   <li>Name and Address of the controller
-    Controller for the purposes of the General Data Protection Regulation (GDPR), other data protection laws applicable in Member states of the European Union and other provisions related to data protection is:
+    Controller within the meaning of Art. 5 lit. j of the Swiss Federal Act on Data Protection (FADP) and — to the extent applicable — controller for the purposes of the General Data Protection Regulation (GDPR), other data protection
+    laws applicable in Member states of the European Union and other provisions related to data protection is:
   </li>
 </ol>
 
@@ -101,6 +110,20 @@ translation: /de/datenschutz/
   ensure an optimal level of protection for the personal data we process. The anonymous data of the server log files are stored separately from all personal data provided by a data subject.</p>
 
 <ol>
+  <li>Use of GoatCounter (web analytics)
+    This website uses the privacy-friendly web analytics service GoatCounter, operated by Martin Tournoij, Ireland. GoatCounter is used to statistically evaluate the use of our website and to continuously improve our offering. The legal
+    basis is our overriding interest under Art. 31(1) FADP and — insofar as the GDPR also applies — Art. 6(1)(f) GDPR in the needs-based design and ongoing optimization of our website.
+  </li>
+</ol>
+
+<p>GoatCounter does not store cookies, LocalStorage, or any other information in the data subject's browser, and it does not track visitors across websites. The data subject's IP address is used only transiently to derive a coarse
+  location (country) and is not stored afterwards. Only aggregated, non-personal data is collected, such as the sub-page visited, the referrer, browser type, operating system, screen width, and country, as well as — as conversion events —
+  clicks on phone and e-mail links and successful submissions of our contact form. It is not possible to identify individual persons from this data.</p>
+
+<p>Data is stored on servers operated by Hetzner Online GmbH in Finland and Germany. Since GoatCounter does not collect personal data, the provider takes the position that no separate cookie consent is required; further information is
+  available in GoatCounter's privacy policy at https://www.goatcounter.com/privacy.</p>
+
+<ol>
   <li>Routine erasure and blocking of personal data
     The data controller shall process and store the personal data of the data subject only for the period necessary to achieve the purpose of storage, or as far as this is granted by the European legislator or other legislators in laws or
     regulations to which the controller is subject to.
@@ -108,6 +131,9 @@ translation: /de/datenschutz/
 </ol>
 
 <p>If the storage purpose is not applicable, or if a storage period prescribed by the European legislator or another competent legislator expires, the personal data are routinely blocked or erased in accordance with legal requirements.</p>
+
+<p>The rights described below under a) to i) are modelled on the requirements of the GDPR and are available to data subjects insofar as the GDPR applies to the processing in question. The largely corresponding rights under the Swiss
+  FADP are set out separately following point i).</p>
 
 <ol>
   <li>Rights of the data subject
@@ -211,79 +237,29 @@ translation: /de/datenschutz/
 
 <p>If the data subject wishes to exercise the right to withdraw the consent, he or she may, at any time, contact any employee of die PavingWays GmbH.</p>
 
+<p>j) Rights under the Swiss Federal Act on Data Protection (FADP)
+  For data subjects whose data is governed by the Swiss FADP, the following largely corresponding rights apply — in place of, or in addition to, the GDPR-based rights a) to i) above: the right to information about the personal data
+  processed (Art. 25 et seq. FADP), the right to receive or have transferred the personal data in a common electronic format (Art. 28 f. FADP), and the right to rectification of inaccurate personal data (Art. 32(1) FADP). Where processing
+  unlawfully infringes personality rights, the data subject is further entitled to the claims under Art. 32(2) FADP in conjunction with Art. 28 et seq. of the Swiss Civil Code (ZGB), namely to have the infringement prohibited, eliminated,
+  or judicially declared. The Swiss FADP does not provide a separately codified "right to be forgotten", "right to restriction of processing", or "right to object" modelled on Art. 17, 18 and 21 GDPR — comparable protection instead
+  follows from the personality-rights claims described above.</p>
+
+<p>Data subjects may also lodge a complaint with the competent supervisory authority at any time. In Switzerland, this is the Federal Data Protection and Information Commissioner (FDPIC, Art. 4 FADP; www.edoeb.admin.ch); data subjects
+  resident in the EU/EEA may additionally contact the data protection supervisory authority of their place of residence.</p>
+
 <ol>
-  <li>Data protection provisions about the application and use of LinkedIn
-    The controller has integrated components of the LinkedIn Corporation on this website. LinkedIn is a web-based social network that enables users with existing business contacts to connect and to make new business contacts. Over 400 million
-    registered people in more than 200 countries use LinkedIn. Thus, LinkedIn is currently the largest platform for business contacts and one of the most visited websites in the world.
+  <li>Links to our LinkedIn and X profiles
+    Our website's footer links to our LinkedIn company profile and our profile on X (formerly Twitter). These are plain hyperlinks, not embedded plug-ins, widgets, or any other components of these providers.
   </li>
 </ol>
 
-<p>The operating company of LinkedIn is LinkedIn Corporation, 2029 Stierlin Court Mountain View, CA 94043, UNITED STATES. For privacy matters outside of the UNITED STATES LinkedIn Ireland, Privacy Policy Issues, Wilton Plaza, Wilton Place, Dublin
-  2, Ireland, is responsible.</p>
+<p>Simply visiting our website therefore does not establish any connection to LinkedIn or X, does not load any component of these providers, and does not transmit any information about your visit to them. Only when you actively click one
+  of these links do you leave our website and reach the respective external profile. Data processing on that platform is the sole responsibility of the respective provider, under its own privacy policy: LinkedIn Ireland Unlimited Company
+  (https://www.linkedin.com/legal/privacy-policy) and X Corp. (https://x.com/privacy), respectively.</p>
 
-<p>With each call-up to one of the individual pages of this Internet site, which is operated by the controller and on which a LinkedIn component (LinkedIn plug-in) was integrated, the Internet browser on the information technology system of the
-  data subject is automatically prompted to the download of a display of the corresponding LinkedIn component of LinkedIn. Further information about the LinkedIn plug-in may be accessed under https://developer.linkedin.com/plugins. During the
-  course of this technical procedure, LinkedIn gains knowledge of what specific sub-page of our website was visited by the data subject.</p>
-
-<p>If the data subject is logged in at the same time on LinkedIn, LinkedIn detects with every call-up to our website by the data subject—and for the entire duration of their stay on our Internet site—which specific sub-page of our Internet page
-  was visited by the data subject. This information is collected through the LinkedIn component and associated with the respective LinkedIn account of the data subject. If the data subject clicks on one of the LinkedIn buttons integrated on our
-  website, then LinkedIn assigns this information to the personal LinkedIn user account of the data subject and stores the personal data.</p>
-
-<p>LinkedIn receives information via the LinkedIn component that the data subject has visited our website, provided that the data subject is logged in at LinkedIn at the time of the call-up to our website. This occurs regardless of whether the
-  person clicks on the LinkedIn button or not. If such a transmission of information to LinkedIn is not desirable for the data subject, then he or she may prevent this by logging off from their LinkedIn account before a call-up to our website
-  is made.</p>
-
-<p>LinkedIn provides under https://www.linkedin.com/psettings/guest-controls the possibility to unsubscribe from e-mail messages, SMS messages and targeted ads, as well as the ability to manage ad settings. LinkedIn also uses affiliates such as
-  Eire, Google Analytics, BlueKai, DoubleClick, Nielsen, Comscore, Eloqua, and Lotame. The setting of such cookies may be denied under https://www.linkedin.com/legal/cookie-policy. The applicable privacy policy for LinkedIn is available under
-  https://www.linkedin.com/legal/privacy-policy. The LinkedIn Cookie Policy is available under https://www.linkedin.com/legal/cookie-policy.</p>
-
-<ol>
-  <li>Data protection provisions about the application and use of Twitter
-    On this website, the controller has integrated components of Twitter. Twitter is a multilingual, publicly-accessible microblogging service on which users may publish and spread so-called ‘tweets,’ e.g. short messages, which are limited to
-    280 characters. These short messages are available for everyone, including those who are not logged on to Twitter. The tweets are also displayed to so-called followers of the respective user. Followers are other Twitter users who follow a
-    user&#39;s tweets. Furthermore, Twitter allows you to address a wide audience via hashtags, links or retweets.
-  </li>
-</ol>
-
-<p>The operating company of Twitter is Twitter, Inc., 1355 Market Street, Suite 900, San Francisco, CA 94103, UNITED STATES.</p>
-
-<p>With each call-up to one of the individual pages of this Internet site, which is operated by the controller and on which a Twitter component (Twitter button) was integrated, the Internet browser on the information technology system of the data
-  subject is automatically prompted to download a display of the corresponding Twitter component of Twitter. Further information about the Twitter buttons is available under https://about.twitter.com/de/resources/buttons. During the course of
-  this technical procedure, Twitter gains knowledge of what specific sub-page of our website was visited by the data subject. The purpose of the integration of the Twitter component is a retransmission of the contents of this website to allow
-  our users to introduce this web page to the digital world and increase our visitor numbers.</p>
-
-<p>If the data subject is logged in at the same time on Twitter, Twitter detects with every call-up to our website by the data subject and for the entire duration of their stay on our Internet site which specific sub-page of our Internet page was
-  visited by the data subject. This information is collected through the Twitter component and associated with the respective Twitter account of the data subject. If the data subject clicks on one of the Twitter buttons integrated on our
-  website, then Twitter assigns this information to the personal Twitter user account of the data subject and stores the personal data.</p>
-
-<p>Twitter receives information via the Twitter component that the data subject has visited our website, provided that the data subject is logged in on Twitter at the time of the call-up to our website. This occurs regardless of whether the
-  person clicks on the Twitter component or not. If such a transmission of information to Twitter is not desirable for the data subject, then he or she may prevent this by logging off from their Twitter account before a call-up to our website
-  is made.</p>
-
-<p>The applicable data protection provisions of Twitter may be accessed under https://twitter.com/privacy?lang=en.</p>
-
-<ol>
-  <li>Data protection provisions about the application and use of Xing
-    On this website, the controller has integrated components of XING. XING is an Internet-based social network that enables users to connect with existing business contacts and to create new business contacts. The individual users can create
-    a personal profile of themselves at XING. Companies may, e.g. create company profiles or publish jobs on XING.
-  </li>
-</ol>
-
-<p>The operating company of XING is XING SE, Dammtorstraße 30, 20354 Hamburg, Germany.</p>
-
-<p>With each call-up to one of the individual pages of this Internet site, which is operated by the controller and on which a XING component (XING plug-in) was integrated, the Internet browser on the information technology system of the data
-  subject is automatically prompted to download a display of the corresponding XING component of XING. Further information about the XING plug-in the may be accessed under https://dev.xing.com/plugins. During the course of this technical
-  procedure, XING gains knowledge of what specific sub-page of our website was visited by the data subject.</p>
-
-<p>If the data subject is logged in at the same time on XING, XING detects with every call-up to our website by the data subject—and for the entire duration of their stay on our Internet site—which specific sub-page of our Internet page was
-  visited by the data subject. This information is collected through the XING component and associated with the respective XING account of the data subject. If the data subject clicks on the XING button integrated on our Internet site, e.g. the
-  &quot;Share&quot;-button, then XING assigns this information to the personal XING user account of the data subject and stores the personal data.</p>
-
-<p>XING receives information via the XING component that the data subject has visited our website, provided that the data subject is logged in at XING at the time of the call to our website. This occurs regardless of whether the person clicks on
-  the XING component or not. If such a transmission of information to XING is not desirable for the data subject, then he or she can prevent this by logging off from their XING account before a call-up to our website is made.</p>
-
-<p>The data protection provisions published by XING, which is available under https://www.xing.com/privacy, provide information on the collection, processing and use of personal data by XING. In addition, XING has published privacy notices for
-  the XING share button under https://www.xing.com/app/share?op=data_protection.</p>
+<p>As our company is based in Switzerland, the Swiss FADP does not use a closed catalogue of legal bases comparable to the GDPR. Under Art. 6 FADP (processing principles), processing is permissible if carried out in good faith, is
+  proportionate, and is limited to its purpose; it is unlawful insofar as it unlawfully infringes the personality of the data subject (Art. 30 FADP), unless a justification applies — namely the data subject's consent, an overriding
+  private or public interest, or a legal basis (Art. 31 FADP). Insofar as the GDPR also applies alongside the FADP, the following applies in addition:</p>
 
 <ol>
   <li><p>Legal basis for the processing
