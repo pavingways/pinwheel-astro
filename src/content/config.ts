@@ -17,6 +17,8 @@ const blogCollection = defineCollection({
     language: z.string().default("de"),
     // URL of the same post in the other language, e.g. /en/blog/some-slug
     translation: z.string().optional(),
+    // shows the AI-disclosure line under the byline; standard for AI-generated posts
+    aiAssisted: z.boolean().optional().default(false),
   }),
 });
 
