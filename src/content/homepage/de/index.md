@@ -3,7 +3,7 @@ page:
   title: Mobile Apps Schweiz - PavingWays GmbH
   description: "App-Entwicklung über den ganzen Lebenszyklus: Wir entwickeln, deployen und pflegen Mobile Apps für iOS und Android – seit 2006, aus der Schweiz."
 banner:
-  title: App-Entwicklung, die den ganzen Weg geht.
+  title: App-Entwicklung im Komplettpaket.
   content: "
     Von den Anforderungen bis in die App Stores – und durch jedes OS-Update danach.
     Wir entwickeln, deployen und pflegen **Mobile Apps für iOS und Android**.
