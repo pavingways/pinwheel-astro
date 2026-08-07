@@ -9,7 +9,7 @@ import Pagination from "@layouts/components/Pagination.astro";
 import Cta from "@layouts/partials/Cta.astro";
 import { getSinglePage } from "@lib/contentParser.astro";
 import { getTaxonomy } from "@lib/taxonomyParser.astro";
-import { sortByDate } from "@lib/utils/sortFunctions";
+import { sortByDate, splitFeaturedPosts } from "@lib/utils/sortFunctions";
 import { getEntryBySlug } from "astro:content";
 import { getI18nStrings } from "@lib/utils/i18n";
 const i18n = getI18nStrings(Astro.currentLocale);
@@ -23,11 +23,11 @@ const posts = (await getSinglePage(blog_folder, "en")).filter(
 );
 const categories = await getTaxonomy(config.settings.blog_folder, "categories", "en");
 const sortedPosts = sortByDate(posts);
-const featuredPost = sortedPosts.filter((item) => item.data.featured);
-const unfeaturedPosts = sortedPosts.filter((item) => !item.data.featured);
-const totalPages = Math.ceil(unfeaturedPosts.length / config.settings.pagination);
-const currentPosts = unfeaturedPosts.slice(0, 3);
-const olderPosts = unfeaturedPosts.slice(3, config.settings.pagination);
+// top block: newest post + featured post (or 2nd-newest, if none is featured)
+const { topPosts, restPosts } = splitFeaturedPosts(sortedPosts);
+const totalPages = Math.ceil(restPosts.length / config.settings.pagination);
+const currentPosts = restPosts.slice(0, 3);
+const olderPosts = restPosts.slice(3, config.settings.pagination);
 
 ---
 
@@ -51,8 +51,8 @@ const olderPosts = unfeaturedPosts.slice(3, config.settings.pagination);
     <div class="container">
 
       {
-        featuredPost.length > 0 && (
-          <FeaturedBlog posts={featuredPost} />
+        topPosts.length > 0 && (
+          <FeaturedBlog posts={topPosts} />
         )
       }
       {

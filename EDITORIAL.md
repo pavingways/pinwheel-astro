@@ -6,35 +6,52 @@ month**, zero in a crunch month is fine.
 
 ## Pipeline
 
-| # | Post | Lang | Status | Planned |
-|---|---|---|---|---|
-| 1 | Was kostet eine App? Der ehrliche Überblick 2026 / What Does an App Cost? | DE+EN | **live on merge** — CHF ranges need Rocco's sign-off; EN twin paired via `translation:` | Jul 2026 |
-| 2 | App-Wartung: Was nach dem Launch wirklich anfällt / App Maintenance: What Really Happens After Launch | DE+EN | **live** — `featured: true` so it shows in the top block on `/blog/`; extended with concrete platform examples (16KB pages, CocoaPods sunset, Liquid Glass, new devices) | Aug 2026 |
-| 3 | Ionic/Capacitor vs. React Native vs. Flutter: So wählen wir aus / How We Choose | DE+EN | written, `draft: true` | Sep 2026 |
-| 4 | Our production fastlane pipeline for iOS & Android in 2026 | EN | **skeleton — needs real pipeline facts from Jörg/Rocco** | Oct 2026 |
-| 5 | 20 years of shipping mobile apps: what changed, what didn't | EN | **skeleton — needs real history; the LinkedIn anniversary piece** | Nov 2026 |
-| 6 | Making your API usable by AI agents with MCP | EN | not created — gated on AI offer validation with existing clients | tbd |
+| # | Post                                                                                          | Lang | Status | Planned |
+|---|-----------------------------------------------------------------------------------------------|---|---|---|
+| 1 | Was kostet eine App? Der ehrliche Überblick 2026 / What Does an App Cost?                     | DE+EN | **live on merge** — CHF ranges need Rocco's sign-off; EN twin paired via `translation:` | Jul 2026 |
+| 2 | App-Wartung: Was nach dem Launch wirklich anfällt / App Maintenance: What Really Happens After Launch | DE+EN | **live** — extended with concrete platform examples (16KB pages, CocoaPods sunset, Liquid Glass, new devices); `categories: [insights, technology]` | Aug 2026 |
+| 3 | Ionic/Capacitor vs. React Native vs. Flutter: So wählen wir aus / How We Choose               | DE+EN | **live** — FAQ section, `aiAssisted: true` and a generated cover image added before publish | Aug 2026 |
+| 4 | Our production fastlane pipeline for iOS & Android in 2026                                    | EN | **skeleton — needs real pipeline facts from Jörg/Rocco** | Oct 2026 |
+| 5 | 20 years of shipping mobile apps: what changed, what didn't                                   | EN | **skeleton — needs real history; the LinkedIn anniversary piece** | Nov 2026 |
+| 6 | Making your API usable by AI agents with MCP                                                  | EN | not created — gated on AI offer validation with existing clients | tbd |
 
 ## Publishing a scheduled draft
 
-1. Open the post in `src/content/blog/`, review content (and the date — set it to the actual publish day).
+1. Open the post in `src/content/blog/`, review content, and set `date` to the actual
+   current date (today) — never leave the original planned-month placeholder in place.
+   This is a standing rule: always use today's date when a draft goes live, do it as
+   part of finishing/publishing the post, no need to check in about it first.
 2. Remove the `draft: true` line.
 3. Merge + deploy. The post appears in the blog index, RSS feeds and sitemap automatically.
 4. Diana: repurpose into LinkedIn post(s) — for our size, LinkedIn distribution beats organic search in year one.
 
 ## Featured posts
 
-`featured: true` pulls a post into the highlighted block at the top of `/blog/`, above
-the "Latest posts" heading — regardless of its `date`. This is why the newest post by
-date doesn't automatically show up first: a featured post always outranks non-featured
-posts, even newer ones.
+The top block of `/blog/` (above the "Latest posts" heading) always shows exactly two
+posts, side by side:
 
-- Featured posts render side by side (two per row), sorted newest-`date`-first among
-  themselves — same as the rest of the site.
-- To make a new post the top item on the page: either set `featured: true` on it (it
-  joins the featured row) or unset `featured` on whatever currently holds that slot.
-- Keep it to 2–3 featured posts at a time. Unset `featured` on older ones as new
-  cornerstone posts take over, unless you deliberately want them side by side.
+- **Slot 1 is always the single newest post by `date`** — never manually overridden.
+- **Slot 2 is the manually flagged `featured` post, if one exists** (anywhere in the
+  archive, not just recent posts) — otherwise it falls back to the second-newest post.
+  Setting `featured: true` on a post is how you replace slot 2 with it.
+
+So with zero posts flagged `featured` (the current state — nothing is featured right
+now), the top block is simply the two newest posts, which is the common case. Flip
+`featured: true` on a post only when you deliberately want to keep something in that
+second slot regardless of newer posts arriving (e.g. a cornerstone piece you want
+visible longer than its natural spot in the date order).
+
+- `featured` is **manual-only** — nothing sets or clears it automatically, and it does
+  not default to `true` (schema default is `false`).
+- Only one `featured` post is used at a time. If more than one post happens to be
+  flagged, the most recent one wins slot 2; the others render normally further down
+  the list — so don't rely on flagging several at once.
+- Unset `featured` on a post once you no longer want it pinned; the top block then
+  reverts to newest + second-newest automatically.
+- Implementation: `splitFeaturedPosts()` in `src/lib/utils/sortFunctions.ts`, used by
+  both `src/pages/{de,en}/blog/index.astro` (top block + pagination count) and
+  `src/pages/{de,en}/blog/page/[slug].astro` (so the two top posts aren't repeated on
+  page 2+).
 
 ## Post images
 
@@ -66,6 +83,14 @@ Example (this post): `node scripts/gen-blog-image.js --out app-maintenance-after
 
 - **Language pairing**: single-language posts are fine (archive precedent). If both languages exist, pair them with `translation:` frontmatter in *both* files.
 - **Category**: new posts use `insights` (never `historic` — that fences off the archive).
+  Additionally, whenever a post substantively discusses specific technologies —
+  naming frameworks, platforms, languages or dev tools as a real topic, not just a
+  passing generic mention of "apps" or "cross-platform" — add `technology` too, e.g.
+  `categories: [insights, technology]`. Applied retroactively to all three live
+  cornerstone posts (cost, maintenance, framework comparison), since all three name
+  concrete frameworks/platforms/tools. Skeleton posts (#4 fastlane, #5 20-years) will
+  almost certainly qualify too once actually written — decide when writing them, not
+  before.
 - **Frontmatter**: give every post a real `description` (meta description + RSS) and a real `author`.
 - **FAQ sections** (`## Häufige Fragen` / `## Frequently asked questions` with `###` questions) automatically emit FAQPage JSON-LD — use one on high-intent posts.
 - **Internal links**: every post should link at least one money page (`/de/app-entwicklung/`, `/de/app-wartung/`, …) and end with a soft CTA to `/de/kontakt/` / `/en/contact/`.

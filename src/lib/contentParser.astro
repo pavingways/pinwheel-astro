@@ -4,7 +4,9 @@ import { getCollection } from "astro:content";
 export const getSinglePage = async (collection: any, language?: string) => {
   const allPage = await getCollection(collection);
   const removeIndex = allPage.filter((data) => data.id.match(/^(?!-)/));
-  const removeDrafts = removeIndex.filter((data) => !data.data.draft);
+  const removeDrafts = removeIndex.filter(
+    (data) => !data.data.draft || import.meta.env.DEV
+  );
   // entries only live under their own language tree (/de/... or /en/...)
   const filterLanguage = language
     ? removeDrafts.filter((data) => (data.data.language ?? "de") === language)

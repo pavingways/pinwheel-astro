@@ -13,7 +13,7 @@ const blogCollection = defineCollection({
     author: z.string().optional().default("author"),
     categories: z.array(z.string()).default(["others"]),
     draft: z.boolean().optional(),
-    featured: z.boolean().optional().default(true),
+    featured: z.boolean().optional().default(false),
     language: z.string().default("de"),
     // URL of the same post in the other language, e.g. /en/blog/some-slug
     translation: z.string().optional(),

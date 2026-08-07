@@ -6,7 +6,10 @@ export async function GET(context) {
   // -index.md is list-page metadata, not a post
   const posts = await getCollection(
     "blog",
-    ({ slug, data }) => !data.draft && data.language === "en" && !slug.startsWith("-")
+    ({ slug, data }) =>
+      (!data.draft || import.meta.env.DEV) &&
+      data.language === "en" &&
+      !slug.startsWith("-")
   );
   const sorted = posts.sort((a, b) => (b.data.date ?? 0) - (a.data.date ?? 0));
   return rss({
