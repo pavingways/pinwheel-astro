@@ -11,7 +11,7 @@ month**, zero in a crunch month is fine.
 | 1 | Was kostet eine App? Der ehrliche Überblick 2026 / What Does an App Cost?                     | DE+EN | **live on merge** — CHF ranges need Rocco's sign-off; EN twin paired via `translation:` | Jul 2026 |
 | 2 | App-Wartung: Was nach dem Launch wirklich anfällt / App Maintenance: What Really Happens After Launch | DE+EN | **live** — extended with concrete platform examples (16KB pages, CocoaPods sunset, Liquid Glass, new devices); `categories: [insights, technology]` | Aug 2026 |
 | 3 | Ionic/Capacitor vs. React Native vs. Flutter: So wählen wir aus / How We Choose               | DE+EN | **live** — FAQ section, `aiAssisted: true` and a generated cover image added before publish | Aug 2026 |
-| 4 | Our production fastlane pipeline for iOS & Android in 2026                                    | EN | **skeleton — needs real pipeline facts from Jörg/Rocco** | Oct 2026 |
+| 4 | Our production fastlane pipeline for iOS & Android in 2026 / Unsere Fastlane-Pipeline für iOS & Android 2026 | DE+EN | **live** — based on our real fastlane setup (client identity scrubbed); hybrid-app (React Native/Capacitor) angle, provisioning-profile types, and cheap-Linux-vs-expensive-macOS-runner economics called out for SEO; EAS Build section is explicitly forward-looking/WIP, not shipped; DE twin paired via `translation:` | Aug 2026 |
 | 5 | 20 years of shipping mobile apps: what changed, what didn't                                   | EN | **skeleton — needs real history; the LinkedIn anniversary piece** | Nov 2026 |
 | 6 | Making your API usable by AI agents with MCP                                                  | EN | not created — gated on AI offer validation with existing clients | tbd |
 

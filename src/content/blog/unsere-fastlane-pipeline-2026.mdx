@@ -1,0 +1,103 @@
+---
+title: "Unsere Fastlane-Pipeline für iOS & Android 2026"
+date: 2026-08-15T09:00:00+02:00
+image: /images/blog-fastlane-pipeline-2026.webp
+categories: [insights, technology]
+author: Rocco
+featured: false
+language: de
+description: "Ein Blick in unsere fastlane- und GitHub-Actions-Pipeline: Versionen und Build-Nummern, die sich selbst hochzählen, Signierung ohne Tränen, echte Build-Zeiten – und was UI-Tests und EAS Build als Nächstes bringen."
+translation: /en/blog/fastlane-pipeline-2026
+aiAssisted: true
+---
+
+Irgendwo auf einem Entwickler-Laptop liegt eine Datei namens `app-release-v3-FINAL-2.ipa`. Wenn Ihr Release-Prozess noch bedeutet, dass jemand in Xcode auf «Archive» klickt, App Store Connect von Hand ausfüllt und hofft, dass die Build-Nummer noch nicht vergeben ist – kennen Sie die Fehlerbilder: ein vergessener Versionssprung, ein Zertifikat, das im ungünstigsten Moment abläuft, ein Release, das freitags niemand verantworten will. Wir bauen seit 2006 Apps, und die grösste Veränderung in dieser Zeit sind nicht die Frameworks – sondern dass nichts davon mehr eine Person braucht.
+
+Das ist die Pipeline, die wir heute produktiv einsetzen. Drei Dinge bringt sie uns: **Automatisierung** von Anfang bis Ende, **Flexibilität**, dieselben Lanes lokal oder auf jeder CI laufen zu lassen, und **verlässliche** Builds, die sich identisch verhalten, egal ob ein Mensch oder ein Roboter sie auslöst.
+
+## Zwei Branches, zwei Umgebungen, keine manuelle Versionierung
+
+Der Aufbau ist bewusst unspektakulär: zwei Branches, zwei GitHub-Actions-Workflows, zwei fastlane-Lanes.
+
+- Push auf `staging` → Build gegen eine Staging-Bundle-ID, Upload an externe TestFlight-Tester und den internen Google-Play-Track.
+- Push auf `main` → Produktions-Build, Upload an TestFlight (intern, wartet auf Marketing-Freigabe) und Plays geschlossenen Beta-Track.
+
+Die meisten unserer Apps sind hybrid – React Native oder Capacitor mit einem Web-Technologie-Kern in einer dünnen nativen Hülle. Das ist nicht nur eine Framework-Entscheidung, sie prägt die Pipeline: Der Grossteil der App-Logik und -Oberfläche steckt in TypeScript/JavaScript und lässt sich in einem reinen Node.js-Prozess linten, typprüfen und mit Unit-Tests abdecken – ohne Xcode, ohne Gradle, ohne dass ein Simulator starten muss, um einen kaputten Funktionsaufruf zu finden.
+
+Ohne Widerstand kommt trotzdem keiner der beiden Branches durch: Ein PR-Checks-Workflow prüft bei jedem Pull Request Linting, einen vollständigen TypeScript-Check und die Unit-Test-Suite gegen genau diese Web-Schicht – auf einem gewöhnlichen Linux-Runner, meist in unter einer Minute erledigt. Nichts landet auf `staging` oder `main`, das nicht alle drei besteht – und niemand wartet auf einen knappen macOS-Runner, nur um einen Tippfehler zu finden.
+
+Am liebsten mögen wir, dass nirgends eine Versionsnummer von Hand eingetragen wird. Auf `main` löst ein Merge `semantic-release` aus: Das Tool liest die Commit-Messages seit dem letzten Release nach Conventional Commits – `fix:` wird zum Patch, `feat:` zur Minor-Version, `feat!:` zur Major-Version –, erhöht die Version in `package.json`, schreibt das Changelog und taggt das Release. Unabhängig davon fragen die Fastfile-Lanes vor jedem Build App Store Connect und Google Play, welche Build-Nummer aktuell die höchste ist, und zählen um eins hoch:
+
+```ruby
+latest_build = latest_testflight_build_number(
+  app_identifier: ENV["APP_IDENTIFIER"],
+  initial_build_number: 0
+)
+increment_build_number(build_number: latest_build + 1)
+```
+
+Zwei unabhängige Quellen der Wahrheit, beide automatisiert. Der einzige menschliche Beitrag, der bleibt, ist eine sauber formatierte Commit-Message – und selbst die stammt zunehmend nicht mehr von einem Menschen: KI-Coding-Agents halten sich an das Conventional-Commits-Format meist zuverlässiger als ein Entwickler, der freitagabends schnell noch committen will.
+
+## Signierung ohne Tränen
+
+Code-Signierung ist die Stelle, an der die meisten manuellen Pipelines still vor sich hin verrotten. Unsere nicht, weil Zertifikate und Provisioning Profiles nie auf einem Entwickler-Laptop liegen – sie liegen verschlüsselt in einem privaten Git-Repository, verwaltet von fastlane `match`. CI authentifiziert sich über einen API-Key bei App Store Connect und holt Zertifikate aus diesem Repo **nur lesend**: Sie können genutzt, aber nie ausgestellt oder widerrufen werden.
+
+```ruby
+match(
+  type: "appstore",
+  app_identifier: ENV["APP_IDENTIFIER"],
+  readonly: true
+)
+```
+
+Läuft ein Apple-Distribution-Zertifikat ab – einmal im Jahr, planbar, genau wie OS-Updates und Store-Richtlinien planbar sind –, führt ein Lead Developer lokal `fastlane match appstore` aus, und das erneuerte Zertifikat landet zurück im selben Repo, aus dem CI es beim nächsten Lauf zieht. Sollten Zertifikate je irreparabel beschädigt sein, gibt es eine bewusst radikale Notlösung: `fastlane match nuke appstore` löscht sie bei Apple und im Certs-Repo, ein sauberes `match appstore` erzeugt danach alles neu. Ein Fehlerfall, der eine Fünf-Minuten-Aufgabe bleiben sollte – kein Vorfall.
+
+`match` verwaltet nicht nur eine Art von Berechtigung. Apple stellt für unterschiedliche Zwecke unterschiedliche Provisioning Profiles aus – **Development Profiles** für Debug-Builds auf einem registrierten Gerät oder Simulator, **Ad-hoc-Distribution-Profiles** für die Installation eines Builds direkt auf einer festen Liste von Testgeräten, ganz ohne TestFlight, und **App-Store-Distribution-Profiles** für alles, was Richtung TestFlight oder App Store geht. Unsere CI-Lane zieht für Release-Builds nur lesend ein App-Store-Distribution-Profile; im selben Certs-Repo liegt auch das Development Profile, sodass ein neuer Laptop im Team nur ein `match development` davon entfernt ist, die App auf einem echten Gerät zu bauen und zu starten – kein Zertifikat per Mail, keine Keychain-Archäologie.
+
+## Vom Merge zum Testgerät
+
+Auf dieser Pipeline dauert ein Staging-Build ungefähr **15 Minuten für iOS** und **30 Minuten für Android**, beide Plattformen laufen parallel statt nacheinander. Beide Zeiten werden von der nativen Kompilierung dominiert, nicht von fastlane selbst – der Automatisierungs-Overhead liegt nahe null.
+
+Die Zahl, die man kennen sollte, wenn man das auf GitHub Actions plant: Die kostenlose Stufe umfasst 2000 Actions-Minuten pro Monat, aber **macOS-Runner verbrauchen sie im zehnfachen Tempo von Linux-Runnern**. Rechnet man das durch, ist bei einem Build auf jeden Push nach `staging` das Monatsbudget nach rund einem Dutzend iOS-Builds aufgebraucht. Genau hier zahlt sich Hybrid doppelt aus: Die Logik-Tests sind bereits während der PR-Checks auf günstigen Linux-Runnern gelaufen, sodass die teuren macOS-Minuten für genau eine Sache draufgehen – den finalen nativen Build samt Signierung –, statt für Fehler, die ein Node-Prozess für einen Bruchteil der Kosten hätte finden können. Genau dieser Engpass ist auch der Grund, warum «Flexibilität» ein echtes Designziel ist und kein Buzzword: Dieselben fastlane-Lanes laufen unverändert auf einem Entwickler-Laptop, auf einem selbst gehosteten Runner oder – dazu gleich mehr – zunehmend auf einem Cloud-Build-Dienst, der nicht nach CI-Minute abgerechnet wird.
+
+## Was die meisten Pipelines auslassen: UI-Tests auf echten Geräten
+
+Das PR-Checks-Gate von oben fängt kaputte Logik ab – einen fehlschlagenden Unit-Test, einen Typfehler, einen Lint-Verstoss. Eine kaputte App fängt es nicht ab. Kein Unit-Test bemerkt, dass ein Button hinter einem Systemdialog im neuesten iOS plötzlich unerreichbar ist, oder dass ein Layout bei einer bestimmten Android-Bildschirmdichte zerbricht.
+
+Auch hier zahlt sich Hybrid mit einer günstigen Zwischenstufe aus: Weil die Oberfläche selbst Web-Technologie ist, lässt sich ein grosser Teil davon in einer reinen Browser-Umgebung prüfen – kein Simulator, kein physisches Gerät, keine plattformspezifischen Build-Tools installiert – mit schnellen Komponenten- und Interaktionstests, die in Sekunden statt Minuten laufen. Das ersetzt nicht den echten Test, fängt aber einen überraschend grossen Teil der UI-Regressionen ab, bevor überhaupt ein langsamerer Lauf auf einem echten Gerät nötig wird.
+
+Was danach übrig bleibt, sind echte End-to-End-UI-Tests: die tatsächlich kompilierte App durch ihre kritischen Abläufe steuern, so wie es Nutzer tun würden. Das ist die Ebene, an der die meisten CI/CD-Pipelines – auch frühere Versionen dieser – hängen bleiben. Der Weg, den wir gerade einrichten: ein Tool wie Maestro oder Detox skriptet die echten Abläufe (Login, Checkout, was auch immer der kritische Pfad der App ist), ausgeführt entweder gegen Simulatoren/Emulatoren in CI für Geschwindigkeit, oder gegen echte Geräte auf einem Dienst wie BrowserStack App Automate für die Geräteabdeckung, die ein Simulator nicht vortäuschen kann – faltbare Geräte, ältere OS-Versionen, das Handy, das Ihre Nutzer tatsächlich besitzen. Teams, die die Hardware lieber selbst besitzen statt sie zu mieten, fahren mit einem kleinen eigenen Geräte-Regal, das in dieselben Lanes eingebunden ist, genauso gut – fastlane ist es egal, woher das Gerät kommt.
+
+## Was als Nächstes kommt: EAS Build ergänzen
+
+Speziell für Expo-/React-Native-Projekte prüfen wir gerade, Expo Application Services (EAS Build) mit ins Bild zu holen – dieser Teil ist in Arbeit, noch nicht produktiv. Die konzeptionelle Aufteilung ist klar: EAS übernimmt die eigentliche Build-Warteschlange und die Verwaltung der Zertifikate in der Cloud, sodass ein iOS-Build nicht auf eine knappe macOS-Runner-Minute warten muss. fastlane behält alles, worin es schon gut ist – Signatur-Prüfung, Changelogs, den eigentlichen Upload an TestFlight und Play, gestaffelte Rollouts. Einmal bauen, gleich ausliefern, nur ohne die Runner-Minuten-Obergrenze.
+
+## Was weiterhin einen Menschen braucht
+
+Nicht alles sollte automatisiert werden, und das verschweigen wir nicht:
+
+- **Zertifikatserneuerung**, einmal im Jahr – technisch automatisierbar, bewusst nicht automatisiert: CI hält immer nur einen nur-lesenden Key, sodass selbst ein vollständig kompromittiertes Pipeline-Secret Zertifikate zwar nutzen, aber nie ausstellen oder widerrufen kann. Ein fünfminütiger lokaler Lauf von `match appstore` durch einen Lead Developer ist ein kleiner Preis, um diese Grenze intakt zu halten.
+- **Biometrische Authentifizierung, QR-/Kamera-Scans und Push-Benachrichtigungen testen** – sie hängen von echten Sensoren und OS-Berechtigungsdialogen ab, die Simulatoren schlecht nachbilden, also klickt sich vor jedem Release jemand auf einem echten Gerät durch. Das *Setup* dahinter ist nicht der schwierige Teil: Push-Zertifikate, Deep-Link-Schemas und Berechtigungs-Entitlements pro Umgebung werden von denselben Lanes automatisch skriptet und angewendet – nur die Prüfung «ist der Fingerabdruck-Dialog tatsächlich erschienen» bleibt manuell.
+- **Echte Nutzertests** – die Pipeline kann nicht beantworten, ob Nutzer einen Erklärbildschirm brauchen, *warum* gleich der Push-Benachrichtigungs-Dialog des Betriebssystems erscheint, oder ob dieser Bildschirm nur unnötige Reibung erzeugt. Das beantworten nur echte Nutzer. Der Vorteil des ganzen Aufbaus: Ein Build mit Erklärbildschirm und einer ohne sind beide nur einen Merge entfernt, sodass ein sauberer Test dieser Frage einen Nachmittag kostet, nicht einen ganzen Release-Zyklus.
+- **Store-Freigabe-Entscheidungen** – Marketing-Texte, Screenshots und Release Notes bekommen weiterhin einen menschlichen Blick, bevor ein Produktions-Build zur Store-Prüfung geht.
+- **Das eigentliche Go/No-Go** – die Pipeline kann ein Release in Minuten bauen, testen und hochladen; die Entscheidung, *wann* es rausgeht, bleibt eine Produktentscheidung, keine Pipeline-Einstellung.
+
+## Diesen Aufbau übernehmen
+
+Nichts davon ist exotisch – es ist fastlane, GitHub Actions und ein paar hundert Zeilen Ruby, so zusammengesetzt, wie wir es uns wünschen würden, hätte es jemand anderes für uns gebaut. Genau diese Art Pipeline richten wir auch für andere Teams ein: als kompletten Aufbau, als Audit dessen, was bereits existiert, oder als Schulung, damit Ihr Team die Automatisierung selbst weiterentwickeln kann. Das deckt unsere [CI/CD & Testautomatisierung](/de/ci-cd-testautomation/) ab.
+
+Wenn Ihr Release-Prozess noch einen «hier klicken und warten»-Schritt enthält, [sprechen wir darüber](/de/kontakt/), was es braucht, um ihn loszuwerden.
+
+## Häufige Fragen
+
+### Warum fastlane statt eines vollständig verwalteten Build-Dienstes?
+
+Vollständig verwaltete Dienste sind praktisch, bis man etwas braucht, das sie nicht unterstützen – eine spezielle Signierungs-Eigenheit, eine eigene Lane, die Integration eigener Test-Tools. fastlane ist offen, skriptbar und funktioniert mit praktisch jedem CI-System – deshalb setzen wir seit Jahren in sehr unterschiedlichen Projekten darauf.
+
+### Was kostet der Aufbau für unsere App?
+
+Kommt darauf an, was bereits existiert – manche Projekte brauchen eine komplette Pipeline von null, andere ein Audit und ein paar fehlende Lanes. Wir kalkulieren das nach einem kurzen Blick auf Ihren aktuellen Prozess; siehe [CI/CD & Testautomatisierung](/de/ci-cd-testautomation/) für den Leistungsumfang.
+
+### Müssen wir dafür auf GitHub Actions setzen?
+
+Nein. GitHub Actions ist unser Standard, weil die meisten Teams, mit denen wir arbeiten, es bereits nutzen – fastlane selbst ist es egal, welche CI es ausführt. Die Lanes aus diesem Beitrag würden auf jedem System laufen, das Code auschecken und Ruby ausführen kann.

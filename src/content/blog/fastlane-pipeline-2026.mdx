@@ -1,36 +1,103 @@
 ---
 title: "Our production fastlane pipeline for iOS & Android in 2026"
-date: 2026-10-15T09:00:00+02:00
-image: /images/blog-default-old.webp
-categories: [insights]
+date: 2026-08-15T09:00:00+02:00
+image: /images/blog-fastlane-pipeline-2026.webp
+categories: [insights, technology]
 author: Rocco
 featured: false
 language: en
-description: "TODO: one-sentence summary once the article is written."
-draft: true # TODO skeleton — needs real pipeline details from Jörg/Rocco before writing
+description: "Inside our fastlane + GitHub Actions pipeline: self-bumping versions, signing without tears, real build times, and what UI testing and EAS Build add next."
+translation: /de/blog/unsere-fastlane-pipeline-2026
+aiAssisted: true
 ---
 
-{/*
-TODO — this post needs OUR REAL pipeline to be credible (technical authority piece).
-Collect from the team before writing:
+Somewhere on a developer's laptop there is a file called `app-release-v3-FINAL-2.ipa`. If your release process still involves a person clicking "Archive" in Xcode, filling in App Store Connect by hand, and hoping the build number wasn't already used – you know the failure modes: a version bump that got forgotten, a certificate that expired at the worst possible moment, a release nobody wants to own on a Friday. We've been shipping mobile apps since 2006, and the biggest change in that time isn't the frameworks – it's that none of this needs a person anymore.
 
-- actual lane structure (build/beta/release lanes, per platform)
-- how signing is managed (match? manual? keystore handling on CI)
-- which GitHub Actions runners (macOS version, self-hosted?), caching strategy, build times
-- how TestFlight / Play internal testing distribution is triggered
-- screenshot automation? metadata sync? staged rollouts config
-- one real war story (what broke, how the pipeline caught it)
-- code snippets from a real (sanitized) Fastfile
+This is the pipeline we run today, in production. Three things it buys us: **automation** end to end, **flexibility** to run the same lanes locally or on any CI, and **reliable** builds that behave identically whether a human or a robot triggers them.
 
-Target audience: developers/CTOs evaluating us for CI/CD work.
-Feeds: /en/ci-cd-test-automation/ — link it prominently.
-*/}
+## Two branches, two environments, zero manual versioning
 
-Outline (draft):
+The setup is deliberately boring: two branches, two GitHub Actions workflows, two fastlane lanes.
 
-1. Why we automate every release (the cost of manual releases)
-2. The lane structure we converged on after years of iteration
-3. Signing without tears: how certificates/keystores live on CI
-4. From merge to TestFlight in N minutes (real numbers)
-5. What still needs a human (and why that's fine)
-6. Steal this setup (link to CI/CD service page)
+- Push to `staging` → builds against a staging bundle ID, uploads to TestFlight external testers and the Google Play internal track.
+- Push to `main` → builds production, uploads to TestFlight (internal, awaiting marketing review) and Play's closed beta track.
+
+Most of what we build is hybrid – React Native or Capacitor apps with a web-technology core wrapped in a thin native shell. That's not just a framework choice, it shapes the pipeline: the bulk of an app's logic and UI lives in TypeScript/JavaScript, which can be linted, type-checked and unit-tested in a plain Node.js process – no Xcode, no Gradle, no simulator boot required to find out a function is broken.
+
+Neither branch gets there without a fight, though: a PR-checks workflow runs lint, a full TypeScript check and the unit test suite against that web layer on every pull request, on a standard Linux runner, usually done in well under a minute. Nothing lands on `staging` or `main` that doesn't pass all three – and nobody waited on a scarce macOS runner just to catch a typo.
+
+The part we like best is that nobody types a version number anywhere. On `main`, a merge triggers `semantic-release`, which reads the commit messages since the last release using Conventional Commits – `fix:` becomes a patch, `feat:` a minor version, `feat!:` a major – bumps `package.json`, writes the changelog and tags the release. Separately, before every build, the Fastfile lanes ask App Store Connect and Google Play what the latest build number actually is and increment it by one:
+
+```ruby
+latest_build = latest_testflight_build_number(
+  app_identifier: ENV["APP_IDENTIFIER"],
+  initial_build_number: 0
+)
+increment_build_number(build_number: latest_build + 1)
+```
+
+Two independent sources of truth, both automated. The only human input required is a well-formed commit message – and even that's increasingly not typed by a human at all: AI coding agents tend to follow the Conventional Commits format correctly and consistently, more reliably than a developer rushing a commit late on a Friday.
+
+## Signing without tears
+
+Code signing is where most manual pipelines quietly rot. Ours doesn't, because certificates and provisioning profiles never live on a developer's machine – they live encrypted in a private git repository, managed by fastlane `match`. CI authenticates against App Store Connect via an API key and pulls certificates from that repo **read-only**: it can use them, never issue or revoke them.
+
+```ruby
+match(
+  type: "appstore",
+  app_identifier: ENV["APP_IDENTIFIER"],
+  readonly: true
+)
+```
+
+When an Apple Distribution certificate expires – once a year, predictably, the same way OS updates and store policy changes are predictable – a lead developer runs `fastlane match appstore` locally, and the refreshed certificate lands back in the same repo for CI to pick up on the next run. If certificates ever get corrupted beyond repair, there's a deliberately blunt escape hatch: `fastlane match nuke appstore` wipes them from Apple and the certs repo, then a clean `match appstore` regenerates everything. It's the kind of failure that should be a five-minute chore, not an incident.
+
+`match` doesn't manage just one kind of credential, either. Apple issues different provisioning profiles for different jobs – **development profiles** for running debug builds on a registered device or simulator, **ad-hoc distribution profiles** for installing a build straight onto a fixed list of test devices without going through TestFlight at all, and **App Store distribution profiles** for anything headed to TestFlight or the App Store itself. Our CI lane pulls an App Store distribution profile read-only for release builds; the same certs repo holds the development profile, so a new engineer's laptop is one `match development` away from building and running the app on a physical device – no certificate emailed around, no Keychain archaeology.
+
+## From merge to a tester's phone
+
+On this pipeline, a staging build takes roughly **15 minutes for iOS** and **30 minutes for Android**, with both platforms building in parallel jobs rather than one after another. Both numbers are dominated by native compilation, not by fastlane itself – the automation overhead is close to zero.
+
+The number worth knowing if you're planning this on GitHub Actions: the free tier includes 2,000 Actions minutes a month, but **macOS runners burn them at 10x the rate of Linux ones**. Do the math and a project building on every push to `staging` runs out of budget around a dozen iOS builds a month. This is where building hybrid pays off twice: the logic-level testing already happened on cheap Linux runners during PR checks, so the expensive macOS minutes get spent on exactly one thing – the final native compile and signing step – not on catching bugs that a Node process could have caught for a fraction of the cost. That constraint is also exactly why "flexibility" matters as a design goal, not just a buzzword: the same fastlane lanes run unchanged on a developer's laptop, on a self-hosted runner, or – see below – increasingly on a cloud build service that isn't priced by the CI minute.
+
+## The piece most pipelines skip: real-device UI testing
+
+The PR-checks gate above catches broken logic – a failing unit test, a type error, a lint violation. It does not catch a broken app. No unit test notices that a button is now unreachable behind a system dialog on the newest iOS, or that a layout breaks on a specific Android screen density.
+
+Hybrid buys a cheap middle step here, too. Because the UI itself is web technology, a large share of it can be exercised in a browser-only environment – no simulator, no physical device, no platform build tools installed at all – with fast component and interaction tests that run in seconds, not minutes. That's not a substitute for the real thing, but it catches a surprising share of UI regressions before a slower, real-device run is even triggered.
+
+What's left after that is genuine end-to-end UI testing: driving the actual compiled binary through its critical flows the way a user would. It's the layer most CI/CD pipelines – including earlier versions of this one – never get around to. The path we're adding: a tool like Maestro or Detox scripting the real flows (login, checkout, whatever the app's critical path is), run either against simulators/emulators in CI for speed, or against real devices on a service like BrowserStack App Automate for the device coverage a simulator can't fake – foldables, older OS versions, the phone your users actually own. For teams that would rather own the hardware than rent it, a small in-house device shelf wired into the same lanes works just as well; fastlane doesn't care where the device comes from.
+
+## What's next: layering in EAS Build
+
+For Expo/React Native projects specifically, we're now evaluating adding Expo Application Services (EAS Build) into the mix – this part is in progress, not shipped yet. The conceptual split is clean: EAS takes over the actual compile queue and credential storage in the cloud, so an iOS build isn't waiting on a scarce macOS runner minute. fastlane keeps everything it's already good at – signing verification, changelogs, the actual upload to TestFlight and Play, staged rollouts. Build once, ship the same way, just without the runner-minute ceiling.
+
+## What still needs a human
+
+Not everything should be automated, and we don't pretend otherwise:
+
+- **Certificate renewal**, once a year – technically automatable, deliberately not automated: CI only ever holds a read-only key, so even a fully compromised pipeline secret can use certificates but never mint or revoke one. A five-minute local `match appstore` run by a lead developer is a small price for keeping that boundary intact.
+- **Testing biometric auth, QR/camera scanning and push notifications** – these depend on real sensors and OS-level permission prompts that simulators fake poorly, so someone taps through them on a real device before every release. The *setup* behind them isn't the hard part: push certificates, deep-link schemes and permission entitlements per environment are all scripted and applied automatically by the same lanes – it's only the "did the fingerprint prompt actually appear" check that stays manual.
+- **Actual user testing** – the pipeline can't tell you whether people need a screen explaining *why* the push-notification permission dialog is about to appear before the OS shows it, or whether that screen just adds friction nobody wanted. Only real users answer that. The upside of everything above: a build with the explainer screen and a build without it are both a merge away, so testing the question properly costs an afternoon, not a release cycle.
+- **Store review decisions** – marketing copy, screenshots and release notes still get a human look before a production build goes out for review.
+- **The actual go/no-go** – the pipeline can build, test and upload a release in minutes; deciding *when* to ship it stays a product call, not a pipeline setting.
+
+## Steal this setup
+
+None of this is exotic – it's fastlane, GitHub Actions, and a few hundred lines of Ruby, assembled the way we'd want it if someone else had built it for us. We set up exactly this kind of pipeline for other teams too: as a full build, as an audit of what you already have, or as training so your team can keep extending it. That's what our [CI/CD & test automation](/en/ci-cd-test-automation/) work covers.
+
+If your release process still has a "click here and wait" step in it, [let's talk](/en/contact/) about what it would take to remove it.
+
+## Frequently asked questions
+
+### Why fastlane instead of a fully managed build service?
+
+Fully managed services are convenient until you need something they don't support – a specific signing quirk, a custom lane, integrating your own test tooling. fastlane is open, scriptable, and works with practically any CI system, which is why we've built on it for years across very different projects.
+
+### What does it cost to set this up for our app?
+
+It depends on what already exists – some projects need a full pipeline from zero, others need an audit and a few missing lanes. We size it after a short look at your current process; see [CI/CD & test automation](/en/ci-cd-test-automation/) for what's included.
+
+### Do we need to be on GitHub Actions specifically?
+
+No. GitHub Actions is our default because it's what most teams we work with already have, but fastlane itself doesn't care which CI runs it – the lanes in this post would run the same way on any system that can check out code and run Ruby.
