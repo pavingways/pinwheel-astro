@@ -14,6 +14,7 @@ month**, zero in a crunch month is fine.
 | 4 | Our production fastlane pipeline for iOS & Android in 2026 / Unsere Fastlane-Pipeline für iOS & Android 2026 | DE+EN | **live** — based on our real fastlane setup (client identity scrubbed); hybrid-app (React Native/Capacitor) angle, provisioning-profile types, and cheap-Linux-vs-expensive-macOS-runner economics called out for SEO; EAS Build section is explicitly forward-looking/WIP, not shipped; DE twin paired via `translation:` | Aug 2026 |
 | 5 | 20 years of shipping mobile apps: what changed, what didn't                                   | EN | **skeleton — needs real history; the LinkedIn anniversary piece** | Nov 2026 |
 | 6 | Making your API usable by AI agents with MCP                                                  | EN | not created — gated on AI offer validation with existing clients | tbd |
+| 7 | AI Developer Shift: From Code Writer to Quality Guardian / KI-Entwicklerwandel | DE+EN | **live** — source content supplied by Rocco; the "AI-powered workflow" comparison-table column was reconstructed since it didn't survive the source copy/paste (Rocco signed off on publishing as-is); `categories: [AI, technology]` (EN) / `[KI, technology]` (DE) — new taxonomy, see house rules below; DE twin paired via `translation:` | ad hoc, Aug 2026 |
 
 ## Publishing a scheduled draft
 
@@ -91,6 +92,12 @@ Example (this post): `node scripts/gen-blog-image.js --out app-maintenance-after
   concrete frameworks/platforms/tools. Skeleton posts (#4 fastlane, #5 20-years) will
   almost certainly qualify too once actually written — decide when writing them, not
   before.
+- **AI category**: posts substantively about AI-assisted/AI-driven development itself
+  (not just posts that happen to be written with AI help — see the disclosure rule
+  below) use `AI` in English and `KI` in German instead of `insights`, e.g.
+  `categories: [AI, technology]` (EN) / `[KI, technology]` (DE). The two are separate
+  taxonomy slugs (`/en/categories/ai/`, `/de/categories/ki/`) and don't hreflang-pair
+  with each other — that's expected, same as any other single-language taxonomy.
 - **Frontmatter**: give every post a real `description` (meta description + RSS) and a real `author`.
 - **FAQ sections** (`## Häufige Fragen` / `## Frequently asked questions` with `###` questions) automatically emit FAQPage JSON-LD — use one on high-intent posts.
 - **Internal links**: every post should link at least one money page (`/de/app-entwicklung/`, `/de/app-wartung/`, …) and end with a soft CTA to `/de/kontakt/` / `/en/contact/`.
