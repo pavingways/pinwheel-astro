@@ -39,7 +39,7 @@ const currentLocale = Astro.currentLocale;
               {post.data.title}
             </h3>
             <p class="mb-4 text-text">
-              {plainify(post.body?.slice(0, Number(summary_length)))}...
+              {post.data.excerpt ?? `${plainify(post.body?.slice(0, Number(summary_length)))}...`}
             </p>
             <div class="card-footer mt-6 flex space-x-4">
               <span class="inline-flex items-center text-xs text-[#666]">

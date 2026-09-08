@@ -1,6 +1,6 @@
 ---
 title: "KI-Benchmarking im SDLC: Was sollten Sie messen?"
-date: 2026-09-08T09:00:00+02:00
+date: 2026-09-07T09:00:00+02:00
 image: /images/blog-ai-benchmarking-software-development-sketch.webp
 categories: [KI, technology]
 author: Rocco
@@ -54,7 +54,7 @@ In der Anforderungsanalyse kann ein KI-Assistent mit klar begrenztem, freigegebe
 
 Dieser Kontext kann konkreter sein als ein Prompt. Projektregeln und Skills können in versionierten Dateien wie \`AGENTS.md\` liegen, sodass das Team prüfen kann, was ein Agent annehmen darf und wie er arbeiten soll. [Addy Osmanis Agent Skills](https://github.com/addyosmani/agent-skills/) sind ein Open-Source-Beispiel: Das Repository enthält wiederverwendbare Workflows für [Context Engineering](https://github.com/addyosmani/agent-skills/blob/main/skills/context-engineering/SKILL.md), [das Definieren von Constraints](https://github.com/addyosmani/agent-skills/blob/main/skills/constraint-driven-development/SKILL.md) und [Code Reviews](https://github.com/addyosmani/agent-skills/blob/main/skills/code-review-and-quality/SKILL.md). Das ist kein Plug-and-Play-Unternehmenswissen. Es muss an die tatsächlichen Regeln des Unternehmens angepasst, versioniert und geprüft werden – und diese Pflege gehört in die Rechnung.
 
-In der Architektur gilt dieselbe Unterscheidung. Abhängigkeiten in einer großen Codebasis zu kartieren, eine Änderungsfolgenanalyse zu entwerfen, veraltete Dokumentation zu finden oder einen ersten Systemüberblick vorzuschlagen, kann Arbeit sein, für die ein Team bisher nie genug Zeit hatte. Das ist eine neue Fähigkeit, nicht einfach „Coding-Geschwindigkeit“. Auch der menschliche Aufwand zur Prüfung gehört in die Messung.
+In der Architektur gilt dieselbe Unterscheidung. Abhängigkeiten in einer grossen Codebasis zu kartieren, eine Änderungsfolgenanalyse zu entwerfen, veraltete Dokumentation zu finden oder einen ersten Systemüberblick vorzuschlagen, kann Arbeit sein, für die ein Team bisher nie genug Zeit hatte. Das ist eine neue Fähigkeit, nicht einfach „Coding-Geschwindigkeit“. Auch der menschliche Aufwand zur Prüfung gehört in die Messung.
 
 Messen Sie auch die Folgen nach dem Deployment. Führt die Änderung zu weniger Regressionen? Lassen sich Incidents leichter diagnostizieren, weil Tests und Dokumentation besser sind? Löst das Team Wartungsarbeit planbarer? Ein Release ist nicht das Ende einer KI-gestützten Änderung. In der [App-Wartung](/de/app-wartung/) zeigt sich, ob eine Abkürzung wirklich gespart oder nur Kosten verschoben hat.
 
@@ -80,7 +80,7 @@ Ein agentischer Loop kann planen, implementieren, testen, reviewen und sich selb
 
 Statt zu fragen, ob ein Stack „autonom“ ist, sollte man seine Grenze definieren:
 
-- Welche Arten von Aufgaben darf ein Agent ohne menschlichen Zwischenschritt beginnen und abschließen?
+- Welche Arten von Aufgaben darf ein Agent ohne menschlichen Zwischenschritt beginnen und abschliessen?
 - Auf welche Tools, Repositories, Geschäftsinformationen und Umgebungen darf er zugreifen?
 - Wie oft muss ein Mensch seine Richtung korrigieren, Output ablehnen oder eine Eskalation übernehmen?
 - Welche Tests und Freigaben bleiben vor dem Deployment verpflichtend?
@@ -91,9 +91,9 @@ Wenn ein Agent anhand seines eigenen Outputs den nächsten Prompt bestimmt, ist 
 
 Ein Agent, der seine eigene Änderung reviewt, liefert nützliches Feedback, aber keine unabhängige Validierung. Dieselbe falsche Annahme kann Implementierung, Testgenerierung und Review durchlaufen, ohne hinterfragt zu werden. Agentische Loops brauchen zudem explizite Abbruchbedingungen: Ohne Grenzen können sie Zeit und Tokens für minimale Verbesserungen ausgeben oder denselben fehlgeschlagenen Ansatz wiederholen. Wenn mehrere Agents parallel laufen, entstehen doppelte Recherche, überlappende Änderungen, Merge-Konflikte und unklare Zuständigkeiten. Breiter Zugriff auf Repositories, Geschäftssysteme oder Deployment-Tools kann aus einem lokalen Fehler eine externe Aktion machen.
 
-Machen Sie diese Kontrollarbeit zum Teil des Benchmarks. Halten Sie für jede vergleichbare Aufgabe Loop- und Run-Anzahl, verstrichene Zeit und Token-Kosten, Abbruchgrund, Zahl menschlicher Eingriffe oder Eskalationen, abgelehnten oder zurückgesetzten Output, Nacharbeit nach dem Merge und das abschließende unabhängig geprüfte Ergebnis fest. Prompts, Kontext- und Skill-Versionen, Tool-Aufrufe und resultierende Diffs sollten nachvollziehbar genug sein, um zu erklären, wie eine Änderung entstanden ist.
+Machen Sie diese Kontrollarbeit zum Teil des Benchmarks. Halten Sie für jede vergleichbare Aufgabe Loop- und Run-Anzahl, verstrichene Zeit und Token-Kosten, Abbruchgrund, Zahl menschlicher Eingriffe oder Eskalationen, abgelehnten oder zurückgesetzten Output, Nacharbeit nach dem Merge und das abschliessende unabhängig geprüfte Ergebnis fest. Prompts, Kontext- und Skill-Versionen, Tool-Aufrufe und resultierende Diffs sollten nachvollziehbar genug sein, um zu erklären, wie eine Änderung entstanden ist.
 
-Diese Antworten werden zu brauchbaren Benchmark-Daten. Mehr unbeaufsichtigt abgeschlossene Arbeit bei einer engen, gut getesteten Aufgabe kann wertvoll sein. Sie ist kein Beleg dafür, dass jede größere Aufgabe ebenfalls unbeaufsichtigt laufen sollte. Begrenzen Sie Loops nach Aufgabenbereich, maximalen Durchläufen, Budget und Laufzeit; vergeben Sie nur minimale Berechtigungen; definieren Sie Schreibzuständigkeiten für parallele Arbeit; und verlangen Sie menschliche Freigabe vor irreversiblen oder produktionsrelevanten Aktionen. Autonomie ist eine Risiko- und Kontrollentscheidung, keine Trophäenkennzahl.
+Diese Antworten werden zu brauchbaren Benchmark-Daten. Mehr unbeaufsichtigt abgeschlossene Arbeit bei einer engen, gut getesteten Aufgabe kann wertvoll sein. Sie ist kein Beleg dafür, dass jede grössere Aufgabe ebenfalls unbeaufsichtigt laufen sollte. Begrenzen Sie Loops nach Aufgabenbereich, maximalen Durchläufen, Budget und Laufzeit; vergeben Sie nur minimale Berechtigungen; definieren Sie Schreibzuständigkeiten für parallele Arbeit; und verlangen Sie menschliche Freigabe vor irreversiblen oder produktionsrelevanten Aktionen. Autonomie ist eine Risiko- und Kontrollentscheidung, keine Trophäenkennzahl.
 
 ## Mit einer Baseline beginnen
 

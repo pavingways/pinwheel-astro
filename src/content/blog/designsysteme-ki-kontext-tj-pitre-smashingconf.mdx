@@ -2,11 +2,12 @@
 title: "Designsysteme als KI-Kontext: Notizen zu TJ Pitre bei der SmashingConf Freiburg"
 date: 2026-09-08T13:30:00+02:00
 image: /images/blog-smashingconf-tj-pitre-design-systems-ai.webp
-categories: [conference, KI, technology]
+categories: [Konferenz, KI]
 author: Rocco
 featured: false
 language: de
 description: "Notizen zu TJ Pitres SmashingConf-Talk darüber, wie Designsysteme für KI nutzbaren Kontext liefern: FigmaLint, Component Contracts, Storybook-Feedback-Loops und die menschliche Arbeit, die Design und Code zusammenhält."
+excerpt: "Was muss ein Designsystem explizit machen, damit KI zuverlässig damit arbeiten kann? Notizen zu FigmaLint, Component Contracts und dem Feedback-Loop, der Design und Code zusammenhält."
 translation: /en/blog/design-systems-ai-context-tj-pitre-smashingconf
 aiAssisted: true
 ---
@@ -21,7 +22,7 @@ TJ Pitres Talk, **Design Systems and the AI Context**, drehte sich um ein Proble
 
 Design-Intent wandert nicht einmal sauber von Figma nach Code. Er verändert sich, wenn eine Anforderung konkreter wird, ein Sonderfall auftaucht, ein Produkt einen neuen Zustand braucht oder ein Entwickler entdeckt, was eine Plattform tatsächlich erlaubt. Das ist normale Produktarbeit.
 
-Die Frage ist nicht, ob Drift entsteht. Entscheidend ist, ob er sichtbar und bewusst ist und wieder in das System zurückfließt. Ohne diesen Loop werden eine Designbibliothek und eine Komponentenbibliothek nach und nach zu zwei unterschiedlichen Beschreibungen desselben Produkts.
+Die Frage ist nicht, ob Drift entsteht. Entscheidend ist, ob er sichtbar und bewusst ist und wieder in das System zurückfliesst. Ohne diesen Loop werden eine Designbibliothek und eine Komponentenbibliothek nach und nach zu zwei unterschiedlichen Beschreibungen desselben Produkts.
 
 Für Menschen sind unvollständige Designinformationen unbequem. Für einen KI-Agenten sind sie eine Einladung, Dinge abzuleiten. Wenn ein Agent an einer Stelle einen fest eingetragenen `1px`-Border und an anderer Stelle ein nicht damit verbundenes Token für die Border-Breite sieht, muss er raten, ob beides dasselbe bedeutet. Er kann eine plausible Wahl treffen – aber plausibel ist nicht gleich korrekt.
 
@@ -37,11 +38,11 @@ Deshalb sollte ein Figma-Frame auch nicht allein zur Source of Truth werden. Fig
 
 ## Tools können Kontext transportieren, aber keinen Vertrag ersetzen
 
-Die Werkzeuge dafür werden immer praxistauglicher. [Figmas offizieller MCP-Server](https://developers.figma.com/docs/figma-mcp-server/) kann kompatiblen KI-Clients Designkontext wie Variablen, Komponenten und Layout-Daten bereitstellen. Figma dokumentiert außerdem Code Connect als Möglichkeit, generierten Code zu den Komponenten einer angebundenen Codebasis zu führen.
+Die Werkzeuge dafür werden immer praxistauglicher. [Figmas offizieller MCP-Server](https://developers.figma.com/docs/figma-mcp-server/) kann kompatiblen KI-Clients Designkontext wie Variablen, Komponenten und Layout-Daten bereitstellen. Figma dokumentiert ausserdem Code Connect als Möglichkeit, generierten Code zu den Komponenten einer angebundenen Codebasis zu führen.
 
 TJ verwies auch auf Tools seines Unternehmens [Southleft](https://southleft.com/), darunter [Figma Console MCP](https://github.com/southleft/figma-console-mcp). Dieses Tool verbindet KI-Assistenten mit Figma für Extraktion, Erstellung und Debugging. Solche Tools erleichtern es, Designkontext in einen agentischen Workflow zu bringen. Sie entscheiden jedoch nicht, was eine Komponente bedeutet, wann eine neue Variante in die Bibliothek gehört oder wer eine Änderung freigibt. Das bleibt die Arbeit des Systems rund um das Tool.
 
-Eine besonders interessante Idee aus dem Talk ist ein **Component Contract**. Das ist mehr als eine visuelle Komponentenbeschreibung: Er kann Anatomie, Varianten, Zustände, Tokens, Verhalten und Regeln zur Barrierefreiheit maschinenlesbar festhalten. Der [Component-Contract-Proof-of-Concept von Southleft](https://github.com/southleft/ds-contracts-poc) beschreibt sich als Kandidat für eine herstellerneutrale Spezifikation, nicht als fertigen Standard. Die zentrale Idee überzeugt: Ein Contract liegt zwischen Design und Code, Änderungen fließen in ihn zurück und beide Oberflächen werden gegen ihn geprüft.
+Eine besonders interessante Idee aus dem Talk ist ein **Component Contract**. Das ist mehr als eine visuelle Komponentenbeschreibung: Er kann Anatomie, Varianten, Zustände, Tokens, Verhalten und Regeln zur Barrierefreiheit maschinenlesbar festhalten. Der [Component-Contract-Proof-of-Concept von Southleft](https://github.com/southleft/ds-contracts-poc) beschreibt sich als Kandidat für eine herstellerneutrale Spezifikation, nicht als fertigen Standard. Die zentrale Idee überzeugt: Ein Contract liegt zwischen Design und Code, Änderungen fliessen in ihn zurück und beide Oberflächen werden gegen ihn geprüft.
 
 Diese Richtung finde ich besonders sinnvoll. Sie schafft einen Ort für Entscheidungen, die nicht zweimal manuell gepflegt werden sollten. Als Softwareentwickler kennen wir diese Disziplin aus API-Spezifikationen: Ein gemeinsamer Vertrag definiert, worauf sich Beteiligte verlassen können, und daraus kann Code erzeugt werden. Ein Component Contract wendet dieselbe Idee auf die Grenze des Designsystems an.
 
@@ -51,7 +52,7 @@ Damit ein Agent eine Komponente sicher verwenden kann, brauchen wir eine klare K
 
 - ihren Zweck und ihre semantische Rolle;
 - ihre Anatomie: welche Teile sie hat und welche optional sind;
-- Eigenschaften, Varianten und Zustände, einschließlich ungültiger und Ladezustände;
+- Eigenschaften, Varianten und Zustände, einschliesslich ungültiger und Ladezustände;
 - Tokens und visuelle Regeln statt beliebiger Werte;
 - Interaktions-, Inhalts- und Barrierefreiheitsanforderungen; und
 - Beispiele für Kontexte, in denen sie verwendet werden soll – und nicht verwendet werden soll.
@@ -76,7 +77,7 @@ Tools wie [Story UI](https://github.com/southleft/story-ui) weisen ebenfalls in 
 
 Ein Pixelvergleich ist nützlich, aber kein endgültiger Richter. Eine kleine visuelle Differenz kann harmlos sein; eine perfekt passende Komponente kann dennoch einen verwirrenden Flow erzeugen. Jemand muss Komponenten weiterhin im Produkt und in ihren tatsächlichen Kombinationen und Varianten prüfen – nicht nur isoliert.
 
-## Feedback muss zurückfließen
+## Feedback muss zurückfliessen
 
 Die schwierige Frage beginnt nach der ersten sauberen Ausrichtung: Was passiert, wenn die Implementierung einen neuen Bedarf entdeckt?
 

@@ -18,6 +18,8 @@ month**, zero in a crunch month is fine.
 
 | 8 | AI Benchmarking Across the SDLC: What Should You Measure? / KI-Benchmarking im SDLC: Was sollten Sie messen? | DE+EN | **live** — paired framework post on delivery flow, quality and maintenance, newly possible work, and total AI cost/control; links to Steyer's controlled agent comparison as a contrast to day-to-day delivery. A practical measurement follow-up is teased, not yet planned. | Sep 2026 |
 | 9 | Design Systems as AI Context: Notes from TJ Pitre at SmashingConf Freiburg / Designsysteme als KI-Kontext: Notizen zu TJ Pitre bei der SmashingConf Freiburg | DE+EN | **live** — paired first entry in an in-progress series of personal SmashingConf Freiburg 2026 talk notes; categories: `conference`, `AI`/`KI`, `technology`; attendance disclosure for Pax included. Further talk posts will be added as their notes are prepared. | Sep 2026 |
+| 10 | From Friction to Flow: Notes from Joe Natoli at SmashingConf Freiburg / Von Reibung zu Flow: Notizen zu Joe Natoli bei der SmashingConf Freiburg | DE+EN | **live on merge** — paired personal conference notes on surfacing useful disagreement early, understanding what each product role protects, and centring the customer outcome; attendance disclosure for Pax included; categories: `conference`, `insights`. | Sep 2026 |
+| 11 | Who Designers Will Become with AI: Notes from Ioana Teleanu at SmashingConf Freiburg / Was Designer:innen mit KI werden: Notizen zu Ioana Teleanu bei der SmashingConf Freiburg | DE+EN | **live** — paired personal talk notes on designers becoming directors of AI behaviour and output; connects the shift in design work to the earlier developer-role post. | Sep 2026 |
 
 ## Publishing a scheduled draft
 

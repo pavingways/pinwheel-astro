@@ -7,6 +7,8 @@ const blogCollection = defineCollection({
     title: z.string(),
     meta_title: z.string().optional(),
     description: z.string().optional(),
+    // Optional copy for blog cards; cards otherwise derive a preview from the post body.
+    excerpt: z.string().optional(),
     subtitle: z.string().optional().default("subtitle"),
     date: z.date().optional(),
     image: z.string().optional(),
