@@ -3,7 +3,7 @@ import { Image } from 'astro:assets'
 import config from "@config/config.json";
 import dateFormat from "@lib/utils/dateFormat";
 // import readingTime from "@lib/utils/readingTime";
-import { humanize, plainify, slugify } from "@lib/utils/textConverter";
+import { humanize, plainify } from "@lib/utils/textConverter";
 import { localizeUrl } from "@lib/utils/i18n";
 
 const { summary_length } = config.settings;
@@ -15,7 +15,11 @@ const currentLocale = Astro.currentLocale;
   {
     posts.map((currentPost: any) => (
       <div class="mb-8 md:col-6 lg:col-4">
-        <div class="card">
+        <a
+          class="card block focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-primary"
+          href={localizeUrl(`/blog/${currentPost.slug}`, currentLocale)}
+          aria-label={currentPost.data.title}
+        >
           <Image
             class="card-img"
             width={335}
@@ -26,13 +30,13 @@ const currentLocale = Astro.currentLocale;
           <div class="card-content">
             <div class="card-tags space-x-1">
               {currentPost.data.categories.map((category: any) => (
-                <a class="tag" href={localizeUrl(`/categories/${slugify(category)}`, currentLocale)}>
+                <span class="tag">
                   {humanize(category)}
-                </a>
+                </span>
               ))}
             </div>
-            <h3 class="h4 card-title h-8 truncate">
-              <a href={localizeUrl(`/blog/${currentPost.slug}`, currentLocale)}>{currentPost.data.title}</a>
+              <h3 class="h4 card-title h-8 truncate text-primary">
+              {currentPost.data.title}
             </h3>
             <p class="mb-4 text-text min-h-20">
               {plainify(currentPost.body?.slice(0, Number(summary_length)))}...
@@ -74,7 +78,7 @@ const currentLocale = Astro.currentLocale;
             </div>
 
           </div>
-        </div>
+        </a>
       </div>
     ))
   }
