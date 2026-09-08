@@ -82,5 +82,5 @@ npm run check-placeholders # deploy guard against leftover template placeholders
 npm run check-nesting      # HTML nesting validation
 npm run deploy-dev         # build + deploy to the DigitalOcean dev box (bin/deploy-dev.sh)
 npm run deploy-prod        # build + deploy to GitHub Pages (bin/deploy-prod.sh)
-node scripts/gen-blog-image.js --out <slug> --badges <icon,icon,icon,icon>  # blog cover image, see EDITORIAL.md
+# Blog covers: use the built-in ImageGen workflow described in EDITORIAL.md.
 ```

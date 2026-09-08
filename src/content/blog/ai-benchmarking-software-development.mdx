@@ -1,0 +1,128 @@
+---
+title: "AI Benchmarking Across the SDLC: What Should You Measure?"
+date: 2026-09-08T09:00:00+02:00
+image: /images/blog-ai-benchmarking-software-development-sketch.webp
+categories: [AI, technology]
+author: Rocco
+featured: false
+language: en
+description: "AI can accelerate steps across the SDLC, but measuring its real value means more than counting story points: track delivery, quality, new capability, and the full cost of reviews, guardrails and tokens."
+translation: /de/blog/ki-benchmarking-im-sdlc
+aiAssisted: true
+---
+
+AI is changing the speed of software development. That much is easy to feel. A task that took an afternoon may take an hour; a test suite, migration plan or first pass at documentation may appear before the developer has finished their coffee.
+
+**But a feeling is not a benchmark.** AI can change individual steps across the SDLC—short for the software development lifecycle: the path from requirements and architecture through development, review, release and long-term maintenance. If a team is investing in models, subscriptions, skills, training and extra review, it needs a more useful answer than “we seem faster.” What changed across the SDLC? Which changes are valuable? And do they outweigh what the new workflow costs?
+
+The difficult part is that there is no universal multiplier. AI gains are individual: they depend on the codebase, the work, the experience of the developer, the quality of the requirements, the available context, and the guardrails around the tool. Measuring them still matters. Without it, a team can spend more on AI-enabled delivery while becoming less predictable, less maintainable or both.
+
+## A benchmark you usually cannot run
+
+Controlled comparisons have their place. In [his experiment with twelve AI coding agents](https://www.angulararchitects.io/en/blog/loop-engineering-with-super-mario-and-twelve-ai-coding-agents/), Manfred Steyer gave agents the same tasks, baseline and automated loop. That is precisely what makes the comparison interesting: it isolates a particular setup and makes cost, elapsed time and code quality discussable together.
+
+Normal product work does not offer that laboratory. You cannot pause client delivery for a month, make two identical copies of every ticket and ask one team to forget everything it learned about AI. The codebase changes, the requirements become clearer or less clear, the AI tools evolve, and the team becomes more practiced at using them. Day-to-day work is not a clean before-and-after test.
+
+That does not mean “do not measure.” It means do not pretend that one number is the answer.
+
+## Why story points are not a currency
+
+Imagine a team that normally completes 50 story points in a sprint. After learning to use AI responsibly, it completes 100. That looks like a clear result—until you remember what a story point is.
+
+Story points are an estimate made by a team with a shared understanding of effort, uncertainty and risk. Once AI changes how the team expects to implement and review a story, that shared understanding changes too. A story that was once estimated at eight points might now be estimated at five. Capacity can rise while estimates shrink. The headline number may move in either direction without saying what actually happened.
+
+That does not make sprint data useless. It makes it a supporting signal rather than a verdict. The same is true for lines of code, pull-request count, coding time or the number of review ping-pongs. Each describes one part of the work; none describes the value of the whole lifecycle.
+
+## Measure the lifecycle, not just the code
+
+A practical benchmark is a balanced scorecard. It should answer four different questions over time, for comparable classes of work:
+
+| Dimension | Useful signals | What it prevents you from missing |
+| --- | --- | --- |
+| Delivery flow | Time from a ready story to a production release, forecast reliability, completed customer outcomes | Faster implementation that merely moves the bottleneck to review, QA or release |
+| Quality and maintenance | Review rework, regressions, escaped defects, test confidence, support and fix work after release | “Fast” delivery that creates a larger maintenance bill |
+| Newly possible work | Requirements analysis, architectural analysis, documentation and validation work that was previously impractical to perform consistently | The gains AI creates by expanding capability, not only by accelerating familiar tasks |
+| Total investment and control | Education, model and token spend, context maintenance, quality gates, reviews, remediation and incident risk | A cheap-looking tool that is expensive once the safe workflow around it is included |
+
+The goal is not to collect every metric available. It is to make the trade-offs visible. A team may choose a slower development flow if it materially improves architectural documentation and reduces long-term support risk. Another may accept higher token costs because it can now analyse a legacy system before a risky change. Both can be rational decisions—if they are explicit.
+
+## “now faster” vs. “now possible”
+
+AI can help with repetitive implementation, but its more interesting gains may arrive before and after the code is written.
+
+In requirements analysis, an AI assistant can work from carefully bounded, approved business knowledge: domain terminology, prior decisions, product rules and dedicated skills that describe how the organisation works. The benchmark is not whether it produced more words. It is whether it helped surface missing questions, contradictions and acceptance criteria early enough to avoid rework—and whether a person still validated the result.
+
+That context can be more concrete than a prompt. Project rules and skills can be version-controlled in files such as AGENTS.md, so the team can review what an agent is allowed to assume and how it should work. [Addy Osmani’s Agent Skills](https://github.com/addyosmani/agent-skills/) is one open-source example: it contains reusable workflows for [context engineering](https://github.com/addyosmani/agent-skills/blob/main/skills/context-engineering/SKILL.md), [defining constraints](https://github.com/addyosmani/agent-skills/blob/main/skills/constraint-driven-development/SKILL.md) and [code review](https://github.com/addyosmani/agent-skills/blob/main/skills/code-review-and-quality/SKILL.md). These are not plug-and-play business knowledge. They need to be tailored, versioned and verified against the company’s real rules—and that maintenance belongs in the calculation.
+
+In architecture, the same distinction applies. Mapping dependencies in a large codebase, drafting a change-impact analysis, finding stale documentation or proposing a first system overview may be work a team never had the time to do comprehensively. Count that as a new capability, not as “coding speed.” Record the human effort needed to check it too.
+
+After deployment, measure the consequences as well. Does the change create fewer regressions? Are incidents easier to diagnose because tests and documentation are better? Does the team resolve maintenance work more predictably? The release is not the finish line of an AI-assisted change. [App maintenance](/en/app-maintenance/) is where a shortcut eventually proves whether it was a saving or a deferred cost.
+
+## The full cost of AI
+
+The model bill is only one line item. A serious calculation includes the work that makes AI safe and useful:
+
+- developer education and time to build sound habits;
+- maintaining the context, dedicated skills and business knowledge the assistant relies on;
+- fencing: permissions, sandboxing, security checks and quality gates;
+- more detailed code, architecture and product reviews where the volume or complexity of output demands them;
+- tokens, subscriptions, infrastructure and the orchestration that runs agent loops, applies run budgets and records audit trails;
+- containment and rollback mechanisms, plus resolving duplicate or conflicting work when several agents work on related changes;
+- rework, remediation and operational incidents when the workflow gets something wrong.
+
+Some of those costs are temporary ramp-up costs. Some are the permanent operating cost of a responsible AI stack. Treating both as zero is not an AI strategy; it is a missing budget line.
+
+This is why [CI/CD and test automation](/en/ci-cd-test-automation/) matter even more when implementation accelerates. Automated checks can make feedback faster and more consistent, but they do not remove the need for deliberate human review. As we discussed in [AI Developer Shift: From Code Writer to Quality Guardian](/en/blog/from-code-writers-to-system-architects/), speed raises the value of architecture, judgment and quality gates.
+
+## Autonomy is a boundary
+
+An agentic loop can plan, implement, test, review and prompt itself for another pass. That sounds like a single measure of autonomy, but it is not. An agent that can safely format a component, generate a test or prepare a documentation draft is not automatically ready to merge a security-sensitive production change.
+
+Instead of asking whether a stack is “autonomous,” define its boundary:
+
+- Which task types may an agent start and complete without an intervening human?
+- Which tools, repositories, business information and environments may it access?
+- How often does a human need to correct its direction, reject its output or handle an escalation?
+- Which tests and approvals remain mandatory before deployment?
+
+### What self-prompting adds
+
+When an agent uses its own output to decide the next prompt, the work is no longer simply a longer single interaction. A vague requirement or faulty assumption can become a self-reinforcing plan, implementation and review. Context can also become stale, overlong or internally inconsistent, so each further pass drifts away from the intended outcome rather than improving it.
+
+An agent reviewing its own change is useful feedback, but it is not independent validation. The same mistaken assumption can pass through implementation, test generation and review without being challenged. Agentic loops also need explicit stop conditions: without limits, they can spend time and tokens on marginal improvements or repeatedly try the same failing approach. When several agents run in parallel, they add duplicated investigation, overlapping edits, merge conflicts and unclear ownership. Broad access to repositories, business systems or deployment tools can turn a local mistake into an external action.
+
+Make that control work part of the benchmark. For each comparable task, record loop and run count, elapsed time and token cost, termination reason, the number of human interventions or escalations, rejected or reverted output, post-merge rework, and the final independently reviewed outcome. Keep prompts, context and skill versions, tool calls and resulting diffs traceable enough to explain how a change happened.
+
+Those answers become useful benchmark data. An increase in hands-off completion for a narrow, well-tested task can be valuable. It is not evidence that every larger task should become hands-off too. Bound loops by task scope, maximum turns, budget and elapsed time; keep permissions least-privilege; assign write ownership for parallel work; and require human approval before irreversible or production-affecting actions. Autonomy is a risk-and-control decision, not a trophy metric.
+
+## Start with a baseline
+
+Choose a few recurring work types and document the current flow before changing too many variables at once. Keep the comparison honest by separating new development from maintenance, simple changes from architectural work, and developers who are still learning the workflow from those who are already practiced.
+
+Review the scorecard at the end of a sprint or release. Ask what moved, why it moved, and what the measurement failed to capture. If delivery looks faster but review rework rises, the next improvement may be better requirements, more focused context or smaller AI-generated changes—not a faster model. If a team begins doing high-value analysis it previously skipped, give that benefit a place in the discussion even when it has no neat story-point conversion.
+
+AI benchmarking is difficult because software delivery is difficult. That is the reason to do it carefully. The question is not “Did AI double our velocity?” It is: “Did it make us more capable, more reliable and more economical over the life of the product?”
+
+The next article will turn this scorecard into a more operational measurement approach. If you are working out where AI belongs in your own delivery process, [let’s talk](/en/contact/).
+
+## Frequently asked questions
+
+### Can story points measure AI productivity?
+
+Not on their own. Story points reflect a team’s estimate of effort and uncertainty, and that estimate changes when the team changes its tools and workflow. Use sprint capacity as one contextual signal, alongside delivery, quality, capability and cost measures.
+
+### What should a team really measure?
+
+Measure delivery flow, quality after release, work that AI makes possible for the first time, and the full cost of using AI safely. The exact signals should fit the team’s recurring work and risk profile.
+
+### Do token costs reveal AI’s return on investment?
+
+No. Token and subscription costs matter, but so do developer education, context and skills maintenance, quality gates, extra review and the cost of rework or incidents. The relevant number is the cost of the whole workflow against its lifecycle benefits.
+
+### How autonomous should an AI development workflow be?
+
+Only as autonomous as the task boundary, access controls, tests and human approval process make safe. Start with narrow, reversible work, measure the interventions it still needs, and keep explicit quality gates for changes that can affect users or production systems.
+
+### What extra controls do self-prompting agentic loops require?
+
+Give every loop a clear task boundary, maximum turns, budget and elapsed-time limit. Keep its permissions narrow, log the context, tool calls and output it used, and do not treat its own review as final proof. Parallel agents need ownership of the files or branches they may change, while irreversible and production-affecting actions remain behind explicit human approval.

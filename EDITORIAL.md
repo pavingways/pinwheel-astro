@@ -16,6 +16,8 @@ month**, zero in a crunch month is fine.
 | 6 | Making your API usable by AI agents with MCP                                                  | EN | not created — gated on AI offer validation with existing clients | tbd |
 | 7 | AI Developer Shift: From Code Writer to Quality Guardian / KI-Entwicklerwandel | DE+EN | **live** — source content supplied by Rocco; the "AI-powered workflow" comparison-table column was reconstructed since it didn't survive the source copy/paste (Rocco signed off on publishing as-is); `categories: [AI, technology]` (EN) / `[KI, technology]` (DE) — new taxonomy, see house rules below; DE twin paired via `translation:` | ad hoc, Aug 2026 |
 
+| 8 | AI Benchmarking Across the SDLC: What Should You Measure? / KI-Benchmarking im SDLC: Was sollten Sie messen? | DE+EN | **live** — paired framework post on delivery flow, quality and maintenance, newly possible work, and total AI cost/control; links to Steyer's controlled agent comparison as a contrast to day-to-day delivery. A practical measurement follow-up is teased, not yet planned. | Sep 2026 |
+
 ## Publishing a scheduled draft
 
 1. Open the post in `src/content/blog/`, review content, and set `date` to the actual
@@ -56,29 +58,27 @@ visible longer than its natural spot in the date order).
 
 ## Post images
 
-Every new post gets a generated cover image instead of reusing `blog-default*.webp` —
-run:
+Every new post gets an article-specific cover created with the built-in ImageGen
+workflow; do not reuse `blog-default*.webp` or the retired scripted phone/checklist
+generator.
 
-```
-node scripts/gen-blog-image.js --out <slug> --badges <icon,icon,icon,icon> [--checked 3]
-```
-
-- `--out` — becomes the filename: `public/images/blog-<slug>.webp` (1600×850, matches
-  the aspect ratio of the existing default images).
-- `--badges` — exactly 4 icon names, comma-separated, for the top-left/top-right/
-  bottom-left/bottom-right positions around the phone mockup. Available icons: `shield`
-  (security), `refresh` (OS/store updates), `certificate` (store policies/compliance),
-  `gear` (maintenance/settings), `chart` (cost/growth), `lock` (privacy). Add new icons
-  to the `ICONS` registry in the script if a post needs a theme none of these cover.
-- `--checked` — how many of the 4 checklist rows on the phone screen render as "done"
-  (default 3).
-
-No text is baked into the image, so **one file covers both the DE and EN twin** — point
-`image:` at the same `/images/blog-<slug>.webp` in both frontmatter files. Colors are
-hardcoded from `src/config/theme.json` (`TEAL`/`LIME`/`NAVY` constants at the top of the
-script) — update them there if the brand palette changes.
-
-Example (this post): `node scripts/gen-blog-image.js --out app-maintenance-after-launch --badges shield,refresh,certificate,gear`
+- **Visual system:** restrained editorial graphite-pencil and black-ink illustration on
+  warm off-white textured paper, with graphite as the dominant colour and only small,
+  purposeful teal accents. Make the concept specific to the article rather than using
+  generic AI imagery.
+- **Avoid:** text, readable UI, code, numbers, logos, watermarks, robots, glossy 3D,
+  photorealism, neon, gradients, heavy saturation and stock-art aesthetics. This keeps
+  language pairs reusable and the covers calm rather than conspicuously AI-generated.
+- **Composition:** the blog layout centre-crops covers to a short 4:1 banner. Generate
+  a 1600×850 source image, but keep every important motif in the middle 40–45% of its
+  height with breathing room above and below, so the banner preserves the whole idea.
+- **Workflow:** write a structured prompt that names the article topic, central visual
+  metaphor, paper/sketch medium, 4:1 crop constraint and avoid list. Generate with the
+  built-in ImageGen tool, inspect the result, iterate if the central crop loses key
+  content, then export the selected asset as a 1600×850 WebP at
+  `public/images/blog-<canonical-slug>.webp`.
+- **Language pairs:** bake no text into the cover and use one shared `image:` path for
+  the DE and EN twins.
 
 ## House rules for new posts
 
