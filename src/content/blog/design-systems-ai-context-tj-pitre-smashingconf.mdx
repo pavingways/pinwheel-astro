@@ -1,0 +1,104 @@
+---
+title: "Design Systems as AI Context: Notes from TJ Pitre at SmashingConf Freiburg"
+date: 2026-09-08T13:30:00+02:00
+image: /images/blog-smashingconf-tj-pitre-design-systems-ai.webp
+categories: [conference, AI, technology]
+author: Rocco
+featured: false
+language: en
+description: "Notes from TJ Pitre’s SmashingConf Freiburg talk on making design systems usable AI context: FigmaLint, component contracts, Storybook feedback loops, and the human work that keeps design and code aligned."
+translation: /de/blog/designsysteme-ki-kontext-tj-pitre-smashingconf
+aiAssisted: true
+---
+
+> **Disclosure:** I am attending SmashingConf Freiburg as an employee of [Pax](https://www.pax.ch/)—thank you to Pax for the opportunity. I took notes on the talks and am sharing the thoughts they prompted here. This is a personal conference note, not a transcript and not a statement by Pax.
+
+This is the first post in a series of notes from SmashingConf Freiburg. The 2026 conference is taking place in Freiburg from September 7 to 10. [The official schedule is here](https://smashingconf.com/freiburg-2026/).
+
+Pitre’s talk, **Design Systems and the AI Context**, landed on a problem that design and development teams already know well: design systems and code drift apart. AI does not create that problem. It makes its consequences much more visible, and it can help teams keep drift in check. TJ proposed tools and workflows for making the relationship between design systems and code inspectable and actionable.
+
+## Drift is a product-lifecycle problem
+
+Design intent does not move once, cleanly, from Figma to code. It changes when a requirement becomes more specific, an edge case appears, a product needs a new state, or a developer discovers what a platform actually allows. That is normal product work.
+
+The question is not whether drift happens. It is whether it is visible, intentional and fed back into the system. Without that loop, a design library and a component library gradually become two different descriptions of the same product.
+
+For people, incomplete design information is inconvenient. For an AI agent, it is an invitation to infer. An agent faced with a fixed `1px` border in one place and an unconnected border-width token elsewhere has to guess whether they mean the same thing. It may make a plausible choice, but plausible is not the same as correct.
+
+## Is the design ready to be used as context?
+
+One demonstration in the talk was [FigmaLint](https://github.com/southleft/figmalint), a Figma plugin that analyses components for design-system compliance, accessibility and developer readiness. My notes include an alignment score such as 87%. I understood that score not as an aesthetic rating, but as a signal of how much of the design is expressed in a structured, reusable form that a developer—or an agent—can work from.
+
+The contrast between a one-off `1px` value and a named standard border-width variable is a small but telling example. The aim is not simply to reach a perfect-looking score. It is to describe decisions so explicitly that AI does not need to derive critical values from pixels, naming conventions or nearby examples.
+
+At the limit, an “AI-ready” design is a design from which an agent can produce clean code by using the actual system: its variables, components, variants, states and rules. A 100% score can be a useful target for the checked rules. It is not, by itself, proof that a product experience is good.
+
+This is also why a Figma frame alone should not become the source of truth. Figma can be an excellent surface for a specification, but a surface is not the whole specification.
+
+## Tools can move the context, not replace the contract
+
+The tooling around this is becoming practical. [Figma’s official MCP server](https://developers.figma.com/docs/figma-mcp-server/) can give compatible AI clients design context such as variables, components and layout data; Figma also documents Code Connect as a way to steer generated code toward the components in a connected codebase.
+
+TJ also pointed to tools from his company, [Southleft](https://southleft.com/), including [Figma Console MCP](https://github.com/southleft/figma-console-mcp), which connects AI assistants to Figma for extraction, creation and debugging. These tools make it easier to bring design context into an agentic workflow. They do not decide what a component means, when a new variant belongs in the library, or who approves a change. That is still the work of the system around the tool.
+
+One especially interesting idea raised in the talk is a **component contract**. This is more than a visual component description: it can capture anatomy, variants, states, tokens, behaviour and accessibility rules in a machine-readable form. The [Southleft component-contract proof of concept](https://github.com/southleft/ds-contracts-poc) describes its work as a candidate for a vendor-neutral specification, not as a completed standard. Its central idea is compelling: a contract sits between design and code, changes feed back to that contract, and both surfaces are checked against it.
+
+That is the direction I find most useful. It gives us a place for decisions that should not have to be hand-maintained twice. As software developers, we already know this discipline from API specifications: a shared contract defines what participants can rely on, and code can be generated from it. A component contract applies the same idea to the design-system boundary.
+
+## My take: specify first, then generate
+
+For an agent to use a component safely, we need a clear component structure. It should make explicit at least:
+
+- its purpose and semantic role;
+- anatomy: which parts it has and which are optional;
+- properties, variants and states, including invalid and loading states;
+- tokens and visual rules, rather than arbitrary values;
+- interaction, content and accessibility constraints; and
+- examples of the contexts in which it should and should not be used.
+
+Figma can be a strong base for this, because it is already where many teams discuss components. But knowledge cannot remain in the designer’s head or only in a comment beside a frame. If it is important enough to guide a developer, it needs to become explicit enough to guide an agent too.
+
+This changes the role of UI/UX designers in a productive way. They take on some of the component-definition work that has often happened only after handoff. In return, developers need to become more design- and UX-aware. That latter shift is already visible in AI-assisted work: when implementation becomes easier to generate, judgment about the right component and the right experience becomes more valuable. We explored that shift in [AI Developer Shift: From Code Writer to Quality Guardian](/en/blog/from-code-writers-to-system-architects/).
+
+## Storybook belongs in the feedback loop
+
+I would put [Storybook](https://storybook.js.org/) at the centre of an agentic design-system loop. It provides a rendered, inspectable version of the actual components—not just a design intention and not just source code. That makes it useful across many products and projects: a shared Storybook gives designers, developers and agents the same rendered reference even when components are reused in different applications.
+
+
+That makes a practical automated loop possible:
+
+1. an agent reads the component contract and the relevant Figma context;
+2. it implements or changes a component;
+3. Storybook renders the meaningful states and variants;
+4. a browser check, for example with [Playwright](https://playwright.dev/), inspects those renders against agreed rules or approved references; and
+5. the result goes to a person when the difference is ambiguous, product-specific or significant.
+
+Tools such as [Story UI](https://github.com/southleft/story-ui) point in this direction too: it can use Storybook context to generate component stories, and its documentation recommends Playwright for rendering and checking generated work. The important part is not any one tool. It is that the loop has an executable product surface and a deliberate human decision point.
+
+Pixel comparison is useful, but it is not the final judge. A tiny visual difference can be harmless; a perfectly matching component can still create a confusing flow. Someone still has to inspect components in the product, in their real combinations and mutations—not just in isolation.
+
+## Feedback must flow back
+
+The hard question starts after the first clean alignment: what happens when implementation discovers a new need?
+
+Imagine a team needs a red version of a button for one feature. Does that become a component variant? A local exception? A semantic token? Or does the use case reveal that the product’s status model is incomplete?
+
+The wrong answer is to automatically promote every change into a global library. Global component libraries become harder to understand when every one-off requirement turns into a canonical variant. The equally wrong answer is to bury every new decision in product code.
+
+Teams need a promotion rule. A change might earn a place in the shared contract when it has more than one real use case, has a clear semantic meaning, meets accessibility requirements and has an owner who will maintain it. Otherwise, it can remain a documented local composition. The point is not bureaucracy; it is making the decision visible and reversible.
+
+This is particularly relevant for organisations with several products. AI may make it possible to maintain a global specification of UI principles, tokens, behaviour and accessibility, while each product retains its own component library and local compositions. The global layer gives agents common context. Product libraries keep them from flattening every product into one generic interface.
+
+## UI precision is not UX completeness
+
+The conversation can go all the way down to a one-pixel border definition. That precision matters. But it must be viewed from the height of the whole product.
+
+UI can often be encoded very precisely: values, states, components and visual rules can be represented in design tokens and code. UX is more than that. It emerges from the interplay of components, copy, information architecture, timing, error handling and the user’s actual goal.
+
+That is why UX felt underrepresented next to UI in my notes from the talk. The valuable next question is: how precise can a system be about experience, not only appearance? An agent can validate tokens and variants reliably when the rules exist. It cannot decide, from a component catalogue alone, whether a journey is understandable or whether a new flow solves a real user problem.
+
+Keeping design and code aligned has always been difficult. AI can help with the tedious parts: extracting context, finding differences, rendering states, checking rules and keeping the evidence close to the change. It also changes roles, tools and workflows. In a sense, AI asks a team to clean up its closet: name the things that were implicit, connect the things that were duplicated, and decide who owns the rules.
+
+The most important loop is therefore not Figma to code. It is a broader loop between designers, developers and the people using the product. Code should inform the specification; users should inform the experience; and both should have a route back into the design system.
+
+If you are building or evolving an app and want to make that feedback loop more durable, [we can help with the development and long-term maintenance work](/en/app-development/). Or [get in touch](/en/contact/) to compare notes.

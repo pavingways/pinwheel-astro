@@ -17,6 +17,7 @@ month**, zero in a crunch month is fine.
 | 7 | AI Developer Shift: From Code Writer to Quality Guardian / KI-Entwicklerwandel | DE+EN | **live** — source content supplied by Rocco; the "AI-powered workflow" comparison-table column was reconstructed since it didn't survive the source copy/paste (Rocco signed off on publishing as-is); `categories: [AI, technology]` (EN) / `[KI, technology]` (DE) — new taxonomy, see house rules below; DE twin paired via `translation:` | ad hoc, Aug 2026 |
 
 | 8 | AI Benchmarking Across the SDLC: What Should You Measure? / KI-Benchmarking im SDLC: Was sollten Sie messen? | DE+EN | **live** — paired framework post on delivery flow, quality and maintenance, newly possible work, and total AI cost/control; links to Steyer's controlled agent comparison as a contrast to day-to-day delivery. A practical measurement follow-up is teased, not yet planned. | Sep 2026 |
+| 9 | Design Systems as AI Context: Notes from TJ Pitre at SmashingConf Freiburg / Designsysteme als KI-Kontext: Notizen zu TJ Pitre bei der SmashingConf Freiburg | DE+EN | **live** — paired first entry in an in-progress series of personal SmashingConf Freiburg 2026 talk notes; categories: `conference`, `AI`/`KI`, `technology`; attendance disclosure for Pax included. Further talk posts will be added as their notes are prepared. | Sep 2026 |
 
 ## Publishing a scheduled draft
 

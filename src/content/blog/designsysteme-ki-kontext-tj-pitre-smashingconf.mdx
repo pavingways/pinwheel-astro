@@ -1,0 +1,103 @@
+---
+title: "Designsysteme als KI-Kontext: Notizen zu TJ Pitre bei der SmashingConf Freiburg"
+date: 2026-09-08T13:30:00+02:00
+image: /images/blog-smashingconf-tj-pitre-design-systems-ai.webp
+categories: [conference, KI, technology]
+author: Rocco
+featured: false
+language: de
+description: "Notizen zu TJ Pitres SmashingConf-Talk darüber, wie Designsysteme für KI nutzbaren Kontext liefern: FigmaLint, Component Contracts, Storybook-Feedback-Loops und die menschliche Arbeit, die Design und Code zusammenhält."
+translation: /en/blog/design-systems-ai-context-tj-pitre-smashingconf
+aiAssisted: true
+---
+
+> **Offenlegung:** Ich besuche die SmashingConf Freiburg als Mitarbeiter von [Pax](https://www.pax.ch/) – vielen Dank an Pax für diese Möglichkeit. Ich habe mir Notizen zu den Talks gemacht und teile hier die Gedanken, die sie ausgelöst haben. Dies ist eine persönliche Konferenznotiz, kein Transkript und keine Aussage von Pax.
+
+Dies ist der erste Beitrag in einer Reihe von Notizen zur SmashingConf Freiburg. Die Konferenz 2026 findet vom 7. bis 10. September in Freiburg statt. [Hier ist das offizielle Programm](https://smashingconf.com/freiburg-2026/).
+
+TJ Pitres Talk, **Design Systems and the AI Context**, drehte sich um ein Problem, das Design- und Entwicklungsteams sehr gut kennen: Designsysteme und Code driften auseinander. KI schafft dieses Problem nicht. Sie macht seine Folgen sichtbarer – und sie kann Teams helfen, Drift im Griff zu behalten. TJ stellte Tools und Workflows vor, mit denen sich das Verhältnis zwischen Designsystemen und Code prüfen und aktiv bearbeiten lässt.
+
+## Drift ist ein Thema des gesamten Produktlebenszyklus
+
+Design-Intent wandert nicht einmal sauber von Figma nach Code. Er verändert sich, wenn eine Anforderung konkreter wird, ein Sonderfall auftaucht, ein Produkt einen neuen Zustand braucht oder ein Entwickler entdeckt, was eine Plattform tatsächlich erlaubt. Das ist normale Produktarbeit.
+
+Die Frage ist nicht, ob Drift entsteht. Entscheidend ist, ob er sichtbar und bewusst ist und wieder in das System zurückfließt. Ohne diesen Loop werden eine Designbibliothek und eine Komponentenbibliothek nach und nach zu zwei unterschiedlichen Beschreibungen desselben Produkts.
+
+Für Menschen sind unvollständige Designinformationen unbequem. Für einen KI-Agenten sind sie eine Einladung, Dinge abzuleiten. Wenn ein Agent an einer Stelle einen fest eingetragenen `1px`-Border und an anderer Stelle ein nicht damit verbundenes Token für die Border-Breite sieht, muss er raten, ob beides dasselbe bedeutet. Er kann eine plausible Wahl treffen – aber plausibel ist nicht gleich korrekt.
+
+## Ist das Design bereit, als Kontext genutzt zu werden?
+
+Eine Demonstration im Talk war [FigmaLint](https://github.com/southleft/figmalint), ein Figma-Plugin, das Komponenten auf Designsystem-Konformität, Barrierefreiheit und Entwicklungsreife untersucht. In meinen Notizen kommt ein Alignment-Score wie 87 % vor. Ich verstehe diesen Wert nicht als ästhetische Bewertung, sondern als Signal dafür, wie viel des Designs in einer strukturierten, wiederverwendbaren Form vorliegt, mit der ein Entwickler – oder ein Agent – arbeiten kann.
+
+Der Unterschied zwischen einem einmalig eingetragenen `1px`-Wert und einer benannten Standardvariable für die Border-Breite ist ein kleines, aber aussagekräftiges Beispiel. Das Ziel ist nicht einfach ein perfekter Score. Entscheidungen sollen so explizit beschrieben sein, dass KI kritische Werte nicht aus Pixeln, Namenskonventionen oder benachbarten Beispielen ableiten muss.
+
+Im Idealfall ist ein „KI-bereites“ Design ein Design, aus dem ein Agent sauberen Code erzeugen kann, indem er das tatsächliche System nutzt: seine Variablen, Komponenten, Varianten, Zustände und Regeln. Ein Score von 100 % kann ein sinnvolles Ziel für die geprüften Regeln sein. Er ist für sich allein aber kein Beweis für eine gute Produkterfahrung.
+
+Deshalb sollte ein Figma-Frame auch nicht allein zur Source of Truth werden. Figma kann eine ausgezeichnete Oberfläche für eine Spezifikation sein, aber eine Oberfläche ist nicht die gesamte Spezifikation.
+
+## Tools können Kontext transportieren, aber keinen Vertrag ersetzen
+
+Die Werkzeuge dafür werden immer praxistauglicher. [Figmas offizieller MCP-Server](https://developers.figma.com/docs/figma-mcp-server/) kann kompatiblen KI-Clients Designkontext wie Variablen, Komponenten und Layout-Daten bereitstellen. Figma dokumentiert außerdem Code Connect als Möglichkeit, generierten Code zu den Komponenten einer angebundenen Codebasis zu führen.
+
+TJ verwies auch auf Tools seines Unternehmens [Southleft](https://southleft.com/), darunter [Figma Console MCP](https://github.com/southleft/figma-console-mcp). Dieses Tool verbindet KI-Assistenten mit Figma für Extraktion, Erstellung und Debugging. Solche Tools erleichtern es, Designkontext in einen agentischen Workflow zu bringen. Sie entscheiden jedoch nicht, was eine Komponente bedeutet, wann eine neue Variante in die Bibliothek gehört oder wer eine Änderung freigibt. Das bleibt die Arbeit des Systems rund um das Tool.
+
+Eine besonders interessante Idee aus dem Talk ist ein **Component Contract**. Das ist mehr als eine visuelle Komponentenbeschreibung: Er kann Anatomie, Varianten, Zustände, Tokens, Verhalten und Regeln zur Barrierefreiheit maschinenlesbar festhalten. Der [Component-Contract-Proof-of-Concept von Southleft](https://github.com/southleft/ds-contracts-poc) beschreibt sich als Kandidat für eine herstellerneutrale Spezifikation, nicht als fertigen Standard. Die zentrale Idee überzeugt: Ein Contract liegt zwischen Design und Code, Änderungen fließen in ihn zurück und beide Oberflächen werden gegen ihn geprüft.
+
+Diese Richtung finde ich besonders sinnvoll. Sie schafft einen Ort für Entscheidungen, die nicht zweimal manuell gepflegt werden sollten. Als Softwareentwickler kennen wir diese Disziplin aus API-Spezifikationen: Ein gemeinsamer Vertrag definiert, worauf sich Beteiligte verlassen können, und daraus kann Code erzeugt werden. Ein Component Contract wendet dieselbe Idee auf die Grenze des Designsystems an.
+
+## Mein Fazit: erst spezifizieren, dann generieren
+
+Damit ein Agent eine Komponente sicher verwenden kann, brauchen wir eine klare Komponentenstruktur. Sie sollte mindestens explizit machen:
+
+- ihren Zweck und ihre semantische Rolle;
+- ihre Anatomie: welche Teile sie hat und welche optional sind;
+- Eigenschaften, Varianten und Zustände, einschließlich ungültiger und Ladezustände;
+- Tokens und visuelle Regeln statt beliebiger Werte;
+- Interaktions-, Inhalts- und Barrierefreiheitsanforderungen; und
+- Beispiele für Kontexte, in denen sie verwendet werden soll – und nicht verwendet werden soll.
+
+Figma kann dafür eine starke Basis sein, weil dort viele Teams bereits über Komponenten sprechen. Wissen darf aber nicht im Kopf des Designers oder nur in einem Kommentar neben einem Frame bleiben. Wenn es wichtig genug ist, um einen Entwickler zu leiten, muss es explizit genug werden, um auch einen Agenten zu leiten.
+
+Das verändert die Rolle von UI/UX-Designern auf produktive Weise. Sie übernehmen einen Teil der Komponenten-Definitionsarbeit, die oft erst nach dem Handoff stattfindet. Im Gegenzug müssen Entwickler design- und UX-bewusster werden. Dieser Wandel zeigt sich bereits bei KI-gestützter Arbeit: Wenn sich Implementierung leichter generieren lässt, werden Urteilsvermögen über die richtige Komponente und die richtige Erfahrung wertvoller. Diesen Wandel haben wir in [KI-Entwicklerwandel: Vom Code-Schreiber zum Qualitätswächter](/de/blog/vom-code-schreiber-zum-system-architekten/) beleuchtet.
+
+## Storybook gehört in den Feedback-Loop
+
+Ich würde [Storybook](https://storybook.js.org/) in das Zentrum eines agentischen Designsystem-Loops stellen. Es stellt eine gerenderte, überprüfbare Version der tatsächlichen Komponenten bereit – nicht nur eine Design-Intention und nicht nur Source Code. Damit eignet es sich für viele Produkte und Projekte: Ein gemeinsames Storybook gibt Designern, Entwicklern und Agents dieselbe gerenderte Referenz, auch wenn Komponenten in verschiedenen Anwendungen wiederverwendet werden.
+
+Damit wird ein praktischer automatisierter Loop möglich:
+
+1. Ein Agent liest den Component Contract und den relevanten Figma-Kontext.
+2. Er implementiert oder verändert eine Komponente.
+3. Storybook rendert die relevanten Zustände und Varianten.
+4. Ein Browser-Check, zum Beispiel mit [Playwright](https://playwright.dev/), prüft diese Darstellungen gegen vereinbarte Regeln oder freigegebene Referenzen.
+5. Das Ergebnis geht an einen Menschen, wenn die Differenz mehrdeutig, produktspezifisch oder wesentlich ist.
+
+Tools wie [Story UI](https://github.com/southleft/story-ui) weisen ebenfalls in diese Richtung: Sie können Storybook-Kontext nutzen, um Component Stories zu erzeugen, und ihre Dokumentation empfiehlt Playwright, um generierte Arbeit zu rendern und zu prüfen. Entscheidend ist nicht ein einzelnes Tool. Entscheidend ist, dass der Loop eine ausführbare Produktoberfläche und einen bewussten menschlichen Entscheidungspunkt enthält.
+
+Ein Pixelvergleich ist nützlich, aber kein endgültiger Richter. Eine kleine visuelle Differenz kann harmlos sein; eine perfekt passende Komponente kann dennoch einen verwirrenden Flow erzeugen. Jemand muss Komponenten weiterhin im Produkt und in ihren tatsächlichen Kombinationen und Varianten prüfen – nicht nur isoliert.
+
+## Feedback muss zurückfließen
+
+Die schwierige Frage beginnt nach der ersten sauberen Ausrichtung: Was passiert, wenn die Implementierung einen neuen Bedarf entdeckt?
+
+Stellen wir uns vor, ein Team braucht für ein Feature eine rote Variante eines Buttons. Wird daraus eine Komponentenvariante? Eine lokale Ausnahme? Ein semantisches Token? Oder zeigt der Anwendungsfall, dass das Statusmodell des Produkts unvollständig ist?
+
+Die falsche Antwort ist, jede Änderung automatisch in eine globale Bibliothek zu übernehmen. Globale Komponentenbibliotheken werden schwerer verständlich, wenn jede einmalige Anforderung zu einer kanonischen Variante wird. Genauso falsch ist es, jede neue Entscheidung im Produktcode zu verstecken.
+
+Teams brauchen eine Regel für diese Aufnahme. Eine Änderung kann einen Platz im gemeinsamen Contract verdienen, wenn sie mehr als einen echten Anwendungsfall hat, eine klare semantische Bedeutung besitzt, Anforderungen an die Barrierefreiheit erfüllt und einen Owner hat, der sie pflegt. Andernfalls kann sie eine dokumentierte lokale Komposition bleiben. Es geht nicht um Bürokratie, sondern darum, die Entscheidung sichtbar und reversibel zu machen.
+
+Das ist besonders relevant für Organisationen mit mehreren Produkten. KI kann es möglich machen, eine globale Spezifikation für UI-Prinzipien, Tokens, Verhalten und Barrierefreiheit zu pflegen, während jedes Produkt seine eigene Komponentenbibliothek und lokale Kompositionen behält. Die globale Ebene gibt Agents gemeinsamen Kontext. Die Produktbibliotheken verhindern, dass jedes Produkt zu einer generischen Oberfläche vereinheitlicht wird.
+
+## Präzision im UI ist keine Vollständigkeit im UX
+
+Die Diskussion kann bis zu einer Definition einer Border-Breite von einem Pixel gehen. Diese Präzision ist wichtig. Sie muss aber aus der Höhe des gesamten Produkts betrachtet werden.
+
+UI lässt sich oft sehr präzise kodieren: Werte, Zustände, Komponenten und visuelle Regeln können in Design Tokens und Code abgebildet werden. UX ist mehr als das. Sie entsteht aus dem Zusammenspiel von Komponenten, Copy, Informationsarchitektur, Timing, Fehlerbehandlung und dem tatsächlichen Ziel des Nutzers.
+
+Deshalb kam UX in meinen Notizen zum Talk gegenüber den UI-Aspekten etwas zu kurz. Die wertvolle nächste Frage lautet: Wie präzise kann ein System die Erfahrung beschreiben, nicht nur das Erscheinungsbild? Ein Agent kann Tokens und Varianten zuverlässig validieren, wenn die Regeln existieren. Er kann nicht allein aus einem Komponenten-Katalog entscheiden, ob ein Nutzerweg verständlich ist oder ein neuer Flow ein echtes Problem löst.
+
+Design und Code zusammenzuhalten war schon immer schwierig. KI kann bei den mühsamen Teilen helfen: Kontext extrahieren, Unterschiede finden, Zustände rendern, Regeln prüfen und die Evidenz nah an der Änderung halten. Sie verändert aber auch Rollen, Tools und Workflows. In gewisser Weise verlangt KI von einem Team, den eigenen Schrank aufzuräumen: Implizites zu benennen, doppelte Dinge zu verbinden und zu entscheiden, wem die Regeln gehören.
+
+Der wichtigste Loop ist deshalb nicht Figma zu Code. Es ist ein breiterer Loop zwischen Designern, Entwicklern und den Menschen, die das Produkt nutzen. Code sollte die Spezifikation informieren, Nutzer sollten die Erfahrung informieren und beides braucht einen Weg zurück in das Designsystem.
+
+Wenn Sie eine App entwickeln oder weiterentwickeln und diesen Feedback-Loop belastbarer machen möchten, [unterstützen wir Sie bei Entwicklung und langfristiger Wartung](/de/app-entwicklung/). Oder [kontaktieren Sie uns](/de/kontakt/), um Erfahrungen auszutauschen.
