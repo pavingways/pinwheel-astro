@@ -1,13 +1,13 @@
 ---
-title: "Designsysteme als KI-Kontext - SmashingConf"
+title: "Kontextbasierte Designsysteme in der Praxis - SmashingConf"
 date: 2026-09-08T13:30:00+02:00
 image: /images/blog-smashingconf-tj-pitre-design-systems-ai.webp
 categories: [Konferenz, KI]
 author: Rocco
 featured: false
 language: de
-description: "Notizen zu TJ Pitres SmashingConf-Talk darüber, wie Designsysteme für KI nutzbaren Kontext liefern: FigmaLint, Component Contracts, Storybook-Feedback-Loops und die menschliche Arbeit, die Design und Code zusammenhält."
-excerpt: "Was muss ein Designsystem explizit machen, damit KI zuverlässig damit arbeiten kann? Notizen zu FigmaLint, Component Contracts und dem Feedback-Loop, der Design und Code zusammenhält."
+description: "Notizen zu TJ Pitres SmashingConf-Talk über kontextbasierte Designsysteme: auffindbare Patterns, Benennung, Governance, Akzeptanz im Team und KI als Unterstützung."
+excerpt: "Ein Designsystem funktioniert, wenn Teams passende Patterns finden und ohne Rätselraten nutzen können. Notizen zu TJ Pitres CBDS-Framework und dazu, wie KI auf einem soliden Fundament aufbauen kann."
 translation: /en/blog/design-systems-ai-context-tj-pitre-smashingconf
 aiAssisted: true
 ---
@@ -16,7 +16,15 @@ aiAssisted: true
 
 Dies ist der erste Beitrag in einer Reihe von Notizen zur SmashingConf Freiburg. Die Konferenz 2026 findet vom 7. bis 10. September in Freiburg statt. [Hier ist das offizielle Programm](https://smashingconf.com/freiburg-2026/).
 
-TJ Pitres Talk, **Design Systems and the AI Context**, drehte sich um ein Problem, das Design- und Entwicklungsteams sehr gut kennen: Designsysteme und Code driften auseinander. KI schafft dieses Problem nicht. Sie macht seine Folgen sichtbarer – und sie kann Teams helfen, Drift im Griff zu behalten. TJ stellte Tools und Workflows vor, mit denen sich das Verhältnis zwischen Designsystemen und Code prüfen und aktiv bearbeiten lässt.
+TJ Pitres Talk, **Context-Based Design Systems in Practice**, begann mit einer praktischen Frage: Können Teams die passenden Patterns tatsächlich finden und ohne Rätselraten nutzen? Diese Frage ist seit Jahren relevant, und KI ändert daran nichts. TJ stellte das Framework **Context-Based Design Systems (CBDS)** vor: ein Modell, um Komponenten, Tokens und Dokumentation so zu strukturieren, dass sie unter realem Produktionsdruck nützlich bleiben.
+
+Das Fundament bilden Benennung, Governance und die tatsächliche Nutzung im Team: Wie erkennen Teams das passende Pattern, wie entwickelt sich das System weiter, und können Menschen es im Alltag einsetzen? KI spielt eine unterstützende Rolle. Wenn diese Struktur steht, können KI-Tools denselben Kontext nutzen, um konsistentere Ergebnisse zu erzeugen, die zur Marke passen. Die folgenden Notizen beleuchten dieses Fundament und die Gedanken, die es bei mir zum Zusammenspiel von Design und Code ausgelöst hat.
+
+## Teams helfen, passende Patterns zu finden und zu nutzen
+
+Eine Komponentenbibliothek ist dann nützlich, wenn ein Team erkennen kann, welche Komponente zu einer Anforderung passt und wie sie eingesetzt wird. Namen, Tokens und Dokumentation müssen neben dem Erscheinungsbild auch die Entscheidungen hinter einem Pattern erklären. Sonst müssen Menschen raten, nachfragen oder eine weitere Version von etwas erstellen, das bereits existiert.
+
+Aus TJs CBDS-Ansatz nehme ich mit, dass dies ebenso eine organisatorische wie eine strukturelle Aufgabe ist. Namen helfen beim Finden eines Patterns, Dokumentation bei seiner Anwendung, und Governance schafft einen Weg, Änderungen vorzuschlagen und zu prüfen. Ob das zusammenspielt, zeigt sich daran, ob Teams das System im Alltag tatsächlich nutzen. Dieses Fundament hilft Designern und Entwicklern schon heute und gibt KI-Tools besseren Kontext, wenn Teams sie einsetzen möchten.
 
 ## Drift ist ein Thema des gesamten Produktlebenszyklus
 
@@ -24,21 +32,21 @@ Design-Intent wandert nicht einmal sauber von Figma nach Code. Er verändert sic
 
 Die Frage ist nicht, ob Drift entsteht. Entscheidend ist, ob er sichtbar und bewusst ist und wieder in das System zurückfliesst. Ohne diesen Loop werden eine Designbibliothek und eine Komponentenbibliothek nach und nach zu zwei unterschiedlichen Beschreibungen desselben Produkts.
 
-Für Menschen sind unvollständige Designinformationen unbequem. Für einen KI-Agenten sind sie eine Einladung, Dinge abzuleiten. Wenn ein Agent an einer Stelle einen fest eingetragenen `1px`-Border und an anderer Stelle ein nicht damit verbundenes Token für die Border-Breite sieht, muss er raten, ob beides dasselbe bedeutet. Er kann eine plausible Wahl treffen – aber plausibel ist nicht gleich korrekt.
+Unvollständige Designinformationen zwingen Menschen, Lücken selbst zu füllen. Daraus können inkonsistente Implementierungen und doppelte Patterns entstehen. Ein KI-Agent steht vor derselben Unklarheit: Wenn er an einer Stelle einen fest eingetragenen `1px`-Border und an anderer Stelle ein nicht damit verbundenes Token für die Border-Breite sieht, muss er raten, ob beides dasselbe bedeutet. Er kann eine plausible Wahl treffen – aber plausibel ist nicht gleich korrekt.
 
-## Ist das Design bereit, als Kontext genutzt zu werden?
+## Die Entscheidungen im System explizit machen
 
 Eine Demonstration im Talk war [FigmaLint](https://github.com/southleft/figmalint), ein Figma-Plugin, das Komponenten auf Designsystem-Konformität, Barrierefreiheit und Entwicklungsreife untersucht. In meinen Notizen kommt ein Alignment-Score wie 87 % vor. Ich verstehe diesen Wert nicht als ästhetische Bewertung, sondern als Signal dafür, wie viel des Designs in einer strukturierten, wiederverwendbaren Form vorliegt, mit der ein Entwickler – oder ein Agent – arbeiten kann.
 
-Der Unterschied zwischen einem einmalig eingetragenen `1px`-Wert und einer benannten Standardvariable für die Border-Breite ist ein kleines, aber aussagekräftiges Beispiel. Das Ziel ist nicht einfach ein perfekter Score. Entscheidungen sollen so explizit beschrieben sein, dass KI kritische Werte nicht aus Pixeln, Namenskonventionen oder benachbarten Beispielen ableiten muss.
+Der Unterschied zwischen einem einmalig eingetragenen `1px`-Wert und einer benannten Standardvariable für die Border-Breite ist ein kleines, aber aussagekräftiges Beispiel. Das Ziel ist eine explizite, wiederverwendbare Entscheidung: Ein Entwickler soll den vorgesehenen Wert erkennen und verstehen können, wo er gilt. Ein KI-Tool kann anschliessend dieselbe Information nutzen, statt kritische Werte aus Pixeln oder benachbarten Beispielen abzuleiten.
 
-Im Idealfall ist ein „KI-bereites“ Design ein Design, aus dem ein Agent sauberen Code erzeugen kann, indem er das tatsächliche System nutzt: seine Variablen, Komponenten, Varianten, Zustände und Regeln. Ein Score von 100 % kann ein sinnvolles Ziel für die geprüften Regeln sein. Er ist für sich allein aber kein Beweis für eine gute Produkterfahrung.
+Ein gut strukturiertes Design gibt Teams eine gemeinsame Referenz für Variablen, Komponenten, Varianten, Zustände und Regeln. Es gibt auch einem Agenten eine solidere Grundlage, um Code zu erzeugen, der dem System folgt. Ein Score von 100 % kann ein sinnvolles Ziel für die geprüften Regeln sein. Er beweist für sich allein aber weder, dass Menschen das passende Pattern finden, noch dass das System genutzt wird oder eine gute Produkterfahrung entsteht.
 
 Deshalb sollte ein Figma-Frame auch nicht allein zur Source of Truth werden. Figma kann eine ausgezeichnete Oberfläche für eine Spezifikation sein, aber eine Oberfläche ist nicht die gesamte Spezifikation.
 
 ## Tools können Kontext transportieren, aber keinen Vertrag ersetzen
 
-Die Werkzeuge dafür werden immer praxistauglicher. [Figmas offizieller MCP-Server](https://developers.figma.com/docs/figma-mcp-server/) kann kompatiblen KI-Clients Designkontext wie Variablen, Komponenten und Layout-Daten bereitstellen. Figma dokumentiert ausserdem Code Connect als Möglichkeit, generierten Code zu den Komponenten einer angebundenen Codebasis zu führen.
+Auf diesem Fundament können Tools den Kontext für KI-Assistenten zugänglich machen. [Figmas offizieller MCP-Server](https://developers.figma.com/docs/figma-mcp-server/) kann kompatiblen KI-Clients Designkontext wie Variablen, Komponenten und Layout-Daten bereitstellen. Figma dokumentiert ausserdem Code Connect als Möglichkeit, generierten Code zu den Komponenten einer angebundenen Codebasis zu führen.
 
 TJ verwies auch auf Tools seines Unternehmens [Southleft](https://southleft.com/), darunter [Figma Console MCP](https://github.com/southleft/figma-console-mcp). Dieses Tool verbindet KI-Assistenten mit Figma für Extraktion, Erstellung und Debugging. Solche Tools erleichtern es, Designkontext in einen agentischen Workflow zu bringen. Sie entscheiden jedoch nicht, was eine Komponente bedeutet, wann eine neue Variante in die Bibliothek gehört oder wer eine Änderung freigibt. Das bleibt die Arbeit des Systems rund um das Tool.
 
@@ -48,7 +56,7 @@ Diese Richtung finde ich besonders sinnvoll. Sie schafft einen Ort für Entschei
 
 ## Mein Fazit: erst spezifizieren, dann generieren
 
-Damit ein Agent eine Komponente sicher verwenden kann, brauchen wir eine klare Komponentenstruktur. Sie sollte mindestens explizit machen:
+Damit ein Team eine Komponente sicher auswählen und verwenden kann, brauchen wir eine klare Komponentenstruktur. Dieselben Informationen können auch einen Agenten leiten. Meine praktische Checkliste würde mindestens explizit machen:
 
 - ihren Zweck und ihre semantische Rolle;
 - ihre Anatomie: welche Teile sie hat und welche optional sind;
@@ -63,9 +71,9 @@ Das verändert die Rolle von UI/UX-Designern auf produktive Weise. Sie übernehm
 
 ## Storybook gehört in den Feedback-Loop
 
-Ich würde [Storybook](https://storybook.js.org/) in das Zentrum eines agentischen Designsystem-Loops stellen. Es stellt eine gerenderte, überprüfbare Version der tatsächlichen Komponenten bereit – nicht nur eine Design-Intention und nicht nur Source Code. Damit eignet es sich für viele Produkte und Projekte: Ein gemeinsames Storybook gibt Designern, Entwicklern und Agents dieselbe gerenderte Referenz, auch wenn Komponenten in verschiedenen Anwendungen wiederverwendet werden.
+Für meine eigene Arbeit weitergedacht, würde ich [Storybook](https://storybook.js.org/) in das Zentrum des Feedback-Loops zwischen Design und Entwicklung stellen. Es stellt eine gerenderte, überprüfbare Version der tatsächlichen Komponenten bereit – nicht nur eine Design-Intention und nicht nur Source Code. Damit eignet es sich für viele Produkte und Projekte: Ein gemeinsames Storybook gibt Designern und Entwicklern dieselbe gerenderte Referenz, auch wenn Komponenten in verschiedenen Anwendungen wiederverwendet werden. Agents können diese Referenz ebenfalls nutzen.
 
-Damit wird ein praktischer automatisierter Loop möglich:
+Auf dieser gemeinsamen Referenz aufbauend, würde ich den folgenden automatisierten Loop erproben. Das ist mein Vorschlag zur Anwendung der Ideen, keine Wiedergabe von TJs Talk:
 
 1. Ein Agent liest den Component Contract und den relevanten Figma-Kontext.
 2. Er implementiert oder verändert eine Komponente.
@@ -79,7 +87,7 @@ Ein Pixelvergleich ist nützlich, aber kein endgültiger Richter. Eine kleine vi
 
 ## Feedback muss zurückfliessen
 
-Die schwierige Frage beginnt nach der ersten sauberen Ausrichtung: Was passiert, wenn die Implementierung einen neuen Bedarf entdeckt?
+Für mich führt das zurück zur Governance: Was passiert, wenn die Implementierung einen neuen Bedarf entdeckt?
 
 Stellen wir uns vor, ein Team braucht für ein Feature eine rote Variante eines Buttons. Wird daraus eine Komponentenvariante? Eine lokale Ausnahme? Ein semantisches Token? Oder zeigt der Anwendungsfall, dass das Statusmodell des Produkts unvollständig ist?
 
@@ -87,7 +95,7 @@ Die falsche Antwort ist, jede Änderung automatisch in eine globale Bibliothek z
 
 Teams brauchen eine Regel für diese Aufnahme. Eine Änderung kann einen Platz im gemeinsamen Contract verdienen, wenn sie mehr als einen echten Anwendungsfall hat, eine klare semantische Bedeutung besitzt, Anforderungen an die Barrierefreiheit erfüllt und einen Owner hat, der sie pflegt. Andernfalls kann sie eine dokumentierte lokale Komposition bleiben. Es geht nicht um Bürokratie, sondern darum, die Entscheidung sichtbar und reversibel zu machen.
 
-Das ist besonders relevant für Organisationen mit mehreren Produkten. KI kann es möglich machen, eine globale Spezifikation für UI-Prinzipien, Tokens, Verhalten und Barrierefreiheit zu pflegen, während jedes Produkt seine eigene Komponentenbibliothek und lokale Kompositionen behält. Die globale Ebene gibt Agents gemeinsamen Kontext. Die Produktbibliotheken verhindern, dass jedes Produkt zu einer generischen Oberfläche vereinheitlicht wird.
+Das ist besonders relevant für Organisationen mit mehreren Produkten. Eine gemeinsame Spezifikation für UI-Prinzipien, Tokens, Verhalten und Barrierefreiheit kann Teams Orientierung geben, während jedes Produkt seine eigene Komponentenbibliothek und lokale Kompositionen behält. KI könnte helfen, diese Struktur zu pflegen und zu prüfen. Die gemeinsame Ebene gibt Teams und Agents denselben Kontext, während die Produktbibliotheken die Patterns bewahren, die zu den Anforderungen des jeweiligen Produkts passen.
 
 ## Präzision im UI ist keine Vollständigkeit im UX
 
@@ -95,9 +103,9 @@ Die Diskussion kann bis zu einer Definition einer Border-Breite von einem Pixel 
 
 UI lässt sich oft sehr präzise kodieren: Werte, Zustände, Komponenten und visuelle Regeln können in Design Tokens und Code abgebildet werden. UX ist mehr als das. Sie entsteht aus dem Zusammenspiel von Komponenten, Copy, Informationsarchitektur, Timing, Fehlerbehandlung und dem tatsächlichen Ziel des Nutzers.
 
-Deshalb kam UX in meinen Notizen zum Talk gegenüber den UI-Aspekten etwas zu kurz. Die wertvolle nächste Frage lautet: Wie präzise kann ein System die Erfahrung beschreiben, nicht nur das Erscheinungsbild? Ein Agent kann Tokens und Varianten zuverlässig validieren, wenn die Regeln existieren. Er kann nicht allein aus einem Komponenten-Katalog entscheiden, ob ein Nutzerweg verständlich ist oder ein neuer Flow ein echtes Problem löst.
+Meine Notizen konzentrieren sich stark auf UI-Details. Daraus ergibt sich für mich eine weiterführende UX-Frage: Wie präzise kann ein System die Erfahrung beschreiben, nicht nur das Erscheinungsbild? Diese Frage nehme ich über den Talk hinaus mit. Ein Agent kann Tokens und Varianten zuverlässig validieren, wenn die Regeln existieren. Er kann nicht allein aus einem Komponenten-Katalog entscheiden, ob ein Nutzerweg verständlich ist oder ein neuer Flow ein echtes Problem löst.
 
-Design und Code zusammenzuhalten war schon immer schwierig. KI kann bei den mühsamen Teilen helfen: Kontext extrahieren, Unterschiede finden, Zustände rendern, Regeln prüfen und die Evidenz nah an der Änderung halten. Sie verändert aber auch Rollen, Tools und Workflows. In gewisser Weise verlangt KI von einem Team, den eigenen Schrank aufzuräumen: Implizites zu benennen, doppelte Dinge zu verbinden und zu entscheiden, wem die Regeln gehören.
+Design und Code zusammenzuhalten war schon immer schwierig. TJs CBDS-Ansatz führt mich zurück zu der Arbeit, die ein System belastbar macht: klare Namen, verknüpfte Komponenten und Tokens, nutzbare Dokumentation und Verantwortung für Änderungen. Das ist relevant, ob ein Team KI einsetzt oder nicht. Wenn dieses Fundament steht, kann KI bei den mühsamen Teilen helfen: Kontext extrahieren, Unterschiede finden, Zustände rendern, Regeln prüfen und die Evidenz nah an der Änderung halten.
 
 Der wichtigste Loop ist deshalb nicht Figma zu Code. Es ist ein breiterer Loop zwischen Designern, Entwicklern und den Menschen, die das Produkt nutzen. Code sollte die Spezifikation informieren, Nutzer sollten die Erfahrung informieren und beides braucht einen Weg zurück in das Designsystem.
 

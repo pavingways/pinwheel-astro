@@ -1,13 +1,13 @@
 ---
-title: "Design Systems as AI Context - SmashingConf"
+title: "Context-Based Design Systems in Practice - SmashingConf"
 date: 2026-09-08T13:30:00+02:00
 image: /images/blog-smashingconf-tj-pitre-design-systems-ai.webp
 categories: [conference, AI]
 author: Rocco
 featured: false
 language: en
-description: "Notes from TJ Pitre’s SmashingConf Freiburg talk on making design systems usable AI context: FigmaLint, component contracts, Storybook feedback loops, and the human work that keeps design and code aligned."
-excerpt: "What must a design system encode before an AI agent can use it reliably? Notes on FigmaLint, component contracts and the feedback loop that keeps design and code aligned."
+description: "Notes from TJ Pitre’s SmashingConf talk on Context-Based Design Systems: patterns teams can find and use, naming, governance, adoption, and AI’s supporting role."
+excerpt: "A design system works when teams can find and use the right patterns without guessing. Notes on TJ Pitre’s CBDS framework and how AI can extend a strong foundation."
 translation: /de/blog/designsysteme-ki-kontext-tj-pitre-smashingconf
 aiAssisted: true
 ---
@@ -16,7 +16,15 @@ aiAssisted: true
 
 This is the first post in a series of notes from SmashingConf Freiburg. The 2026 conference is taking place in Freiburg from September 7 to 10. [The official schedule is here](https://smashingconf.com/freiburg-2026/).
 
-Pitre’s talk, **Design Systems and the AI Context**, landed on a problem that design and development teams already know well: design systems and code drift apart. AI does not create that problem. It makes its consequences much more visible, and it can help teams keep drift in check. TJ proposed tools and workflows for making the relationship between design systems and code inspectable and actionable.
+TJ Pitre’s talk, **Context-Based Design Systems in Practice**, started from a practical test: can teams actually find and use the right patterns without guessing? That question has mattered for years, and AI does not change it. TJ walked through the **Context-Based Design Systems (CBDS)** framework, a model for structuring components, tokens and documentation so they remain useful under real production pressure.
+
+The foundation is naming, governance and adoption: how teams recognise the right pattern, how the system evolves, and whether people can use it in their daily work. AI plays a supporting role. Once that structure exists, AI tools can use the same context to produce more consistent, on-brand work. The notes below explore that foundation and the thoughts it prompted about keeping design and code aligned.
+
+## Help teams find and use the right patterns
+
+A component library is only useful if a team can work out which component fits a need and how to use it. Names, tokens and documentation need to explain the decisions behind a pattern as well as its appearance. Otherwise, people have to guess, ask around or create another version of something that already exists.
+
+My takeaway from TJ’s CBDS framing is that this is as much an organisational task as a structural one. Naming helps people find a pattern; documentation helps them apply it; governance gives them a way to propose and review changes. Adoption is the practical test of whether those pieces work together. That foundation helps designers and developers today, and gives AI tools better context when teams choose to use them.
 
 ## Drift is a product-lifecycle problem
 
@@ -24,21 +32,21 @@ Design intent does not move once, cleanly, from Figma to code. It changes when a
 
 The question is not whether drift happens. It is whether it is visible, intentional and fed back into the system. Without that loop, a design library and a component library gradually become two different descriptions of the same product.
 
-For people, incomplete design information is inconvenient. For an AI agent, it is an invitation to infer. An agent faced with a fixed `1px` border in one place and an unconnected border-width token elsewhere has to guess whether they mean the same thing. It may make a plausible choice, but plausible is not the same as correct.
+Incomplete design information forces people to fill in gaps, which can lead to inconsistent implementations and duplicated patterns. An AI agent faces the same ambiguity: with a fixed `1px` border in one place and an unconnected border-width token elsewhere, it has to guess whether they mean the same thing. It may make a plausible choice, but plausible is not the same as correct.
 
-## Is the design ready to be used as context?
+## Make the system’s decisions explicit
 
 One demonstration in the talk was [FigmaLint](https://github.com/southleft/figmalint), a Figma plugin that analyses components for design-system compliance, accessibility and developer readiness. My notes include an alignment score such as 87%. I understood that score not as an aesthetic rating, but as a signal of how much of the design is expressed in a structured, reusable form that a developer—or an agent—can work from.
 
-The contrast between a one-off `1px` value and a named standard border-width variable is a small but telling example. The aim is not simply to reach a perfect-looking score. It is to describe decisions so explicitly that AI does not need to derive critical values from pixels, naming conventions or nearby examples.
+The contrast between a one-off `1px` value and a named standard border-width variable is a small but telling example. The aim is to make a decision explicit and reusable, so a developer can recognise the intended value and understand where it applies. An AI tool can then use that same information instead of deriving critical values from pixels or nearby examples.
 
-At the limit, an “AI-ready” design is a design from which an agent can produce clean code by using the actual system: its variables, components, variants, states and rules. A 100% score can be a useful target for the checked rules. It is not, by itself, proof that a product experience is good.
+A well-structured design gives teams a shared reference for variables, components, variants, states and rules. It also gives an agent a firmer basis for generating code that follows the system. A 100% score can be a useful target for the checked rules. It is not, by itself, proof that people can find the right pattern, that the system is adopted, or that a product experience is good.
 
 This is also why a Figma frame alone should not become the source of truth. Figma can be an excellent surface for a specification, but a surface is not the whole specification.
 
 ## Tools can move the context, not replace the contract
 
-The tooling around this is becoming practical. [Figma’s official MCP server](https://developers.figma.com/docs/figma-mcp-server/) can give compatible AI clients design context such as variables, components and layout data; Figma also documents Code Connect as a way to steer generated code toward the components in a connected codebase.
+With that foundation in place, tools can make the context available to AI assistants. [Figma’s official MCP server](https://developers.figma.com/docs/figma-mcp-server/) can give compatible AI clients design context such as variables, components and layout data; Figma also documents Code Connect as a way to steer generated code toward the components in a connected codebase.
 
 TJ also pointed to tools from his company, [Southleft](https://southleft.com/), including [Figma Console MCP](https://github.com/southleft/figma-console-mcp), which connects AI assistants to Figma for extraction, creation and debugging. These tools make it easier to bring design context into an agentic workflow. They do not decide what a component means, when a new variant belongs in the library, or who approves a change. That is still the work of the system around the tool.
 
@@ -48,7 +56,7 @@ That is the direction I find most useful. It gives us a place for decisions that
 
 ## My take: specify first, then generate
 
-For an agent to use a component safely, we need a clear component structure. It should make explicit at least:
+For a team to choose and use a component confidently, we need a clear component structure. The same information can also guide an agent. My practical checklist would make explicit at least:
 
 - its purpose and semantic role;
 - anatomy: which parts it has and which are optional;
@@ -63,10 +71,9 @@ This changes the role of UI/UX designers in a productive way. They take on some 
 
 ## Storybook belongs in the feedback loop
 
-I would put [Storybook](https://storybook.js.org/) at the centre of an agentic design-system loop. It provides a rendered, inspectable version of the actual components—not just a design intention and not just source code. That makes it useful across many products and projects: a shared Storybook gives designers, developers and agents the same rendered reference even when components are reused in different applications.
+Taking this further in my own work, I would put [Storybook](https://storybook.js.org/) at the centre of the feedback loop between design and development. It provides a rendered, inspectable version of the actual components—not just a design intention and not just source code. That makes it useful across many products and projects: a shared Storybook gives designers and developers the same rendered reference even when components are reused in different applications. Agents can use that reference too.
 
-
-That makes a practical automated loop possible:
+Building on that shared reference, I would explore the following automated loop. This is my proposed application of the ideas, rather than a walkthrough of TJ’s talk:
 
 1. an agent reads the component contract and the relevant Figma context;
 2. it implements or changes a component;
@@ -80,7 +87,7 @@ Pixel comparison is useful, but it is not the final judge. A tiny visual differe
 
 ## Feedback must flow back
 
-The hard question starts after the first clean alignment: what happens when implementation discovers a new need?
+For me, this brings the discussion back to governance: what happens when implementation discovers a new need?
 
 Imagine a team needs a red version of a button for one feature. Does that become a component variant? A local exception? A semantic token? Or does the use case reveal that the product’s status model is incomplete?
 
@@ -88,7 +95,7 @@ The wrong answer is to automatically promote every change into a global library.
 
 Teams need a promotion rule. A change might earn a place in the shared contract when it has more than one real use case, has a clear semantic meaning, meets accessibility requirements and has an owner who will maintain it. Otherwise, it can remain a documented local composition. The point is not bureaucracy; it is making the decision visible and reversible.
 
-This is particularly relevant for organisations with several products. AI may make it possible to maintain a global specification of UI principles, tokens, behaviour and accessibility, while each product retains its own component library and local compositions. The global layer gives agents common context. Product libraries keep them from flattening every product into one generic interface.
+This is particularly relevant for organisations with several products. A shared specification of UI principles, tokens, behaviour and accessibility can guide teams while each product retains its own component library and local compositions. AI could help maintain and check that structure. The shared layer gives teams and agents common context, while product libraries preserve the patterns that fit each product’s needs.
 
 ## UI precision is not UX completeness
 
@@ -96,9 +103,9 @@ The conversation can go all the way down to a one-pixel border definition. That 
 
 UI can often be encoded very precisely: values, states, components and visual rules can be represented in design tokens and code. UX is more than that. It emerges from the interplay of components, copy, information architecture, timing, error handling and the user’s actual goal.
 
-That is why UX felt underrepresented next to UI in my notes from the talk. The valuable next question is: how precise can a system be about experience, not only appearance? An agent can validate tokens and variants reliably when the rules exist. It cannot decide, from a component catalogue alone, whether a journey is understandable or whether a new flow solves a real user problem.
+My notes focus heavily on UI detail, which leaves me with a further UX question: how precise can a system be about experience, not only appearance? That is a question I am taking beyond the talk. An agent can validate tokens and variants reliably when the rules exist. It cannot decide, from a component catalogue alone, whether a journey is understandable or whether a new flow solves a real user problem.
 
-Keeping design and code aligned has always been difficult. AI can help with the tedious parts: extracting context, finding differences, rendering states, checking rules and keeping the evidence close to the change. It also changes roles, tools and workflows. In a sense, AI asks a team to clean up its closet: name the things that were implicit, connect the things that were duplicated, and decide who owns the rules.
+Keeping design and code aligned has always been difficult. TJ’s CBDS framing brings me back to the work that makes a system resilient: clear names, connected components and tokens, usable documentation, and ownership of changes. Those things matter whether or not a team uses AI. Once they are in place, AI can help with the tedious parts: extracting context, finding differences, rendering states, checking rules and keeping the evidence close to the change.
 
 The most important loop is therefore not Figma to code. It is a broader loop between designers, developers and the people using the product. Code should inform the specification; users should inform the experience; and both should have a route back into the design system.
 
