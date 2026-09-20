@@ -20,7 +20,7 @@ month**, zero in a crunch month is fine.
 | 9 | Context-Based Design Systems in Practice - SmashingConf / Kontextbasierte Designsysteme in der Praxis - SmashingConf | DE+EN | **live** — paired first entry in an in-progress series of personal SmashingConf Freiburg 2026 talk notes; TJ Pitre’s CBDS framework, pattern discovery, naming, governance and adoption, with AI in a supporting role; attendance disclosure for Pax included. Further talk posts will be added as their notes are prepared. | Sep 2026 |
 | 10 | From Friction to Flow - SmashingConf / Von Reibung zu Flow - SmashingConf | DE+EN | **live on merge** — paired personal conference notes on surfacing useful disagreement early, understanding what each product role protects, and centring the customer outcome; attendance disclosure for Pax included; categories: `conference`, `insights`. | Sep 2026 |
 | 11 | AI and the Role of Designers - SmashingConf / KI und die Rolle von Designer:innen - SmashingConf | DE+EN | **live** — paired personal talk notes on designers becoming directors of AI behaviour and output; connects the shift in design work to the earlier developer-role post. | Sep 2026 |
-| 12 | Jev Explained: TypeSafe AI's System One Model for Decisions, Not Chat / Jev erklärt: TypeSafe AIs System-One-Modell für Entscheidungen statt Chat | DE+EN | **live on merge** — paired technical explainer covering Jev's typed decision primitives, calibration, architecture fit, vendor claims, limitations and a production evaluation checklist. | Sep 2026 |
+| 12 | Jev Explained: TypeSafe AI's System One Model for Decisions, Not Chat / Jev erklärt: Das System-One-Modell von TypeSafe AI für Entscheidungen statt Chat | DE+EN | **live on merge** — paired technical explainer covering Jev's typed decision primitives, calibration, architecture fit, vendor claims, limitations and a production evaluation checklist. | Sep 2026 |
 
 ## Publishing a scheduled draft
 
@@ -103,6 +103,10 @@ generator.
   taxonomy slugs (`/en/categories/ai/`, `/de/categories/ki/`) and don't hreflang-pair
   with each other — that's expected, same as any other single-language taxonomy.
 - **Frontmatter**: give every post a real `description` (meta description + RSS) and a real `author`.
+- **Opening summary**: begin the post body with a concise, unlabelled summary of two
+  or three sentences covering the topic, why it matters and any essential caveat.
+  Do not add a `TL;DR`, `Kurz gesagt` or similar heading. Follow the summary
+  immediately with a descriptive `##` heading that starts the main article.
 - **FAQ sections** (`## Häufige Fragen` / `## Frequently asked questions` with `###` questions) automatically emit FAQPage JSON-LD — use one on high-intent posts.
 - **Internal links**: every post should link at least one money page (`/de/app-entwicklung/`, `/de/app-wartung/`, …) and end with a soft CTA to `/de/kontakt/` / `/en/contact/`.
 - **No invented facts**: client names, numbers and war stories only with the team's sign-off (and naming approval where clients are identifiable).

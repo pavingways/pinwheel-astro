@@ -12,11 +12,15 @@ excerpt: "Jev does not chat or generate code. It turns text and application stat
 aiAssisted: true
 ---
 
+Jev is TypeSafe AI's first System One Model: it turns text or structured application state into bounded, typed decisions such as choices, scores and yes/no probabilities. Unlike a chat-oriented LLM, it does not generate prose or code; it is designed to work as a fast probabilistic function inside software. That makes it promising for routing, classification, triage and agent control, but production use still requires representative evaluation, confidence thresholds and reliable fallbacks.
+
+## A different kind of AI model
+
 On 15 September 2026, TypeSafe AI introduced **Jev**, an AI model that does not chat, write prose or generate code. Instead, it receives text or structured application state, answers narrowly defined questions and returns typed values with probabilities.
 
 That difference is more important than it may first sound. Most teams currently add AI to software through a chat model: send a prompt, receive a string, then parse and validate it before the application can use it. Jev is designed for the part after the conversation—for the many small judgments inside a workflow where software needs a bounded answer rather than another paragraph.
 
-One terminology correction first: Jev is not a “System 0” model. TypeSafe calls it the first **[System One Model](https://typesafe.ai/blog/introducing-system-one-models-and-jev)**. The company and documentation are at [typesafe.ai](https://typesafe.ai/), not typesafe.io. The name refers to the fast, intuitive “System 1” in Daniel Kahneman's distinction between fast and slow thinking. It is a metaphor for focused, quick judgments, not a claim that the model thinks like a person.
+TypeSafe calls Jev the first **[System One Model](https://typesafe.ai/blog/introducing-system-one-models-and-jev)**. The name refers to the fast, intuitive “System 1” in Daniel Kahneman's distinction between fast and slow thinking. It is a metaphor for focused, quick judgments, not a claim that the model thinks like a person.
 
 ## The short version: a probabilistic function call
 
@@ -192,10 +196,6 @@ For software teams, that may be Jev's most useful lesson. The future of applied 
 If you are deciding how bounded AI decisions, generative models and deterministic services should fit into an application, that architecture work is part of building a maintainable product—not an API afterthought. Read more about our approach to [app development](/en/app-development/), or [talk to us about your system](/en/contact/).
 
 ## Frequently asked questions
-
-### Is Jev a System 0 model?
-
-No. TypeSafe AI calls Jev its first **System One Model**. The name is inspired by the fast, intuitive System 1 in the distinction popularised by Daniel Kahneman. “System 0” is not the product category used in TypeSafe's announcement or documentation.
 
 ### Is Jev just a smaller LLM?
 
