@@ -20,6 +20,7 @@ month**, zero in a crunch month is fine.
 | 9 | Context-Based Design Systems in Practice - SmashingConf / Kontextbasierte Designsysteme in der Praxis - SmashingConf | DE+EN | **live** — paired first entry in an in-progress series of personal SmashingConf Freiburg 2026 talk notes; TJ Pitre’s CBDS framework, pattern discovery, naming, governance and adoption, with AI in a supporting role; attendance disclosure for Pax included. Further talk posts will be added as their notes are prepared. | Sep 2026 |
 | 10 | From Friction to Flow - SmashingConf / Von Reibung zu Flow - SmashingConf | DE+EN | **live on merge** — paired personal conference notes on surfacing useful disagreement early, understanding what each product role protects, and centring the customer outcome; attendance disclosure for Pax included; categories: `conference`, `insights`. | Sep 2026 |
 | 11 | AI and the Role of Designers - SmashingConf / KI und die Rolle von Designer:innen - SmashingConf | DE+EN | **live** — paired personal talk notes on designers becoming directors of AI behaviour and output; connects the shift in design work to the earlier developer-role post. | Sep 2026 |
+| 12 | Jev Explained: TypeSafe AI's System One Model for Decisions, Not Chat / Jev erklärt: TypeSafe AIs System-One-Modell für Entscheidungen statt Chat | DE+EN | **live on merge** — paired technical explainer covering Jev's typed decision primitives, calibration, architecture fit, vendor claims, limitations and a production evaluation checklist. | Sep 2026 |
 
 ## Publishing a scheduled draft
 

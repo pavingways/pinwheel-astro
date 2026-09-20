@@ -40,6 +40,10 @@ the sibling repo `../pavingways.github.io` (CNAME www.pavingways.com), then comm
 and pushes there. `bin/deploy-dev.sh` rsyncs to a DigitalOcean box (pumptrack)
 instead — a separate site, not a staging mirror of prod.
 
+For dev publishing, a successful `npm run deploy-dev` run is sufficient. Do not
+perform a follow-up health check of the public dev URL or troubleshoot the dev
+server unless explicitly requested.
+
 GitHub Pages cannot do server-side redirects — every redirect must be a static
 meta-refresh page or client-side JS.
 
