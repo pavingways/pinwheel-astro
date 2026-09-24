@@ -30,6 +30,11 @@ export interface Props {
 // destructure front matter
 const currentLocale = Astro.currentLocale;
 const { title, meta_title, description, image, noindex, canonical, translation, schemas } = Astro.props;
+// Use the public directory URL even when this HTML is served as /index.html.
+// Keep explicit overrides and leave noindex pages without an automatic canonical.
+const canonicalUrl = canonical || (noindex ? undefined : new URL(
+  withTrailingSlash(Astro.url.pathname), config.site.base_url
+).href);
 const pagetitle = title ? title + config.site.titleaddon : config.site.title;
 const i18n = getI18nStrings(currentLocale);
 const metaDescription = plainify(description ?? i18n["meta_description"] ?? config.metadata.meta_description);
@@ -84,7 +89,7 @@ const jsonLd = [
       content="width=device-width, initial-scale=1, maximum-scale=5"
     />
     <title>{plainify(pagetitle)}</title>
-    {canonical && <link rel="canonical" href={canonical} item-prop="url" />}
+    {canonicalUrl && <link rel="canonical" href={canonicalUrl} />}
     {alternates && (
       <>
         <link rel="alternate" hreflang="de" href={`${config.site.base_url}${alternates.de}`} />

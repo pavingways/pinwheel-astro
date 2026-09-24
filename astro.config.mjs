@@ -109,6 +109,17 @@ export default defineConfig({
           de: "de",
           en: "en"
         }
+      },
+      serialize: (item) => {
+        // The root is a language selector, not a second German homepage.
+        if (["/", "/de/", "/en/"].includes(new URL(item.url).pathname)) {
+          item.links = [
+            { lang: "de", url: new URL("/de/", config.site.base_url).href },
+            { lang: "en", url: new URL("/en/", config.site.base_url).href },
+            { lang: "x-default", url: new URL("/", config.site.base_url).href }
+          ];
+        }
+        return item;
       }
     }),
     tailwind({
