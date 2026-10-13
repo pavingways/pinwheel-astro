@@ -12,7 +12,7 @@ month**, zero in a crunch month is fine.
 | 2 | App-Wartung: Was nach dem Launch wirklich anfällt / App Maintenance: What Really Happens After Launch | DE+EN | **live** — extended with concrete platform examples (16KB pages, CocoaPods sunset, Liquid Glass, new devices); `categories: [insights, technology]` | Aug 2026 |
 | 3 | Ionic/Capacitor vs. React Native vs. Flutter: So wählen wir aus / How We Choose               | DE+EN | **live** — FAQ section, `aiAssisted: true` and a generated cover image added before publish | Aug 2026 |
 | 4 | Our production fastlane pipeline for iOS & Android in 2026 / Unsere Fastlane-Pipeline für iOS & Android 2026 | DE+EN | **live** — based on our real fastlane setup (client identity scrubbed); hybrid-app (React Native/Capacitor) angle, provisioning-profile types, and cheap-Linux-vs-expensive-macOS-runner economics called out for SEO; EAS Build section is explicitly forward-looking/WIP, not shipped; DE twin paired via `translation:` | Aug 2026 |
-| 6 | What Is MCP? How AI Assistants Connect to Your Business Systems / Was ist MCP? Wie KI-Assistenten auf Ihre Unternehmenssysteme zugreifen | DE+EN | **live** — published 13 October 2026; educational introduction for decision-makers; hypothetical rental-service example, external AI distribution, authentication and visibility boundaries; shared generated cover and reciprocal translations. No client validation needed for this article; an AI/MCP service page remains gated on validation with existing clients. | Oct 2026 |
+| 6 | What Is MCP? How AI Assistants Connect to Your Business Systems / Was ist MCP? So greift KI auf Ihre Daten zu | DE+EN | **live** — published 13 October 2026; educational introduction for decision-makers; hypothetical rental-service example, external AI distribution, authentication and visibility boundaries; shared generated cover and reciprocal translations. No client validation needed for this article; an AI/MCP service page remains gated on validation with existing clients. | Oct 2026 |
 | 7 | AI Developer Shift: From Code Writer to Quality Guardian / KI-Entwicklerwandel | DE+EN | **live** — source content supplied by Rocco; the "AI-powered workflow" comparison-table column was reconstructed since it didn't survive the source copy/paste (Rocco signed off on publishing as-is); `categories: [AI, technology]` (EN) / `[KI, technology]` (DE) — new taxonomy, see house rules below; DE twin paired via `translation:` | ad hoc, Aug 2026 |
 
 | 8 | AI Benchmarking Across the SDLC: What Should You Measure? / KI-Benchmarking im SDLC: Was sollten Sie messen? | DE+EN | **live** — paired framework post on delivery flow, quality and maintenance, newly possible work, and total AI cost/control; links to Steyer's controlled agent comparison as a contrast to day-to-day delivery. A practical measurement follow-up is teased, not yet planned. | Sep 2026 |
@@ -101,6 +101,11 @@ generator.
   taxonomy slugs (`/en/categories/ai/`, `/de/categories/ki/`) and don't hreflang-pair
   with each other — that's expected, same as any other single-language taxonomy.
 - **Frontmatter**: give every post a real `description` (meta description + RSS) and a real `author`.
+- **Titles and card previews**: prefer short, clear words and concise phrasing.
+  Avoid excessively long words, especially German compounds, that can overflow
+  narrow blog cards. For example, use "Ihre Daten" instead of
+  "Ihre Unternehmenssysteme" when it preserves the meaning. Apply the same rule
+  to `excerpt:` text and check card wrapping at narrow widths before publishing.
 - **Opening summary**: begin the post body with a concise, unlabelled summary of two
   or three sentences covering the topic, why it matters and any essential caveat.
   Do not add a `TL;DR`, `Kurz gesagt` or similar heading. Follow the summary
