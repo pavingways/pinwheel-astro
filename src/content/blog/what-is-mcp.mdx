@@ -1,0 +1,131 @@
+---
+title: "What Is MCP? How AI Assistants Connect to Your Business Systems"
+date: 2026-10-13T09:00:00+02:00
+image: /images/blog-what-is-mcp.webp
+categories: [AI, technology]
+author: Rocco
+featured: false
+language: en
+translation: /de/blog/was-ist-mcp
+description: "What is MCP? Learn how an existing API becomes usable by external AI assistants, with a rental-service example, authentication and data visibility controls."
+excerpt: "MCP can make your existing service usable inside customers’ AI assistants. The opportunity depends on useful capabilities, deliberate permissions and a working connection."
+aiAssisted: true
+---
+
+The Model Context Protocol (MCP) gives AI applications a standard way to access data and use tools provided by other systems. For an existing app or service, an MCP interface can open another channel through which customers use its functionality, without the provider building an AI assistant of its own. That access still needs deliberate integration, authentication and clear limits on what each connected tool can see and do.
+
+## What MCP adds to an existing API
+
+An API already allows software to exchange information with your service. However, an external AI application needs a way to discover the capabilities you offer, understand their inputs and request useful operations. MCP provides a common interface for that connection, as the [official MCP introduction](https://modelcontextprotocol.io/docs/2026-07-28/getting-started/intro) explains.
+
+An **MCP server** is the software exposing those capabilities. It can sit in front of an existing API and translate selected operations into tools an AI application can use. You choose which operations to expose; copying every API endpoint into the MCP interface is rarely a useful product design.
+
+For a decision-maker, the flow is straightforward:
+
+**Customer’s AI application → your MCP server → your existing API → your business system.**
+
+The application contains an MCP client that connects to the server. Servers can offer tools for actions, resources for context and reusable prompts. These are the main building blocks described in the [MCP architecture overview](https://modelcontextprotocol.io/docs/2026-07-28/learn/architecture). Your service remains responsible for its data and business rules; MCP does not replace either.
+
+## Example: a rental service inside someone else’s AI assistant
+
+Consider a hypothetical equipment-rental business. It already has a website, an app and an API for equipment, availability, prices and bookings. This is an illustrative scenario, not a client case study.
+
+Today, a customer opens the app, searches for equipment, checks dates and reads their booking details. An MCP API integration could expose a small set of useful capabilities: finding suitable equipment, checking availability, retrieving the signed-in customer’s bookings and preparing a reservation.
+
+Once the customer connects the service to a compatible external AI assistant, they could ask:
+
+> Find a suitable drill and a ladder available next Saturday near our workshop. Show the rental conditions before I reserve anything.
+
+The assistant requests current information through the MCP server. The existing API supplies availability and conditions, while the assistant helps compare the results within the customer’s planning conversation. The rental business does not need to develop the conversational interface itself.
+
+After account linking, the customer could also ask when their existing rental must be returned. A booking lookup returns only bookings their account is entitled to access. If they want to reserve equipment, the service requires booking permission and a separate confirmation of the actual dates, equipment and price.
+
+The assistant’s answer can still be mistaken. The booking system must validate availability again when committing a reservation, and handle repeat requests without accidentally creating duplicate bookings. Natural-language convenience does not remove transaction rules.
+
+## Why the service provider can benefit too
+
+For the customer, the improvement is fewer interruptions between planning and using the rental service. For the provider, its inventory and functionality become usable in a workflow hosted by someone else.
+
+That is the business opportunity: a customer who already works in an AI assistant can consult your live catalogue and potentially complete a transaction with your service. Your app stays valuable, while the MCP interface creates an additional way to use the same product.
+
+A focused interface can also reduce the need to design a separate custom integration for every compatible assistant. It does not eliminate testing, provider-specific requirements or maintenance, and it offers no guaranteed increase in traffic, bookings or revenue.
+
+**Accessible through AI tools is different from automatically discoverable by them.** Someone still needs to configure the connection, or a provider needs to make the integration available. Publishing an MCP endpoint does not automatically list your service in every assistant, improve search rankings or make private account data public. Check each intended client’s connection and listing requirements before treating MCP as a distribution channel.
+
+## Authentication: connecting an account is only the beginning
+
+Authentication establishes who is signing in. Authorization determines what that identity and the connected application may access. Both matter when an external tool connects to customer data.
+
+For protected remote access, MCP’s [HTTP authorization framework](https://modelcontextprotocol.io/specification/2026-07-28/basic/authorization) uses OAuth-based access. In our rental example, the customer signs in with the rental service and grants limited permissions to the external client. They should not paste their password or a shared administrator key into a conversation.
+
+Make the consent screen identify the requesting client and the access requested. Keep permission to read bookings separate from permission to create or cancel them. Give customers a way to disconnect a client and revoke its access.
+
+The connection also needs to work technically. [Authorization discovery metadata](https://modelcontextprotocol.io/specification/2026-07-28/basic/authorization/authorization-server-discovery) lets a compatible client locate the authorization service. The client also needs a supported registration route. An existing login page alone does not supply these integration pieces; test the account-linking journey in the external tools you intend to support.
+
+Use HTTPS, protect credentials and plan for token expiry. The server must validate that a token was issued for this MCP service, rather than accepting a token intended for some other API. These requirements are covered in the [authorization security considerations](https://modelcontextprotocol.io/specification/2026-07-28/basic/authorization/security-considerations). Where a downstream API needs its own credentials, manage that access deliberately instead of blindly forwarding incoming tokens.
+
+## Visibility: decide what external tools can discover and receive
+
+A signed-in customer does not gain access to every record in the business. Apply the existing access model to the MCP offering, with explicit boundaries for discovery, returned data and execution.
+
+For the hypothetical rental service, a sensible starting policy would be:
+
+| Capability | Visibility and access |
+| --- | --- |
+| Browse equipment and public rental conditions | Intentionally public information; no customer records |
+| Read bookings | Authorized bookings within the customer’s account or organization |
+| Prepare or confirm a reservation | Separate booking permission and verified confirmation |
+| Cancel a booking | Separate cancellation permission and the service’s cancellation rules |
+| Read internal margins or other customers’ details | Excluded from the customer-facing MCP offering |
+
+Enforce account, organization, role and record-level restrictions on the server for every request. A user-provided booking ID must never be sufficient to retrieve someone else’s booking. Permission to use a tool and permission to access a particular record are separate checks.
+
+Where capability names, descriptions or resource listings reveal sensitive information, filter discovery too. Return only the fields needed for the task: a return date does not require exposing payment details. Hiding a tool in a list is not an authorization mechanism; a direct attempt to invoke it must still be checked. The [MCP tools specification](https://modelcontextprotocol.io/specification/2026-07-28/server/tools) provides the protocol context for tool discovery and execution; the rental access policy above is an application-design recommendation.
+
+For consequential actions, make confirmation part of the service workflow. For example, the assistant can prepare a reservation and provide a link where the signed-in customer approves the exact terms. The backend verifies that approval before committing. A sentence claiming “the customer confirmed” is not proof, and read-only labels or tool descriptions do not enforce permissions.
+
+## External access also changes where information travels
+
+When the service returns booking information to an external AI tool, that information enters the provider’s processing environment. Evaluate the specific provider and account configuration: what data is retained, who can access it and what use is permitted? MCP itself does not answer those questions.
+
+Send the minimum necessary data and treat returned free text as potentially untrusted. A note stored in a booking must not be able to grant permissions merely by instructing an assistant to ignore its rules. Design the system so that external prompts cannot override the service’s access checks.
+
+Operationally, add usage limits, audit records of access and actions, and useful handling of unavailable dependencies. Keep credentials and unnecessary personal data out of logs. The official [MCP security guidance](https://modelcontextprotocol.io/docs/2026-07-28/tutorials/security/security_best_practices) is a useful implementation reference. These controls need ownership throughout the integration’s lifetime.
+
+## When MCP is worth considering
+
+MCP is a good candidate when customers want to use your service from compatible AI applications and you can expose a few meaningful capabilities. A direct API integration may be simpler when there is only one known consumer and a fixed workflow.
+
+Before investing, identify the customer task, the external clients to support, the data they need and the actions they should be allowed to take. Start with a limited read-only capability, test account linking and access boundaries, then consider transactional functionality. Track useful usage and completed customer tasks rather than assuming a published endpoint creates demand.
+
+Treat this as an extension of [app development](/en/app-development/) and ongoing product operation: the API, permissions and maintenance remain part of the product.
+
+## Frequently asked questions
+
+### What does MCP stand for?
+
+MCP stands for Model Context Protocol. It standardizes how AI applications connect to capabilities supplied by other systems, including data access and executable tools.
+
+### Does MCP replace an existing API?
+
+No. An MCP server can expose selected capabilities backed by an existing API. The API and business system continue to validate data, enforce access rules and execute operations.
+
+### Does an MCP server make all our data public?
+
+No. Public access is a design choice. A customer-facing offering should separate public information from protected account data and enforce permission checks for discovery, retrieval and actions where appropriate.
+
+### Will every AI assistant automatically find our service?
+
+No. The assistant must support the required connection and a user or provider must make it available. MCP compatibility, provider listings and search visibility are different matters.
+
+### What authentication does an external MCP connection need?
+
+For protected remote access, plan compatible OAuth account linking, narrowly scoped permissions and validated tokens. Also test authorization discovery, client registration, expiry and revocation with the external clients you intend to support.
+
+### Can an AI assistant make bookings through MCP?
+
+Yes, if the service exposes that capability. In the example here, booking needs separate authorization, explicit approval verified by the service, and the same availability and transaction checks used by the existing app.
+
+## Explore a useful first connection
+
+If you are considering how an existing app or API could support external AI workflows, [get in touch](/en/contact/). Start with one concrete customer task and the access boundaries it needs.

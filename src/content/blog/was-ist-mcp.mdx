@@ -1,0 +1,131 @@
+---
+title: "Was ist MCP? Wie KI-Assistenten auf Ihre Unternehmenssysteme zugreifen"
+date: 2026-10-13T09:00:00+02:00
+image: /images/blog-what-is-mcp.webp
+categories: [KI, technology]
+author: Rocco
+featured: false
+language: de
+translation: /en/blog/what-is-mcp
+description: "Was ist MCP? Wie bestehende APIs für externe KI-Assistenten nutzbar werden: ein Vermietungsbeispiel mit Authentifizierung und Regeln zur Datensichtbarkeit."
+excerpt: "MCP kann Ihren bestehenden Dienst in den KI-Assistenten Ihrer Kundschaft nutzbar machen. Entscheidend sind sinnvolle Funktionen, gezielte Berechtigungen und eine funktionierende Verbindung."
+aiAssisted: true
+---
+
+Das Model Context Protocol (MCP) bietet KI-Anwendungen eine einheitliche Möglichkeit, auf Daten zuzugreifen und Werkzeuge anderer Systeme zu nutzen. Für eine bestehende App oder einen Dienst kann eine MCP-Schnittstelle einen zusätzlichen Zugang für die Kundschaft schaffen, ohne dass der Anbieter selbst einen KI-Assistenten entwickeln muss. Dafür braucht es weiterhin eine gezielte Integration, Authentifizierung und klare Grenzen dafür, was verbundene Werkzeuge sehen und tun dürfen.
+
+## Was MCP einer bestehenden API hinzufügt
+
+Eine API ermöglicht bereits den Datenaustausch zwischen Ihrem Dienst und anderer Software. Eine externe KI-Anwendung braucht darüber hinaus eine Möglichkeit, angebotene Funktionen zu entdecken, ihre Eingaben zu verstehen und sinnvolle Vorgänge anzufordern. MCP schafft dafür eine gemeinsame Schnittstelle, wie die [offizielle MCP-Einführung](https://modelcontextprotocol.io/docs/2026-07-28/getting-started/intro) erläutert.
+
+Ein **MCP-Server** ist die Software, die diese Fähigkeiten bereitstellt. Er kann vor einer bestehenden API sitzen und ausgewählte Vorgänge als Werkzeuge für KI-Anwendungen anbieten. Welche Funktionen verfügbar werden, entscheiden Sie. Jeden API-Endpunkt unverändert in die MCP-Schnittstelle zu übernehmen, ergibt selten eine sinnvolle Produktgestaltung.
+
+Für Entscheider:innen lässt sich der Ablauf einfach darstellen:
+
+**KI-Anwendung der Kundschaft → Ihr MCP-Server → Ihre bestehende API → Ihr Geschäftssystem.**
+
+Die Anwendung enthält einen MCP-Client, der sich mit dem Server verbindet. Server können Werkzeuge für Aktionen, Ressourcen als Kontext und wiederverwendbare Prompts anbieten. Diese Bausteine beschreibt die [MCP-Architekturübersicht](https://modelcontextprotocol.io/docs/2026-07-28/learn/architecture). Ihr Dienst bleibt für seine Daten und Geschäftsregeln verantwortlich; MCP ersetzt beides nicht.
+
+## Beispiel: ein Vermietungsdienst im KI-Assistenten eines anderen Anbieters
+
+Stellen wir uns einen Geräteverleih vor. Das Unternehmen hat bereits eine Website, eine App und eine API für Geräte, Verfügbarkeit, Preise und Buchungen. Das folgende Szenario ist ein hypothetisches Beispiel, keine Kundenreferenz.
+
+Bisher öffnet die Kundschaft die App, sucht Geräte, prüft Termine und liest Buchungsdetails. Eine MCP-API-Integration könnte einige gezielte Funktionen bereitstellen: geeignete Geräte suchen, ihre Verfügbarkeit prüfen, Buchungen des angemeldeten Kontos abrufen und eine Reservierung vorbereiten.
+
+Nach dem Verbinden des Dienstes mit einem kompatiblen externen KI-Assistenten könnte eine Person fragen:
+
+> Suche eine geeignete Bohrmaschine und eine Leiter, die nächsten Samstag in der Nähe unserer Werkstatt verfügbar sind. Zeige mir die Mietbedingungen, bevor ich etwas reserviere.
+
+Der Assistent fragt aktuelle Informationen über den MCP-Server ab. Die bestehende API liefert Verfügbarkeit und Bedingungen. Der Assistent hilft, die Ergebnisse innerhalb des Planungsgesprächs zu vergleichen. Der Geräteverleih muss die Gesprächsoberfläche dafür nicht selbst entwickeln.
+
+Nach dem Verknüpfen des Kontos lässt sich auch fragen, wann ein bereits gemietetes Gerät zurückgegeben werden muss. Die Buchungsabfrage liefert nur Buchungen, auf die das Konto zugreifen darf. Für eine neue Reservierung verlangt der Dienst eine Buchungsberechtigung und eine gesonderte Bestätigung der konkreten Termine, Geräte und Preise.
+
+Die Antwort des Assistenten kann trotzdem falsch sein. Das Buchungssystem muss die Verfügbarkeit beim verbindlichen Reservieren erneut prüfen und wiederholte Anfragen so behandeln, dass keine versehentlichen Doppelbuchungen entstehen. Die bequeme Spracheingabe hebt Transaktionsregeln nicht auf.
+
+## Warum auch der Anbieter davon profitieren kann
+
+Für die Kundschaft bedeutet die Integration weniger Unterbrechungen zwischen Planung und Nutzung des Vermietungsdienstes. Für den Anbieter werden seine Bestände und Funktionen in einem Arbeitsablauf nutzbar, dessen Oberfläche jemand anderes betreibt.
+
+Darin liegt die geschäftliche Chance: Wer bereits mit einem KI-Assistenten arbeitet, kann Ihren aktuellen Katalog abfragen und möglicherweise eine Transaktion bei Ihrem Dienst abschliessen. Ihre App bleibt wertvoll, während die MCP-Schnittstelle einen weiteren Zugang zum gleichen Produkt eröffnet.
+
+Eine gezielte Schnittstelle kann ausserdem den Aufwand verringern, für jeden kompatiblen Assistenten eine eigene Integration zu entwerfen. Sie beseitigt weder Tests noch anbieterspezifische Anforderungen oder Wartung. Mehr Besucher:innen, Buchungen oder Umsatz sind damit nicht garantiert.
+
+**Über KI-Werkzeuge erreichbar zu sein, bedeutet nicht, dort automatisch gefunden zu werden.** Jemand muss die Verbindung konfigurieren oder ein Anbieter die Integration bereitstellen. Ein veröffentlichter MCP-Endpunkt trägt Ihren Dienst nicht automatisch in jeden Assistenten ein, verbessert keine Suchmaschinenplatzierung und macht private Kontodaten nicht öffentlich. Prüfen Sie die Verbindungs- und Aufnahmebedingungen der vorgesehenen Anbieter, bevor Sie MCP als Vertriebskanal einplanen.
+
+## Authentifizierung: ein verbundenes Konto ist erst der Anfang
+
+Authentifizierung klärt, wer sich anmeldet. Autorisierung bestimmt, worauf diese Identität und die verbundene Anwendung zugreifen dürfen. Beides zählt, wenn externe Werkzeuge Kundendaten abrufen.
+
+Für geschützten Fernzugriff verwendet das [MCP-Autorisierungsmodell für HTTP](https://modelcontextprotocol.io/specification/2026-07-28/basic/authorization) OAuth-basierten Zugang. Im Vermietungsbeispiel meldet sich die Person beim Geräteverleih an und erteilt dem externen Client begrenzte Berechtigungen. Ein Passwort oder ein gemeinsamer Administratorschlüssel gehört nicht in das Gespräch mit dem Assistenten.
+
+Der Zustimmungsdialog sollte den anfragenden Client und die gewünschten Zugriffe benennen. Trennen Sie das Lesen von Buchungen vom Erstellen oder Stornieren. Kund:innen brauchen eine Möglichkeit, einen Client zu trennen und seinen Zugriff zu widerrufen.
+
+Auch technisch muss die Verbindung funktionieren. [Metadaten zur Autorisierung](https://modelcontextprotocol.io/specification/2026-07-28/basic/authorization/authorization-server-discovery) ermöglichen einem kompatiblen Client, den zuständigen Autorisierungsdienst zu finden. Zusätzlich braucht er einen unterstützten Registrierungsweg. Eine bestehende Login-Seite stellt diese Integrationsbausteine nicht automatisch bereit. Testen Sie die Kontoverknüpfung in den externen Werkzeugen, die Sie unterstützen möchten.
+
+Nutzen Sie HTTPS, schützen Sie Zugangsdaten und berücksichtigen Sie ablaufende Tokens. Der Server muss prüfen, dass ein Token für diesen MCP-Dienst ausgestellt wurde. Ein Token für irgendeine andere API reicht nicht aus. Die [Sicherheitshinweise zur Autorisierung](https://modelcontextprotocol.io/specification/2026-07-28/basic/authorization/security-considerations) beschreiben diese Anforderungen. Benötigt eine nachgelagerte API eigene Zugangsdaten, muss dieser Zugriff gezielt geregelt werden; eingehende Tokens dürfen nicht einfach blind weitergereicht werden.
+
+## Sichtbarkeit: was externe Werkzeuge entdecken und erhalten dürfen
+
+Ein angemeldetes Konto erhält dadurch keinen Zugriff auf sämtliche Datensätze des Unternehmens. Übertragen Sie das vorhandene Berechtigungsmodell auf das MCP-Angebot, mit ausdrücklichen Grenzen für das Entdecken von Funktionen, zurückgegebene Daten und die Ausführung von Aktionen.
+
+Für den hypothetischen Geräteverleih wäre folgende Ausgangsregelung sinnvoll:
+
+| Funktion | Sichtbarkeit und Zugriff |
+| --- | --- |
+| Geräte und öffentliche Mietbedingungen ansehen | Bewusst öffentliche Informationen; keine Kundendatensätze |
+| Buchungen lesen | Berechtigte Buchungen innerhalb des Kontos oder der Organisation |
+| Reservierung vorbereiten oder bestätigen | Gesonderte Buchungsberechtigung und überprüfte Bestätigung |
+| Buchung stornieren | Gesonderte Stornierungsberechtigung und bestehende Stornierungsregeln |
+| Interne Margen oder Daten anderer Kund:innen lesen | Vom MCP-Angebot für die Kundschaft ausgeschlossen |
+
+Prüfen Sie bei jeder Anfrage serverseitig die Grenzen von Konto, Organisation, Rolle und einzelnem Datensatz. Eine angegebene Buchungsnummer darf niemals genügen, um die Buchung einer anderen Person abzurufen. Die Berechtigung für ein Werkzeug und die Berechtigung für einen bestimmten Datensatz sind zwei getrennte Prüfungen.
+
+Wo Funktionsnamen, Beschreibungen oder Ressourcenlisten sensible Informationen verraten, müssen bereits diese Auflistungen gefiltert werden. Antworten sollten nur notwendige Felder enthalten: Für das Rückgabedatum braucht es keine Zahlungsdetails. Ein Werkzeug aus einer Liste auszublenden, ersetzt keine Autorisierung. Auch ein direkter Aufruf muss geprüft werden. Die [MCP-Spezifikation für Werkzeuge](https://modelcontextprotocol.io/specification/2026-07-28/server/tools) beschreibt den Protokollrahmen für Auflistung und Ausführung; die Zugriffsregeln des Vermietungsbeispiels sind eine Empfehlung für die Anwendungsgestaltung.
+
+Bei folgenreichen Aktionen gehört die Bestätigung in den Ablauf des Dienstes. Der Assistent kann etwa eine Reservierung vorbereiten und einen Link liefern, über den die angemeldete Person die genauen Bedingungen bestätigt. Das Backend prüft diese Zustimmung vor der verbindlichen Buchung. Der Satz „Die Kundin hat bestätigt“ ist kein Nachweis. Auch Hinweise wie „nur lesend“ in einer Werkzeugbeschreibung setzen keine Berechtigungen durch.
+
+## Externer Zugriff verändert auch den Weg der Informationen
+
+Gibt der Dienst Buchungsinformationen an ein externes KI-Werkzeug zurück, gelangen diese in die Verarbeitungsumgebung des Anbieters. Prüfen Sie den konkreten Anbieter und die Kontoeinstellungen: Welche Daten werden aufbewahrt, wer darf darauf zugreifen und welche Nutzung ist vorgesehen? MCP beantwortet diese Fragen nicht.
+
+Übermitteln Sie nur erforderliche Daten und behandeln Sie zurückgegebene Freitexte als potenziell nicht vertrauenswürdig. Eine Buchungsnotiz darf keine Berechtigungen erteilen können, indem sie den Assistenten zum Ignorieren seiner Regeln auffordert. Externe Prompts dürfen die Zugriffskontrollen des Dienstes nicht überschreiben.
+
+Zum Betrieb gehören Nutzungslimits, nachvollziehbare Protokolle von Zugriffen und Aktionen sowie sinnvolle Reaktionen auf nicht verfügbare Systeme. Zugangsdaten und unnötige personenbezogene Angaben gehören nicht in Logs. Die offizielle [MCP-Sicherheitsdokumentation](https://modelcontextprotocol.io/docs/2026-07-28/tutorials/security/security_best_practices) ist eine hilfreiche Referenz für die Umsetzung. Für diese Kontrollen braucht es über die gesamte Lebensdauer der Integration klare Verantwortlichkeiten.
+
+## Wann sich MCP lohnt
+
+MCP kommt infrage, wenn Ihre Kundschaft den Dienst aus kompatiblen KI-Anwendungen nutzen möchte und Sie einige sinnvolle Fähigkeiten anbieten können. Eine direkte API-Integration kann einfacher sein, wenn es nur einen bekannten Nutzer der Schnittstelle und einen festen Ablauf gibt.
+
+Klären Sie vor einer Investition die konkrete Aufgabe, die unterstützten externen Clients, die benötigten Daten und die erlaubten Aktionen. Beginnen Sie mit einer begrenzten Lesefunktion, testen Sie Kontoverknüpfung und Zugriffsgrenzen und prüfen Sie danach Transaktionsfunktionen. Messen Sie sinnvolle Nutzung und erledigte Kundenaufgaben, statt allein von einem veröffentlichten Endpunkt Nachfrage zu erwarten.
+
+Betrachten Sie die Integration als Erweiterung der [App-Entwicklung](/de/app-entwicklung/) und des laufenden Produktbetriebs: API, Berechtigungen und Wartung bleiben Bestandteile des Produkts.
+
+## Häufige Fragen
+
+### Wofür steht MCP?
+
+MCP steht für Model Context Protocol. Es vereinheitlicht die Verbindung von KI-Anwendungen mit Fähigkeiten anderer Systeme, darunter Datenzugriff und ausführbare Werkzeuge.
+
+### Ersetzt MCP eine bestehende API?
+
+Nein. Ein MCP-Server kann ausgewählte Fähigkeiten über eine bestehende API anbieten. API und Geschäftssystem prüfen weiterhin Daten, setzen Zugriffsregeln durch und führen Vorgänge aus.
+
+### Macht ein MCP-Server alle unsere Daten öffentlich?
+
+Nein. Öffentlicher Zugriff ist eine Gestaltungsentscheidung. Ein Angebot für Kund:innen sollte öffentliche Informationen von geschützten Kontodaten trennen und erforderliche Berechtigungen für Auflistung, Abruf und Aktionen prüfen.
+
+### Findet jeder KI-Assistent unseren Dienst automatisch?
+
+Nein. Der Assistent muss die benötigte Verbindung unterstützen und eine Person oder ein Anbieter muss sie verfügbar machen. MCP-Kompatibilität, Anbieterlisten und Sichtbarkeit in Suchmaschinen sind unterschiedliche Themen.
+
+### Welche Authentifizierung braucht eine externe MCP-Verbindung?
+
+Planen Sie für geschützten Fernzugriff kompatible OAuth-Kontoverknüpfung, eng begrenzte Berechtigungen und überprüfte Tokens. Testen Sie auch Autorisierungsmetadaten, Client-Registrierung, Ablauf und Widerruf mit den vorgesehenen externen Clients.
+
+### Kann ein KI-Assistent über MCP Buchungen vornehmen?
+
+Ja, wenn der Dienst diese Fähigkeit bereitstellt. Im Beispiel hier braucht eine Buchung eine gesonderte Autorisierung, eine vom Dienst überprüfte ausdrückliche Zustimmung und die gleichen Verfügbarkeits- und Transaktionsprüfungen wie in der bestehenden App.
+
+## Eine sinnvolle erste Verbindung finden
+
+Wenn Sie überlegen, wie Ihre bestehende App oder API externe KI-Arbeitsabläufe unterstützen könnte, [sprechen Sie mit uns](/de/kontakt/). Ein guter Ausgangspunkt ist eine konkrete Kundenaufgabe mit klaren Zugriffsgrenzen.

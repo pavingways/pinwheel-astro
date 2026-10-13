@@ -12,8 +12,7 @@ month**, zero in a crunch month is fine.
 | 2 | App-Wartung: Was nach dem Launch wirklich anfällt / App Maintenance: What Really Happens After Launch | DE+EN | **live** — extended with concrete platform examples (16KB pages, CocoaPods sunset, Liquid Glass, new devices); `categories: [insights, technology]` | Aug 2026 |
 | 3 | Ionic/Capacitor vs. React Native vs. Flutter: So wählen wir aus / How We Choose               | DE+EN | **live** — FAQ section, `aiAssisted: true` and a generated cover image added before publish | Aug 2026 |
 | 4 | Our production fastlane pipeline for iOS & Android in 2026 / Unsere Fastlane-Pipeline für iOS & Android 2026 | DE+EN | **live** — based on our real fastlane setup (client identity scrubbed); hybrid-app (React Native/Capacitor) angle, provisioning-profile types, and cheap-Linux-vs-expensive-macOS-runner economics called out for SEO; EAS Build section is explicitly forward-looking/WIP, not shipped; DE twin paired via `translation:` | Aug 2026 |
-| 5 | 20 years of shipping mobile apps: what changed, what didn't                                   | EN | **skeleton — needs real history; the LinkedIn anniversary piece** | Nov 2026 |
-| 6 | Making your API usable by AI agents with MCP                                                  | EN | not created — gated on AI offer validation with existing clients | tbd |
+| 6 | What Is MCP? How AI Assistants Connect to Your Business Systems / Was ist MCP? Wie KI-Assistenten auf Ihre Unternehmenssysteme zugreifen | DE+EN | **live** — published 13 October 2026; educational introduction for decision-makers; hypothetical rental-service example, external AI distribution, authentication and visibility boundaries; shared generated cover and reciprocal translations. No client validation needed for this article; an AI/MCP service page remains gated on validation with existing clients. | Oct 2026 |
 | 7 | AI Developer Shift: From Code Writer to Quality Guardian / KI-Entwicklerwandel | DE+EN | **live** — source content supplied by Rocco; the "AI-powered workflow" comparison-table column was reconstructed since it didn't survive the source copy/paste (Rocco signed off on publishing as-is); `categories: [AI, technology]` (EN) / `[KI, technology]` (DE) — new taxonomy, see house rules below; DE twin paired via `translation:` | ad hoc, Aug 2026 |
 
 | 8 | AI Benchmarking Across the SDLC: What Should You Measure? / KI-Benchmarking im SDLC: Was sollten Sie messen? | DE+EN | **live** — paired framework post on delivery flow, quality and maintenance, newly possible work, and total AI cost/control; links to Steyer's controlled agent comparison as a contrast to day-to-day delivery. A practical measurement follow-up is teased, not yet planned. | Sep 2026 |
@@ -93,9 +92,8 @@ generator.
   passing generic mention of "apps" or "cross-platform" — add `technology` too, e.g.
   `categories: [insights, technology]`. Applied retroactively to all three live
   cornerstone posts (cost, maintenance, framework comparison), since all three name
-  concrete frameworks/platforms/tools. Skeleton posts (#4 fastlane, #5 20-years) will
-  almost certainly qualify too once actually written — decide when writing them, not
-  before.
+  concrete frameworks/platforms/tools. Apply the same topic-based rule when writing
+  future posts.
 - **AI category**: posts substantively about AI-assisted/AI-driven development itself
   (not just posts that happen to be written with AI help — see the disclosure rule
   below) use `AI` in English and `KI` in German instead of `insights`, e.g.
